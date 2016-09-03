@@ -9,24 +9,141 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="portfolio.css">
+        <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800|Roboto+Slab" rel="stylesheet">
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <!-- Site Code -->
 
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<nav id="navBar">
+ <ul>
+    <a href="#about" title="About"><li>About me</li></a>
+    <a href="#skills" title="Skills"><li>Skills</li></a>            
+    <a href="#experience" title="CV"><li>Work</li></a>
+    <a href="#contact" title="Contact"><li>Contact</li></a>
+ </ul>   
+</nav>
+<div id="main-container">
+    <div id="welcome" class="section">Hi, I'm James.<br>Welcome to my site.</div>
+    <div id ="about" class="section">About
+        <p>I'm currently working in PR, looking to make a move into front end developer<br>
+    I'm hungry to learn</p></div>
+    <div id="skills" class="section">Skills
+    <br>
+    <br>
+    List of coding skills goes here</div>
+   
+
+
+    <div id="projects" class="section">Work<br><br>Put a gallery here that shows my projects
+
+
+<ul id="rig">
+    <li>
+        <a class="rig-cell" href="#">
+            <img class="rig-img" src="http://blogs.microsoft.co.il/blogs/gilf/CSS3Logo_406A9E5E.jpg">
+            <span class="rig-overlay"></span>
+            <span class="rig-text">Lorem Ipsum Dolor</span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="#">
+            <img class="rig-img" src="img/2.jpg">
+            <span class="rig-overlay"></span>
+            <span class="rig-text">Consectetur Adipiscing</span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="#">
+            <img class="rig-img" src="img/3.jpg">
+            <span class="rig-overlay"></span>
+            <span class="rig-text">Vivamus ut Felis</span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="#">
+            <img class="rig-img" src="img/4.jpg">
+            <span class="rig-overlay"></span>
+            <span class="rig-text">Curabitur tempus</span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="#">
+            <img class="rig-img" src="img/5.jpg">
+            <span class="rig-overlay"></span>
+            <span class="rig-text">Sed et nunc luctus</span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="#">
+            <img class="rig-img" src="img/6.jpg">
+            <span class="rig-overlay"></span>
+            <span class="rig-text">Suspendisse tellus</span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="#">
+            <img class="rig-img" src="img/7.jpg">
+            <span class="rig-overlay"></span>
+            <span class="rig-text">pellentesque odio</span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="#">
+            <img class="rig-img" src="img/8.jpg">
+            <span class="rig-overlay"></span>
+            <span class="rig-text">Nam euismod</span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="#">
+            <img class="rig-img" src="img/9.jpg">
+            <span class="rig-overlay"></span>
+            <span class="rig-text">Vestibulum ultricies</span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="#">
+            <img class="rig-img" src="img/10.jpg">
+            <span class="rig-overlay"></span>
+            <span class="rig-text">quis interdum sapien</span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="#">
+            <img class="rig-img" src="img/11.jpg">
+            <span class="rig-overlay"></span>
+            <span class="rig-text">Maecenas vitae</span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="#">
+            <img class="rig-img" src="img/12.jpg">
+            <span class="rig-overlay"></span>
+            <span class="rig-text">Proin Scelerisque</span>
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+
+
+    <div id="contact" class="section">Contact<br><br>How to get in touch with me, GitHub etc
+<div id="contactbutton"><a href="mailto:mail@jamestbyrne.com">Email me</a></div>
+
+    </div>
+</div>
+
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
+        <script type="text/javascript" src="js/fullPage.js-master/jquery.fullPage.min.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
