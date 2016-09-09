@@ -1,89 +1,307 @@
 
+/* ***** NAVIGATION ***** */
+
+
+@font-face {
+  font-family: 'Avenir-Black';
+  src:  url('fonts/AvenirLTStd-Black.WOFF') format('woff'),
+        url('myfont.woff') format('woff');
+    }
+    @font-face {
+          font-family: 'Avenir-Book';
+  src:  url('fonts/AvenirLTStd-Book.WOFF') format('woff'),
+        url('myfont.woff') format('woff');
+
+}
+
+html {
+	margin: 0px;
+}
 body 
 {
 	margin: 0px;
+	overflow-x: hidden;
 }
 
-#navBar {
+header {
 	text-align: right;
 	display: block;
-
-	margin-right: 10%;
-	width: auto;
-	font-family: 'open sans', sans-serif;
-	height: 150px;
+	background-color: #fff;
+	margin:0px;
+	min-width: 100vw;
+	max-width: 100vw;
+	overflow: hidden;
+	font-family: 'Avenir-Black', sans-serif;
+	height: 80px;
 	font-weight: 800;
 	text-transform: uppercase;
+	z-index: 999;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.stick-me .not-sticking {
+	position: absolute;
+	left: 0px;
+}
+
+#logo, #logo:hover, nav ul li #logo:hover{
+
+	height: 40px;
+	display: inline-block;
+	margin: 0px 10px;
+	border: none;
+}
+
+
+#logo-wrapper {
+	margin-bottom: 15px;
+	padding-bottom: 2px;
+	position: absolute;
+	bottom: 0px;
+}
+
+.logo:after {
+	content: '';
+	display: none;
+	background: transparent;
+}
+.logo:hover:after {
+	width: 100%;
+	background: #000;
+}
+
+nav {
+	width: 60%;
+	font-size: 14px;
+	letter-spacing: 4px;
+	display: inline-block;
+	margin: auto;
 }
 
 nav ul {
 	width: auto;
-	margin: 0px;
+	margin: auto;
 	bottom: 20px;
-		padding-top: 50px;
+		padding-top: 10px;
+		text-align: center;
 }
 
 nav ul li {
 
 display: inline-block;
-margin: 10px -2px;
-	border-bottom: solid 4px #000;
-padding: 15px 25px;
+margin: 10px 2px;
+padding: 5px 25px;
 text-decoration: none;
-color: #1A1D1A;
+color: #a9a9a9;
 }
 
 nav ul li:hover {
 
 display: inline-block;
-margin: 10px -2px;
-color: #FB3640;
-border-bottom: solid 4px #FB3640;
+margin: 10px 2px;
+color: #000;
 text-decoration: none;
 }
 
 nav li a {
 	color: #000;
-font-size: 18px ;
+font-size: 16px ;
 	text-decoration: none;
 	margin: 10px 20px;
 }
 
 nav li a:hover {
-	color: #AD8B32;
+	color: #d9b310;
+	overflow-x: hidden;
+	 -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
 
 }
 
+nav ul li:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 2px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+nav ul li:hover:after {
+	width: 100%;
+	background: #000;
+}
 
-#welcome {
-	color: #fff;
-	background-color: #FB3640;
-	font-family: 'roboto slab', serif;
-	font-size: 96px;
-	font-weight: bold;
-	text-align: left;
-	padding-left: 100px;
-	padding-top: 100px;
-	max-height: calc(100% - 150px);
+nav ul li.active a {
+    border-top: 3px solid #333;
+    color: #333;
+}
+
+/* ***** GENERAL STYLES ***** */
+
+.section {
+
+	max-width: 100vw;
+	margin: auto;
+	background-color: lightblue;
+	font-size: 44px;
+	text-align: center;
+	color: #000;
+}
+
+
+#main-container {
+
+	background-color: #fff;
+	height: 100vh;
+	max-width: 100vw;
+	padding: 0px 1vw;
 	box-sizing: border-box;
 }
 
+.section-header {
+font-size: 3rem;
+font-family: 'Avenir-Black', 'century-gothic', sans-serif;
+text-align: center;
+letter-spacing: 4px ;
+text-transform: uppercase;
+margin: 0px auto 20px auto ;
+color: #a9a9a9;
+display:block;
+}
+
+.hr {
+
+	border: solid 2px #a9a9a9;
+	color: #a9a9a9;
+	width: 40px;
+	margin-bottom: 60px;
+}
+
+/* ***** WELCOME SECTION ***** */
+
+#welcome {
+	background-color: #1a2930;
+	text-align: left;
+	min-height: 100vh;
+	max-height: 100vh;
+	overflow-y: none;
+	box-sizing: border-box;
+	margin: 0px ;
+	}
+
+#welcome-container {
+	color: #f7ce36;
+	background-color: transparent;
+	font-family: 'Avenir-Black', sans-serif;
+	font-size: 8rem;
+	font-weight: bold;
+	text-align: center;
+	padding-left: 100px;
+	padding-top: 30vh;
+	  -webkit-animation: intro 1s;
+  animation: intro 1s;
+
+}
+
+
+body {
+  margin: 0;
+  background-color: #1d1f20;
+}
+.mouse {
+  position: absolute;
+  width: 22px;
+  height: 42px;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -12px;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  -webkit-animation: intro 2s;
+  animation: intro 2s;
+}
+.scroll {
+  display: block;
+  width: 3px;
+  height: 3px;
+  margin: 6px auto;
+  border-radius: 4px;
+  background: #fff;
+  -webkit-animation: finger 1s infinite;
+  animation: finger 1s infinite;
+}
+
+@-webkit-keyframes intro {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes intro {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes finger {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+@keyframes finger {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+
+
+/* ***** ABOUT SECTION ***** */
+
 #about {
-	color: #FB3640;
-	background-color: #fff;
-	font-family: 'roboto slab', serif;
+	color: #a9a9a9;
+	background-color: #efefef;
+	font-family: 'Avenir-Book', serif;
 	font-size: 26px;
 	font-weight: bold;
 	text-align: left;
 	padding: 100px 200px;
-	max-height: 100vh;
+	max-height: 80vh;
 	box-sizing: border-box;
 }
 
 #about p {
-	color: #FB3640;
-	background-color: #fff;
-	font-family: 'roboto slab', serif;
+	color: #a9a9a9;
+	background-color: #caebf2;
+	font-family: 'Avenir-Book', serif;
 	font-size: 26px;
 	font-weight: bold;
 	text-align: left;
@@ -92,50 +310,60 @@ nav li a:hover {
 	box-sizing: border-box;
 }
 
+/* ***** SKILLS SECTION ***** */
 
 #skills {
-	color: #FB3640;
-	background-color: #1A1D1A;
-	font-family: 'roboto slab', serif;
+	color: #efefef;
+	background-color: #c5c1c0;
+	font-family: 'Avenir-Book', serif;
 	font-size: 26px;
 	font-weight: bold;
 	text-align: left;
-	padding: 100px 200px;
-	height: 100vh;
+	padding: 70px 200px;
+	min-height: 75vh;
 	box-sizing: border-box;
 }
 
+.skillstitle {
 
+	display: block;
+	margin-bottom: 40px;
+	font-family: 'Avenir-Black', sans-serif;
+}
+
+.container-fluid {
+
+	width: 80%;
+}
+
+/* ***** PROJECTS SECTION ***** */
 
 #projects {
-	color: #fff;
-	background-color: #989C94;
-	font-family: 'roboto slab', serif;
+	color: #a9a9a9;
+	background-color: #efefef;
+	font-family: 'Avenir-Book', serif;
 	font-size: 26px;
 	font-weight: bold;
 	text-align: left;
-	padding: 100px 200px;
+	padding: 100px 0px;
 	height: 100vh;
 	box-sizing: border-box;
 }
 
-Demo 2: Use image sprites for responsive image grids
 
-▲
-© 2016 - MenucoolTM
-Term of Use  |  License Agreement  |  Contact Us
 #rig {
-    max-width:900px;
-    margin:0 auto; /*center aligned*/
+    max-width:100%;
+    margin: 100px auto; /*center aligned*/
     padding:0;
     font-size:0; /* Remember to change it back to normal font size if have captions */
     list-style:none;
-    background-color:#000;
+    background-color:transparent;
 }
 #rig li {
     display: inline-block;
     *display:inline;/*for IE6 - IE7*/
     width:25%;
+    max-height: 466px;
     vertical-align:middle;
     box-sizing:border-box;
     margin:0;
@@ -174,14 +402,14 @@ Term of Use  |  License Agreement  |  Contact Us
     bottom: 0;
     right: 0;
     margin: auto;
-    background: #3DC0F1 url(img/link.png) no-repeat center 20%;
+    background: #f7ce36 url(img/link.png) no-repeat center 20%;
     background-size:50px 50px;
     opacity:0;
     filter:alpha(opacity=0);/*For IE6 - IE8*/
     transition:all 0.6s;
 }
 #rig li:hover .rig-overlay {
-    opacity:0.8;
+    opacity:0.95;
 }
 
 /* If have captions */
@@ -193,12 +421,12 @@ Term of Use  |  License Agreement  |  Contact Us
     left:0;
     width:100%;
     text-align:center;
-    text-transform:capitalize;
+    text-transform:uppercase;
     font-size:18px;
-    font-weight:bold;
-    font-family: 'Oswald', sans-serif;
-    font-weight:normal!important;
-    top:40%;
+    font-weight: 800;
+    font-family: 'Avenir-Black', sans-serif;
+ 
+    top:35%;
     color:white;
     opacity:0;
     filter:alpha(opacity=0);/*For older IE*/
@@ -206,6 +434,40 @@ Term of Use  |  License Agreement  |  Contact Us
     transition:all .3s;
 }
 #rig li:hover .rig-text {
+    transform:translateY(0px);
+    opacity:0.9;
+}
+
+.rig-lines {
+	border: solid 3px #fff;
+	width: 25px;
+	text-align: left;
+	margin-left: 0px;
+	margin: 20px auto;
+}
+
+.rig-subtitle-text {
+    display:block;
+    padding:0 30px;
+    box-sizing:border-box;
+    position:absolute;
+    left:0;
+    width:100%;
+    text-align:center;
+    text-transform:capitalize;
+    font-size:18px;
+    font-weight:bold;
+    font-style: italic;
+    font-family: 'Avenir-Book', sans-serif;
+    font-weight:normal!important;
+    top:55%;
+    color:white;
+    opacity:0;
+    filter:alpha(opacity=0);/*For older IE*/
+    transform:translateY(20px);
+    transition:all .3s;
+}
+#rig li:hover .rig-subtitle-text {
     transform:translateY(0px);
     opacity:0.9;
 }
@@ -229,42 +491,35 @@ Term of Use  |  License Agreement  |  Contact Us
 }
 
 
+/* ***** CONTACT SECTION ***** */
+
 #contact {
 	color: #fff;
-	background-color: #1A1D1A ;
-	font-family: 'roboto slab', serif;
+	background-color: #0A1612 ;
+	font-family: 'Avenir-book', serif;
 	font-size: 26px;
 	font-weight: bold;
 	text-align: left;
 	padding: 100px 200px;
-	max-height: 100vh;
+	min-height: calc(100vh - 130px);
 	box-sizing: border-box;
 }
 
+#contact-wrapper {
+	margin-top: 100px;
+}
 
-.section {
-
-	height: 100vh;
-	max-width: 100vw;
-	margin: auto;
-	background-color: lightblue;
-	font-size: 44px;
-	text-align: center;
-	color: #000;
+#contact-left {
+	padding: 0px 100px 0px 0px;
 }
 
 
-#main-container {
 
-	background-color: pink;
-	height: 100vh;
-	max-width: 100vw;
-	box-sizing: border-box;
-}
+
 
 #contactbutton a {
-	margin: 100px auto;
-    font-family: 'Open Sans', century gothic, helvetica, arial, sans-serif;
+	margin: 0px auto 100px auto;
+    font-family: 'Avenir-Black', century-gothic, helvetica, arial, sans-serif;
     text-decoration: none;
     text-transform: uppercase;
     background-color: #fff;
@@ -282,7 +537,7 @@ Term of Use  |  License Agreement  |  Contact Us
     transition: all ease 0.3s;
     }
 
-    #contactbutton a:hover {	font-family: 'Open Sans', century gothic, helvetica, arial, sans-serif ;
+    #contactbutton a:hover {	font-family: 'Avenir-Black', century gothic, helvetica, arial, sans-serif ;
 		text-decoration: none;
 		text-transform: uppercase ; 
 		font-weight: 800;
@@ -295,4 +550,173 @@ Term of Use  |  License Agreement  |  Contact Us
 		display: inline-block;
 	-webkit-transition: all ease 0.3s;
 	-moz-transition: all ease 0.3s;
+}
+
+.socialicons {
+	height: 20px;
+	display: inline-block ;
+}
+
+
+
+#social-container ul {
+	height: 50px;
+	width:  320px;
+	background-color: #fff;
+}
+
+#social-container ul li a {
+	height: 20px;
+	width: 20px;
+	display: inline-block ;
+	border: none ;
+	padding: 4px;
+	list-style: none;
+
+
+}
+
+#social-container ul li a:hover {
+	height: 20px;
+	width: 20px;
+	margin: 0px ;
+	display: inline-block ;
+	border: none ;
+	padding: 4px;
+}
+
+footer {
+	color: #a9a9a9;
+	background-color: #0A1612 ;
+	text-align: center;
+	display: block;
+	margin: auto;
+	font-size: 14px;
+	font-family: 'Avenir-Book', century gothic, helvetica, arial, sans-serif ;
+	position: relative;
+	bottom: 10px;
+	padding: 20px;
+}
+
+
+/*------------
+MEDIA QUERIES
+-----------*/
+
+
+@media (max-width: 900px)
+
+{
+	#main-container {
+		width: 100vw;
+		padding: 0px ;
+	}
+
+
+
+	#about, #welcome, #contact, #skills, #projects {
+	 padding: 70px  1vh;
+	 box-sizing: border-box;
+	 overflow: hidden;
+	}
+
+	#welcome-container, .slideInUp {
+		padding: 25vh 1vw 1vh 1vw;
+		font-size: 6rem;
+		display: flex;
+		 align-items: center;
+  justify-content: center;
+	}
+
+#about p {
+	width: 90vw;
+	margin: 2vw 1vh;
+	box-sizing: border-box;;
+}
+#contact-wrapper {
+	margin-top: 0px;
+}
+#contact-left {
+		 padding: 70px  1vh;
+}
+
+#contactbutton, #contactbutton a, #contactbutton a:hover {
+	max-width: 100%;
+}
+
+.col-md-8 {
+	width: 90vw;
+	margin: 2vw 1vh;
+	box-sizing: border-box;;
+}
+
+ul:first-child {
+	margin-bottom: 200px;
+}
+
+}
+
+@media (max-width: 700px)
+
+{
+	#main-container {
+		width: 100vw;
+		padding: 0px ;
+	}
+
+#welcome {
+		height: 100vh;
+
+	}
+
+	.mouse {
+		bottom: 20px;
+	}
+
+	#about, #welcome, #contact, #skills, #projects {
+	 padding: 70px  1vh;
+	 box-sizing: border-box;
+	 overflow: hidden;
+	}
+
+	#welcome-container, .slideInUp {
+		padding: 15vh 1vw 1vh 1vw;
+		font-size: 4rem;
+		display: flex;
+		 align-items: center;
+  justify-content: center;
+	}
+
+	#about {
+		height: 100vh;
+		max-height: 100vh;
+	}
+
+#about p {
+	width: 90vw;
+	margin: 2vw 1vh;
+	box-sizing: border-box;
+	font-size: 2rem;
+}
+#contact-wrapper {
+	margin-top: 0px;
+}
+#contact-left {
+		 padding: 70px  1vh;
+}
+
+#contactbutton, #contactbutton a, #contactbutton a:hover {
+	max-width: 100%;
+}
+
+.col-md-8 {
+	width: 90vw;
+	margin: 2vw 1vh;
+	box-sizing: border-box;;
+}
+
+ul:first-child {
+	margin-bottom: 200px;
+}
+
 }
