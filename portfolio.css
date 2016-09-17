@@ -75,9 +75,9 @@ header {
 }
 
 nav {
-	width: 60%;
-	font-size: 14px;
-	letter-spacing: 4px;
+	width: auto;
+	font-size: 18px;
+	letter-spacing: 6px;
 	display: inline-block;
 	margin: auto;
 }
@@ -86,7 +86,7 @@ nav ul {
 	width: auto;
 	margin: auto;
 	bottom: 20px;
-		padding-top: 10px;
+		padding: 10px 0px;
 		text-align: center;
 }
 
@@ -109,7 +109,7 @@ text-decoration: none;
 
 nav li a {
 	color: #000;
-font-size: 16px ;
+font-size: 2rem ;
 	text-decoration: none;
 	margin: 10px 20px;
 }
@@ -137,10 +137,12 @@ nav ul li:hover:after {
 	background: #000;
 }
 
-nav ul li.active a {
-    border-top: 3px solid #333;
-    color: #333;
+.active {
+	color: pink;
+	background-color: rgba(100,100,100,1);
+	border-bottom: thick solid rgba(0,255,0,0.5);
 }
+
 
 /* ***** GENERAL STYLES ***** */
 
@@ -300,7 +302,6 @@ body {
 
 #about p {
 	color: #a9a9a9;
-	background-color: #caebf2;
 	font-family: 'Avenir-Book', serif;
 	font-size: 26px;
 	font-weight: bold;
@@ -336,6 +337,11 @@ body {
 	width: 80%;
 }
 
+.fa {
+font-family: 'Avenir-Book', serif;
+	font-size: 26px;
+}
+
 /* ***** PROJECTS SECTION ***** */
 
 #projects {
@@ -346,7 +352,7 @@ body {
 	font-weight: bold;
 	text-align: left;
 	padding: 100px 0px;
-	height: 100vh;
+	min-height: 100vh;
 	box-sizing: border-box;
 }
 
@@ -368,6 +374,7 @@ body {
     box-sizing:border-box;
     margin:0;
     padding:0;
+    background-color: #1a2930;
 }
         
 /* The wrapper for each item */
@@ -382,11 +389,14 @@ body {
 /* If have the image layer */
 .rig-img {
     display:block;
-    width: 100%;
-    height: auto;
+    width: auto;
+    margin: auto;
+    height: 466px;
     border:none;
     transform:scale(1);
     transition:all 1s;
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%);
 }
 
 #rig li:hover .rig-img {
@@ -446,7 +456,7 @@ body {
 	margin: 20px auto;
 }
 
-.rig-subtitle-text {
+.rig-subtitle-text  {
     display:block;
     padding:0 30px;
     box-sizing:border-box;
@@ -467,28 +477,35 @@ body {
     transform:translateY(20px);
     transition:all .3s;
 }
+
+.subtitle-link {
+    display:block;
+    padding:0 30px;
+    box-sizing:border-box;
+    position:absolute;
+    left:0;
+    width:100%;
+    text-align:center;
+    text-transform:capitalize;
+    font-size:18px;
+    font-weight:bold;
+    font-style: italic;
+    font-family: 'Avenir-Book', sans-serif;
+    font-weight:normal!important;
+    top:55%;
+    color:white;
+    opacity:0;
+    filter:alpha(opacity=0);/*For older IE*/
+    transform:translateY(20px);
+    transition:all .3s;
+}
+
 #rig li:hover .rig-subtitle-text {
     transform:translateY(0px);
     opacity:0.9;
 }
 
-@media (max-width: 9000px) {
-    #rig li {
-        width:25%;
-    }
-}
 
-@media (max-width: 700px) {
-    #rig li {
-        width:33.33%;
-    }
-}
-
-@media (max-width: 550px) {
-    #rig li {
-        width:50%;
-    }
-}
 
 
 /* ***** CONTACT SECTION ***** */
@@ -496,7 +513,7 @@ body {
 #contact {
 	color: #fff;
 	background-color: #0A1612 ;
-	font-family: 'Avenir-book', serif;
+	font-family: 'Avenir-Book', serif;
 	font-size: 26px;
 	font-weight: bold;
 	text-align: left;
@@ -511,10 +528,8 @@ body {
 
 #contact-left {
 	padding: 0px 100px 0px 0px;
+	margin-bottom: 50px;
 }
-
-
-
 
 
 #contactbutton a {
@@ -528,7 +543,7 @@ body {
     letter-spacing: 2px;
     padding: 30px;
     text-align: center;
-    width: 320px;
+    width: 300px;
     color: #1A1D1A;
     border: solid 4px #fff;
     display: inline-block;
@@ -543,7 +558,7 @@ body {
 		font-weight: 800;
 		font-size: 16px;
 		padding: 30px;
-		width: 320px ;
+		width: 300px ;
 		color: #fff;
 		background-color: transparent;
 		border: solid 4px #fff ;
@@ -557,20 +572,41 @@ body {
 	display: inline-block ;
 }
 
+.fa {
+	color: #fff;
+	font-family: 'Avenir-Book', serif;
+	font-size: 26px;
 
+}
+
+#social-container {
+		text-align: center;
+}
 
 #social-container ul {
 	height: 50px;
-	width:  320px;
-	background-color: #fff;
+	width:  322px;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+
 }
+
+#social-container ul li
+{
+	list-style: none;
+	display: inline-block;
+
+}
+
+
 
 #social-container ul li a {
 	height: 20px;
 	width: 20px;
 	display: inline-block ;
 	border: none ;
-	padding: 4px;
+	margin: 0px 16px;
 	list-style: none;
 
 
@@ -579,10 +615,16 @@ body {
 #social-container ul li a:hover {
 	height: 20px;
 	width: 20px;
-	margin: 0px ;
 	display: inline-block ;
 	border: none ;
-	padding: 4px;
+	margin: 0px 16px;
+}
+
+.fa-lg:hover {
+	color: #f7ce36;
+	-webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
 }
 
 footer {
@@ -631,17 +673,20 @@ MEDIA QUERIES
 #about p {
 	width: 90vw;
 	margin: 2vw 1vh;
-	box-sizing: border-box;;
+	box-sizing: border-box;
+	padding: 0px 5vw;
 }
 #contact-wrapper {
 	margin-top: 0px;
 }
 #contact-left {
-		 padding: 70px  1vh;
+		 padding: 70px  0px 1vh 1vh;
 }
 
 #contactbutton, #contactbutton a, #contactbutton a:hover {
 	max-width: 100%;
+	text-align: center;
+
 }
 
 .col-md-8 {
@@ -650,8 +695,23 @@ MEDIA QUERIES
 	box-sizing: border-box;;
 }
 
+#contact-left {
+	padding-right: 0px;
+}
+
 ul:first-child {
 	margin-bottom: 200px;
+}
+
+#rig li {
+
+	width: 50%;
+}
+
+
+
+#social-container ul {
+	margin: auto;
 }
 
 }
@@ -679,9 +739,14 @@ ul:first-child {
 	 overflow: hidden;
 	}
 
+	#projects {
+
+		padding: 70px 0px;
+	}
+
 	#welcome-container, .slideInUp {
-		padding: 15vh 1vw 1vh 1vw;
-		font-size: 4rem;
+		padding: 20vh 1vw 1vh 1vw;
+		font-size: 4.5rem;
 		display: flex;
 		 align-items: center;
   justify-content: center;
@@ -696,7 +761,7 @@ ul:first-child {
 	width: 90vw;
 	margin: 2vw 1vh;
 	box-sizing: border-box;
-	font-size: 2rem;
+	font-size: 2.75rem;
 }
 #contact-wrapper {
 	margin-top: 0px;
@@ -707,6 +772,7 @@ ul:first-child {
 
 #contactbutton, #contactbutton a, #contactbutton a:hover {
 	max-width: 100%;
+	text-align: center;
 }
 
 .col-md-8 {
@@ -717,6 +783,11 @@ ul:first-child {
 
 ul:first-child {
 	margin-bottom: 200px;
+}
+
+#rig li {
+	min-width: 100%;
+	max-width: 100%;
 }
 
 }
