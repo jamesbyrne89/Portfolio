@@ -12,6 +12,8 @@
 
         <link rel="stylesheet" href="portfolio.css">
         <link rel="stylesheet" href="animate.css">
+        <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/kissui.scrollanim/0.3.0/scrollanim.min.css">
+       
         <!-- FONTS -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800|Roboto+Slab" rel="stylesheet">
         <!-- FONT AWESOME -->
@@ -35,7 +37,7 @@
   
 <nav>
  <ul>
-    <a href="#about" title="About"><li>About</li></a>
+    <a id="#about-link" href="#about" title="About"><li>About</li></a>
     <a href="#skills" title="Skills"><li>Skills</li></a>            
     <li class="logo"><img id="logo" src="img/JB-logo.png"></li>
     <a href="#projects" title="Projects"><li>Projects</li></a>
@@ -63,7 +65,7 @@
         <p class="about-myself">I'm currently working in PR, looking to make a move into front end development<br>
     I'm hungry to learn, blah blah blah.
     <br>
-    Take a look mat my work and drop me a line if you think I could help your organisation.</p></section>
+    Take a look at my work and drop me a line if you think I could help your organisation.</p></section>
 
 
     <section id="skills" class="section"><span class="section-header">Skills</span><hr class="hr">
@@ -71,27 +73,26 @@
         <a href="#skills" title="Skills"></a>
     <div class="container-fluid">
  <div class="row">
-       <div class="col-md-8"><span class="skillstitle">Languages &#038 Frameworks</span><ul>
-    <li>HTML5</li>
-    <li>CSS3</li>
-    <li>Javascript</li>
-    <li>jQuery</li>
-</ul></div>
-  <div class="col-md-4"><span class="skillstitle">Tools</span><ul>
-    <li>Git</li>
-    <li>Sass</li>
-    <li>Javascript</li>
-    <li>jQuery</li>
+       <div class="col-md-6"><span class="skillstitle">This is what I know:</span></div><ul>
+        <div class="col-md-6"><ul>
+    <li id="list-item-1" class="delayed-text-1">HTML5</li>
+    <li id="list-item-2" class="delayed-text-2">CSS3</li>
+    <li id="list-item-3" class="delayed-text-3">Javascript</li>
+    <li id="list-item-4" class="delayed-text-4">jQuery</li>
+    <li id="list-item-5" class="delayed-text-5">Git</li>
+    <li id="list-item-6" class="delayed-text-6">Sass</li>
+    <li id="list-item-7" class="delayed-text-7">Responsive Design</li>
+    <li id="list-item-8" class="delayed-text-8">Node.js</li>
 </ul></div>
 </div>
  
 
 
 </div>
-
+</section>
 <!-- PROJECTS SECTION -->
 
-</section>
+
 
 
     <section id="projects" class="section">
@@ -101,7 +102,8 @@
 <ul id="rig">
     <li>
         <a class="rig-cell" href="#">
-            <img class="rig-img" src="img/russell-wilson-tribute.png">
+            <img class="rig-img lazy" data-original="img/russell-wilson-tribute.png">
+             <span class="rig-orig-overlay"></span>
             <span class="rig-overlay"></span>
             <span class="rig-text">Tribute Page<hr class="rig-lines"></span>
              <a class="subtitle-link" href="https://github.com/jamesbyrne89/tribute-page"><span class="rig-subtitle-text">View on GitHub</span></a>
@@ -110,7 +112,8 @@
     </li>
     <li>
         <a class="rig-cell" href="#">
-            <img class="rig-img" src="img/how-many-fingers.png">
+            <img class="rig-img lazy" data-original="img/how-many-fingers.png">
+             <span class="rig-orig-overlay"></span>
             <span class="rig-overlay"></span>
             <span class="rig-text">How Many Fingers Am I Holding Up?<hr class="rig-lines">  </span>  
                    <span class="rig-subtitle-text">View on CodePen<br>View on GitHub</span>
@@ -118,7 +121,8 @@
     </li>
     <li>
         <a class="rig-cell" href="#">
-            <img class="rig-img" src="img/digital-download.png">
+            <img class="rig-img lazy" data-original="img/digital-download.png">
+             <span class="rig-orig-overlay"></span>
             <span class="rig-overlay"></span>
             <span class="rig-text">salt communications Tumblr refresh<hr class="rig-lines"></span>
               <span class="rig-subtitle-text">View on Github</span>
@@ -126,7 +130,8 @@
     </li>
     <li>
         <a class="rig-cell" href="#">
-            <img class="rig-img" src="img/random-quote-machine.png">
+            <img class="rig-img lazy" data-original="img/random-quote-machine.png">
+             <span class="rig-orig-overlay"></span>
             <span class="rig-overlay"></span>
             <span class="rig-text">Random Quote Machine<hr class="rig-lines"></span>
               <span class="rig-subtitle-text">View on Github</span>
@@ -135,7 +140,8 @@
    
     <li>
         <a class="rig-cell" href="#">
-            <img class="rig-img" src="http://placehold.it/600x600">
+            <img class="rig-img lazy" data-original="http://placehold.it/600x600">
+             <span class="rig-orig-overlay"></span>
             <span class="rig-overlay"></span>
             <span class="rig-text">Sed et nunc luctus</span><br>
               <span class="rig-subtitle-text">Lorem Ipsum Dolor</span>
@@ -143,7 +149,8 @@
     </li>
     <li>
         <a class="rig-cell" href="#">
-            <img class="rig-img" src="http://placehold.it/600x600">
+            <img class="rig-img lazy" data-original="http://placehold.it/600x600">
+            <span class="rig-orig-overlay"></span>
             <span class="rig-overlay"></span>
             <span class="rig-text">Suspendisse tellus</span><br>
               <span class="rig-subtitle-text">Lorem Ipsum Dolor</span>
@@ -151,7 +158,8 @@
     </li>
     <li>
         <a class="rig-cell" href="#">
-            <img class="rig-img" src="http://placehold.it/600x600">
+            <img class="rig-img lazy" data-original="http://placehold.it/600x600">
+             <span class="rig-orig-overlay"></span>
             <span class="rig-overlay"></span>
             <span class="rig-text">pellentesque odio</span><br>
               <span class="rig-subtitle-text">Lorem Ipsum Dolor</span>
@@ -159,7 +167,8 @@
     </li>
     <li>
         <a class="rig-cell" href="#">
-            <img class="rig-img" src="http://placehold.it/600x600">
+            <img class="rig-img lazy" data-original="http://placehold.it/600x600">
+             <span class="rig-orig-overlay"></span>
             <span class="rig-overlay"></span>
             <span class="rig-text">Nam euismod</span><br>
               <span class="rig-subtitle-text">Lorem Ipsum Dolor</span>
@@ -218,19 +227,19 @@
 <div id="social-container">
 <ul>
     <li>
-    <a href="https://twitter.com/james_byrne"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i> </a>
+    <a href="https://twitter.com/james_byrne"><i class="fa fa-twitter fa-lg delayed-text-1" aria-hidden="true"></i> </a>
     </li>
     <li>
-    <a href="https://instagram.com/james_byrne"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+    <a href="https://instagram.com/james_byrne"><i class="fa fa-instagram fa-lg delayed-text-2" aria-hidden="true"></i></a>
     </li>
     <li>
-    <a href="https://uk.linkedin.com/in/jamestbyrne89"><i class="fa fa-flickr fa-lg" aria-hidden="true"></i></a>
+    <a href="https://uk.linkedin.com/in/jamestbyrne89"><i class="fa fa-flickr fa-lg delayed-text-3" aria-hidden="true"></i></a>
     </li>
     <li>
-    <a href="https://uk.linkedin.com/in/jamestbyrne89"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
+    <a href="https://uk.linkedin.com/in/jamestbyrne89"><i class="fa fa-linkedin-square fa-lg delayed-text-4" aria-hidden="true"></i></a>
     </li>
     <li>
-    <a href="https://github.com/jamesbyrne89"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+    <a href="https://github.com/jamesbyrne89"><i class="fa fa-github fa-lg delayed-text-5" aria-hidden="true"></i></a>
     </li>
     </ul>
 </div>
@@ -249,7 +258,7 @@ Site design by James Byrne. © 2016
 </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script type="text/javascript" src="js/sticky-header.js"></script>
-<script type="text/javascript" src="js/jquery-smooth-scroll/smooth-scroll.jquery.js"></script>
+
 <script>
         
             $(document).ready(function(){
@@ -261,7 +270,11 @@ Site design by James Byrne. © 2016
         
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script type="text/javascript" src="js/fullPage.js-master/jquery.fullPage.min.js"></script>
+        <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+         <script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
+        
          <script type="text/javascript" src="js/portfolio.js"></script>
+
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

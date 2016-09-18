@@ -146,6 +146,24 @@ nav ul li:hover:after {
 
 /* ***** GENERAL STYLES ***** */
 
+.slow {
+ -moz-animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+.medium {
+-webkit-animation-duration: 1s;
+animation-duration: 1s;
+}
+
+.fast {
+
+-webkit-animation-duration: 0.5s;
+animation-duration: 0.5s;
+}
+
+
 .section {
 
 	max-width: 100vw;
@@ -254,8 +272,8 @@ body {
 @keyframes intro {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(40px);
-    transform: translateY(40px);
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;
@@ -263,6 +281,33 @@ body {
     transform: translateY(0);
   }
 }
+
+@-webkit-keyframes sideintro {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(500px);
+    transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes sideintro {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(500px);
+    transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+
 @-webkit-keyframes finger {
   0% {
     opacity: 1;
@@ -284,7 +329,14 @@ body {
   }
 }
 
-
+.sideintro {
+	  -webkit-animation: sideintro 3s;
+  animation: sideintro 3s;
+}
+.intro{
+	  -webkit-animation: intro 1s;
+  animation: intro 1s;
+}
 
 /* ***** ABOUT SECTION ***** */
 
@@ -296,7 +348,7 @@ body {
 	font-weight: bold;
 	text-align: left;
 	padding: 100px 200px;
-	max-height: 80vh;
+	max-height: 100vh;
 	box-sizing: border-box;
 }
 
@@ -306,7 +358,7 @@ body {
 	font-size: 26px;
 	font-weight: bold;
 	text-align: left;
-	margin: 100px 200px;
+	margin: 200px 200px;
 	max-height: 100vh;
 	box-sizing: border-box;
 }
@@ -325,11 +377,90 @@ body {
 	box-sizing: border-box;
 }
 
+.delayed-text-1, .delayed-text-2, .delayed-text-3,
+.delayed-text-4, .delayed-text-5, .delayed-text-6,
+.delayed-text-7, .delayed-text-8
+{
+	opacity: 1;
+	  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.delayed-text-1 {
+
+-webkit-animation-duration: 0.5s;
+animation-duration: 0.5s;
+animation-delay: 0.5s;
+}
+
+.delayed-text-2 {
+-webkit-animation-delay: 0.6s;
+animation-delay: 0.6s;
+-webkit-animation-duration: 0.5s;
+animation-duration: 0.5s;
+}
+
+.delayed-text-3 {
+-webkit-animation-delay: 0.7s;
+animation-delay: 0.7s;
+-webkit-animation-duration: 0.5s;
+animation-duration: 0.5s;
+}
+
+.delayed-text-4 {
+-webkit-animation-delay: 0.8s;
+animation-delay: 0.8s;
+-webkit-animation-duration: 0.5s;
+animation-duration: 0.5s;
+}
+
+.delayed-text-5 {
+-webkit-animation-delay: 0.9s;
+animation-delay: 0.9s;
+-webkit-animation-duration: 0.5s;
+animation-duration: 0.5s;
+}
+
+
+.delayed-text-6 {
+-webkit-animation-delay: 1s;
+animation-delay: 1s;
+-webkit-animation-duration: 0.5s;
+animation-duration: 0.5s;
+}
+
+
+.delayed-text-7 {
+-webkit-animation-delay: 1.1s;
+animation-delay: 1.1s;
+-webkit-animation-duration: 0.5s;
+animation-duration: 0.5s;
+}
+
+
+.delayed-text-8 {
+-webkit-animation-delay: 1.2s;
+animation-delay: 1.2s;
+-webkit-animation-duration: 0.5s;
+animation-duration: 0.5s;
+}
+
+.fadeOut, #skills ul {
+		-webkit-animation-duration: 1.5s;
+animation-duration: 1.5s;
+transition:all 1s;
+}
+
+
 .skillstitle {
 
 	display: block;
 	margin-bottom: 40px;
 	font-family: 'Avenir-Black', sans-serif;
+	opacity: 0;
+	-webkit-animation-duration: 1.5s;
+animation-duration: 1.5s;
 }
 
 .container-fluid {
@@ -412,7 +543,7 @@ font-family: 'Avenir-Book', serif;
     bottom: 0;
     right: 0;
     margin: auto;
-    background: #f7ce36 url(img/link.png) no-repeat center 20%;
+    background: #f7ce36 ;
     background-size:50px 50px;
     opacity:0;
     filter:alpha(opacity=0);/*For IE6 - IE8*/
@@ -420,6 +551,24 @@ font-family: 'Avenir-Book', serif;
 }
 #rig li:hover .rig-overlay {
     opacity:0.95;
+}
+
+.rig-orig-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #1a2930 ;
+    background-size:50px 50px;
+    opacity:0.7;
+    filter:alpha(opacity=0);/*For IE6 - IE8*/
+    transition:all 0.6s;
+}
+#rig li:hover .rig-orig-overlay {
+    opacity:0;
 }
 
 /* If have captions */
@@ -681,6 +830,10 @@ MEDIA QUERIES
 }
 #contact-left {
 		 padding: 70px  0px 1vh 1vh;
+-webkit-animation-duration: 0.5s;
+animation-duration: 0.5s;
+animation-delay: 0.5s;
+
 }
 
 #contactbutton, #contactbutton a, #contactbutton a:hover {

@@ -1,121 +1,251 @@
-$(document).ready(function() {
-  function filterPath(string) {
-  return string
-    .replace(/^\//,'')
-    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-    .replace(/\/$/,'');
-  }
-  var locationPath = filterPath(location.pathname);
-  var scrollElem = scrollableElement('html', 'body');
- 
-  $('a[href*=#]').each(function() {
-    var thisPath = filterPath(this.pathname) || locationPath;
-    if (  locationPath == thisPath
-    && (location.hostname == this.hostname || !this.hostname)
-    && this.hash.replace(/#/,'') ) {
-      var $target = $(this.hash), target = this.hash;
-      if (target) {
-        var targetOffset = $target.offset().top;
-        $(this).click(function(event) {
-          event.preventDefault();
-          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
-            location.hash = target;
-          });
-        });
-      }
-    }
-  });
- 
-  // use the first element that is "scrollable"
-  function scrollableElement(els) {
-    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
-      var el = arguments[i],
-          $scrollElement = $(el);
-      if ($scrollElement.scrollTop()> 0) {
-        return el;
-      } else {
-        $scrollElement.scrollTop(1);
-        var isScrollable = $scrollElement.scrollTop()> 0;
-        $scrollElement.scrollTop(0);
-        if (isScrollable) {
-          return el;
-        }
-      }
-    }
-    return [];
-  }
- 
-});
-/*
-$(function() {
-$(document).scroll(function() {
-  var distancefromtop = $(this).scrollTop();
-  if (distancefromtop > $(window).height()*0.4) {
-    $('.about-myself').fadeTo( 1000, 1 );
-  } else {
-    $('.about-myself').fadeTo( 1000, 0 );
-  }
-});
+$(document).ready();
 
-*/
+$("img.lazy").lazyload();
+
+// ABOUT ME SECTION //
+
+var $about = $('#about p');
+
+ $about.waypoint(function(direction){
+ 	if (direction == 'down'){
+$about.addClass('intro');
+$about.removeClass('fadeOut');
+} else {
+	$about.removeClass('intro');
+	$about.addClass('fadeOut');
+}
+ }, {offset: '70%'});
 
 
-/*
-// Cache selectors
-var lastId,
- topMenu = $("#main-nav"),
- topMenuHeight = topMenu.outerHeight()+1,
- // All list items
- menuItems = topMenu.find("a"),
- // Anchors corresponding to menu items
- scrollItems = menuItems.map(function(){
-   var item = $($(this).attr("href"));
-    if (item.length) { return item; }
- });
+// SKILLS SECTION //
 
-// Bind click handler to menu items
-// so we can get a fancy scroll animation
-menuItems.click(function(e){
-  var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-  $('html, body').stop().animate({ 
-      scrollTop: offsetTop
-  }, 850);
-  e.preventDefault();
-});
+ var $skillstitle = $('.skillstitle');
 
-// Bind to scroll
-$(window).scroll(function(){
-   // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight;
-   
-   // Get id of current scroll item
-   var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
-   });
-   // Get the id of the current element
-   cur = cur[cur.length-1];
-   var id = cur && cur.length ? cur[0].id : "";
-   
-   if (lastId !== id) {
-       lastId = id;
-       // Set/remove active class
-       menuItems
-         .parent().removeClass("active")
-         .end().filter("[href=#"+id+"]").parent().addClass("active");
-   }                   
-});
-});
-/*
-$(function() {
-$(document).scroll(function() {
-  var distancefromtop = $(this).scrollTop();
-  if (distancefromtop > $(window).height()*2.6) {
-    $('.rig').animate({ opacity: 1 })
-  } else {
-    $('rig').animate({ opacity: 0 })
-  }
-});
-});
-});
+ $skillstitle.waypoint(function(direction){
+ 	if (direction == 'down'){
+$skillstitle.addClass('animated fadeIn');
+$skillstitle.removeClass('fadeOut');
+} else {
+	$skillstitle.removeClass('fadeIn');
+	$skillstitle.addClass('fadeOut');
+}
+ }, {offset: '70%'});
+
+
+var $listItemOne = $('#list-item-1');
+
+ $skillstitle.waypoint(function(direction){
+ 		if (direction == 'down'){
+$listItemOne.addClass('sideintro', 'delayed-text-1')
+$listItemOne.removeClass('animated fadeOut')
+} else {
+$listItemOne.removeClass('sideintro', 'delayed-text-1')
+$listItemOne.addClass('animated fadeOut')
+}
+ }, {offset: '60%'});
+
+
+ var $listItemTwo = $('#list-item-2');
+
+ $skillstitle.waypoint(function(direction){
+ 	if (direction == 'down'){
+$listItemTwo.addClass('sideintro', 'delayed-text-2')
+$listItemTwo.removeClass('animated fadeOut')
+ } else {
+ 	$listItemTwo.removeClass('sideintro', 'delayed-text-2')
+$listItemTwo.addClass('animated fadeOut')
+}
+}, {offset: '60%'});
+
+
+ var $listItemThree = $('#list-item-3');
+
+ $skillstitle.waypoint(function(direction){
+ 		if (direction == 'down'){
+$listItemThree.addClass('sideintro', 'delayed-text-3');
+$listItemThree.removeClass('animated fadeOut')
+ } else {
+ 	$listItemThree.removeClass('sideintro', 'delayed-text-3')
+$listItemThree.addClass('animated fadeOut')
+}
+}, {offset: '60%'});
+
+ var $listItemFour = $('#list-item-4');
+
+ $skillstitle.waypoint(function(direction){
+ 		if (direction == 'down'){
+$listItemFour.addClass('sideintro', 'delayed-text-4');
+$listItemFour.removeClass('animated fadeOut')
+ } else {
+ 	$listItemFour.removeClass('sideintro', 'delayed-text-4')
+$listItemFour.addClass('animated fadeOut')
+}
+}, {offset: '60%'});
+
+ var $listItemFive = $('#list-item-5');
+
+ $skillstitle.waypoint(function(direction){
+ 		if (direction == 'down'){
+$listItemFive.addClass('animated bounceInRight', 'delayed-text-5');
+$listItemFive.css('opacity' , 1);
+ } else {
+ 	$listItemFive.removeClass('animated bounceInRight', 'delayed-text-5')
+$listItemFive.css('opacity' , 0);
+}
+}, {offset: '60%'});
+
+
+var $listItemSix = $('#list-item-6');
+
+ $skillstitle.waypoint(function(direction){
+ 		if (direction == 'down'){
+$listItemSix.addClass('animated bounceInRight', 'delayed-text-6');
+$listItemSix.css('opacity' , 1);
+ } else {
+ 	$listItemSix.removeClass('bounceInRight', 'delayed-text-6')
+$listItemSix.css('opacity' , 0);
+}
+}, {offset: '60%'});
+
+
+  var $listItemSeven = $('#list-item-7');
+
+ $skillstitle.waypoint(function(direction){
+ 		if (direction == 'down'){
+$listItemSeven.addClass('animated bounceInRight', 'delayed-text-7');
+$listItemSeven.css('opacity' , 1);
+ } else {
+ 	$listItemSeven.removeClass('bounceInRight', 'delayed-text-7')
+$listItemSeven.css('opacity' , 0);
+}
+}, {offset: '60%'});
+
+var $listItemEight = $('#list-item-8');
+
+ $skillstitle.waypoint(function(direction){
+ 		if (direction == 'down'){
+$listItemEight.addClass('animated bounceInRight', 'delayed-text-8');
+$listItemEight.css('opacity' , 1);
+ } else {
+ 	$listItemEight.removeClass('bounceInRight', 'delayed-text-8')
+$listItemEight.css('opacity' , 0);
+}
+}, {offset: '60%'});
+
+
+//PROJECTS SECTION //
+
+ var $projectsGrid = $('#rig');
+
+ $projectsGrid.waypoint(function(direction){
+ 		if (direction == 'down'){
+$projectsGrid.addClass('intro');
+ 	$projectsGrid.removeClass('animated fadeOut')
+$projectsGrid.css('opacity' , 1);
+ } else {
+ 	$projectsGrid.addClass('animated fadeOut')
+$projectsGrid.css('opacity' , 0);
+}
+}, {offset: '60%'});
+
+// CONTACT SECTION //
+
+ var $contactMe = $('#contact-left');
+
+ $contactMe.waypoint(function(direction){
+ 		if (direction == 'down'){
+$contactMe.addClass('animated bounceInLeft slow');
+$contactMe.css('opacity' , 1);
+ } else {
+ 	$contactMe.removeClass('bounceInLeft')
+$contactMe.css('opacity' , 0);
+}
+}, {offset: '60%'});
+
+
+var $emailBtn = $('#contactbutton');
+
+ $emailBtn.waypoint(function(direction){
+ 		if (direction == 'down'){
+$emailBtn.addClass('animated bounceInRight slow');
+$emailBtn.css('opacity' , 1);
+ } else {
+ 	$emailBtn.removeClass('bounceInRight')
+$emailBtn.css('opacity' , 0);
+}
+}, {offset: '60%'});
+
+
+var $socialOne = $('.fa-twitter');
+
+ $socialOne.waypoint(function(direction){
+ 		if (direction == 'down'){
+$socialOne.addClass('animated bounceInRight', 'delayed-text-1')
+$socialOne.css('opacity' , 1);
+} else {
+$socialOne.removeClass('animated bounceInRight', 'delayed-text-1')
+$socialOne.css('opacity' , 0);
+}
+ }, {offset: '70%'});
+
+
+var $socialOne = $('.fa-twitter');
+
+ $socialOne.waypoint(function(direction){
+ 		if (direction == 'down'){
+$socialOne.addClass('animated bounceInRight', 'delayed-text-1')
+$socialOne.css('opacity' , 1);
+} else {
+$socialOne.removeClass('animated bounceInRight', 'delayed-text-1')
+$socialOne.css('opacity' , 0);
+}
+ }, {offset: '70%'});
+
+var $socialTwo = $('.fa-instagram');
+
+ $socialTwo.waypoint(function(direction){
+ 		if (direction == 'down'){
+$socialTwo.addClass('animated bounceInRight', 'delayed-text-2')
+$socialTwo.css('opacity' , 1);
+} else {
+$socialTwo.removeClass('animated bounceInRight', 'delayed-text-2')
+$socialTwo.css('opacity' , 0);
+}
+ }, {offset: '70%'});
+
+var $socialThree = $('.fa-flickr');
+
+ $socialThree.waypoint(function(direction){
+ 		if (direction == 'down'){
+$socialThree.addClass('animated bounceInRight', 'delayed-text-3')
+$socialThree.css('opacity' , 1);
+} else {
+$socialThree.removeClass('animated bounceInRight', 'delayed-text-3')
+$socialThree.css('opacity' , 0);
+}
+ }, {offset: '70%'});
+
+var $socialFour = $('.fa-linkedin-square');
+
+ $socialThree.waypoint(function(direction){
+ 		if (direction == 'down'){
+$socialFour.addClass('animated bounceInRight', 'delayed-text-4')
+$socialFour.css('opacity' , 1);
+} else {
+$socialFour.removeClass('animated bounceInRight', 'delayed-text-4')
+$socialFour.css('opacity' , 0);
+}
+ }, {offset: '70%'});
+
+var $socialFive = $('.fa-github');
+
+ $socialFive.waypoint(function(direction){
+ 		if (direction == 'down'){
+$socialFive.addClass('animated bounceInRight', 'delayed-text-5')
+$socialFive.css('opacity' , 1);
+} else {
+$socialFive.removeClass('animated bounceInRight', 'delayed-text-5')
+$socialFive.css('opacity' , 0);
+}
+ }, {offset: '70%'});
+

@@ -28,6 +28,7 @@
                 topOffset: 900,
                 transitionStyle: 'fade',
                 stickyAlready: false
+                this.pageSections = $(".section");
             }, options);
         // Initial state
         $elem
@@ -43,6 +44,26 @@
             settings.topOffset = 0;
             stick();
         }
+
+
+
+
+
+
+createPageSectionWaypoints(){
+  this.pageSections.each(function(){
+    var currentPageSection = this;
+new Waypoint({
+  element: currentPageSection,
+  handler: function(){
+    var matchingHeaderLink = currentPageSection.getAttribute("#about-link")
+    $(matchingHeaderLink).addClass("active");
+  }
+});
+
+
+  });
+}
 
         $elemTopOffset = $elem.offset().top;
 
