@@ -2,6 +2,35 @@ $(document).ready();
 
 $("img.lazy").lazyload();
 
+
+
+
+
+// RESPONSIVE NAVIGATION //
+
+ var $aboutSection = $('#about');
+var $aboutSectionLink = $('#about-link');
+ $aboutSection.waypoint(function(){	
+$aboutSectionLink.addClass('active');
+}, {offset: '0%'});
+
+
+
+
+
+
+ var $aboutSection = $('#about');
+var $mouse = $('.mouse');
+
+ $aboutSection.waypoint(function(direction){
+ 	if (direction == 'down'){
+$mouse.addClass('animated fadeOut');
+} else {
+	$mouse.removeClass('animated fadeOut');
+}
+ }, {offset: '80%'});
+
+
 // ABOUT ME SECTION //
 
 var $about = $('#about p');
@@ -23,10 +52,10 @@ $about.removeClass('fadeOut');
 
  $skillstitle.waypoint(function(direction){
  	if (direction == 'down'){
-$skillstitle.addClass('animated fadeIn');
+$skillstitle.addClass('intro');
 $skillstitle.removeClass('fadeOut');
 } else {
-	$skillstitle.removeClass('fadeIn');
+	$skillstitle.removeClass('intro');
 	$skillstitle.addClass('fadeOut');
 }
  }, {offset: '70%'});
@@ -86,11 +115,11 @@ $listItemFour.addClass('animated fadeOut')
 
  $skillstitle.waypoint(function(direction){
  		if (direction == 'down'){
-$listItemFive.addClass('animated bounceInRight', 'delayed-text-5');
-$listItemFive.css('opacity' , 1);
+$listItemFive.addClass('sideintro', 'delayed-text-5');
+$listItemFive.removeClass('animated fadeOut')
  } else {
- 	$listItemFive.removeClass('animated bounceInRight', 'delayed-text-5')
-$listItemFive.css('opacity' , 0);
+ 	$listItemFive.removeClass('sideintro', 'delayed-text-5')
+$listItemFive.addClass('animated fadeOut')
 }
 }, {offset: '60%'});
 
@@ -99,11 +128,11 @@ var $listItemSix = $('#list-item-6');
 
  $skillstitle.waypoint(function(direction){
  		if (direction == 'down'){
-$listItemSix.addClass('animated bounceInRight', 'delayed-text-6');
-$listItemSix.css('opacity' , 1);
+$listItemSix.addClass('sideintro', 'delayed-text-6');
+$listItemSix.removeClass('animated fadeOut')
  } else {
- 	$listItemSix.removeClass('bounceInRight', 'delayed-text-6')
-$listItemSix.css('opacity' , 0);
+ 	$listItemSix.removeClass('sideintro', 'delayed-text-6')
+$listItemSix.addClass('animated fadeOut')
 }
 }, {offset: '60%'});
 
@@ -112,11 +141,11 @@ $listItemSix.css('opacity' , 0);
 
  $skillstitle.waypoint(function(direction){
  		if (direction == 'down'){
-$listItemSeven.addClass('animated bounceInRight', 'delayed-text-7');
-$listItemSeven.css('opacity' , 1);
+$listItemSeven.addClass('sideintro', 'delayed-text-7');
+$listItemSeven.removeClass('animated fadeOut')
  } else {
- 	$listItemSeven.removeClass('bounceInRight', 'delayed-text-7')
-$listItemSeven.css('opacity' , 0);
+ 	$listItemSeven.removeClass('sideintro', 'delayed-text-7')
+$listItemSeven.addClass('animated fadeOut')
 }
 }, {offset: '60%'});
 
@@ -124,16 +153,17 @@ var $listItemEight = $('#list-item-8');
 
  $skillstitle.waypoint(function(direction){
  		if (direction == 'down'){
-$listItemEight.addClass('animated bounceInRight', 'delayed-text-8');
-$listItemEight.css('opacity' , 1);
+$listItemEight.addClass('sideintro', 'delayed-text-8');
+$listItemEight.removeClass('animated fadeOut')
  } else {
- 	$listItemEight.removeClass('bounceInRight', 'delayed-text-8')
-$listItemEight.css('opacity' , 0);
+ 	$listItemEight.removeClass('sideintro', 'delayed-text-8')
+$listItemEight.addClass('animated fadeOut')
 }
 }, {offset: '60%'});
 
 
 //PROJECTS SECTION //
+
 
  var $projectsGrid = $('#rig');
 
@@ -148,104 +178,92 @@ $projectsGrid.css('opacity' , 0);
 }
 }, {offset: '60%'});
 
+
 // CONTACT SECTION //
 
  var $contactMe = $('#contact-left');
 
  $contactMe.waypoint(function(direction){
  		if (direction == 'down'){
-$contactMe.addClass('animated bounceInLeft slow');
-$contactMe.css('opacity' , 1);
+$contactMe.addClass('intro');
+$contactMe.removeClass('animated fadeOut');
  } else {
- 	$contactMe.removeClass('bounceInLeft')
-$contactMe.css('opacity' , 0);
+ 	$contactMe.removeClass('intro')
+$contactMe.addClass('animated fadeOut');
 }
-}, {offset: '60%'});
+}, {offset: '80%'});
 
 
 var $emailBtn = $('#contactbutton');
 
  $emailBtn.waypoint(function(direction){
  		if (direction == 'down'){
-$emailBtn.addClass('animated bounceInRight slow');
-$emailBtn.css('opacity' , 1);
+$emailBtn.addClass('intro');
+$emailBtn.removeClass('animated fadeOut');
  } else {
- 	$emailBtn.removeClass('bounceInRight')
-$emailBtn.css('opacity' , 0);
+ 	$emailBtn.removeClass('intro')
+ 	$emailBtn.addClass('animated fadeOut');
 }
-}, {offset: '60%'});
+}, {offset: '80%'});
 
 
 var $socialOne = $('.fa-twitter');
 
  $socialOne.waypoint(function(direction){
  		if (direction == 'down'){
-$socialOne.addClass('animated bounceInRight', 'delayed-text-1')
-$socialOne.css('opacity' , 1);
+$socialOne.addClass('sideintro', 'delayed-text-1')
+$socialOne.removeClass('animated fadeOut')
 } else {
-$socialOne.removeClass('animated bounceInRight', 'delayed-text-1')
-$socialOne.css('opacity' , 0);
+$socialOne.removeClass('sideintro', 'delayed-text-1')
+$socialOne.addClass('animated fadeOut')
 }
- }, {offset: '70%'});
-
-
-var $socialOne = $('.fa-twitter');
-
- $socialOne.waypoint(function(direction){
- 		if (direction == 'down'){
-$socialOne.addClass('animated bounceInRight', 'delayed-text-1')
-$socialOne.css('opacity' , 1);
-} else {
-$socialOne.removeClass('animated bounceInRight', 'delayed-text-1')
-$socialOne.css('opacity' , 0);
-}
- }, {offset: '70%'});
+ }, {offset: '80%'});
 
 var $socialTwo = $('.fa-instagram');
 
  $socialTwo.waypoint(function(direction){
  		if (direction == 'down'){
-$socialTwo.addClass('animated bounceInRight', 'delayed-text-2')
-$socialTwo.css('opacity' , 1);
+$socialTwo.addClass('sideintro', 'delayed-text-2')
+$socialTwo.removeClass('animated fadeOut')
 } else {
-$socialTwo.removeClass('animated bounceInRight', 'delayed-text-2')
-$socialTwo.css('opacity' , 0);
+$socialTwo.removeClass('sideintro', 'delayed-text-2')
+$socialTwo.addClass('animated fadeOut')
 }
- }, {offset: '70%'});
+ }, {offset: '80%'});
 
 var $socialThree = $('.fa-flickr');
 
  $socialThree.waypoint(function(direction){
  		if (direction == 'down'){
-$socialThree.addClass('animated bounceInRight', 'delayed-text-3')
-$socialThree.css('opacity' , 1);
+$socialThree.addClass('sideintro', 'delayed-text-3')
+$socialThree.removeClass('animated fadeOut')
 } else {
-$socialThree.removeClass('animated bounceInRight', 'delayed-text-3')
-$socialThree.css('opacity' , 0);
+$socialThree.removeClass('sideintro', 'delayed-text-3')
+$socialThree.addClass('animated fadeOut')
 }
- }, {offset: '70%'});
+ }, {offset: '80%'});
 
 var $socialFour = $('.fa-linkedin-square');
 
- $socialThree.waypoint(function(direction){
+ $socialFour.waypoint(function(direction){
  		if (direction == 'down'){
-$socialFour.addClass('animated bounceInRight', 'delayed-text-4')
-$socialFour.css('opacity' , 1);
+$socialFour.addClass('sideintro', 'delayed-text-4')
+$socialFour.removeClass('animated fadeOut')
 } else {
-$socialFour.removeClass('animated bounceInRight', 'delayed-text-4')
-$socialFour.css('opacity' , 0);
+$socialFour.removeClass('sideintro', 'delayed-text-4')
+$socialFour.addClass('animated fadeOut')
 }
- }, {offset: '70%'});
+ }, {offset: '80%'});
 
 var $socialFive = $('.fa-github');
 
  $socialFive.waypoint(function(direction){
  		if (direction == 'down'){
-$socialFive.addClass('animated bounceInRight', 'delayed-text-5')
-$socialFive.css('opacity' , 1);
+$socialFive.addClass('sideintro', 'delayed-text-5')
+$socialFive.removeClass('animated fadeOut')
 } else {
-$socialFive.removeClass('animated bounceInRight', 'delayed-text-5')
-$socialFive.css('opacity' , 0);
+$socialFive.removeClass('sideintro', 'delayed-text-5')
+$socialFive.addClass('animated fadeOut')
 }
- }, {offset: '70%'});
+ }, {offset: '80%'});
 
