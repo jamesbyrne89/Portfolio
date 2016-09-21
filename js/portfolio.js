@@ -3,20 +3,34 @@ $(document).ready();
 $("img.lazy").lazyload();
 
 
+var $welcome = $('#welcome-container');
+
+ $welcome.waypoint(function(direction){
+ 	if (direction == 'up'){
+$welcome.addClass('intro');
+$welcome.removeClass('fadeOut');
+} else {
+	$welcome.removeClass('intro');
+	$welcome.addClass('fadeOut');
+}
+ }, {offset: '2%'});
 
 
 
 // RESPONSIVE NAVIGATION //
 
- var $aboutSection = $('#about');
-var $aboutSectionLink = $('#about-link');
- $aboutSection.waypoint(function(){	
-$aboutSectionLink.addClass('active');
-}, {offset: '0%'});
+$(window).scroll(function(){
+         var sticky = $('header'),
+         scroll = $(window).scrollTop();
+        if (scroll >= 850){
+            sticky.addClass('fixed');
+            sticky.fadeIn(100);
+        }else{
+            sticky.removeClass('fixed');
 
-
-
-
+            sticky.removeAttr("style"); //slideDown adds the style="block" which needs to be removed so that next time slideDown will work
+        }
+    });
 
 
  var $aboutSection = $('#about');
@@ -25,7 +39,7 @@ var $mouse = $('.mouse');
  $aboutSection.waypoint(function(direction){
  	if (direction == 'down'){
 $mouse.addClass('animated fadeOut');
-} else {
+}else {
 	$mouse.removeClass('animated fadeOut');
 }
  }, {offset: '80%'});
@@ -51,12 +65,12 @@ $about.removeClass('fadeOut');
  var $skillstitle = $('.skillstitle');
 
  $skillstitle.waypoint(function(direction){
- 	if (direction == 'down'){
+ 	if (direction == 'up'){
+ 			$skillstitle.removeClass('intro');
+	$skillstitle.addClass('fadeOut');
+} else {
 $skillstitle.addClass('intro');
 $skillstitle.removeClass('fadeOut');
-} else {
-	$skillstitle.removeClass('intro');
-	$skillstitle.addClass('fadeOut');
 }
  }, {offset: '70%'});
 
@@ -191,7 +205,7 @@ $contactMe.removeClass('animated fadeOut');
  	$contactMe.removeClass('intro')
 $contactMe.addClass('animated fadeOut');
 }
-}, {offset: '80%'});
+}, {offset: '75%'});
 
 
 var $emailBtn = $('#contactbutton');
@@ -204,7 +218,7 @@ $emailBtn.removeClass('animated fadeOut');
  	$emailBtn.removeClass('intro')
  	$emailBtn.addClass('animated fadeOut');
 }
-}, {offset: '80%'});
+}, {offset: '75%'});
 
 
 var $socialOne = $('.fa-twitter');
@@ -217,7 +231,7 @@ $socialOne.removeClass('animated fadeOut')
 $socialOne.removeClass('sideintro', 'delayed-text-1')
 $socialOne.addClass('animated fadeOut')
 }
- }, {offset: '80%'});
+ }, {offset: '75%'});
 
 var $socialTwo = $('.fa-instagram');
 
@@ -229,7 +243,7 @@ $socialTwo.removeClass('animated fadeOut')
 $socialTwo.removeClass('sideintro', 'delayed-text-2')
 $socialTwo.addClass('animated fadeOut')
 }
- }, {offset: '80%'});
+ }, {offset: '75%'});
 
 var $socialThree = $('.fa-flickr');
 
@@ -241,7 +255,7 @@ $socialThree.removeClass('animated fadeOut')
 $socialThree.removeClass('sideintro', 'delayed-text-3')
 $socialThree.addClass('animated fadeOut')
 }
- }, {offset: '80%'});
+ }, {offset: '75%'});
 
 var $socialFour = $('.fa-linkedin-square');
 
@@ -253,7 +267,7 @@ $socialFour.removeClass('animated fadeOut')
 $socialFour.removeClass('sideintro', 'delayed-text-4')
 $socialFour.addClass('animated fadeOut')
 }
- }, {offset: '80%'});
+ }, {offset: '75%'});
 
 var $socialFive = $('.fa-github');
 
@@ -265,5 +279,5 @@ $socialFive.removeClass('animated fadeOut')
 $socialFive.removeClass('sideintro', 'delayed-text-5')
 $socialFive.addClass('animated fadeOut')
 }
- }, {offset: '80%'});
+ }, {offset: '75%'});
 

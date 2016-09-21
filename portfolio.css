@@ -63,6 +63,7 @@ header {
 .stick-me .not-sticking {
 	position: absolute;
 	left: 0px;
+	    box-shadow: 0px 1px 5px rgba(0,0,0,0.20);
 }
 
 #logo, #logo:hover, nav ul li #logo:hover{
@@ -163,6 +164,18 @@ nav ul li:hover:after {
 	border-bottom: thick solid rgba(0,255,0,0.5);
 }
 
+.fixed{
+    position: fixed;
+    z-index: 1;
+    display:none;
+    -webkit-transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+    transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+    -webkit-transition-property: background-color, -webkit-backdrop-filter;
+    transition-property: background-color, -webkit-backdrop-filter;
+    transition-property: background-color, backdrop-filter;
+    transition-property: background-color, backdrop-filter, -webkit-backdrop-filter;
+}
+
 
 /* ***** GENERAL STYLES ***** */
 
@@ -223,6 +236,12 @@ display:block;
 	margin-bottom: 60px;
 }
 
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+    animation-fill-mode: forwards;
+}
+
 /* ***** WELCOME SECTION ***** */
 
 #welcome {
@@ -231,6 +250,7 @@ display:block;
 	min-height: 100vh;
 	max-height: 100vh;
 	overflow-y: none;
+	padding-top: 30vh;
 	box-sizing: border-box;
 	margin: 0px ;
 	}
@@ -243,10 +263,7 @@ display:block;
 	font-weight: bold;
 	text-align: center;
 	padding-left: 100px;
-	padding-top: 30vh;
-	  -webkit-animation: intro 1s;
-  animation: intro 1s;
-
+	 animation-fill-mode: forwards;
 }
 
 
@@ -386,10 +403,10 @@ body {
 	font-size: 26px;
 	font-weight: bold;
 	text-align: left;
-	margin: 200px 200px;
-	max-height: 100vh;
+	margin: 160px auto 100px auto;
 	box-sizing: border-box;
 	opacity: 0;
+	width: 60vw;
 }
 
 /* ***** SKILLS SECTION ***** */
@@ -401,13 +418,18 @@ body {
 	font-size: 26px;
 	font-weight: bold;
 	text-align: left;
-	padding: 70px 200px;
+	padding: 100px 200px;
 	min-height: 75vh;
 	box-sizing: border-box;
 }
 
+#skills ul {
+	color: #efefef;
+	    font-size: 26px;
+}
+
 .col-md-6 {
-	margin: 140px 0px 200px 0px;
+	margin: 100px 0px 100px 0px;
 	    box-sizing: border-box;
 }
 
@@ -488,6 +510,11 @@ transition:all 1s;
 
 #skills ul li {
 	margin-bottom: 20px;
+		color: #efefef;
+	    font-size: 26px;
+}
+
+
 }
 
 .skillstitle {
@@ -498,6 +525,7 @@ transition:all 1s;
 	-webkit-animation-duration: 1.5s;
 animation-duration: 1.5s;
   animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .container-fluid {
@@ -527,7 +555,7 @@ font-family: 'Avenir-Book', serif;
 
 #rig {
     max-width:100%;
-    margin: 100px auto; /*center aligned*/
+    margin: 160px auto 100px auto; /*center aligned*/
     padding:0;
     font-size:0; /* Remember to change it back to normal font size if have captions */
     list-style:none;
@@ -639,7 +667,7 @@ font-family: 'Avenir-Book', serif;
     width:100%;
     text-align:center;
     text-transform:none;
-    font-size:16px;
+    font-size:18px;
     font-weight: 300;
     font-family: 'Avenir-Black', sans-serif;
  	z-index: 999;
@@ -708,7 +736,7 @@ font-family: 'Avenir-Book', serif;
 	margin: 10px auto;
 	position: absolute;
 	top:60%;
-	left:calc(47% - 2px);
+	left:calc(48% - 2px);
 }
 
 .fa-link:hover {
@@ -770,6 +798,10 @@ font-family: 'Avenir-Book', serif;
 	margin-bottom: 50px;
 }
 
+#contact-right{
+	padding-left: 80px;
+}
+
 
 #contactbutton a {
 	margin: 0px auto 100px auto;
@@ -782,7 +814,7 @@ font-family: 'Avenir-Book', serif;
     letter-spacing: 2px;
     padding: 30px;
     text-align: center;
-    width: 300px;
+    width: 280px;
     color: #1A1D1A;
     border: solid 4px #fff;
     display: inline-block;
@@ -797,7 +829,7 @@ font-family: 'Avenir-Book', serif;
 		font-weight: 800;
 		font-size: 16px;
 		padding: 30px;
-		width: 300px ;
+		width: 280px ;
 		color: #fff;
 		background-color: transparent;
 		border: solid 4px #fff ;
@@ -824,10 +856,10 @@ font-family: 'Avenir-Book', serif;
 
 #social-container ul {
 	height: 50px;
-	width:  322px;
+	width:  302px;
 	text-align: left;
 	padding: 0px;
-	margin: 0px;
+	margin-left: 0px;
 
 }
 
@@ -868,7 +900,7 @@ font-family: 'Avenir-Book', serif;
 
 footer {
 	color: #a9a9a9;
-	background-color: #0A1612 ;
+	background-color: #fff;
 	text-align: center;
 	display: block;
 	margin: auto;
@@ -1017,21 +1049,28 @@ float: none;
 	}
 
 	#about {
-		height: 100vh;
-		max-height: 100vh;
+		min-height: 100vh;
+		max-height: auto;
+		
 	}
 
 #about p {
+	height: auto;
 	width: 90vw;
 	margin: 2vw 1vh;
 	box-sizing: border-box;
-	font-size: 2.75rem;
+	font-size: 2.5rem;
 }
 #contact-wrapper {
 	margin-top: 0px;
 }
 #contact-left {
 		 padding: 70px  1vh;
+}
+
+#contact-right {
+		 padding: 0px;
+		 text-align: left;
 }
 
 #contactbutton, #contactbutton a, #contactbutton a:hover {

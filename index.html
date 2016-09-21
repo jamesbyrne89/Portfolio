@@ -3,15 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>James Byrne | Front End Web Developer in London</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel=”icon” type=”image/x-icon” href=”/favicon.ico”>
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="portfolio.css">
         <link rel="stylesheet" href="animate.css">
+        <link rel="stylesheet" href="normalize.css">
         <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/kissui.scrollanim/0.3.0/scrollanim.min.css">
        
         <!-- FONTS -->
@@ -37,18 +38,18 @@
   
 <nav>
  <ul>
-    <a id="#about-link" href="#about" title="About"><li>About</li></a>
-    <a href="#skills" title="Skills"><li>Skills</li></a>            
+    <a id="#about-link" data-scroll href="#about" title="About"><li>About</li></a>
+    <a href="#skills" data-scroll title="Skills"><li>Skills</li></a>            
     <li class="logo"><img id="logo" src="img/JB-logo.png"></li>
-    <a href="#projects" title="Projects"><li>Projects</li></a>
-    <a href="#contact" title="Contact"><li>Contact</li></a>
+    <a href="#projects" data-scroll title="Projects"><li>Projects</li></a>
+    <a href="#contact" data-scroll title="Contact"><li>Contact</li></a>
  </ul>   
 
  </nav></header>
 <div id="main-container">
     <section id="welcome" class="section">
-<div id="welcome-container" class="slideInUp">Hi, I'm James.
-<br>Front-end developer.
+<div id="welcome-container">Hi, I'm James,
+<br> a front-end developer.
 <br>Welcome to my site.
 </div>
 <div class="mouse">
@@ -62,15 +63,16 @@
 <a href="#about" title="About"></a>
     <span class="section-header">About me</span><hr class="hr"/>
 
-        <p class="about-myself">I'm an aspiring front end developer with a passion for crafting beautiful experiences on the web.<br>
-    I love clean, minimalist design that's a joy to use.
-    <br>
+        <p class="about-myself">I'm an aspiring front end developer based in London, with a passion for crafting beautiful experiences on the web.<br><br>
+    I love clean, simple and occasionally minimalist design that's a joy to use.<br><br>
+    When I'm not writing code you can find me in the gym, out and about with my camera, or planning my next oversea adventure.
+    <br><br>
     Take a look at my work and drop me a line if you'd like to enquire about my services.</p></section>
 
-
+ <a href="#skills" title="Skills"></a>
     <section id="skills" class="section"><span class="section-header">Skills</span><hr class="hr">
 
-        <a href="#skills" title="Skills"></a>
+       
     <div class="container-fluid">
  <div class="row">
        <div class="col-md-6"><span class="skillstitle">This is what I know:</span></div><ul>
@@ -229,7 +231,7 @@
        <div class="col-lg-8" id="contact-left">
     If you like what you see and think I could help you, feel free to drop me an email, or get in touch through social media.<br>
 </div>
-  <div class="col-lg-4">
+  <div class="col-lg-4" id="contact-right">
   <div id="contactbutton"><a href="mailto:mail@jamestbyrne.com">Email me</a></div>
 <div id="social-container">
 <ul>
@@ -265,13 +267,20 @@ Site design by James Byrne. © 2016
 </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script type="text/javascript" src="js/sticky-header.js"></script>
-
+      <script src="js/smooth-scroll.js"></script>
 <script>
         
             $(document).ready(function(){
   $('header').stickMe(); // Yes, that's it!
 })
-             </script>
+
+</script>
+
+            
+            <script>
+    smoothScroll.init();
+    </script>
+
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
@@ -279,7 +288,7 @@ Site design by James Byrne. © 2016
         <script type="text/javascript" src="js/fullPage.js-master/jquery.fullPage.min.js"></script>
         <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
          <script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
-        
+  
          <script type="text/javascript" src="js/portfolio.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
