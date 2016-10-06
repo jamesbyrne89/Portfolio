@@ -207,9 +207,10 @@ height: 8vh;
 	min-height: 245px !important;
  max-height: 400px !important;
  box-shadow: inset  320px 0 0 0  #fff;
-	-webkit-transition: all ease 0.3s;
-	-moz-transition: all ease 0.3s;
-	    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,1) 30%, #000 50%, rgba(0,0,0,1) 70%);
+ transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+	    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,1) 30%, #0A1612 50%, rgba(0,0,0,1) 70%);
   -webkit-mask-size: 200%;
   animation: shine 2.5s infinite;
 
@@ -293,14 +294,23 @@ nav ul li, nav ul li a, nav ul li a:hover {
 }
 
 nav ul li a:hover {
- background-color: #1a2930;
+ background-color: #fff;
  text-decoration: none;
  border-bottom: none;
  margin: 0px;
- color: #f7ce36;
+ color: #0A1612;
  -webkit-transition: all 200ms ease-in;
  -moz-transition: all 200ms ease-in;
  transition: all 200ms ease-in;
+}
+
+.main_h a  {
+    color: #a9a9a9;
+    text-decoration: none;
+}
+
+.main_h a, .main_h a:visited, .main_h a:hover {
+  text-decoration: none;
 }
 
 .logo {
@@ -330,11 +340,11 @@ nav ul a {
  font-size: 20px;
  position: absolute;
  right: 22px;
- top: 10;
+ top: 10px;
  width: 30px;
- -webkit-transition: all 300ms ease-in;
- -moz-transition: all 300ms ease-in;
- transition: all 300ms ease-in;
+ -webkit-transition: all 150ms ease-in;
+ -moz-transition: all 150ms ease-in;
+ transition: all 150ms ease-in;
 }
 }
 
@@ -345,7 +355,7 @@ nav ul a {
 .mobile-toggle {
  display: block;
 }
-}
+
 
 .mobile-toggle span {
  width: 25px;
@@ -361,7 +371,7 @@ nav ul a {
 	border-bottom: thick solid rgba(0,255,0,0.5);
 }
 
-.fixed{
+.fixed {
     position: fixed;
     z-index: 1;
     display:none;
@@ -456,7 +466,7 @@ display:block;
 	text-align: left;
 	min-height: 100vh;
 	max-height: 100vh;
-	overflow-y: none;
+	overflow-y: hidden;
 	padding-top: 30vh;
 	box-sizing: border-box;
 	margin: 0px ;
@@ -720,9 +730,8 @@ transition:all 1s;
 		color: #efefef;
 	    font-size: 26px;
 }
-
-
 }
+
 
 .skillstitle {
 
@@ -768,9 +777,9 @@ font-family: 'Avenir-Book', serif;
     list-style:none;
     background-color:transparent;
 }
+
 #rig li {
     display: inline-block;
-    *display:inline;/*for IE6 - IE7*/
     width:25%;
     max-height: 440px;
     vertical-align:middle;
@@ -781,6 +790,7 @@ font-family: 'Avenir-Book', serif;
 }
         
 /* The wrapper for each item */
+
 .rig-cell {
     /*margin:12px;
     box-shadow:0 0 6px rgba(0,0,0,0.3);*/
@@ -1375,5 +1385,5 @@ animation-delay: 0.5s;
     font-size: 1.0em;
     line-height: .75em;
     vertical-align: -15%;
-
+}
 }
