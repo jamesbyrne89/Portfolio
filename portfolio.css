@@ -895,9 +895,10 @@ font-family: 'Avenir-Book', serif;
     transition:all .3s;
 }
 
-.rig-text a:hover {
+.rig-text p:hover {
 	text-decoration: none;
 	color: #1a2930;
+  transition:all .3s;
 }
 
 #rig li:hover .rig-text {
