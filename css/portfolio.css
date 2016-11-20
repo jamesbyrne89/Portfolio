@@ -967,7 +967,7 @@ font-family: 'Avenir-Book', serif;
 	border: solid 2px #fff;
 	padding: 6px;
 	border-radius: 50%;
-	margin: 10px auto;
+	margin: 0px auto 10px auto;
 	position: absolute;
 	top:58%;
 	left:calc(50% - 15px);
@@ -977,7 +977,7 @@ font-family: 'Avenir-Book', serif;
 	border: solid 2px #1a2930;
 	padding: 6px;
 	border-radius: 50%;
-	margin: 10px auto;
+	margin: 0px auto 10px auto;
 	color: #1a2930;
 	  transition: all .5s;
 }
