@@ -610,7 +610,7 @@ body {
 	font-weight: bold;
 	text-align: left;
 	padding: 100px 200px;
-	max-height: 100vh;
+	height: auto;
 	box-sizing: border-box;
 }
 
