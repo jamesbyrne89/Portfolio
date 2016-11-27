@@ -237,7 +237,7 @@ $contactMe.removeClass('animated fadeOut');
  	$contactMe.removeClass('intro')
 $contactMe.addClass('animated fadeOut');
 }
-}, {offset: '75%'});
+}, {offset: '70%'});
 
 
 var $emailBtn = $('#contactbutton');
@@ -250,7 +250,7 @@ $emailBtn.removeClass('animated fadeOut');
  	$emailBtn.removeClass('intro')
  	$emailBtn.addClass('animated fadeOut');
 }
-}, {offset: '75%'});
+}, {offset: '70%'});
 
 
 var $socialOne = $('.fa-twitter');
@@ -263,7 +263,7 @@ $socialOne.removeClass('animated fadeOut')
 $socialOne.removeClass('sideintro', 'delayed-text-1')
 $socialOne.addClass('animated fadeOut')
 }
- }, {offset: '75%'});
+ }, {offset: '70%'});
 
 var $socialTwo = $('.fa-instagram');
 
@@ -275,7 +275,7 @@ $socialTwo.removeClass('animated fadeOut')
 $socialTwo.removeClass('sideintro', 'delayed-text-2')
 $socialTwo.addClass('animated fadeOut')
 }
- }, {offset: '75%'});
+ }, {offset: '70%'});
 
 var $socialThree = $('.fa-flickr');
 
@@ -287,7 +287,7 @@ $socialThree.removeClass('animated fadeOut')
 $socialThree.removeClass('sideintro', 'delayed-text-3')
 $socialThree.addClass('animated fadeOut')
 }
- }, {offset: '75%'});
+ }, {offset: '70%'});
 
 var $socialFour = $('.fa-linkedin-square');
 
@@ -299,7 +299,7 @@ $socialFour.removeClass('animated fadeOut')
 $socialFour.removeClass('sideintro', 'delayed-text-4')
 $socialFour.addClass('animated fadeOut')
 }
- }, {offset: '75%'});
+ }, {offset: '70%'});
 
 var $socialFive = $('.fa-github');
 
@@ -311,5 +311,5 @@ $socialFive.removeClass('animated fadeOut')
 $socialFive.removeClass('sideintro', 'delayed-text-5')
 $socialFive.addClass('animated fadeOut')
 }
- }, {offset: '75%'});
+ }, {offset: '70%'});
 

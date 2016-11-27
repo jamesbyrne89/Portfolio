@@ -83,7 +83,8 @@
 	width:  302px;
 	text-align: left;
 	padding: 0px;
-
+	display: flex;
+		justify-content: space-around;
 
 }
 

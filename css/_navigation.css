@@ -40,6 +40,8 @@ nav ul {
 	bottom: 40px;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
+flex: 1 0 auto;
 		padding: 10px 0px 20px 0px;
 		text-align: center;
 	 transition: all .5s ease-in-out;
