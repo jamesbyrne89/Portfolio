@@ -1,0 +1,10 @@
+/* ***** RESETS ***** */
+
+html {
+	margin: 0px;
+}
+body 
+{
+	margin: 0px;
+	overflow-x: hidden;
+}
