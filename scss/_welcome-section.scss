@@ -1,0 +1,66 @@
+// ***** WELCOME SECTION *****
+
+@import '_variables.scss';
+
+#welcome {
+    background-color: $navyBackground;
+    text-align: left;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: hidden;
+    padding-top: 30vh;
+    box-sizing: border-box;
+    margin: 0px;
+}
+#welcome-container {
+    color: $yellow;
+    background-color: transparent;
+    font-family: 'Avenir-Black', sans-serif;
+    font-size: 8rem;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 100px;
+    animation-fill-mode: forwards;
+}
+body {
+    margin: 0;
+    background-color: #1d1f20;
+}
+.mouse {
+    position: absolute;
+    width: 22px;
+    height: 42px;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -12px;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    -webkit-animation: intro 2s;
+    animation: intro 2s;
+}
+.scroll {
+    display: block;
+    width: 3px;
+    height: 3px;
+    margin: 6px auto;
+    border-radius: 4px;
+    background: #fff;
+    -webkit-animation: finger 1s infinite;
+    animation: finger 1s infinite;
+}
+.stick-me .sticking {
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+.sideintro {
+    -webkit-animation: sideintro 3s;
+    animation: sideintro 3s;
+    animation-fill-mode: backwards;
+}
+.intro {
+    -webkit-animation: intro 1s;
+    animation: intro 1s;
+    animation-fill-mode: forwards;
+}

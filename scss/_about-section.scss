@@ -1,0 +1,25 @@
+/* ***** ABOUT SECTION ***** */
+
+#about {
+    color: #a9a9a9;
+    background-color: #efefef;
+    font-family: 'Avenir-Book', serif;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+    padding: 100px 200px;
+    height: auto;
+    box-sizing: border-box;
+
+         p {
+            color: #a9a9a9;
+            font-family: 'Avenir-Book', serif;
+            font-size: 26px;
+            font-weight: bold;
+            text-align: left;
+            margin: 160px auto 100px auto;
+            box-sizing: border-box;
+            opacity: 0;
+            width: 60vw;
+        }
+}

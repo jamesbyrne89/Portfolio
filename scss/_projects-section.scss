@@ -1,0 +1,231 @@
+/* ***** PROJECTS SECTION ***** */
+
+#projects {
+    color: #a9a9a9;
+    background-color: #efefef;
+    font-family: 'Avenir-Book', serif;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+    padding: 100px 0px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+#rig {
+    max-width: 100%;
+    margin: 160px auto 100px auto;
+    /*center aligned*/
+    
+    padding: 0;
+    font-size: 0;
+    /* Remember to change it back to normal font size if have captions */
+    
+    list-style: none;
+    background-color: transparent;
+
+        li {
+            display: inline-block;
+            width: 25%;
+            max-height: 440px;
+            vertical-align: middle;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: $navyBackground;
+}
+}
+/* The wrapper for each item */
+
+.rig-cell {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+/* If have the image layer */
+
+.rig-img {
+    display: block;
+    width: auto;
+    margin: auto;
+    height: 440px;
+    border: none;
+    transform: scale(1);
+    transition: all 1s;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+#rig li:hover .rig-img {
+    transform: scale(1.05);
+}
+/* If have the overlay layer */
+
+.rig-overlay {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: $yellow;
+    background-size: 50px 50px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    /*For IE6 - IE8*/
+    
+    transition: all 0.8s;
+}
+#rig li:hover .rig-overlay {
+    opacity: 1;
+}
+.rig-orig-overlay {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: $navyBackground;
+    background-size: 50px 50px;
+    opacity: 0.7;
+    filter: alpha(opacity=0);
+    /*For IE6 - IE8*/
+    
+    transition: all 0.6s;
+}
+#rig li:hover .rig-orig-overlay {
+    opacity: 0;
+}
+/* If have captions */
+
+.rig-text {
+    display: block;
+    padding: 0 30px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 800;
+    font-family: 'Avenir-Black', sans-serif;
+    top: 35%;
+    color: white;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    /*For older IE*/
+    
+    transform: translateY(-20px);
+    transition: all .3s;
+
+        p {
+            display: block;
+            padding: 10px 30px;
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            margin-top: 10px;
+            text-align: center;
+            text-transform: none;
+            font-size: 18px;
+            font-weight: 300;
+            font-family: 'Avenir-Black', sans-serif;
+            z-index: 999;
+            top: 98%;
+            color: white;
+            opacity: 1;
+            filter: alpha(opacity=0);
+            /*For older IE*/
+            transform: translateY(-20px);
+            transition: all .3s;
+}
+
+        p:hover {
+            text-decoration: none;
+            color: $navyBackground;
+            transition: all .3s;
+}
+        p:after {
+            content: '';
+            display: block;
+            margin: auto;
+            height: 2px;
+            width: 0px;
+            background: transparent;
+            text-decoration: none;
+            transition: width .5s ease, background-color .5s ease;
+}
+        p:hover:after {
+            width: 45%;
+            background: $nearBlackBackground;
+}
+}
+#rig li:hover .rig-text {
+    transform: translateY(0px);
+    opacity: 0.9;
+}
+.rig-lines {
+    border: solid 3px #fff;
+    width: 25px;
+    text-align: left;
+    margin-left: 0px;
+    margin: 20px auto;
+}
+.rig-subtitle-text {
+    display: block;
+    padding: 0 30px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Avenir-Book', sans-serif;
+    font-weight: normal!important;
+    top: 65%;
+    color: white;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    /*For older IE*/
+    
+    transform: translateY(20px);
+    transition: all .3s;
+}
+#rig li:hover #rig-link {
+    transform: translateY(0px);
+    opacity: 0.9;
+    animation: none;
+}
+.fa-link {
+    border: solid 2px #fff;
+    padding: 6px;
+    border-radius: 50%;
+    margin: 0px auto 10px auto;
+    position: absolute;
+    top: 58%;
+    left: calc(50% - 15px);
+}
+.fa-link:hover {
+    border: solid 2px $navyBackground;
+    padding: 6px;
+    border-radius: 50%;
+    margin: 0px auto 10px auto;
+    color: $navyBackground;
+    transition: all .5s;
+}
+.rig-git:hover {
+    border: solid 1px $navyBackground;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 10px auto;
+    color: $navyBackground;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}

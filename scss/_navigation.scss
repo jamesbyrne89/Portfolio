@@ -1,0 +1,138 @@
+/* ***** NAVIGATION ***** */
+
+#left-nav {
+    float: left;
+}
+#right-nav {
+    float: right;
+}
+#logo {
+    height: 40px;
+    display: inline-block;
+    margin: 5px 10px;
+    border: none;
+}
+#mobile-logo {
+    display: none;
+}
+nav {
+    max-width: 99.8vw;
+    height: 90px;
+    font-size: 16px;
+    letter-spacing: 6px;
+    display: flex;
+    margin: auto;
+    padding: 0px 1vw;
+
+    ul {
+        width: 80%;
+        height: 90px;
+        margin: auto;
+        bottom: 40px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex: 1 0 auto;
+        padding: 10px 0px 20px 0px;
+        text-align: center;
+        transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -webkit-transition: all .5s ease-in-out;
+
+        li {
+            display: inline-block;
+            margin: 5px 12px 8px 12px;
+            padding: 5px 25px;
+            text-decoration: none;
+            color: #a9a9a9;
+            width: 10vw;
+
+            a {
+                display: inline-block;
+                margin: 15px 12px 8px 12px;
+                text-decoration: none;
+                color: #a9a9a9;
+            }
+        }
+    }
+ }
+nav ul li a:hover {
+    display: inline-block;
+    margin: 15px 12px 8px 12px;
+    text-decoration: none;
+    color: $nearBlackBackground
+}
+nav li a {
+    color: #000;
+    font-size: 1.75rem;
+    text-decoration: none;
+    margin: 10px 20px;
+}
+nav ul li a:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    text-decoration: none;
+    transition: width .5s ease, background-color .5s ease;
+}
+nav ul li a:hover:after {
+    width: 100%;
+    background: $nearBlackBackground;
+}
+.main_header {
+    position: fixed;
+    top: 0px;
+    max-height: 90px;
+    z-index: 999;
+    max-width: 100%;
+    padding: 0px 1vw 6px 1vw;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 1;
+    letter-spacing: 5px;
+    font-family: 'Avenir-Black', sans-serif;
+    text-align: right;
+    display: block;
+    background-color: #fff;
+    margin: 0px;
+    min-width: 99.2vw;
+    max-width: 99.2vw;
+    overflow: hidden;
+    font-family: 'Avenir-Black', sans-serif;
+    height: 90px;
+    font-weight: 800;
+    text-transform: uppercase;
+    z-index: 999;
+    position: absolute;
+    left: 0px;
+    opacity: 1;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+.sticky {
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 1;
+    top: 0px;
+    border-bottom: 1px solid gainsboro;
+}
+.fixed {
+    position: fixed;
+    z-index: 1;
+    display: none;
+    -webkit-transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+    transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+    -webkit-transition-property: background-color, -webkit-backdrop-filter;
+    transition-property: background-color, -webkit-backdrop-filter;
+    transition-property: background-color, backdrop-filter;
+    transition-property: background-color, backdrop-filter, -webkit-backdrop-filter;
+}
+.mobile-toggle {
+    display: none;
+}
