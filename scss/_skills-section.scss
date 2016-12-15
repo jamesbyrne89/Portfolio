@@ -1,5 +1,8 @@
 /* ***** SKILLS SECTION ***** */
 
+.skills-section-header {
+    color: #efefef !important;
+}
 #skills {
     color: #efefef;
     background-color: #c5c1c0;
@@ -14,8 +17,13 @@
         ul {
             color: #efefef;
             font-size: 26px;
+        }
+        hr {
+    color: #efefef;
+    border: solid 2px #efefef;
 }
 }
+
 .col-md-6 {
     margin: 100px 0px 0px 0px;
     box-sizing: border-box;

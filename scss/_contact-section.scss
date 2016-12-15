@@ -10,7 +10,18 @@
     padding: 100px 200px;
     min-height: calc(100vh - 130px);
     box-sizing: border-box;
+    .section-header
+    {
+        color: #fff;
+    }
+    border: solid 2px #fff;
+            hr {
+    color: #fff;
+    border: solid 2px #fff;
+            }
+
 }
+
 #contact-wrapper {
     margin-top: 100px;
 }
