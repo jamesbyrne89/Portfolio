@@ -43,14 +43,17 @@
 
 <body>
     <!-- Site Code -->
-    <header class="main_header">
-        <div class="row"><img id="mobile-logo" alt="Site logo" src="img/JB-logo.png">
-            <div class="mobile-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav>
+
+    <nav>
+        <div class="mobile-nav">
+            <img class="nav__logo" src="img/JB-logo.png">
+            <div class="menu-btn" id="menu-btn">
+                <div></div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            <div class="responsive-menu">
                 <ul>
 
                     <li><a id="#about-link" data-scroll href="#about" title="About">About</a>
@@ -63,10 +66,10 @@
                     <li><a href="#contact" data-scroll title="Contact">Contact</a>
                     </li>
                 </ul>
-            </nav>
-        </div>
-    </header>
+            </div>
 
+        </div>
+    </nav>
     <div id="main-container">
         <section id="welcome" class="section">
             <h1 id="welcome-container">Hi, I'm James,
@@ -143,6 +146,17 @@
               <span class="rig-subtitle-text"><i class="fa fa-github rig-gitthub" aria-hidden="true"></i><br>View on GitHub</span> -->
                     </div>
                 </li>
+                          <li>
+                    <div class="rig-cell">
+                        <img class="rig-img lazy" alt="Tic-Tac-Toe thumbnail" src="img/tic_tac_toe.jpg" data-original="img/tic_tac_toe.jpg">
+
+                        <span class="rig-overlay"></span>
+                        <span class="rig-text">Tic-Tac-Toe<hr class="rig-lines">
+              <a href="https://jamesbyrne89.github.io/Tic-Tac-Toe"> <i class="fa fa-link" aria-hidden="true"></i></a> <br/>
+            <br/><br/><a href="https://github.com/jamesbyrne89/Tic-Tac-Toe"><p>View code on Github</p></a></span>
+                    </div>
+                </li>
+                <!--
                 <li>
                     <div class="rig-cell">
                         <img class="rig-img lazy" alt="How many fingers am I holding up thumbnail" src="img/how_many_fingers.jpg" data-original="img/how_many_fingers.jpg">
@@ -153,6 +167,7 @@
             <br/><br/><a href="https://github.com/jamesbyrne89/How-Many-Fingers"><p>View code on Github</p></a></span>
                     </div>
                 </li>
+                -->
                 <li>
                     <div class="rig-cell">
                         <img class="rig-img lazy" alt="Weather app thumbnail" src="img/local_weather_app.jpg" data-original="img/local_weather_app.jpg">

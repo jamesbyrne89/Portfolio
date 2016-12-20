@@ -31,6 +31,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            overflow: hidden;
             background-color: $navyBackground;
 }
 }
@@ -51,7 +52,7 @@
     border: none;
     transform: scale(1);
     transition: all 1s;
-    -webkit-filter: grayscale(0%);
+    -webkit-filter: brightness(0%);
     filter: grayscale(0%);
 }
 #rig li:hover .rig-img {
@@ -125,8 +126,8 @@
             padding: 10px 30px;
             box-sizing: border-box;
             position: absolute;
-            left: 0;
-            width: 100%;
+            left: calc(50% - 120px);
+            width: auto;
             margin-top: 10px;
             text-align: center;
             text-transform: none;
@@ -159,7 +160,7 @@
             transition: width .5s ease, background-color .5s ease;
 }
         p:hover:after {
-            width: 45%;
+            width: 100%;
             background: $nearBlackBackground;
 }
 }
