@@ -14,6 +14,12 @@
         box-sizing: border-box;
         overflow: hidden;
     }
+    #about {
+        min-height: 75vh;
+    }
+    .skills-wrapper {
+        margin-top: 7rem;
+    }
     #welcome-container,
     .slideInUp {
         padding: 25vh 1vw 1vh 1vw;
@@ -24,21 +30,29 @@
     }
     #about p {
         width: 90vw;
-        margin: 2vw 1vh;
+        margin: 7rem 1vw 0 1vw;
         box-sizing: border-box;
-        padding: 0px 5vw;
+        padding: 0;
     }
     #skills ul li {
         margin-bottom: 1.5vh;
     }
-    #contact-wrapper {
-        margin-top: 0px;
+    #rig {
+        margin: 7rem 0 0 0;
     }
-    #contact-left {
-        padding: 70px 0px 1vh 1vh;
+    #contact {
+        min-height: 75vh;
+    }
+    .contact-wrapper {
+        margin: 7rem auto 0 auto;
+        width: 80vw;
+    }
+    .contact-left {
         -webkit-animation-duration: 0.5s;
         animation-duration: 0.5s;
         animation-delay: 0.5s;
+        padding-right: 0px;
+        margin-bottom: 10rem;
     }
     #contactbutton,
     #contactbutton a,
@@ -46,23 +60,18 @@
         max-width: 100%;
         text-align: center;
     }
-    .col-md-6 {
-        width: 90vw;
-        margin: 2vw 1vh;
-        box-sizing: border-box;
-        ;
-    }
-    #contact-left {
-        padding-right: 0px;
-    }
+
+
+    .contact-right {
+    padding-left: 0px;
+}
     #rig li {
         width: 50%;
     }
     #social-container {
-        margin-left: -16px;
-    
             ul {
                 margin: auto;
+                width: 100%;
     }
 }
     .container-fluid {
@@ -158,9 +167,13 @@
     #contact,
     #skills,
     #projects {
-        padding: 70px 1vh;
+        padding: 50px 1vw;
         box-sizing: border-box;
         overflow: hidden;
+    }
+    .skills-wrapper {
+        margin-top: 5rem;
+        padding: 0px;
     }
     #skills ul {
         margin-left: 0px;
@@ -189,48 +202,17 @@
             p {
                 height: auto;
                 width: 80vw;
-                margin: 2vw auto;
+                margin: 5rem auto;
                 box-sizing: border-box;
                 font-size: 2.5rem;
     }
 }
-    #skillstitle {
-        margin-top: 2vh;
-    }
-    #contact-wrapper {
-        margin: 0px;
-        max-width: 100%;
-    }
-    #contact-left {
-        padding: 0px 5vw 70px 5vw;
-        margin-bottom: 1vh;
-        font-size: 2.25rem;
-    }
-    #contact-right {
-        padding: 0px 5vw;
-        text-align: left;
-    }
-    #contactbutton,
-    #contactbutton a,
-    #contactbutton a:hover {
-        max-width: 100%;
-        text-align: center;
-    }
-    #contactbutton a {
-        margin-bottom: 70px;
-        padding: 25px 30px;
-    }
-    #contactbutton a:hover {
-        padding: 25px 30px;
-    }
-    .col-md-6 {
-        width: 90vw;
-        margin: 0vh 1vw;
-        box-sizing: border-box;
-        font-size: 2.25rem;
+    .skills-left {
+        font-size: 1.8rem;
     }
     #skills ul li {
-        font-size: 2.25rem;
+        font-size: 1.8rem;
+        padding-left: 30%;
     }
     #rig {
         margin: 60px 0px;
@@ -271,10 +253,10 @@
         min-height: 100%;
     }
     #social-container {
-        width: 80%;
+        width: 100%;
         margin: auto;
         text-align: center;
-    
+        
             ul {
                 width: 100%;
                 margin: auto;
@@ -282,8 +264,7 @@
 
     li a,
     li a:hover {
-        margin-left: 0px;
-        margin-right: 8vw;
+
     }
     }
 }
@@ -298,6 +279,31 @@
     .logo {
         display: none;
     }
+    .contact-wrapper {
+            padding: 0px;
+    }
+    .contact-left {
+        margin-bottom: 5rem;
+        font-size: 1.8rem;
+    }
+    #contact-right {
+        padding: 0px 5vw;
+        text-align: left;
+    }
+    #contactbutton,
+    #contactbutton a,
+    #contactbutton a:hover {
+        max-width: 100%;
+        text-align: center;
+    }
+    #contactbutton a {
+        margin-bottom: 5rem;
+        padding: 25px 30px;
+    }
+    #contactbutton a:hover {
+        padding: 25px 30px;
+    }
+
 }
 
 @media (max-width: 475px) {
@@ -326,7 +332,7 @@
         padding-top: 5vh;
     }
     #rig {
-        margin: 60px 0px;
+        margin: 5rem 0px 0px 0px;
     
             li {
                 min-width: 100%;
@@ -335,7 +341,7 @@
 }
 #about {
     p {
-        font-size: 1.75rem;
+        font-size: 1.8rem;
     }
 }
     .rig-cell {
@@ -352,24 +358,27 @@
         width: 100%;
         text-align: center;
         text-transform: uppercase;
-        font-size: 12px;
+        font-size: 1.8rem;
         font-weight: 800;
         font-family: 'Avenir-Black', sans-serif;
         top: 15%;
         color: white;
         opacity: 0;
         p {
-            font-size: 12px;
-            left: calc(50% - 90px);
+            font-size: 1.4rem;
+            left: calc(50% - 100px);
         }
     }
     .rig-subtitle-text {
-        font-size: 12px;
+        font-size: 1.4rem;
     }
         .rig-img {
         min-height: 100%;
         height: auto;
         min-width: 100%;
         width: 475px;
+    }
+    .fa-link {
+        left: calc(50% - 19px);
     }
 }

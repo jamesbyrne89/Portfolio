@@ -22,14 +22,18 @@
 
 }
 
-#contact-wrapper {
-    margin-top: 100px;
+.contact-wrapper {
+    margin-top: 160px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-#contact-left {
+.contact-left {
     padding: 0px 100px 0px 0px;
     margin-bottom: 50px;
 }
-#contact-right {
+.contact-right {
     padding-left: 80px;
 }
 #contactbutton a {
@@ -74,34 +78,36 @@
     color: #fff;
     font-family: 'Avenir-Book', serif;
     font-size: 26px;
+    text-align: center;
+    width: 100%;
 }
 #social-container {
     text-align: center;
 
         ul {
             height: 50px;
-            width: 302px;
+            width: 280px;
             text-align: left;
             padding: 0px;
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            justify-content: space-between;
                 li {
                     list-style: none;
                     display: inline-block;
+                    text-align: left;
+                    flex: 1 1 20px;
+                    margin: 0px 4px;
                     a {
                             height: 20px;
                             width: 20px;
                             display: inline-block;
                             border: none;
-                            margin: 0px 32px;
+                            margin-left: 20% ;
                             list-style: none;
                         }
                 }
             }
-}
-#social-container ul li a:first-child,
-#social-container ul li a:first-child:hover {
-    margin-left: 0px;
 }
 
 #social-container ul li a:hover {
@@ -109,7 +115,7 @@
     width: 20px;
     display: inline-block;
     border: none;
-    margin: 0px 32px;
+    margin-left: 20%  ;
 }
 .fa-lg:hover {
     color: $yellow;

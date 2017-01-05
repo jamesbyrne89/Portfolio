@@ -5,8 +5,8 @@
 #welcome {
     background-color: $navyBackground;
     text-align: left;
-    min-height: 100vh;
-    max-height: 100vh;
+    min-height: calc(100vh - 98px);
+    max-height: calc(100vh - 98px);
     overflow-y: hidden;
     padding-top: 30vh;
     box-sizing: border-box;

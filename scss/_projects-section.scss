@@ -4,7 +4,7 @@
     color: #a9a9a9;
     background-color: #efefef;
     font-family: 'Avenir-Book', serif;
-    font-size: 26px;
+    font-size: 1.8rem;
     font-weight: bold;
     text-align: left;
     padding: 100px 0px;
@@ -109,7 +109,7 @@
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 2.2rem;
     font-weight: 800;
     font-family: 'Avenir-Black', sans-serif;
     top: 35%;
@@ -131,7 +131,7 @@
             margin-top: 10px;
             text-align: center;
             text-transform: none;
-            font-size: 18px;
+            font-size: 1.8rem;
             font-weight: 300;
             font-family: 'Avenir-Black', sans-serif;
             z-index: 999;
@@ -184,7 +184,7 @@
     width: 100%;
     text-align: center;
     text-transform: capitalize;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
     font-style: italic;
     font-family: 'Avenir-Book', sans-serif;
@@ -209,6 +209,7 @@
     border-radius: 50%;
     margin: 0px auto 10px auto;
     position: absolute;
+    width: 38px !important;
     top: 58%;
     left: calc(50% - 15px);
 }

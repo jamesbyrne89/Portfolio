@@ -26,7 +26,7 @@ nav {
         top: 40px;
         flex-wrap: wrap;
         li {
-            flex: 1 1 10vw;
+            flex: 1 1 6vw;
             line-height: 1.75;
             color: #a9a9a9;
             font-size: 1.5em;
@@ -35,7 +35,7 @@ nav {
                 margin: 4px 12px 4px 12px;
                 text-decoration: none;
                 color: #a9a9a9;
-                padding: 5px 25px;
+                padding: 5px auto;
             }
                 a:hover {
                     display: inline-block;

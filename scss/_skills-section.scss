@@ -7,7 +7,7 @@
     color: #efefef;
     background-color: #c5c1c0;
     font-family: 'Avenir-Book', serif;
-    font-size: 26px;
+    font-size: 2.6rem;
     font-weight: bold;
     text-align: left;
     padding: 100px 200px;
@@ -16,7 +16,8 @@
 
         ul {
             color: #efefef;
-            font-size: 26px;
+            font-size: 2.6rem;
+            list-style-position: inside;
         }
         hr {
     color: #efefef;
@@ -24,9 +25,18 @@
 }
 }
 
-.col-md-6 {
-    margin: 100px 0px 0px 0px;
+.skills-left, .skills-right {
     box-sizing: border-box;
+    width: 50%;
+    flex: 0 1 400px;
+}
+.skills-left {
+    display: block;
+    font-family: 'Avenir-Black', sans-serif;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 .delayed-text-1,
 .delayed-text-2,
@@ -96,22 +106,17 @@
         li {
             margin-bottom: 20px;
             color: #efefef;
-            font-size: 26px;
+            font-size: 2.6rem;
 }
 }
-.skillstitle {
-    display: block;
-    margin-bottom: 40px;
-    font-family: 'Avenir-Black', sans-serif;
-    -webkit-animation-duration: 1.5s;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-}
-.container-fluid {
+
+.skills-wrapper {
     width: 80%;
+    display: flex;
+    margin: 160px auto 0 auto;
+    flex-wrap: wrap;
 }
 .fa {
     font-family: 'Avenir-Book', serif;
-    font-size: 26px;
+    font-size: 2.6rem;
 }

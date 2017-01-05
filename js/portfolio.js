@@ -4,14 +4,13 @@ $(document).ready();
 $(window).scroll(function() {
 
     if ($(window).scrollTop() > 100) {
-      console.log('scrolled');
         $('.main_h').addClass('sticky');
     } else {
         $('.main_h').removeClass('sticky');
     }
 });
 
-// Mobile Nav
+// MOBILE NAVIGATION //
 $(function($){
     $( '.menu-btn' ).click(function(){
     $('.responsive-menu').toggleClass('expand')
@@ -84,7 +83,7 @@ $about.removeClass('fadeOut');
 
 // SKILLS SECTION //
 
- var $skillstitle = $('.skillstitle');
+ var $skillstitle = $('.skills-left');
 
  $skillstitle.waypoint(function(direction){
  	if (direction == 'up'){
@@ -227,7 +226,7 @@ $contactMe.removeClass('animated fadeOut');
  	$contactMe.removeClass('intro')
 $contactMe.addClass('animated fadeOut');
 }
-}, {offset: '70%'});
+}, {offset: '80%'});
 
 
 var $emailBtn = $('#contactbutton');
@@ -240,7 +239,7 @@ $emailBtn.removeClass('animated fadeOut');
  	$emailBtn.removeClass('intro')
  	$emailBtn.addClass('animated fadeOut');
 }
-}, {offset: '70%'});
+}, {offset: '80%'});
 
 
 var $socialOne = $('.fa-twitter');
@@ -253,7 +252,7 @@ $socialOne.removeClass('animated fadeOut')
 $socialOne.removeClass('sideintro', 'delayed-text-1')
 $socialOne.addClass('animated fadeOut')
 }
- }, {offset: '70%'});
+ }, {offset: '80%'});
 
 var $socialTwo = $('.fa-instagram');
 
@@ -265,7 +264,7 @@ $socialTwo.removeClass('animated fadeOut')
 $socialTwo.removeClass('sideintro', 'delayed-text-2')
 $socialTwo.addClass('animated fadeOut')
 }
- }, {offset: '70%'});
+ }, {offset: '80%'});
 
 var $socialThree = $('.fa-flickr');
 
@@ -277,7 +276,7 @@ $socialThree.removeClass('animated fadeOut')
 $socialThree.removeClass('sideintro', 'delayed-text-3')
 $socialThree.addClass('animated fadeOut')
 }
- }, {offset: '70%'});
+ }, {offset: '80%'});
 
 var $socialFour = $('.fa-linkedin-square');
 
@@ -289,7 +288,7 @@ $socialFour.removeClass('animated fadeOut')
 $socialFour.removeClass('sideintro', 'delayed-text-4')
 $socialFour.addClass('animated fadeOut')
 }
- }, {offset: '70%'});
+ }, {offset: '80%'});
 
 var $socialFive = $('.fa-github');
 
@@ -301,5 +300,5 @@ $socialFive.removeClass('animated fadeOut')
 $socialFive.removeClass('sideintro', 'delayed-text-5')
 $socialFive.addClass('animated fadeOut')
 }
- }, {offset: '70%'});
+ }, {offset: '80%'});
 
