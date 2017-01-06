@@ -5,6 +5,9 @@
         width: 100vw;
         padding: 0px;
     }
+    .logo {
+        width: 80px;
+}
     #about,
     #welcome,
     #contact,
@@ -29,8 +32,8 @@
         justify-content: center;
     }
     #about p {
-        width: 90vw;
-        margin: 7rem 1vw 0 1vw;
+        width: 80%;
+        margin: 7rem auto 0 auto;
         box-sizing: border-box;
         padding: 0;
     }
@@ -101,6 +104,9 @@
         z-index: 99;
     }
 }
+.opened {
+    background: $nearBlackBackground !important;
+}
 .nav__logo {
     width: auto;
     height: 30px;
@@ -114,6 +120,7 @@
    ul{ width: 100%;
     height: auto;
     padding: 0px;
+    margin-top: 1.25rem;
     li {
         flex: 1 0 400px;
         height: auto;
@@ -144,9 +151,8 @@
  
 .expand {
     display: block !important;
-    transition:3s;
+    transition: all 4s ease;
     color: #a9a9a9;
-    margin-bottom: 1rem;
 }
 
     .mouse {
@@ -157,7 +163,7 @@
         padding: 0px;
     }
     #welcome {
-        height: 100vh;
+        min-height: 100vh;
     }
     .mouse {
         bottom: 20px;
@@ -178,7 +184,6 @@
     #skills ul {
         margin-left: 0px;
         padding-left: 15px;
-        margin-top: 6vh;
     }
     #projects {
         padding: 70px 0px;
@@ -285,10 +290,13 @@
     .contact-left {
         margin-bottom: 5rem;
         font-size: 1.8rem;
+        flex: 0 0 100%;
     }
-    #contact-right {
+    .contact-right {
         padding: 0px 5vw;
         text-align: left;
+        flex: 0 0 100%;
+        
     }
     #contactbutton,
     #contactbutton a,
@@ -310,9 +318,9 @@
 
 .menu-btn span {
     display: block;
-    width: 19px;
+    width: 28px;
     height: 3px;
-    margin: 4px 0;
+    margin: 6px 0;
     background: #a9a9a9;
     z-index: 99;
 }
@@ -328,7 +336,7 @@
     }
 }
     #welcome-container {
-        font-size: 3rem;
+        font-size: 4rem;
         padding-top: 5vh;
     }
     #rig {

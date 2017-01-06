@@ -23,8 +23,8 @@
 }
 
 .contact-wrapper {
-    margin-top: 160px;
-    width: 100%;
+    width: 80%;
+    margin: 160px auto 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -32,9 +32,11 @@
 .contact-left {
     padding: 0px 100px 0px 0px;
     margin-bottom: 50px;
+    width: 60%
 }
 .contact-right {
     padding-left: 80px;
+    width: 40%;
 }
 #contactbutton a {
     margin: 0px auto 100px auto;

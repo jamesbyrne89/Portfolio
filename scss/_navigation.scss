@@ -10,7 +10,10 @@ nav {
     padding: 4px 10px;
     margin: auto;
     font-weight: 800;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 10;
 }
+
 .responsive-menu {
     letter-spacing: 0.375em;
 
@@ -80,19 +83,25 @@ nav {
     border: none;
     flex: 0 0 auto;
 }
-
+.logo {
+        flex: 1 1 80px;
+}
 .expand {
     display: flex !important;
-    margin-bottom: 1.25rem;
-    transition:3s;
+    margin-top: 0;
+    transition: all 4s ease;
     color: #a9a9a9;
 }
 
 .sticky {
     background-color: rgba(255, 255, 255, 1);
+    z-index: 10;
     opacity: 1;
     top: 0px;
     border-bottom: 1px solid gainsboro;
+    position: fixed;
+    width: 100%;
+    transition: all 0.4s ease;
 }
 .fixed {
     position: fixed;

@@ -3,10 +3,10 @@ $(document).ready();
 
 $(window).scroll(function() {
 
-    if ($(window).scrollTop() > 100) {
-        $('.main_h').addClass('sticky');
+    if ($(window).scrollTop() > 800) {
+        $('.mobile-nav').addClass('sticky');
     } else {
-        $('.main_h').removeClass('sticky');
+        $('.mobile-nav').removeClass('sticky');
     }
 });
 
@@ -14,15 +14,19 @@ $(window).scroll(function() {
 $(function($){
     $( '.menu-btn' ).click(function(){
     $('.responsive-menu').toggleClass('expand')
+    $('.bars').toggleClass('opened')
   });
 });
 
+$(function($){
+    $( '.menu-link' ).click(function(){
+    $('.responsive-menu').toggleClass('expand')
+  });
+});
 
-
-
-
-$("img.lazy").lazyload();
-
+$("img.lazy").lazyload({
+    threshold : -900
+});
 
 var $welcome = $('#welcome-container');
 
@@ -216,7 +220,7 @@ $projectsGrid.css('opacity' , 0);
 
 // CONTACT SECTION //
 
- var $contactMe = $('#contact-left');
+ var $contactMe = $('.contact-left');
 
  $contactMe.waypoint(function(direction){
  		if (direction == 'down'){

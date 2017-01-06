@@ -49,28 +49,28 @@
             <img class="nav__logo" src="img/JB-logo.png">
             <div class="menu-btn" id="menu-btn">
                 <div></div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span>
                 </div>
             <div class="responsive-menu">
                 <ul>
 
-                    <li><a id="#about-link" data-scroll href="#about" title="About">About</a>
+                    <li><a id="#about-link" class="menu-link" data-scroll href="#about" title="About">About</a>
                     </li>
-                    <li><a href="#skills" data-scroll title="Skills">Skills</a> </li>
+                    <li><a href="#skills" class="menu-link" data-scroll title="Skills">Skills</a> </li>
                     <li class="logo"><img id="logo" alt="Site logo" src="img/JB-logo.png">
                     </li>
-                    <li><a href="#projects" data-scroll title="Projects">Projects</a>
+                    <li><a href="#projects" class="menu-link" data-scroll title="Projects">Projects</a>
                     </li>
-                    <li><a href="#contact" data-scroll title="Contact">Contact</a>
+                    <li><a href="#contact" class="menu-link" data-scroll title="Contact">Contact</a>
                     </li>
                 </ul>
             </div>
 
         </div>
     </nav>
-    <div id="main-container">
+    <main id="main-container">
         <section id="welcome" class="section">
             <h1 id="welcome-container">Hi, I'm James,
 <br> a front-end developer.
@@ -225,53 +225,6 @@
 
                     </div>
                 </li>
-                <!--
-
-                            <li>
-                    <div class="rig-cell">
-                        <img class="rig-img lazy" alt="Tumblr refresh thumbnail" src="img/digital-download.jpg" data-original="img/digital-download.jpg">
-
-                        <span class="rig-overlay"></span>
-                        <span class="rig-text">salt communications Tumblr refresh<hr class="rig-lines">
-            <a href="http://salt-pr.tumblr.com"> <i class="fa fa-link" aria-hidden="true"></i></a> <br/>
-            <br/><br/><a href="https://github.com/jamesbyrne89/salt-Tumblr-css"><p>View code on Github</p></a></span>
-                    </div>
-                </li>
-   <li>
-                    <a class="rig-cell" href="#">
-                        <img class="rig-img lazy" data-original="http://placehold.it/600x600">
-                        <span class="rig-orig-overlay"></span>
-                        <span class="rig-overlay"></span>
-                        <span class="rig-text">More projects coming soon</span>
-                        <br>
-
-                    </a>
-                </li>
-        <a class="rig-cell" href="#">
-            <img class="rig-img" src="http://placehold.it/600x600">
-            <span class="rig-overlay"></span>
-            <span class="rig-text">quis interdum sapien</span><br>
-              <span class="rig-subtitle-text">Lorem Ipsum Dolor</span>
-        </a>
-    </li>
-    <li>
-        <a class="rig-cell" href="#">
-            <img class="rig-img" src="http://placehold.it/600x600">
-            <span class="rig-overlay"></span>
-            <span class="rig-text">Maecenas vitae</span><br>
-              <span class="rig-subtitle-text">Lorem Ipsum Dolor</span>
-        </a>
-    </li>
-    <li>
-        <a class="rig-cell" href="#">
-            <img class="rig-img" src="img/12.jpg">
-            <span class="rig-overlay"></span>
-            <span class="rig-text">Proin Scelerisque</span><br>
-              <span class="rig-subtitle-text">Lorem Ipsum Dolor</span>
-        </a>
-    </li>
- -->
-
             </ul>
         </section>
 
@@ -315,26 +268,25 @@
             Site design by James Byrne. © 2017
         </footer>
 
-    </div>
+    </main>
 
     <!-- JAVASCRIPT -->
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="js/smooth-scroll.js"></script>
+    <script src="js/jquery.lazyload.min.js"></script>
 
     <!-- SMOOTH SCROLL -->
     <script>
         smoothScroll.init();
     </script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
     </script>
     <script type="text/javascript" src="js/fullPage.js-master/jquery.fullPage.min.js"></script>
     <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
-    <script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
+
     <script type="text/javascript" src="js/portfolio.js"></script>
 
 </body>

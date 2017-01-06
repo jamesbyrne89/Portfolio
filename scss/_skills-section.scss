@@ -28,9 +28,10 @@
 .skills-left, .skills-right {
     box-sizing: border-box;
     width: 50%;
-    flex: 0 1 400px;
+    flex: 1 1 400px;
 }
 .skills-left {
+    margin-bottom: 5rem;
     display: block;
     font-family: 'Avenir-Black', sans-serif;
     -webkit-animation-duration: 1.5s;
