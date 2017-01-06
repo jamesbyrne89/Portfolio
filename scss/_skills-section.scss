@@ -29,6 +29,7 @@
     box-sizing: border-box;
     width: 50%;
     flex: 1 1 400px;
+    
 }
 .skills-left {
     margin-bottom: 5rem;
@@ -47,11 +48,12 @@
 .delayed-text-6,
 .delayed-text-7,
 .delayed-text-8 {
-    opacity: 1;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
+    opacity: 0;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
 }
+
 .delayed-text-1 {
     -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s;
