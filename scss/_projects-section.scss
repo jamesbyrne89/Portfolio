@@ -7,32 +7,36 @@
     font-size: 1.8rem;
     font-weight: bold;
     text-align: left;
-    padding: 100px 0px;
+    padding: 3em 0;
     min-height: 100vh;
     box-sizing: border-box;
 }
 #rig {
     max-width: 100%;
-    margin: 160px auto 100px auto;
-    /*center aligned*/
-    
+    margin: 3em 0em;
+    /*center aligned*/    
     padding: 0;
     font-size: 0;
     /* Remember to change it back to normal font size if have captions */
-    
+    display: block;
     list-style: none;
-    background-color: transparent;
 
         li {
             display: inline-block;
-            width: 25%;
-            max-height: 440px;
+            width: 100%;
+            max-height: 50vh;
             vertical-align: middle;
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             overflow: hidden;
             background-color: $navyBackground;
+            @include bp(atSmall) {
+                width: 50%;
+            }
+            @include bp(atLarge) {
+                width: 25%;
+            }
 }
 }
 /* The wrapper for each item */
@@ -47,8 +51,9 @@
 .rig-img {
     display: block;
     width: auto;
+    min-width: 110%;
     margin: auto;
-    height: 440px;
+    height: 40vh;
     border: none;
     transform: scale(1);
     transition: all 1s;
@@ -102,17 +107,17 @@
 
 .rig-text {
     display: block;
-    padding: 0 30px;
+    padding: 0 2em;
     box-sizing: border-box;
     position: absolute;
     left: 0;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    font-size: 2.2rem;
+    font-size: 1.75rem;
     font-weight: 800;
     font-family: 'Avenir-Black', sans-serif;
-    top: 35%;
+    top: 20%;
     color: white;
     opacity: 0;
     filter: alpha(opacity=0);
@@ -120,18 +125,23 @@
     
     transform: translateY(-20px);
     transition: all .3s;
-
+            @include bp(atMedium) {
+                font-size: 2rem;
+            }
+            @include bp(atLarge) {
+                font-size: 2.25rem;
+            }
         p {
             display: block;
-            padding: 10px 30px;
+            padding: 0.75em 2em;
             box-sizing: border-box;
             position: absolute;
-            left: calc(50% - 120px);
+            left: calc(50% - 105px);
             width: auto;
-            margin-top: 10px;
+            margin-top: 0.75em;
             text-align: center;
             text-transform: none;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 300;
             font-family: 'Avenir-Black', sans-serif;
             z-index: 999;
@@ -142,6 +152,13 @@
             /*For older IE*/
             transform: translateY(-20px);
             transition: all .3s;
+            @include bp(atMedium) {
+                font-size: 1.8rem;
+                left: calc(50% - 125px);
+            }
+            @include bp(atLarge) {
+            
+            }
 }
 
         p:hover {
@@ -170,7 +187,7 @@
 }
 .rig-lines {
     border: solid 3px #fff;
-    width: 25px;
+    width: 1.75em;
     text-align: left;
     margin-left: 0px;
     margin: 20px auto;

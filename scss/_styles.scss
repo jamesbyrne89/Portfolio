@@ -2,6 +2,23 @@
 
 @import '_variables.scss';
 
+a:focus {
+    outline-color: $nearBlackBackground !important;
+}   
+
+button:hover, a:hover {
+    text-decoration: none ;
+}
+
+html {
+
+text-rendering: optimizeLegibility !important;
+
+-webkit-font-smoothing: antialiased !important;
+
+}
+
+
 ::-moz-selection {
     color: #fff;
     background: $yellow;
@@ -27,16 +44,21 @@
     max-width: 100vw;
     margin: auto;
     background-color: lightblue;
-    font-size: 44px;
+    font-size: 3rem;
     text-align: center;
     color: #000;
 }
 #main-container {
     background-color: #fff;
     height: 100vh;
-    max-width: 100%;
+    width: 100%;
+    max-width: 100vw;
     padding: 0px 1vw;
     box-sizing: border-box;
+      padding: 0px;
+    @include bp(atMedium) {
+        padding: 0 1em;
+    }
 }
 .section-header {
     font-size: 3rem;
@@ -50,11 +72,15 @@
 }
 .hr {
     border: solid 2px #a9a9a9;
-    color: #a9a9a9;
     width: 40px;
 }
 .fadeOut {
     -webkit-animation-name: fadeOut;
     animation-name: fadeOut;
     animation-fill-mode: forwards;
+}
+
+.fa {
+    font-family: 'Avenir-Book', serif;
+    font-size: 2.6rem;
 }

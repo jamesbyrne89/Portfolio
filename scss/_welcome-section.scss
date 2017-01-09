@@ -4,27 +4,32 @@
 
 #welcome {
     background-color: $navyBackground;
-    text-align: left;
-    min-height: calc(100vh - 98px);
-    max-height: calc(100vh - 98px);
-    overflow-y: hidden;
-    padding-top: 30vh;
-    box-sizing: border-box;
-    margin: 0px;
+    height: 100vh;
+    @include bp(atMedium) {
+    height: calc(100vh - 98px);  
+    }
+    @include bp(atLarge) {
+    }
 }
 #welcome-container {
     color: $yellow;
-    background-color: transparent;
+    font-size: 3rem;
+    padding: 0 0.5em ;
+    position: relative;
+    top: 20%;
     font-family: 'Avenir-Black', sans-serif;
-    font-size: 8rem;
     font-weight: bold;
     text-align: center;
-    padding-left: 100px;
     animation-fill-mode: forwards;
-}
-body {
-    margin: 0;
-    background-color: #1d1f20;
+    @include bp(atSmall) {
+          font-size: 4rem;  
+    }
+    @include bp(atMedium) {
+          font-size: 6rem;  
+    }
+    @include bp(atLarge) {
+          font-size: 8rem;  
+    }
 }
 .mouse {
     position: absolute;

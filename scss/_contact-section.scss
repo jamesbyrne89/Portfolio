@@ -4,12 +4,15 @@
     color: #fff;
     background-color: $nearBlackBackground;
     font-family: 'Avenir-Book', serif;
-    font-size: 26px;
+    font-size: 1.75rem;
     font-weight: bold;
     text-align: left;
-    padding: 100px 200px;
-    min-height: calc(100vh - 130px);
-    box-sizing: border-box;
+    padding: 3em 1em;
+    min-height: 100vh;
+    @include bp(atLarge) {
+        min-height: calc(100vh - 130px);
+        font-size: 2.5rem;
+    }
     .section-header
     {
         color: #fff;
@@ -23,22 +26,32 @@
 }
 
 .contact-wrapper {
-    width: 80%;
-    margin: 160px auto 0 auto;
+    margin: 3em 0.5em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+        @include bp(atMedium) {
+        width: 80%;
+        margin: 6em auto;
+    }
+
 }
+
 .contact-left {
-    padding: 0px 100px 0px 0px;
     margin-bottom: 50px;
-    width: 60%
+    flex: 0 0 100%;
+        @include bp(atMedium) {
+        flex: 0 0 50%;
+    }
 }
 .contact-right {
-    padding-left: 80px;
-    width: 40%;
+    flex: 0 0 100%;
+    text-align: center;
+        @include bp(atMedium) {
+        flex: 0 0 50%;
+    }
 }
-#contactbutton a {
+.btn-contact {
     margin: 0px auto 100px auto;
     font-family: 'Avenir-Black', century-gothic, helvetica, arial, sans-serif;
     text-decoration: none;
@@ -47,28 +60,24 @@
     font-weight: 800;
     font-size: 16px;
     letter-spacing: 2px;
-    padding: 30px;
+    padding: 2em 5em;
     text-align: center;
-    width: 280px;
+    max-width: 100%;
     color: #1A1D1A;
     border: solid 4px #fff;
-    display: inline-block;
+    display: block;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
     transition: all ease 0.3s;
 }
-#contactbutton a:hover {
+.btn-contact:hover {
     font-family: 'Avenir-Black', century gothic, helvetica, arial, sans-serif;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 16px;
-    padding: 30px;
-    width: 280px;
     color: #fff;
     background-color: transparent;
     border: solid 4px #fff;
-    display: inline-block;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
 }
@@ -85,6 +94,12 @@
 }
 #social-container {
     text-align: center;
+                    display: inline-block;
+            @include bp(atMedium) {
+
+        width: auto;
+        margin:auto;
+    }
 
         ul {
             height: 50px;
