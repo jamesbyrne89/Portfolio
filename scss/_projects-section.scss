@@ -11,6 +11,11 @@
     min-height: 100vh;
     box-sizing: border-box;
 }
+
+.rig-wrapper {
+    margin-top: calc(3em + 20px);
+    display: block;
+}
 #rig {
     max-width: 100%;
     margin: 3em 0em;
@@ -20,7 +25,6 @@
     /* Remember to change it back to normal font size if have captions */
     display: block;
     list-style: none;
-
         li {
             display: inline-block;
             width: 100%;
