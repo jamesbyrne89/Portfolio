@@ -55,12 +55,12 @@ nav {
     top: 0;
     left: 0;
     height: auto;
+    align-items: center;
 }
    ul{ width: 100%;
         display: flex;
         list-style: none;
-        margin-top: 15px;
-        margin: auto;
+        margin: 0 auto;
         padding: 0;
         text-align: center;
         height: auto;
@@ -69,6 +69,7 @@ nav {
         justify-content: space-around;
        @include bp(atMedium){
     display: flex;
+    margin-top: 0px;
    }
     li {
             flex: 0 0 100%;
@@ -127,6 +128,28 @@ nav {
   }
     }
 
+    .menu-btn span:first-child.opened {
+  -webkit-transform: translateY(0.35em) rotate(225deg);
+  -moz-transform: translateY(0.35em) rotate(225deg);
+  -o-transform: translateY(0.35em) rotate(225deg);
+  -ms-transform: translateY(0.35em) rotate(225deg);
+  transform: translateY(0.35em) rotate(225deg);
+}
+
+
+.menu-btn span:last-child.opened {
+  -webkit-transform: translateY(-0.25em) rotate(-225deg);
+  -moz-transform: translateY(-0.25em) rotate(-225deg);
+  -o-transform: translateY(-0.25em) rotate(-225deg);
+  -ms-transform: translateY(-0.25em) rotate(-225deg);
+  transform: translateY(-0.25em) rotate(-225deg);
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 0.3s;
+}
+
 .nav__logo {
     width: auto;
     height: 30px;
@@ -137,13 +160,20 @@ nav {
     }
 }
  .menu-btn {
+
     @include bp(atMedium){
         display: none;
     }
     }
 
+    .menu-btn span {
+        transition: all 0.3s;
+        opacity: 1;
+    }
+
 .menu-btn div {
     display: block;
+    transition: all 1s;
       @include bp(atMedium){
         display: none;
     }      
@@ -166,6 +196,7 @@ nav {
 
 .opened {
     background: $nearBlackBackground !important;
+    transition: all 1s;
 }
 
 .expand {

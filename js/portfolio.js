@@ -14,7 +14,9 @@ $(window).scroll(function() {
 $(function($){
     $( '.menu-btn' ).click(function(){
     $('.responsive-menu').toggleClass('expand')
-    $('.bars').toggleClass('opened')
+    $('.menu-btn span:first-child').toggleClass('opened')
+    $('.menu-btn span:nth-child(2)').toggleClass('hidden')
+    $('.menu-btn span:last-child').toggleClass('opened')
   });
 });
 
