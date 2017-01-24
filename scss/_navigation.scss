@@ -138,11 +138,11 @@ nav {
 
 
 .menu-btn span:last-child.opened {
-  -webkit-transform: translateY(-0.25em) rotate(-225deg);
-  -moz-transform: translateY(-0.25em) rotate(-225deg);
-  -o-transform: translateY(-0.25em) rotate(-225deg);
-  -ms-transform: translateY(-0.25em) rotate(-225deg);
-  transform: translateY(-0.25em) rotate(-225deg);
+  -webkit-transform: translateY(-0.35em) rotate(-225deg);
+  -moz-transform: translateY(-0.35em) rotate(-225deg);
+  -o-transform: translateY(-0.35em) rotate(-225deg);
+  -ms-transform: translateY(-0.35em) rotate(-225deg);
+  transform: translateY(-0.35em) rotate(-225deg);
 }
 
 .hidden {
@@ -204,6 +204,7 @@ nav {
     color: #a9a9a9;
     width: 100%;
     height: 100vh;
+    top: 50px;
     left: 0;
     background: #fff;
     z-index: 10;
