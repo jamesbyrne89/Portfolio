@@ -210,6 +210,10 @@ nav {
     z-index: 10;
     display: flex;
     align-items: center;
+        @include bp(atMedium){
+        height: auto;
+        top: 0;
+    }
 }
 
 .sticky {
