@@ -1,0 +1,37 @@
+{
+  "name": "canvas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "clipboard": "^1.6.0",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.0",
+    "babel-preset-es2015": "^6.22.0",
+    "browser-sync": "^2.18.6",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-debug": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jsbeautify": "^0.1.1",
+    "gulp-postcss": "^6.3.0",
+    "gulp-rev": "^7.1.2",
+    "gulp-uglify": "^2.0.1",
+    "gulp-usemin": "^0.3.28",
+    "gulp-watch": "^4.3.11",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "postcss-import": "^9.1.0",
+    "postcss-mixins": "^5.4.1",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
