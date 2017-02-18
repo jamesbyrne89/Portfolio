@@ -38,7 +38,7 @@
             vertical-align: middle;
             box-sizing: border-box;
             margin: 0;
-            margin-top: 10px;
+            margin-top: 0px;
             padding: 0;
             overflow: hidden;
             background-color: $navyBackground;
@@ -46,17 +46,30 @@
                 width: 50%;
             }
             @mixin atLarge {
-                width: 24%;
-
+                width: 25%;
+                max-height: 340px;
             }
 }
 }
+
 /* The wrapper for each item */
+
+
 
 .rig-cell {
     display: block;
     position: relative;
     overflow: hidden;
+    max-height: 100%;
+        img {
+width: 700px;
+height: auto;
+filter: brightness(0.3);
+    &:hover {
+        transform: scale(1.5) brightness(1);
+
+    }
+    }
 }
 /* If have the image layer */
 
@@ -70,7 +83,7 @@
     transform: scale(1);
     transition: all 1s;
     -webkit-filter: brightness(0%);
-    filter: grayscale(0%);
+
 }
 #rig li:hover .rig-img {
     transform: scale(1.05);

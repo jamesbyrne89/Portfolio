@@ -69,7 +69,7 @@ $mouse.addClass('animated fadeOut');
 }else {
 	$mouse.removeClass('animated fadeOut');
 }
- }, {offset: '80%'});
+ }, {offset: '60%'});
 
 
 // ABOUT ME SECTION //

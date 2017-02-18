@@ -14,7 +14,7 @@ button:hover, a:hover {
 
 html {
 
-text-rendering: optimizeLegibility !important;
+text-rendering: geometricPrecision !important;
 
 -webkit-font-smoothing: antialiased !important;
 

@@ -1,4 +1,4 @@
-// ***** WELCOME SECTION *****
+/* ***** WELCOME SECTION ***** */
 
 
 #welcome {
@@ -28,6 +28,7 @@
     }
     @mixin atLarge {
           font-size: 8rem;  
+          top: 30%;
     }
 }
 .mouse {

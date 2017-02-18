@@ -34,7 +34,7 @@ button:hover, a:hover {
 }
 html {
 
-text-rendering: optimizeLegibility !important;
+text-rendering: geometricPrecision !important;
 
 -webkit-font-smoothing: antialiased !important;
 
@@ -312,18 +312,7 @@ nav {
     content: '';
     display: block;
     margin: auto;
-    height: 2px;
-    width: 0px;
-    background: transparent;
-    text-decoration: none;
-    -webkit-transition: width .5s ease, background-color .5s ease;
-    transition: width .5s ease, background-color .5s ease;
-}
-.responsive-menu ul li a:after {
-    content: '';
-    display: block;
-    margin: auto;
-    height: 2px;
+    height: 3px;
     width: 0px;
     background: transparent;
     text-decoration: none;
@@ -461,18 +450,13 @@ nav {
 .mobile-toggle {
         display: block;
     }
-// ***** WELCOME SECTION *****
-
-
+/* ***** WELCOME SECTION ***** */
 #welcome {
     background-color: #1a2930;
     height: 100vh;
 }
 @media (min-width: 900px) {
-    // ***** WELCOME SECTION *****
-
-
-#welcome {
+    #welcome {
         height: calc(100vh - 98px);
     }
 }
@@ -502,6 +486,7 @@ nav {
 @media (min-width: 1200px) {
     #welcome-container {
         font-size: 8rem;
+        top: 30%;
     }
 }
 .mouse {
@@ -752,7 +737,7 @@ nav {
     vertical-align: middle;
     box-sizing: border-box;
     margin: 0;
-    margin-top: 10px;
+    margin-top: 0px;
     padding: 0;
     overflow: hidden;
     background-color: #1a2930;
@@ -764,7 +749,8 @@ nav {
 }
 @media (min-width: 1200px) {
     #rig li {
-        width: 24%;
+        width: 25%;
+        max-height: 340px;
     }
 }
 /* The wrapper for each item */
@@ -772,6 +758,17 @@ nav {
     display: block;
     position: relative;
     overflow: hidden;
+    max-height: 100%;
+}
+.rig-cell img {
+    width: 700px;
+    height: auto;
+    -webkit-filter: brightness(0.3);
+    filter: brightness(0.3);
+}
+.rig-cell img:hover {
+    -webkit-transform: scale(1.5) brightness(1);
+    transform: scale(1.5) brightness(1);
 }
 /* If have the image layer */
 .rig-img {
@@ -786,7 +783,7 @@ nav {
     -webkit-transition: all 1s;
     transition: all 1s;
     -webkit-filter: brightness(0%);
-    filter: grayscale(0%);
+
 }
 #rig li:hover .rig-img {
     -webkit-transform: scale(1.05);
