@@ -406,6 +406,7 @@ text-rendering: geometricPrecision !important;
         -webkit-box-flex: 0;
         -ms-flex: 0 0 160px;
         flex: 0 0 160px;
+        font-size: 2rem;
     }
 }
 .responsive-menu ul li a{
@@ -520,7 +521,7 @@ position: relative;
 .expand {
     margin: 0;
     color: #a9a9a9;
-    width: 100%;
+    width: 100vw;
     left: 0;
     top: 70px;
     background: #fff;
@@ -534,7 +535,7 @@ position: relative;
 }
 @media (min-width: 1200px) {
     .expand {
-        height: auto;
+        height: 110px;
         top: 0;
     }
 }
@@ -571,7 +572,7 @@ position: relative;
     }
 /* ***** WELCOME SECTION ***** */
 #welcome {
-    top: 0;
+    margin-top: 34px;
     background-color: #1a2930;
     height: calc(100vh - 60px);
 }
@@ -830,7 +831,7 @@ position: relative;
 }
 #rig {
     max-width: 100%;
-    margin: 3em 0em;
+    margin: 3em 0em !important;
     /*center aligned*/    
     padding: 0;
     font-size: 0;
@@ -905,9 +906,9 @@ position: relative;
     -webkit-filter: brightness(0%);
 
 }
-#rig li:hover .rig-img {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
+#rig li:hover.rig-img {
+    -webkit-transform: scale(1.05) brightness(1);
+            transform: scale(1.05) brightness(1);
 }
 /* If have the overlay layer */
 .rig-overlay {

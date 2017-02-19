@@ -2,7 +2,7 @@
 
 
 #welcome {
-    top: 0;
+    margin-top: 34px;
     background-color: $navyBackground;
     height: calc(100vh - 60px);
     @mixin atMedium {

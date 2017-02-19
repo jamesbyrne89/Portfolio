@@ -18,7 +18,7 @@
 }
 #rig {
     max-width: 100%;
-    margin: 3em 0em;
+    margin: 3em 0em !important;
     /*center aligned*/    
     padding: 0;
     font-size: 0;
@@ -85,8 +85,8 @@ filter: brightness(0.3);
     -webkit-filter: brightness(0%);
 
 }
-#rig li:hover .rig-img {
-    transform: scale(1.05);
+#rig li:hover.rig-img {
+    transform: scale(1.05) brightness(1);
 }
 /* If have the overlay layer */
 
