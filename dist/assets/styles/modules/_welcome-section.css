@@ -1,9 +1,10 @@
-// ***** WELCOME SECTION *****
+/* ***** WELCOME SECTION ***** */
 
 
 #welcome {
+    top: 0;
     background-color: $navyBackground;
-    height: 100vh;
+    height: calc(100vh - 60px);
     @mixin atMedium {
     height: calc(100vh - 98px);  
     }
@@ -28,6 +29,7 @@
     }
     @mixin atLarge {
           font-size: 8rem;  
+          top: 30%;
     }
 }
 .mouse {
