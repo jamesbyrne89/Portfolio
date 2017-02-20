@@ -2,7 +2,7 @@
 
 
 #welcome {
-    margin-top: 34px;
+    margin-top: 0px;
     background-color: $navyBackground;
     height: calc(100vh - 60px);
     @mixin atMedium {
@@ -13,7 +13,7 @@
 }
 #welcome-container {
     color: $yellow;
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 0 0.5em ;
     position: relative;
     top: 20%;
@@ -21,9 +21,6 @@
     font-weight: bold;
     text-align: center;
     animation-fill-mode: forwards;
-    @mixin atSmall {
-          font-size: 4rem;  
-    }
     @mixin atMedium {
           font-size: 6rem;  
     }

@@ -115,6 +115,7 @@ gulp.task('compressScripts', ['babel', 'deleteDistFolder'], function(){
 gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
   var pathsToCopy = [
     './app/**/*',
+    './app/assets/scripts/vendor/**/*',
     '!./app/index.html',
     '!./app/assets/images/**',
     '!./app/assets/styles/styles.css',

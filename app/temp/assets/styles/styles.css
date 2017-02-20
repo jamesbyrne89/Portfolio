@@ -238,7 +238,7 @@ text-rendering: geometricPrecision !important;
 /* ***** NAVIGATION ***** */
 .mobile-nav {
     width: 100vw;
-    padding: 2em 0;
+    padding: 1.5em 0;
     padding-bottom: 0;
     margin: auto;
     color: #a9a9a9;
@@ -246,7 +246,13 @@ text-rendering: geometricPrecision !important;
     font-weight: 800;
     background-color: rgba(255, 255, 255, 1);
     z-index: 15;
-    height: 65px;
+    height: 55px;
+}
+@media (min-width: 700px) {
+    .mobile-nav {
+        padding: 2.5em 0;
+        min-height: 90px;
+    }
 }
 @media (min-width: 1200px) {
     .mobile-nav {
@@ -258,6 +264,14 @@ text-rendering: geometricPrecision !important;
     display: inline-block;
     display: block;
     float: right;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .menu-btn span {
     position: relative;
@@ -266,10 +280,10 @@ text-rendering: geometricPrecision !important;
     background: #a9a9a9;
     z-index: 99;
      display: block;
-     -webkit-transition: top 0.2s ease-in-out 0.5s, opacity 0.5s ease 1s, -webkit-transform 0.2s ease;
-     transition: top 0.2s ease-in-out 0.5s, opacity 0.5s ease 1s, -webkit-transform 0.2s ease;
-     transition: top 0.2s ease-in-out 0.5s, transform 0.2s ease, opacity 0.5s ease 1s;
-     transition: top 0.2s ease-in-out 0.5s, transform 0.2s ease, opacity 0.5s ease 1s, -webkit-transform 0.2s ease;
+     -webkit-transition: top 0.2s ease-in-out 0.2s, opacity 0.5s ease 1s, -webkit-transform 0.2s ease;
+     transition: top 0.2s ease-in-out 0.2s, opacity 0.5s ease 1s, -webkit-transform 0.2s ease;
+     transition: top 0.2s ease-in-out 0.2s, transform 0.2s ease, opacity 0.5s ease 1s;
+     transition: top 0.2s ease-in-out 0.2s, transform 0.2s ease, opacity 0.5s ease 1s, -webkit-transform 0.2s ease;
 }
 @media (min-width: 700px) {
     .menu-btn span {
@@ -304,10 +318,10 @@ text-rendering: geometricPrecision !important;
 .menu-btn span:first-child.opened {
         top: 12px;
         width: 30px;
-     -webkit-transition: top 0.2s ease-in-out, width 0.2s ease 0.5s, -webkit-transform 0.2s ease 0.6s;
-     transition: top 0.2s ease-in-out, width 0.2s ease 0.5s, -webkit-transform 0.2s ease 0.6s;
-     transition: top 0.2s ease-in-out, transform 0.2s ease 0.6s, width 0.2s ease 0.5s;
-     transition: top 0.2s ease-in-out, transform 0.2s ease 0.6s, width 0.2s ease 0.5s, -webkit-transform 0.2s ease 0.6s;
+     -webkit-transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+     transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+     transition: top 0.2s ease-in-out, transform 0.1s ease 0.3s, width 0.1s ease 0.3s;
+     transition: top 0.2s ease-in-out, transform 0.1s ease 0.3s, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
      -webkit-transform: rotate(45deg);
              transform: rotate(45deg);
 }
@@ -319,10 +333,10 @@ text-rendering: geometricPrecision !important;
 .menu-btn span:last-child.opened {
     top: 8px;
     width: 30px;
-    -webkit-transition: top 0.2s ease-in-out, width 0.2s ease 0.5s, -webkit-transform 0.2s ease 0.6s;
-    transition: top 0.2s ease-in-out, width 0.2s ease 0.5s, -webkit-transform 0.2s ease 0.6s;
-    transition: top 0.2s ease-in-out, transform 0.2s ease 0.6s, width 0.2s ease 0.5s;
-    transition: top 0.2s ease-in-out, transform 0.2s ease 0.6s, width 0.2s ease 0.5s, -webkit-transform 0.2s ease 0.6s;
+    -webkit-transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    transition: top 0.2s ease-in-out, transform 0.1s ease 0.3s, width 0.1s ease 0.3s;
+    transition: top 0.2s ease-in-out, transform 0.1s ease 0.3s, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
      -webkit-transform: rotate(-45deg);
              transform: rotate(-45deg);
 }
@@ -393,13 +407,8 @@ text-rendering: geometricPrecision !important;
     flex: 0 0 100%;
     line-height: 1.75;
     color: #a9a9a9;
-    font-size: 1.5rem;
+    font-size: 3rem;
     margin: 0.5em 0;
-}
-@media (min-width: 700px) {
-    .responsive-menu ul li {
-        font-size: 3rem;
-    }
 }
 @media (min-width: 1200px) {
     .responsive-menu ul li {
@@ -548,10 +557,10 @@ position: relative;
     width: 100%;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
-    height: 70px;    
+    height: 74px;    
     
 }
-@media (min-width: 1200px) {
+@media (min-width: 700px) {
     .sticky {
         min-height: 110px;
     }
@@ -572,7 +581,7 @@ position: relative;
     }
 /* ***** WELCOME SECTION ***** */
 #welcome {
-    margin-top: 34px;
+    margin-top: 0px;
     background-color: #1a2930;
     height: calc(100vh - 60px);
 }
@@ -584,7 +593,7 @@ position: relative;
 @media (min-width: 1200px) {}
 #welcome-container {
     color: #f7ce36;
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 0 0.5em ;
     position: relative;
     top: 20%;
@@ -593,11 +602,6 @@ position: relative;
     text-align: center;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
-}
-@media (min-width: 475px) {
-    #welcome-container {
-        font-size: 4rem;
-    }
 }
 @media (min-width: 700px) {
     #welcome-container {
@@ -882,10 +886,15 @@ position: relative;
     max-height: 100%;
 }
 .rig-cell img {
-    width: 700px;
+    width: 500px;
     height: auto;
     -webkit-filter: brightness(0.3);
     filter: brightness(0.3);
+}
+@media (min-width: 700px) {
+    .rig-cell img {
+        width: 700px;
+    }
 }
 .rig-cell img:hover {
     -webkit-transform: scale(1.5) brightness(1);
@@ -1122,7 +1131,6 @@ position: relative;
     font-weight: bold;
     text-align: left;
     padding: 3em 1em;
-    min-height: 100vh;
     border: solid 2px #fff;
 
 }
@@ -1160,6 +1168,7 @@ position: relative;
 }
 .contact-left {
     margin-bottom: 50px;
+    margin-right: 20px;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
@@ -1167,8 +1176,8 @@ position: relative;
 @media (min-width: 700px) {
     .contact-left {
         -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
+        -ms-flex: 0 0 45%;
+        flex: 0 0 45%;
     }
 }
 .contact-right {
