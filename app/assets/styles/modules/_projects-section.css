@@ -14,6 +14,7 @@
 
 .rig-wrapper {
     margin-top: calc(3em + 20px);
+    margin-bottom: calc(3em + 20px);
     display: block;
 }
 #rig {
