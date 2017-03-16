@@ -933,6 +933,8 @@ position: relative;
     background-size: 50px 50px;
     opacity: 0;
     filter: alpha(opacity=0);
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
     /*For IE6 - IE8*/
     
     -webkit-transition: all 0.8s;
@@ -962,6 +964,8 @@ position: relative;
 }
 #rig li:hover .rig-orig-overlay {
     opacity: 0;
+        -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
 }
 /* If have captions */
 .rig-text {
