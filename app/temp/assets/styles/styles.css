@@ -1128,7 +1128,7 @@ position: relative;
     -webkit-transition: all ease 0.3s;
     transition: all ease 0.3s;
 }
-/* ***** WELCOME SECTION ***** */
+/* ***** PROJECTS PAGE ***** */
 #project-header {
     margin-top: 0px;
     background-color: #1a2930;
@@ -1162,6 +1162,82 @@ position: relative;
         font-size: 8rem;
         top: 70%;
     }
+}
+#summary {
+        padding: 3em 1em;
+        background: #c5c1c0;
+        font-family: 'Avenir-Book', serif;
+}
+.summary-wrapper {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #e9e9e9;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-size: 1.75rem;
+}
+@media (min-width: 700px) {
+    .summary-wrapper {
+        width: 80%;
+        font-size: 2rem;
+    }
+}
+@media (min-width: 1200px) {
+    .summary-wrapper {
+        font-size: 2.6rem;
+    }
+}
+.summary-left, .summary-right {
+    width: 50%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 200px;
+            flex: 1 1 200px;
+    
+}
+.summary-left {
+    margin-bottom: 5rem;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+#details {
+    background: #efefef;
+    padding: 3em 1em;
+}
+.btn-return {
+    margin: 0px auto;
+    font-family: 'Avenir-Black', century-gothic, helvetica, arial, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 2em 5em;
+    text-align: center;
+    max-width: 100%;
+    color: #1A1D1A;
+    border: solid 4px #1A1D1A;
+    display: block;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+.btn-return a {
+    text-decoration: none;
+}
+.btn-return:hover {
+    font-family: 'Avenir-Black', century gothic, helvetica, arial, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #1A1D1A;
+    background-color: #fff;
+    border: solid 4px #fff;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
 }
 /* ***** CONTACT SECTION ***** */
 #contact {
