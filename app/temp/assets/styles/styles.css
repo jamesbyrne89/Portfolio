@@ -1128,6 +1128,41 @@ position: relative;
     -webkit-transition: all ease 0.3s;
     transition: all ease 0.3s;
 }
+/* ***** WELCOME SECTION ***** */
+#project-header {
+    margin-top: 0px;
+    background-color: #1a2930;
+    height: calc(80vh - 60px);
+}
+@media (min-width: 700px) {
+    #project-header {
+        height: calc(80vh - 98px);
+    }
+}
+@media (min-width: 1200px) {}
+#project-header__container {
+    color: #f7ce36;
+    font-size: 4rem;
+    padding: 0 0.5em ;
+    position: relative;
+    top: 70%;
+    font-family: 'Avenir-Black', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+@media (min-width: 700px) {
+    #project-header__container {
+        font-size: 6rem;
+    }
+}
+@media (min-width: 1200px) {
+    #project-header__container {
+        font-size: 8rem;
+        top: 70%;
+    }
+}
 /* ***** CONTACT SECTION ***** */
 #contact {
     color: #fff;

@@ -1,0 +1,31 @@
+/* ***** WELCOME SECTION ***** */
+
+
+#project-header {
+    margin-top: 0px;
+    background-color: $navyBackground;
+    height: calc(80vh - 60px);
+    @mixin atMedium {
+    height: calc(80vh - 98px);  
+    }
+    @mixin atLarge {
+    }
+}
+#project-header__container {
+    color: $yellow;
+    font-size: 4rem;
+    padding: 0 0.5em ;
+    position: relative;
+    top: 70%;
+    font-family: 'Avenir-Black', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    animation-fill-mode: forwards;
+    @mixin atMedium {
+          font-size: 6rem;  
+    }
+    @mixin atLarge {
+          font-size: 8rem;  
+          top: 70%;
+    }
+}
