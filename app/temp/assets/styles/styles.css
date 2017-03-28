@@ -1169,10 +1169,13 @@ position: relative;
         font-family: 'Avenir-Book', serif;
 }
 .summary-wrapper {
-    width: 80%;
+    width: 70%;
+    font-weight: bold;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin: auto;
+    text-align: left;
     color: #e9e9e9;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1180,7 +1183,7 @@ position: relative;
 }
 @media (min-width: 700px) {
     .summary-wrapper {
-        width: 80%;
+        width: 70%;
         font-size: 2rem;
     }
 }
@@ -1198,10 +1201,27 @@ position: relative;
 }
 .summary-left {
     margin-bottom: 5rem;
+    color: #0A1612;
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
+}
+.project-summary__link {
+    display: block;
+    margin-bottom: 50px;
+    color: #0A1612;
+    font-size: 1.75rem;
+}
+@media (min-width: 700px) {
+    .project-summary__link {
+        font-size: 2rem;
+    }
+}
+@media (min-width: 1200px) {
+    .project-summary__link {
+        font-size: 2.6rem;
+    }
 }
 #details {
     background: #efefef;
