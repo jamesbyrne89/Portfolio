@@ -82,6 +82,11 @@
 #details {
     background: #efefef;
     padding: 3em 1em;
+    text-align: center;
+}
+
+.device-screenshots {
+    width: 1000px;
 }
 
 .btn-return {
@@ -90,30 +95,46 @@
     text-decoration: none;
     text-transform: uppercase;
     background-color: transparent;
+    display: inline-block;
     font-weight: 800;
     font-size: 16px;
     letter-spacing: 2px;
     padding: 2em 5em;
     text-align: center;
     max-width: 100%;
+    width: auto;
     color: #1A1D1A;
     border: solid 4px #1A1D1A;
-    display: block;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
     transition: all ease 0.3s;
-    a {
-        text-decoration: none;
-    }
 }
 .btn-return:hover {
     font-family: 'Avenir-Black', century gothic, helvetica, arial, sans-serif;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 800;
-    color: #1A1D1A;
-    background-color: #fff;
-    border: solid 4px #fff;
+    color: #fff;
+    background-color: #1A1D1A;
+    border: solid 4px #1A1D1A;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
+    &:after {
+                    width: 100%;
+                    background: $nearBlackBackground;
+                    }    
+}
+
+.btn-return:after {
+    display: none;
+    @mixin atLarge {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    text-decoration: none;
+    transition: width .5s ease, background-color .5s ease;
+    }
 }
