@@ -1208,10 +1208,12 @@ position: relative;
             animation-fill-mode: forwards;
 }
 .project-summary__link {
-    display: block;
+    display: inline-block;
     margin-bottom: 50px;
     color: #0A1612;
     font-size: 1.75rem;
+    padding: 5px auto;
+                width: 100%;
 }
 @media (min-width: 700px) {
     .project-summary__link {
@@ -1223,6 +1225,35 @@ position: relative;
         font-size: 2.6rem;
     }
 }
+.project-summary__link:hover {
+    text-decoration: none;
+    margin: 0;
+    color: #0A1612;
+    text-decoration: none;
+}
+.project-summary__link:hover:after {
+    width: 100%;
+    background: #0A1612;
+}
+.project-summary__link:after {
+    display: none;
+}
+@media (min-width: 1200px) {
+    .project-summary__link:after {
+        content: '';
+        display: block;
+        margin: auto;
+        height: 3px;
+        width: 0px;
+        background: transparent;
+        text-decoration: none;
+        -webkit-transition: width .5s ease, background-color .5s ease;
+        transition: width .5s ease, background-color .5s ease;
+    }
+}
+.link-holder {
+    display: inline-block;
+}
 #details {
     background: #efefef;
     padding: 3em 1em;
@@ -1230,6 +1261,7 @@ position: relative;
 }
 .device-screenshots {
     width: 1000px;
+    margin-bottom: 100px;
 }
 .btn-return {
     margin: 0px auto;
@@ -1259,27 +1291,7 @@ position: relative;
     background-color: #1A1D1A;
     border: solid 4px #1A1D1A;
     -webkit-transition: all ease 0.3s;
-    -moz-transition: all ease 0.3s;    
-}
-.btn-return:hover:after {
-    width: 100%;
-    background: #0A1612;
-}
-.btn-return:after {
-    display: none;
-}
-@media (min-width: 1200px) {
-    .btn-return:after {
-        content: '';
-        display: block;
-        margin: auto;
-        height: 3px;
-        width: 0px;
-        background: transparent;
-        text-decoration: none;
-        -webkit-transition: width .5s ease, background-color .5s ease;
-        transition: width .5s ease, background-color .5s ease;
-    }
+    -moz-transition: all ease 0.3s;
 }
 /* ***** CONTACT SECTION ***** */
 #contact {

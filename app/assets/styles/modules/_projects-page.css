@@ -67,16 +67,45 @@
 }
 
 .project-summary__link {
-    display: block;
+    display: inline-block;
     margin-bottom: 50px;
     color: #0A1612;
     font-size: 1.75rem;
+    padding: 5px auto;
+                width: 100%;
                     @mixin atMedium {
                 font-size: 2rem;
             }
     @mixin atLarge {
       font-size: 2.6rem;
     }
+&:hover {
+    text-decoration: none;
+     margin: 0;
+     color: #0A1612;
+    text-decoration: none;
+}
+&:hover:after {
+    width: 100%;
+    background: #0A1612;
+    }
+&:after {
+    display: none;
+    @mixin atLarge {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    text-decoration: none;
+    transition: width .5s ease, background-color .5s ease;
+    }
+}
+}
+
+.link-holder {
+    display: inline-block;
 }
 
 #details {
@@ -87,6 +116,7 @@
 
 .device-screenshots {
     width: 1000px;
+    margin-bottom: 100px;
 }
 
 .btn-return {
@@ -119,22 +149,5 @@
     border: solid 4px #1A1D1A;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
-    &:after {
-                    width: 100%;
-                    background: $nearBlackBackground;
-                    }    
 }
 
-.btn-return:after {
-    display: none;
-    @mixin atLarge {
-    content: '';
-    display: block;
-    margin: auto;
-    height: 3px;
-    width: 0px;
-    background: transparent;
-    text-decoration: none;
-    transition: width .5s ease, background-color .5s ease;
-    }
-}
