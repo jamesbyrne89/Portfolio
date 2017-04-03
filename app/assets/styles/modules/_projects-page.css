@@ -125,7 +125,6 @@
 
 .device-screenshots {
     width: 1000px;
-    margin-bottom: 100px;
 }
 
 .btn-return {
@@ -163,13 +162,22 @@
 .details__tech-list li {
     display: inline-block;
     margin: 10px 25px 100px 25px;
-    color: #c5c1c0;
+    color: #a9a9a9;
+    font-size: 2.5rem;
 }
-
 
 .details__full-summary {
     font-size: 2.5rem;
     color: #a9a9a9;
     width: 70%;
     margin: 0 auto 100px auto;
+}
+
+.tech-section-header {
+    color: #a9a9a9 !important;
+}
+
+.hr {
+    border: solid 2px #a9a9a9;
+    width: 40px;
 }
