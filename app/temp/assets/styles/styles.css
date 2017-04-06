@@ -1215,6 +1215,7 @@ position: relative;
     animation-duration: 1.5s;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
+
 }
 .project-summary__link {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -1240,7 +1241,6 @@ position: relative;
 }
 .project-summary__link:hover {
     text-decoration: none;
-    margin: 0;
     color: #0A1612;
     text-decoration: none;
 }
@@ -1266,6 +1266,7 @@ position: relative;
 }
 .link-holder {
     display: inline-block;
+    margin-bottom: 50px;
 }
 #details {
     background: #efefef;

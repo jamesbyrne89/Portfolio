@@ -69,6 +69,7 @@
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
+
 }
 
 .project-summary__link {
@@ -90,7 +91,6 @@
     }
 &:hover {
     text-decoration: none;
-     margin: 0;
      color: #0A1612;
     text-decoration: none;
 }
@@ -115,6 +115,7 @@
 
 .link-holder {
     display: inline-block;
+    margin-bottom: 50px;
 }
 
 #details {
