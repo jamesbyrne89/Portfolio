@@ -38,7 +38,7 @@
 }
 
 .summary-wrapper {
-    width: 80%;
+    width: 90%;
     font-weight: bold;
     display: flex;
     margin: auto;
@@ -47,10 +47,11 @@
     flex-wrap: wrap;
     font-size: 1.75rem;
                 @mixin atMedium {
-                width: 70%;
+                width: 80%;
                 font-size: 2rem;
             }
     @mixin atLarge {
+        width: 70%;
       font-size: 2.6rem;
     }
 }
@@ -173,11 +174,21 @@ margin-bottom: 5rem;
        margin: 10px 0px 100px 0px;
        padding: 0;
 }
+.details__tech-list ul {
+    margin-top: 50px;
+    @mixin atLarge {
+        margin-top: 0px;
+    }
+    }
+
 .details__tech-list li {
     display: block;
     margin: 0 25px;
     color: #a9a9a9;
     font-size: 1.75rem;
+    @mixin atMedium {
+        font-size: 2.25rem;
+    }
     @mixin atLarge {
     font-size: 2.5rem;
     display: inline-block;

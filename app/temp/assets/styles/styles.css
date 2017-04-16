@@ -1185,7 +1185,7 @@ position: relative;
         font-family: 'Avenir-Book', serif;
 }
 .summary-wrapper {
-    width: 80%;
+    width: 90%;
     font-weight: bold;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1199,12 +1199,13 @@ position: relative;
 }
 @media (min-width: 700px) {
     .summary-wrapper {
-        width: 70%;
+        width: 80%;
         font-size: 2rem;
     }
 }
 @media (min-width: 1200px) {
     .summary-wrapper {
+        width: 70%;
         font-size: 2.6rem;
     }
 }
@@ -1332,11 +1333,24 @@ position: relative;
        margin: 10px 0px 100px 0px;
        padding: 0;
 }
+.details__tech-list ul {
+    margin-top: 50px;
+    }
+@media (min-width: 1200px) {
+    .details__tech-list ul {
+        margin-top: 0px;
+    }
+}
 .details__tech-list li {
     display: block;
     margin: 0 25px;
     color: #a9a9a9;
     font-size: 1.75rem;
+}
+@media (min-width: 700px) {
+    .details__tech-list li {
+        font-size: 2.25rem;
+    }
 }
 @media (min-width: 1200px) {
     .details__tech-list li {
