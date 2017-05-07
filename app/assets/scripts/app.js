@@ -12,11 +12,20 @@ $(window).scroll(function() {
 
 // MOBILE NAVIGATION
 $(function($){
-    $( '.menu-btn' ).click(function(){
+    $( '.menu-btn' ).on('click', function(){
     $('.responsive-menu').toggleClass('expand')
     $('.menu-btn span:first-child').toggleClass('opened')
     $('.menu-btn span:nth-child(2)').toggleClass('hidden')
     $('.menu-btn span:last-child').toggleClass('opened')
+  });
+});
+
+$(function($){
+    $( '.menu-link' ).on('click', function(){
+    $('.responsive-menu').addClass('expand')
+    $('.menu-btn span:first-child').removeClass('opened')
+    $('.menu-btn span:nth-child(2)').removeClass('hidden')
+    $('.menu-btn span:last-child').removeClass('opened')
   });
 });
 

@@ -267,7 +267,7 @@ text-rendering: geometricPrecision !important;
     display: inline-block;
     display: block;
     float: right;
-    height: auto;
+    height: 32px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
