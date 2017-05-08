@@ -10,13 +10,22 @@ $(window).scroll(function() {
     }
 });
 
-// MOBILE NAVIGATION //
+// MOBILE NAVIGATION
 $(function($){
-    $( '.menu-btn' ).click(function(){
+    $( '.menu-btn' ).on('click', function(){
     $('.responsive-menu').toggleClass('expand')
     $('.menu-btn span:first-child').toggleClass('opened')
     $('.menu-btn span:nth-child(2)').toggleClass('hidden')
     $('.menu-btn span:last-child').toggleClass('opened')
+  });
+});
+
+$(function($){
+    $( '.menu-link' ).on('click', function(){
+    $('.responsive-menu').addClass('expand')
+    $('.menu-btn span:first-child').removeClass('opened')
+    $('.menu-btn span:nth-child(2)').removeClass('hidden')
+    $('.menu-btn span:last-child').removeClass('opened')
   });
 });
 
@@ -30,21 +39,10 @@ $("img.lazy").lazyload({
     threshold : -900
 });
 
-var $welcome = $('#welcome-container');
-
- $welcome.waypoint(function(direction){
- 	if (direction == 'up'){
-$welcome.addClass('intro');
-$welcome.removeClass('fadeOut');
-} else {
-	$welcome.removeClass('intro');
-	$welcome.addClass('fadeOut');
-}
- }, {offset: '2%'});
 
 
 
-// RESPONSIVE NAVIGATION //
+// RESPONSIVE NAVIGATION
 
 $(window).scroll(function(){
          var sticky = $('header'),
@@ -58,6 +56,39 @@ $(window).scroll(function(){
             sticky.removeAttr("style"); //slideDown adds the style="block" which needs to be removed so that next time slideDown will work
         }
     });
+
+
+
+// SLIDE IN ANIMATIONS
+
+// This function needs fixing!!!
+
+function animateIn(el, offset){
+    var $element = $(el);
+
+ $element.waypoint(function(direction){
+        if (direction == 'down'){
+$element.addClass('sideintro', 'delayed-text-5')
+$element.removeClass('animated fadeOut')
+} else {
+$element.removeClass('sideintro', 'delayed-text-5')
+$element.addClass('animated fadeOut')
+}
+ }, {offset: offset});
+}
+
+
+var $welcome = $('#welcome-container');
+
+ $welcome.waypoint(function(direction){
+    if (direction == 'up'){
+$welcome.addClass('intro');
+$welcome.removeClass('fadeOut');
+} else {
+    $welcome.removeClass('intro');
+    $welcome.addClass('fadeOut');
+}
+ }, {offset: '2%'});
 
 
  var $aboutSection = $('#about');
@@ -307,4 +338,9 @@ $socialFive.removeClass('sideintro', 'delayed-text-5')
 $socialFive.addClass('animated fadeOut')
 }
  }, {offset: '80%'});
+
+
+
+
+
 

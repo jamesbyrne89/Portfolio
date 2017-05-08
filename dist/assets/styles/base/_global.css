@@ -75,6 +75,8 @@ text-rendering: geometricPrecision !important;
 .hr {
     border: solid 2px #a9a9a9;
     width: 40px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .fadeOut {
     -webkit-animation-name: fadeOut;
