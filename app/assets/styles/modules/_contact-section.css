@@ -37,9 +37,10 @@
 
 .contact-left {
     margin-bottom: 50px;
-    margin-right: 20px;
+    
     flex: 0 0 100%;
         @mixin atMedium {
+        margin-right: 20px;
         flex: 0 0 45%;
     }
 }

@@ -36,7 +36,7 @@
             display: inline-block;
             width: 100%;
             max-height: 90vw;
-            height: 90vw;
+            height: 325px;
             vertical-align: middle;
             box-sizing: border-box;
             margin: 0;
@@ -47,6 +47,9 @@
             @mixin atSmall {
                 width: 50%;
             }
+            @mixin atMedium {
+                height: 350px;
+            }    
             @mixin atLarge {
                 width: 25%;
                 max-height: 340px;
@@ -62,14 +65,15 @@
     display: block;
     position: relative;
     overflow: hidden;
-    max-height: 100%;
+    height: 100%;
+    @mixin atMedium {
+
+    }
         img {
-width: 500px;
+max-height: 100%;
 height: auto;
 filter: brightness(0.3);
-@mixin atMedium {
-  width: 700px;
-            }
+
     &:hover {
         transform: scale(1.5) brightness(1);
 
