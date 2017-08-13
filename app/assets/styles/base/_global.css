@@ -13,6 +13,7 @@ button:hover, a:hover {
 }
 
 html {
+    font-size: 1rem;
 
 text-rendering: geometricPrecision !important;
 
@@ -45,7 +46,7 @@ text-rendering: geometricPrecision !important;
 .section {
     max-width: 100vw;
     margin: auto;
-    background-color: lightblue;
+    padding: 8rem 0;
     font-size: 3rem;
     text-align: center;
     color: #000;
@@ -69,7 +70,7 @@ text-rendering: geometricPrecision !important;
     letter-spacing: 4px;
     text-transform: uppercase;
     margin: 0px auto 20px auto;
-    color: #a9a9a9;
+    color: $darkGrey;
     display: block;
 }
 .hr {

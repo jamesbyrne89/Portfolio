@@ -43,7 +43,7 @@
             margin-top: 0px;
             padding: 0;
             overflow: hidden;
-            background-color: $navyBackground;
+            background-color: $newNavy;
             @mixin atSmall {
                 width: 50%;
             }
@@ -130,7 +130,7 @@ filter: brightness(0.3);
     bottom: 0;
     right: 0;
     margin: auto;
-    background: $navyBackground;
+    background: $newNavy;
     background-size: 50px 50px;
     opacity: 0.7;
     filter: alpha(opacity=0);
@@ -153,8 +153,7 @@ filter: brightness(0.3);
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.75rem;
-    font-weight: 800;
+    font-weight: 700;
     font-family: 'Avenir-Black', sans-serif;
     color: white;
     opacity: 0;
@@ -167,7 +166,7 @@ filter: brightness(0.3);
                 font-size: 2rem;
             }
             @mixin atLarge {
-                font-size: 2.25rem;
+                font-size: 1.25rem;
             }
         p {
             display: block;
@@ -201,7 +200,7 @@ filter: brightness(0.3);
 
         p:hover {
             text-decoration: none;
-            color: $navyBackground;
+            color: $newNavy;
             transition: all .3s;
 }
         p:after {
@@ -270,19 +269,19 @@ filter: brightness(0.3);
     transition: all .5s;
 }
 .fa-link:hover {
-    border: solid 2px $navyBackground;
+    border: solid 2px $newNavy;
     padding: 6px;
     border-radius: 50%;
     margin: 0px auto 10px auto;
-    color: $navyBackground;
+    color: $newNavy;
     
 }
 .rig-git:hover {
-    border: solid 1px $navyBackground;
+    border: solid 1px $newNavy;
     padding: 5px;
     border-radius: 50%;
     margin: 10px auto;
-    color: $navyBackground;
+    color: $newNavy;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
     transition: all ease 0.3s;
