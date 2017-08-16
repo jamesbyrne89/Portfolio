@@ -4,15 +4,15 @@
     justify-content: space-between;
     color: $darkGrey;
     background-color: #efefef;
-    font-family: 'Avenir-Book', serif;
+    font-family: $bodyText;
     font-size: 1rem;
     font-size: 1.75rem;
 
     p {
-        font-family: 'Avenir-Book', serif;
         text-align: left;
         opacity: 0;
         margin-top: 1.5rem;
+        line-height: 1.25;
 
         @mixin atMedium {
             width: 80%;

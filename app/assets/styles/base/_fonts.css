@@ -8,6 +8,14 @@
     font-family: 'Avenir-Book';
     src: url('/assets/fonts/AvenirLTStd-Book.WOFF') format('woff'), url('../myfont.woff') format('woff');
 }
+@font-face {
+    font-family: 'Avenir-Next';
+    src: url('assets/fonts/AvenirNextLT.WOFF') format('woff'),
+    url('assets/fonts/AvenirNextLT.WOFF') format('woff'),
+    url('assets/fonts/AvenirNextLT.ttf') format('ttf'),
+    url('assets/fonts/AvenirNextLT.eot') format('woff'),
+    url('assets/fonts/AvenirNextLT.svg') format('svg'),
+}
 
 body {
 	-webkit-font-smoothing: antialiased;
