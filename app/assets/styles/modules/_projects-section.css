@@ -1,15 +1,19 @@
 /* ***** PROJECTS SECTION ***** */
 
-#projects {
+.projects-section {
     color: #a9a9a9;
-    background-color: #efefef;
+    background-color: #fff;
     font-family: 'Avenir-Book', serif;
     font-size: 1.8rem;
     font-weight: bold;
     text-align: left;
-    padding: 3em 0;
     min-height: 100vh;
     box-sizing: border-box;
+}
+
+.projects-section-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 .rig-wrapper {
@@ -51,7 +55,8 @@
                 height: 350px;
             }    
             @mixin atLarge {
-                width: 25%;
+                width: 32%;
+                margin: 0.75rem 0.5rem;
                 max-height: 340px;
             }
 }

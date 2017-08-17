@@ -1,26 +1,30 @@
 /* ***** CONTACT SECTION ***** */
 
-#contact {
+.contact-section {
     color: #fff;
     background-color: $nearBlackBackground;
+    display: flex;
+    justify-content: space-between;
     font-family: 'Avenir-Book', serif;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
     font-weight: bold;
     text-align: left;
-    padding: 3em 1em;
     @mixin atLarge {
         min-height: calc(100vh - 130px);
-        font-size: 2.5rem;
     }
     .section-header
     {
         color: #fff;
     }
-            hr {
-    color: #fff;
-    border: solid 2px #fff;
-            }
 
+}
+
+.project-info-text {
+    width: 50%;
+    p {
+        width: 75%;
+    }
 }
 
 .contact-wrapper {
@@ -46,13 +50,12 @@
 }
 .contact-right {
     flex: 0 0 100%;
-    text-align: center;
         @mixin atMedium {
         flex: 0 0 50%;
     }
 }
 .btn-contact {
-    margin: 0px auto 100px auto;
+    margin: 3.5rem auto 100px auto;
     font-family: 'Avenir-Black', century-gothic, helvetica, arial, sans-serif;
     text-decoration: none;
     text-transform: uppercase;

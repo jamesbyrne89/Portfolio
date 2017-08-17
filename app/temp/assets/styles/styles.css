@@ -99,7 +99,8 @@ text-rendering: geometricPrecision !important;
 .section-header {
     font-size: 3.5rem;
     font-family: 'Avenir-Black', 'century-gothic', sans-serif;
-    text-align: center;
+    text-align: left;
+    padding-left: 12rem;
     margin: 0px auto 20px auto;
     color: rgb(82, 82, 82);
     display: block;
@@ -857,16 +858,23 @@ p:nth-child(1) {
     animation-duration: 0.5s;
 }
 /* ***** PROJECTS SECTION ***** */
-#projects {
+.projects-section {
     color: #a9a9a9;
-    background-color: #efefef;
+    background-color: #fff;
     font-family: 'Avenir-Book', serif;
     font-size: 1.8rem;
     font-weight: bold;
     text-align: left;
-    padding: 3em 0;
     min-height: 100vh;
     box-sizing: border-box;
+}
+.projects-section-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .rig-wrapper {
     margin-top: calc(3em + 20px);
@@ -920,7 +928,8 @@ p:nth-child(1) {
 }
 @media (min-width: 1200px) {
     #rig li {
-        width: 25%;
+        width: 32%;
+        margin: 0.75rem 0.5rem;
         max-height: 340px;
     }
 }
@@ -1414,29 +1423,36 @@ p:nth-child(1) {
     width: 40px;
 }
 /* ***** CONTACT SECTION ***** */
-#contact {
+.contact-section {
     color: #fff;
     background-color: #0A1612;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-family: 'Avenir-Book', serif;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
     font-weight: bold;
     text-align: left;
-    padding: 3em 1em;
 
 }
 @media (min-width: 1200px) {
-    #contact {
+    .contact-section {
         min-height: calc(100vh - 130px);
-        font-size: 2.5rem;
     }
 }
-#contact .section-header
+.contact-section .section-header
     {
     color: #fff;
 }
-#contact hr {
-    color: #fff;
-    border: solid 2px #fff;
+.project-info-text {
+    width: 50%;
+}
+.project-info-text p {
+    width: 75%;
 }
 .contact-wrapper {
     margin: 3em 0.5em;
@@ -1477,7 +1493,6 @@ p:nth-child(1) {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
-    text-align: center;
 }
 @media (min-width: 700px) {
     .contact-right {
@@ -1487,7 +1502,7 @@ p:nth-child(1) {
     }
 }
 .btn-contact {
-    margin: 0px auto 100px auto;
+    margin: 3.5rem auto 100px auto;
     font-family: 'Avenir-Black', century-gothic, helvetica, arial, sans-serif;
     text-decoration: none;
     text-transform: uppercase;
