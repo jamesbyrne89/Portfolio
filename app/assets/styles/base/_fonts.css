@@ -20,5 +20,7 @@
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: 'Avenir-Black', sans-serif;
+	font-family: $bodyText;
+    font-weight: 400;
+    line-height: 1.25;
 }

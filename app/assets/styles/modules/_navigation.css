@@ -22,6 +22,15 @@
      }
 }
 
+/* Sticky Header Styles */
+.sticky {
+    position: fixed;
+    top: -80px;
+    height: 80px;
+    -webkit-animation: slideDown 0.4s ease-out forwards;
+    animation: slideDown 0.4s ease-out forwards;
+}
+
  .menu-btn {
     cursor: pointer;
     display: inline-block;
@@ -132,6 +141,7 @@
             line-height: 1.75;
             color: #a9a9a9;
             margin: 0.5em 0;
+            font-weight: bold;
              @mixin atLarge {
             flex: 0 0 160px;
         }
@@ -162,7 +172,7 @@
                     width: 0px;
                     background: transparent;
                     text-decoration: none;
-                    transition: width .5s ease, background-color .5s ease;
+                    transition: width 0.4s ease, background-color .5s ease;
                     }
                 }
 
@@ -254,20 +264,6 @@ position: relative;
     }
 }
 
-.sticky {
-    background-color: rgba(255, 255, 255, 1);
-    z-index: 10;
-    opacity: 1;
-    top: 0px;
-    position: fixed;
-    width: 100%;
-    transition: all 0.4s ease;
-    height: 74px;
-        @mixin atMedium {
-        min-height: 110px;
-    }    
-    
-}
 .fixed {
     position: fixed;
     z-index: 1;

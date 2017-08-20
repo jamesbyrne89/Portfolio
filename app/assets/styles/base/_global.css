@@ -73,12 +73,7 @@ text-rendering: geometricPrecision !important;
     color: $darkGrey;
     display: block;
 }
-.hr {
-    border: solid 2px #a9a9a9;
-    width: 40px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 .fadeOut {
     -webkit-animation-name: fadeOut;
     animation-name: fadeOut;

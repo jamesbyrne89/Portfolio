@@ -106,3 +106,15 @@
   transform: translateY(-4px) rotate(-45deg);
 }
 }
+
+/* Sticky header slides down */
+
+@-webkit-keyframes slideDown {
+  0% { top: -80px; }
+  100% { top: 0px; }
+}
+
+@keyframes slideDown {
+  0% { top: -80px; }  
+  100% { top: 0px; }
+}

@@ -31,7 +31,9 @@ a:hover {
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: 'Avenir-Black', sans-serif;
+	font-family: 'Avenir-Next', helvetica, arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.25;
 }
 /****** MEDIA QUERIES ******/
 // ***** GENERAL STYLES *****
@@ -104,12 +106,6 @@ text-rendering: geometricPrecision !important;
     margin: 0px auto 20px auto;
     color: rgb(82, 82, 82);
     display: block;
-}
-.hr {
-    border: solid 2px #a9a9a9;
-    width: 40px;
-    margin-left: auto;
-    margin-right: auto;
 }
 .fadeOut {
     -webkit-animation-name: fadeOut;
@@ -251,6 +247,15 @@ text-rendering: geometricPrecision !important;
   transform: translateY(-4px) rotate(-45deg);
 }
 }
+/* Sticky header slides down */
+@-webkit-keyframes slideDown {
+  0% { top: -80px; }
+  100% { top: 0px; }
+}
+@keyframes slideDown {
+  0% { top: -80px; }  
+  100% { top: 0px; }
+}
 /* ***** NAVIGATION ***** */
 .site-header {
     width: 100vw;
@@ -274,6 +279,14 @@ text-rendering: geometricPrecision !important;
     .site-header {
         padding: 0;
     }
+}
+/* Sticky Header Styles */
+.sticky {
+    position: fixed;
+    top: -80px;
+    height: 80px;
+    -webkit-animation: slideDown 0.4s ease-out forwards;
+    animation: slideDown 0.4s ease-out forwards;
 }
 .menu-btn {
     cursor: pointer;
@@ -431,6 +444,7 @@ text-rendering: geometricPrecision !important;
     line-height: 1.75;
     color: #a9a9a9;
     margin: 0.5em 0;
+    font-weight: bold;
 }
 @media (min-width: 1200px) {
     .site-nav ul li {
@@ -468,8 +482,8 @@ text-rendering: geometricPrecision !important;
         width: 0px;
         background: transparent;
         text-decoration: none;
-        -webkit-transition: width .5s ease, background-color .5s ease;
-        transition: width .5s ease, background-color .5s ease;
+        -webkit-transition: width 0.4s ease, background-color .5s ease;
+        transition: width 0.4s ease, background-color .5s ease;
     }
 }
 .site-nav ul li a:hover:after {
@@ -567,23 +581,6 @@ position: relative;
     .expand {
         height: 110px;
         top: 0;
-    }
-}
-.sticky {
-    background-color: rgba(255, 255, 255, 1);
-    z-index: 10;
-    opacity: 1;
-    top: 0px;
-    position: fixed;
-    width: 100%;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    height: 74px;    
-    
-}
-@media (min-width: 700px) {
-    .sticky {
-        min-height: 110px;
     }
 }
 .fixed {
@@ -859,11 +856,9 @@ p:nth-child(1) {
 }
 /* ***** PROJECTS SECTION ***** */
 .projects-section {
-    color: #a9a9a9;
+    color: rgb(82, 82, 82);
     background-color: #fff;
-    font-family: 'Avenir-Book', serif;
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: 1.5rem;
     text-align: left;
     min-height: 100vh;
     box-sizing: border-box;
@@ -878,7 +873,6 @@ p:nth-child(1) {
 }
 .rig-wrapper {
     margin-top: calc(3em + 20px);
-    margin-bottom: calc(3em + 20px);
     display: block;
 }
 #rig {

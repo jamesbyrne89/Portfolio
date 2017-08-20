@@ -1,14 +1,26 @@
-$(document).ready();
 
+/**
+ * Sticky header that slides into view only when the user scrolls up
+ */
 
-$(window).scroll(function() {
+(function stickyHeader() {
+    let previous = window.scrollY;
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 180 && window.scrollY > previous) {
+            $('.site-header').removeClass('sticky');
+            previous = window.scrollY;
+        } else if (window.scrollY > 180 && window.scrollY < previous) {
+            $('.site-header').addClass('sticky');
+            previous = window.scrollY;
+        } else if (window.scrollY < 180) {
+            $('.site-header').removeClass('sticky');
+            previous = window.scrollY;
+        } else {
+            return;
+        }
+    });
+})();
 
-    if ($(window).scrollTop() > 800) {
-        $('.mobile-nav').addClass('sticky');
-    } else {
-        $('.mobile-nav').removeClass('sticky');
-    }
-});
 
 // MOBILE NAVIGATION
 $(function($){
@@ -42,20 +54,6 @@ $("img.lazy").lazyload({
 
 
 
-// RESPONSIVE NAVIGATION
-
-$(window).scroll(function(){
-         var sticky = $('header'),
-         scroll = $(window).scrollTop();
-        if (scroll >= 850){
-            sticky.addClass('fixed');
-            sticky.fadeIn(100);
-        }else{
-            sticky.removeClass('fixed');
-
-            sticky.removeAttr("style"); //slideDown adds the style="block" which needs to be removed so that next time slideDown will work
-        }
-    });
 
 
 
