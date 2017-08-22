@@ -3,7 +3,7 @@
 .projects-section {
     color: $darkGrey;
     background-color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     text-align: left;
     min-height: 100vh;
     box-sizing: border-box;
@@ -14,13 +14,10 @@
     justify-content: space-between;
 }
 
-.rig-wrapper {
-    margin-top: calc(3em + 20px);
-    display: block;
-}
-#rig {
+
+.gallery {
     max-width: 100%;
-    margin: 3em 0em !important;
+    margin-top: 8rem;
     /*center aligned*/    
     padding: 0;
     font-size: 0;
@@ -44,7 +41,7 @@
             margin-top: 0px;
             padding: 0;
             overflow: hidden;
-            background-color: $newNavy;
+            background-color: #fff;
             @mixin atSmall {
                 width: 50%;
             }
@@ -63,7 +60,7 @@
 
 
 
-.rig-cell {
+.gallery__item {
     display: block;
     position: relative;
     overflow: hidden;
@@ -74,30 +71,25 @@
         img {
 max-height: 100%;
 height: auto;
-filter: brightness(0.3);
-
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    min-height: 100%;
+    border: none;
+    transform: scale(1);
+    transition: all 1s;
     &:hover {
-        transform: scale(1.5) brightness(1);
+        transform: scale(1.5) brightness(0.3);
 
     }
     }
 }
 /* If have the image layer */
 
-.rig-img {
-    display: block;
-    width: auto;
-    min-width: 110%;
-    margin: auto;
-    height: 35vh;
-    border: none;
-    transform: scale(1);
-    transition: all 1s;
-    -webkit-filter: brightness(0%);
-
-}
-#rig li:hover.rig-img {
+.gallery li:hover.rig-img {
     transform: scale(1.05) brightness(1);
+
 }
 /* If have the overlay layer */
 
@@ -119,31 +111,16 @@ filter: brightness(0.3);
     -webkit-transform: translateZ(0) scale(1.0, 1.0);
     /*For IE6 - IE8*/
     
-    transition: all 0.8s;
+    transition: all 0.4s;
 }
-#rig li:hover .rig-overlay {
+.gallery li:hover .rig-overlay {
     opacity: 1;
 }
-.rig-orig-overlay {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    background: $newNavy;
-    background-size: 50px 50px;
-    opacity: 0.7;
-    filter: alpha(opacity=0);
-    /*For IE6 - IE8*/
-    
-    transition: all 0.6s;
-}
-#rig li:hover .rig-orig-overlay {
+
+.gallery li:hover .rig-orig-overlay {
     opacity: 0;
         -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    -webkit-transform: translateZ(100) scale(1.0, 1.0);
 }
 /* If have captions */
 
@@ -220,7 +197,7 @@ filter: brightness(0.3);
             background: $nearBlackBackground;
 }
 }
-#rig li:hover .rig-text {
+.gallery li:hover .rig-text {
     transform: translateY(0px);
     opacity: 0.9;
 }
@@ -254,7 +231,7 @@ filter: brightness(0.3);
     transform: translateY(20px);
     transition: all .3s;
 }
-#rig li:hover #rig-link {
+.gallery li:hover #rig-link {
     transform: translateY(0px);
     opacity: 0.9;
     animation: none;

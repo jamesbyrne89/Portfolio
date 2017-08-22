@@ -5,14 +5,13 @@
     color: $darkGrey;
     background-color: #efefef;
     font-family: $bodyText;
-    font-size: 1rem;
     font-size: 1.75rem;
 
     p {
         text-align: left;
         opacity: 0;
         margin-top: 1.5rem;
-        line-height: 1.25;
+        line-height: 1.5;
 
         @mixin atMedium {
             width: 80%;
@@ -20,7 +19,7 @@
         }
 
         @mixin atLarge {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             width: 75%;
         }
 
