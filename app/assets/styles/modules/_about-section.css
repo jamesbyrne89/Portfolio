@@ -38,8 +38,12 @@
 .about-text__subtitle {
     font-size: 1.5rem;
     text-align: left;
-    margin-top: 2rem;
+    margin-top: 4rem;
 };
+
+.about-section a {
+    color: $yellow;
+}
 
 .about-section ul {
     margin-top: 2rem;

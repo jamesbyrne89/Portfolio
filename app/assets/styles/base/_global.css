@@ -1,7 +1,8 @@
 // ***** GENERAL STYLES *****
 
-a {
+a, a:visited {
     text-decoration: none;
+    color: $yellow !important;
 }
 
 a:focus {

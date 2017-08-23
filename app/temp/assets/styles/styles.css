@@ -39,8 +39,9 @@ body {
 /****** MEDIA QUERIES ******/
 // ***** GENERAL STYLES *****
 
-a {
+a, a:visited {
     text-decoration: none;
+    color: #FEB63F !important;
 }
 a:focus {
     outline-color: #0A1612 !important;
@@ -737,7 +738,10 @@ position: relative;
 .about-text__subtitle {
     font-size: 1.5rem;
     text-align: left;
-    margin-top: 2rem;
+    margin-top: 4rem;
+}
+.about-section a {
+    color: #FEB63F;
 }
 .about-section ul {
     margin-top: 2rem;
