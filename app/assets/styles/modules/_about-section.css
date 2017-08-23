@@ -27,6 +27,33 @@
 
 }
 
+.skills-wrapper {
+    display: flex;
+}
+
+.skills-list {
+    width: 75%;
+}
+
+.about-text__subtitle {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-top: 2rem;
+};
+
+.about-section ul {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-section ul li {
+    text-align: left;
+    font-size: 1.25rem;
+    list-style: none;
+    margin-right: 1rem;
+}
+
 p:nth-child(1) {
     margin-top: 0;
 }

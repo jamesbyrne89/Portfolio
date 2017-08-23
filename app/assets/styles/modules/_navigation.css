@@ -136,7 +136,8 @@
     margin-top: 0px;
     margin: 0 auto;
    }
-    li {
+    li {    display: flex;
+            align-items: center;
             flex: 0 0 100%;
             line-height: 1.75;
             color: #a9a9a9;
@@ -151,6 +152,8 @@
                 color: #a9a9a9;
                 padding: 5px auto;
                 width: 100%;
+                display: flex;
+                align-items: center;
           @mixin atLarge {
             width: auto;
 
