@@ -3,6 +3,8 @@
 @import 'base/_fonts';
 @import 'base/_mixins';
 @import 'base/_global';
+@import 'base/_icons';
+@import 'base/_buttons';
 @import 'base/_keyframes';
 @import 'modules/_navigation';
 @import 'modules/_welcome-section';

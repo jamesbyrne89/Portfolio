@@ -120,6 +120,91 @@ text-rendering: geometricPrecision !important;
     font-family: 'Avenir-Book', serif;
     font-size: 2.6rem;
 }
+.tech-icon-wrapper {
+    text-align: left;
+    font-size: 1.25rem;
+    list-style: none;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    width: auto;
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    position: relative;
+}
+.tech-icon-wrapper svg {
+    margin: 0 0.5em;
+}
+.tech-icon-wrapper:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+.tech-icon-wrapper::before,
+.tech-icon-wrapper::after {
+    display: block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, -10px);
+            transform: translate(-50%, -10px);
+    opacity: 0;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+.tech-icon-wrapper::before {
+    content: '';
+    top: 100%;
+    border: solid 6px transparent;
+    border-bottom-color: #163850;
+}
+.tech-icon-wrapper::after {
+    content: attr(aria-label);
+    top: calc(100% + 10px);
+    padding: 0.5em 1em;
+    font-size: .875rem;
+    color: white;
+    min-width: 3em;
+    font-weight: bold;
+    background: #163850;
+    border-radius: 2px;
+}
+.tech-icon-wrapper:hover::before,
+.tech-icon-wrapper:hover::after {
+    opacity: 1;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+}
+.btn-contact {
+    margin-top: 4rem;
+    font-family: 'Avenir-Black', century-gothic, helvetica, arial, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #fff;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 1.5em 3em;
+    text-align: center;
+    max-width: 100%;
+    color: #1A1D1A;
+    border: solid 4px #fff;
+    display: block;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+.btn-contact:hover {
+    font-family: 'Avenir-Black', century gothic, helvetica, arial, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #fff;
+    background-color: transparent;
+    border: solid 4px #fff;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+}
 // ***** KEYFRAMES *****
 
 @-webkit-keyframes intro 0% {
@@ -757,56 +842,6 @@ position: relative;
     -webkit-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
 }
-/* Icons */
-.about-section ul li {
-    position: relative;
-}
-.tech-icon-wrapper {
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
-}
-.tech-icon-wrapper::before,
-.tech-icon-wrapper::after {
-    display: block;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translate(-50%, -10px);
-            transform: translate(-50%, -10px);
-    opacity: 0;
-    -webkit-transition: .2s;
-    transition: .2s;
-}
-.tech-icon-wrapper::before {
-    content: '';
-    top: 100%;
-    border: solid 6px transparent;
-    border-bottom-color: #163850;
-}
-.tech-icon-wrapper::after {
-    content: attr(aria-label);
-    top: calc(100% + 10px);
-    padding: 0.5em 1em;
-    font-size: .875rem;
-    color: white;
-    min-width: 3em;
-    font-weight: bold;
-    background: #163850;
-    border-radius: 2px;
-}
-.tech-icon-wrapper:hover::before,
-.tech-icon-wrapper:hover::after {
-    opacity: 1;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
-}
-.tech-icon-wrapper {
-    -webkit-filter: grayscale(1);
-            filter: grayscale(1);
-}
-.tech-icon-wrapper:hover {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-}
 .about-section a:hover::after {
     width: 100%;
 }
@@ -820,18 +855,6 @@ position: relative;
             justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-}
-.tech-icon-wrapper {
-    text-align: left;
-    font-size: 1.25rem;
-    list-style: none;
-    margin-right: 1rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    width: auto;
-}
-.tech-icon-wrapper svg {
-    margin: 0 0.5em;
 }
 p:nth-child(1) {
     margin-top: 0;
@@ -1526,11 +1549,7 @@ p:nth-child(1) {
     text-align: left;
 
 }
-@media (min-width: 1200px) {
-    .contact-section {
-        min-height: calc(100vh - 130px);
-    }
-}
+@media (min-width: 1200px) {}
 .contact-section .section-header
     {
     color: #fff;
@@ -1559,63 +1578,36 @@ p:nth-child(1) {
         margin: 6em auto;
     }
 }
-.contact-left {
-    margin-bottom: 50px;
-    
+.contact-text {
     -webkit-box-flex: 0;
-    
-        -ms-flex: 0 0 100%;
-    
-            flex: 0 0 100%;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%;
+    text-align: left;
+
 }
 @media (min-width: 700px) {
-    .contact-left {
-        margin-right: 20px;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 45%;
-        flex: 0 0 45%;
-    }
-}
-.contact-right {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-}
-@media (min-width: 700px) {
-    .contact-right {
+    .contact-text {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
     }
 }
-.btn-contact {
-    margin: 3.5rem auto 100px auto;
-    font-family: 'Avenir-Black', century-gothic, helvetica, arial, sans-serif;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: #fff;
-    font-weight: 800;
-    font-size: 16px;
-    letter-spacing: 2px;
-    padding: 2em 5em;
-    text-align: center;
-    max-width: 100%;
-    color: #1A1D1A;
-    border: solid 4px #fff;
-    display: block;
-    -webkit-transition: all ease 0.3s;
-    transition: all ease 0.3s;
+.contact-text p {
+    text-align: left;
+    margin-top: 1.5rem;
+    line-height: 1.5;
 }
-.btn-contact:hover {
-    font-family: 'Avenir-Black', century gothic, helvetica, arial, sans-serif;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    color: #fff;
-    background-color: transparent;
-    border: solid 4px #fff;
-    -webkit-transition: all ease 0.3s;
-    -moz-transition: all ease 0.3s;
+@media (min-width: 700px) {
+    .contact-text p {
+        width: 80%;
+        font-size: 2rem;
+    }
+}
+@media (min-width: 1200px) {
+    .contact-text p {
+        font-size: 1.25rem;
+        width: 75%;
+    }
 }
 .socialicons {
     height: 20px;
@@ -1631,6 +1623,7 @@ p:nth-child(1) {
 #social-container {
     text-align: center;
                     display: inline-block;
+                    margin-top: 3.5rem;
 }
 @media (min-width: 700px) {
     #social-container {
@@ -1681,7 +1674,7 @@ p:nth-child(1) {
     -webkit-transition: all ease 0.3s;
     transition: all ease 0.3s;
 }
-footer {
+.site-footer {
     color: #a9a9a9;
     background-color: #fff;
     text-align: center;

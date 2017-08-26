@@ -11,7 +11,7 @@
     font-weight: bold;
     text-align: left;
     @mixin atLarge {
-        min-height: calc(100vh - 130px);
+
     }
     .section-header
     {
@@ -39,51 +39,32 @@
 
 }
 
-.contact-left {
-    margin-bottom: 50px;
-    
-    flex: 0 0 100%;
-        @mixin atMedium {
-        margin-right: 20px;
-        flex: 0 0 45%;
-    }
-}
-.contact-right {
-    flex: 0 0 100%;
+
+.contact-text {
+    flex: 0 0 75%;
+    text-align: left;
         @mixin atMedium {
         flex: 0 0 50%;
     }
+    p {
+        text-align: left;
+        margin-top: 1.5rem;
+        line-height: 1.5;
+
+        @mixin atMedium {
+            width: 80%;
+            font-size: 2rem;
+        }
+
+        @mixin atLarge {
+            font-size: 1.25rem;
+            width: 75%;
+        }
+    }
+
 }
-.btn-contact {
-    margin: 3.5rem auto 100px auto;
-    font-family: 'Avenir-Black', century-gothic, helvetica, arial, sans-serif;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: #fff;
-    font-weight: 800;
-    font-size: 16px;
-    letter-spacing: 2px;
-    padding: 2em 5em;
-    text-align: center;
-    max-width: 100%;
-    color: #1A1D1A;
-    border: solid 4px #fff;
-    display: block;
-    -webkit-transition: all ease 0.3s;
-    -moz-transition: all ease 0.3s;
-    transition: all ease 0.3s;
-}
-.btn-contact:hover {
-    font-family: 'Avenir-Black', century gothic, helvetica, arial, sans-serif;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    color: #fff;
-    background-color: transparent;
-    border: solid 4px #fff;
-    -webkit-transition: all ease 0.3s;
-    -moz-transition: all ease 0.3s;
-}
+
+
 .socialicons {
     height: 20px;
     display: inline-block;
@@ -95,9 +76,11 @@
     text-align: center;
     width: 100%;
 }
+
 #social-container {
     text-align: center;
                     display: inline-block;
+                    margin-top: 3.5rem;
             @mixin atMedium {
 
         width: auto;
@@ -143,7 +126,9 @@
     -moz-transition: all ease 0.3s;
     transition: all ease 0.3s;
 }
-footer {
+
+
+.site-footer {
     color: #a9a9a9;
     background-color: #fff;
     text-align: center;
