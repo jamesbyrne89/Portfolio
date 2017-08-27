@@ -1499,59 +1499,27 @@ p:nth-child(1) {
     text-align: center;
     width: 100%;
 }
-#social-container {
-    text-align: center;
-                    display: inline-block;
-                    margin-top: 3.5rem;
+.social-icons-wrapper {
+    margin-top: 4rem;
 }
-@media (min-width: 700px) {
-    #social-container {
-        width: auto;
-        margin: auto;
-    }
-}
-#social-container ul {
-    height: 50px;
-    width: 280px;
-    text-align: left;
-    padding: 0px;
+.social-icons-wrapper ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-#social-container ul li {
-    list-style: none;
-    display: inline-block;
-    text-align: left;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 20px;
-    flex: 1 1 20px;
-    margin: 0px 4px;
-}
-#social-container ul li a {
-    height: 20px;
-    width: 20px;
-    display: inline-block;
-    border: none;
-    margin-left: 20% ;
     list-style: none;
 }
-#social-container ul li a:hover {
-    height: 20px;
-    width: 20px;
-    display: inline-block;
-    border: none;
-    margin-left: 20%  ;
+.social-icon {
+    width: 1.5rem;
+    fill: #fff;
+    margin: 0 1.5rem;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
 }
-.fa-lg:hover {
-    color: #FEB63F;
-    -webkit-transition: all ease 0.3s;
-    transition: all ease 0.3s;
+.social-icon:hover {
+    fill: #FEB63F;
+}
+.social-icon:first-child {
+    margin-left: 0;
 }
 .site-footer {
     color: #a9a9a9;

@@ -77,66 +77,27 @@
     width: 100%;
 }
 
-#social-container {
-    text-align: center;
-                    display: inline-block;
-                    margin-top: 3.5rem;
-            @mixin atMedium {
+.social-icons-wrapper {
+    margin-top: 4rem;
+}
 
-        width: auto;
-        margin:auto;
+.social-icons-wrapper ul {
+    display: flex;
+    list-style: none;
+}
+
+
+.social-icon {
+    width: 1.5rem;
+    fill: #fff;
+    margin: 0 1.5rem;
+    transition: all 0.25s;
+    &:hover {
+        fill: $yellow;
     }
-
-        ul {
-            height: 50px;
-            width: 280px;
-            text-align: left;
-            padding: 0px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-                li {
-                    list-style: none;
-                    display: inline-block;
-                    text-align: left;
-                    flex: 1 1 20px;
-                    margin: 0px 4px;
-                    a {
-                            height: 20px;
-                            width: 20px;
-                            display: inline-block;
-                            border: none;
-                            margin-left: 20% ;
-                            list-style: none;
-                        }
-                }
-            }
 }
 
-#social-container ul li a:hover {
-    height: 20px;
-    width: 20px;
-    display: inline-block;
-    border: none;
-    margin-left: 20%  ;
-}
-.fa-lg:hover {
-    color: $yellow;
-    -webkit-transition: all ease 0.3s;
-    -moz-transition: all ease 0.3s;
-    transition: all ease 0.3s;
+.social-icon:first-child {
+    margin-left: 0;
 }
 
-
-.site-footer {
-    color: #a9a9a9;
-    background-color: #fff;
-    text-align: center;
-    display: block;
-    margin: auto;
-    font-size: 14px;
-    font-family: 'Avenir-Book', century gothic, helvetica, arial, sans-serif;
-    position: relative;
-    bottom: 10px;
-    padding: 20px;
-}
