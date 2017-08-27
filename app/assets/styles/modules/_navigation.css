@@ -136,16 +136,6 @@
     margin-top: 0px;
     margin: 0 auto;
    }
-    li {    display: flex;
-            align-items: center;
-            flex: 0 0 100%;
-            line-height: 1.75;
-            color: #a9a9a9;
-            margin: 0.5em 0;
-            font-weight: bold;
-             @mixin atLarge {
-            flex: 0 0 160px;
-        }
         a{
                display: inline-block;
                 text-decoration: none;
@@ -185,7 +175,7 @@
                     }    
                 }
             
-  }
+
     }
 
 
@@ -229,19 +219,27 @@ position: relative;
     }      
     
 }
-#logo {
-    height: 40px;
-    display: inline-block;
-    margin: 0px 10px;
-    border: none;
-    flex: 0 0 auto;
-    
+
+.site-nav__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 100%;
+            line-height: 1.75;
+            color: #a9a9a9;
+            margin: 0.5em 0;
+            font-weight: bold;
+             @mixin atLarge {
+            flex: 0 0 160px;
+        }
 }
+
 .logo {
     display: none;
     @mixin atLarge {
-        flex: 1 1 80px;
+        flex: 0 0 auto;
         display: inline-block;
+        width: 2.5rem;
     }
 }
 
