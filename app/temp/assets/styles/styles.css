@@ -1012,13 +1012,12 @@ p:nth-child(1) {
 }
 .gallery {
     max-width: 100%;
-    margin-top: 4rem;
-    /*center aligned*/    
+    margin-top: 4rem;    /*center aligned*/
     padding: 0;
-    font-size: 0;
-    /* Remember to change it back to normal font size if have captions */
+    font-size: 0;    /* Remember to change it back to normal font size if have captions */
     display: block;
     list-style: none;
+
 }
 @media (min-width: 1200px) {
     .gallery {
@@ -1063,14 +1062,15 @@ p:nth-child(1) {
     }
 }
 /* The wrapper for each item */
-.gallery__item {
+.project-cell {
     display: block;
     position: relative;
     overflow: hidden;
     height: 100%;
+
 }
 @media (min-width: 700px) {}
-.gallery__item img {
+.project-cell img {
     max-height: 100%;
     height: auto;
     display: block;
@@ -1084,18 +1084,17 @@ p:nth-child(1) {
     -webkit-transition: all 1s;
     transition: all 1s;
 }
-.gallery__item img:hover {
+.project-cell img:hover {
     -webkit-transform: scale(1.5) brightness(0.3);
     transform: scale(1.5) brightness(0.3);
 }
 /* If have the image layer */
-.gallery li:hover.rig-img {
-    -webkit-transform: scale(1.05) brightness(1);
-            transform: scale(1.05) brightness(1);
-
+.gallery li:hover.cell__thumbnail {
+    -webkit-transform: scale(1.1) brightness(1);
+            transform: scale(1.1) brightness(1);
 }
 /* If have the overlay layer */
-.rig-overlay {
+.cell__overlay {
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1116,177 +1115,61 @@ p:nth-child(1) {
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0) scale(1.0, 1.0);
-    /*For IE6 - IE8*/
-    
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);    /*For IE6 - IE8*/
     -webkit-transition: all 0.4s;
-    
     transition: all 0.4s;
 }
-.gallery li:hover .rig-overlay {
+.gallery li:hover .cell__overlay {
     opacity: 1;
 }
-.gallery li:hover .rig-orig-overlay {
+.gallery li:hover .rig-ocell__overlay {
     opacity: 0;
-        -webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(100) scale(1.0, 1.0);
 }
-/* If have captions */
-.rig-text {
+/* Caption */
+.cell__title {
     display: block;
     padding: 0 2em;
     box-sizing: border-box;
     left: 0;
     width: 100%;
     text-align: center;
-    text-transform: uppercase;
     font-weight: 700;
-    font-family: 'Avenir-Black', sans-serif;
+    font-family: inherit;
     color: white;
     opacity: 0;
-    filter: alpha(opacity=0);
-    /*For older IE*/
-    
+    filter: alpha(opacity=0);    /*For older IE*/
     -webkit-transform: translateY(-20px);
-    
             transform: translateY(-20px);
-    -webkit-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    position: relative;
+
+}
+.cell__title::after {
+    content: '';
+    position: absolute;
+    top: 2.5em;
+    left: calc(50% - 0.75em);
+    width: 1.5em;
+    height: 4px;
+    background: #fff;
 }
 @media (min-width: 700px) {
-    .rig-text {
+    .cell__title {
         font-size: 2rem;
     }
 }
 @media (min-width: 1200px) {
-    .rig-text {
+    .cell__title {
         font-size: 1.25rem;
     }
 }
-.rig-text p {
-    display: block;
-    padding: 0.75em 2em;
-    box-sizing: border-box;
-    position: absolute;
-    left: calc(50% - 105px);
-    width: auto;
-    margin-top: 0.75em;
-    text-align: center;
-    text-transform: none;
-    font-size: 1.5rem;
-    font-weight: 300;
-    font-family: 'Avenir-Black', sans-serif;
-    z-index: 999;
-    top: 98%;
-    color: white;
-    opacity: 1;
-    filter: alpha(opacity=0);/*For older IE*/
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-@media (min-width: 700px) {
-    .rig-text p {
-        font-size: 1.8rem;
-        left: calc(50% - 125px);
-    }
-}
-@media (min-width: 1200px) {}
-.rig-text p:hover {
-    text-decoration: none;
-    color: #163850;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-.rig-text p:after {
-    content: '';
-    display: block;
-    margin: auto;
-    height: 2px;
-    width: 0px;
-    background: transparent;
-    text-decoration: none;
-    -webkit-transition: width .5s ease, background-color .5s ease;
-    transition: width .5s ease, background-color .5s ease;
-}
-.rig-text p:hover:after {
-    width: 100%;
-    background: #0A1612;
-}
-.gallery li:hover .rig-text {
+.gallery li:hover .cell__title {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     opacity: 0.9;
-}
-.rig-lines {
-    border: solid 3px #fff;
-    width: 1.75em;
-    text-align: left;
-    margin-left: 0px;
-    margin: 20px auto;
-}
-.rig-subtitle-text {
-    display: block;
-    padding: 0 30px;
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    text-transform: capitalize;
-    font-size: 1.125rem;
-    font-weight: bold;
-    font-style: italic;
-    font-family: 'Avenir-Book', sans-serif;
-    font-weight: normal!important;
-    top: 65%;
-    color: white;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    /*For older IE*/
-    
-    -webkit-transform: translateY(20px);
-    
-            transform: translateY(20px);
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-.gallery li:hover #rig-link {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    opacity: 0.9;
-    -webkit-animation: none;
-            animation: none;
-}
-.fa-link {
-    border: solid 2px #fff;
-    padding: 6px;
-    border-radius: 50%;
-    margin: 0px auto 10px auto;
-    position: absolute;
-    width: 38px !important;
-    top: 58%;
-    left: calc(50% - 15px);
-    -webkit-transition: all .5s;
-    transition: all .5s;
-}
-.fa-link:hover {
-    border: solid 2px #163850;
-    padding: 6px;
-    border-radius: 50%;
-    margin: 0px auto 10px auto;
-    color: #163850;
-    
-}
-.rig-git:hover {
-    border: solid 1px #163850;
-    padding: 5px;
-    border-radius: 50%;
-    margin: 10px auto;
-    color: #163850;
-    -webkit-transition: all ease 0.3s;
-    transition: all ease 0.3s;
 }
 /* ***** PROJECTS PAGE ***** */
 #project-header {
