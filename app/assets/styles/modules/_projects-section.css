@@ -165,3 +165,19 @@
     opacity: 0.9;
 }
 
+.about-section p:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.about-section p:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.about-section p:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.about-section p:nth-child(5) {
+    animation-delay: 0.4s;
+}
+

@@ -84,25 +84,34 @@ $welcome.waypoint(function (direction) {
 var $aboutSection = $('#about');
 var $mouse = $('.mouse');
 
+$mouse.addClass('fade-in');
+
 $aboutSection.waypoint(function (direction) {
   if (direction == 'down') {
-    $mouse.addClass('animated fadeOut');
+    $mouse.addClass('fade-out');
+    $mouse.removeClass('fade-in');
   } else {
-    $mouse.removeClass('animated fadeOut');
+    $mouse.removeClass('fade-in');
+    $mouse.removeClass('fade-out');
   }
 }, { offset: '60%' });
 
 // ABOUT ME SECTION //
 
 var $about = $('#about p');
+var $aboutTitle = $('.about-section-header');
 
 $about.waypoint(function (direction) {
   if (direction == 'down') {
-    $about.addClass('intro');
-    $about.removeClass('fadeOut');
+    $about.addClass('fade-in');
+    $about.removeClass('fade-out');
+    $aboutTitle.addClass('slide-left');
+    $aboutTitle.removeClass('fade-out');
   } else {
-    $about.removeClass('intro');
-    $about.addClass('fadeOut');
+    $about.removeClass('fade-in');
+    $about.addClass('fade-out');
+    $aboutTitle.addClass('fade-out');
+    $aboutTitle.removeClass('slide-left');
   }
 }, { offset: '70%' });
 

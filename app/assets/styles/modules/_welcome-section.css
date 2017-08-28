@@ -8,6 +8,7 @@
     margin-top: 0px;
     background-color: $newNavy;
     height: calc(100vh - 76px);
+    position: relative;
     @mixin atMedium {
     height: calc(100vh - 22rem);  
     }
@@ -36,15 +37,14 @@
 }
 .mouse {
     position: absolute;
-    width: 20px;
-    height: 42px;
+    width: 1rem;
+    height: 2.5rem;
     bottom: 40px;
     left: 50%;
-    margin-left: -10px;
+    margin-left: -0.5rem;
     border-radius: 15px;
     border: 2px solid #fff;
-    -webkit-animation: intro 2s;
-    animation: intro 2s;
+    animation-delay: 1s;
 }
 .scroll {
     display: block;
@@ -72,3 +72,4 @@
     animation: intro 1s;
     animation-fill-mode: forwards;
 }
+
