@@ -5,50 +5,50 @@
  */
 
 (function stickyHeader() {
-  var previous = window.scrollY;
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 180 && window.scrollY > previous) {
-      $('.site-header').removeClass('sticky');
-      previous = window.scrollY;
-    } else if (window.scrollY > 180 && window.scrollY < previous) {
-      $('.site-header').addClass('sticky');
-      previous = window.scrollY;
-    } else if (window.scrollY < 180) {
-      $('.site-header').removeClass('sticky');
-      previous = window.scrollY;
-    } else {
-      return;
-    }
-  });
+    var previous = window.scrollY;
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 180 && window.scrollY > previous) {
+            $('.site-header').removeClass('sticky');
+            previous = window.scrollY;
+        } else if (window.scrollY > 180 && window.scrollY < previous) {
+            $('.site-header').addClass('sticky');
+            previous = window.scrollY;
+        } else if (window.scrollY < 180) {
+            $('.site-header').removeClass('sticky');
+            previous = window.scrollY;
+        } else {
+            return;
+        }
+    });
 })();
 
 // MOBILE NAVIGATION
 $(function ($) {
-  $('.menu-btn').on('click', function () {
-    $('.responsive-menu').toggleClass('expand');
-    $('.menu-btn span:first-child').toggleClass('opened');
-    $('.menu-btn span:nth-child(2)').toggleClass('hidden');
-    $('.menu-btn span:last-child').toggleClass('opened');
-  });
+    $('.menu-btn').on('click', function () {
+        $('.responsive-menu').toggleClass('expand');
+        $('.menu-btn span:first-child').toggleClass('opened');
+        $('.menu-btn span:nth-child(2)').toggleClass('hidden');
+        $('.menu-btn span:last-child').toggleClass('opened');
+    });
 });
 
 $(function ($) {
-  $('.menu-link').on('click', function () {
-    $('.responsive-menu').addClass('expand');
-    $('.menu-btn span:first-child').removeClass('opened');
-    $('.menu-btn span:nth-child(2)').removeClass('hidden');
-    $('.menu-btn span:last-child').removeClass('opened');
-  });
+    $('.menu-link').on('click', function () {
+        $('.responsive-menu').addClass('expand');
+        $('.menu-btn span:first-child').removeClass('opened');
+        $('.menu-btn span:nth-child(2)').removeClass('hidden');
+        $('.menu-btn span:last-child').removeClass('opened');
+    });
 });
 
 $(function ($) {
-  $('.menu-link').click(function () {
-    $('.responsive-menu').toggleClass('expand');
-  });
+    $('.menu-link').click(function () {
+        $('.responsive-menu').toggleClass('expand');
+    });
 });
 
 $("img.lazy").lazyload({
-  threshold: -900
+    threshold: -900
 });
 
 // SLIDE IN ANIMATIONS
@@ -56,30 +56,34 @@ $("img.lazy").lazyload({
 // This function needs fixing!!!
 
 function animateIn(el, offset) {
-  var $element = $(el);
+    var $element = $(el);
 
-  $element.waypoint(function (direction) {
-    if (direction == 'down') {
-      $element.addClass('sideintro', 'delayed-text-5');
-      $element.removeClass('animated fadeOut');
-    } else {
-      $element.removeClass('sideintro', 'delayed-text-5');
-      $element.addClass('animated fadeOut');
-    }
-  }, { offset: offset });
+    $element.waypoint(function (direction) {
+        if (direction == 'down') {
+            $element.addClass('sideintro', 'delayed-text-5');
+            $element.removeClass('animated fadeOut');
+        } else {
+            $element.removeClass('sideintro', 'delayed-text-5');
+            $element.addClass('animated fadeOut');
+        }
+    }, {
+        offset: offset
+    });
 }
 
 var $welcome = $('#welcome-container');
 
 $welcome.waypoint(function (direction) {
-  if (direction == 'up') {
-    $welcome.addClass('intro');
-    $welcome.removeClass('fadeOut');
-  } else {
-    $welcome.removeClass('intro');
-    $welcome.addClass('fadeOut');
-  }
-}, { offset: '2%' });
+    if (direction == 'up') {
+        $welcome.addClass('intro');
+        $welcome.removeClass('fadeOut');
+    } else {
+        $welcome.removeClass('intro');
+        $welcome.addClass('fadeOut');
+    }
+}, {
+    offset: '2%'
+});
 
 var $aboutSection = $('#about');
 var $mouse = $('.mouse');
@@ -87,242 +91,101 @@ var $mouse = $('.mouse');
 $mouse.addClass('fade-in');
 
 $aboutSection.waypoint(function (direction) {
-  if (direction == 'down') {
-    $mouse.addClass('fade-out');
-    $mouse.removeClass('fade-in');
-  } else {
-    $mouse.removeClass('fade-in');
-    $mouse.removeClass('fade-out');
-  }
-}, { offset: '60%' });
+    if (direction == 'down') {
+        $mouse.addClass('fade-out');
+        $mouse.removeClass('fade-in');
+    } else {
+        $mouse.removeClass('fade-in');
+        $mouse.removeClass('fade-out');
+    }
+}, {
+    offset: '60%'
+});
 
 // ABOUT ME SECTION //
 
-var $about = $('#about p');
+var $about = $('.about-section p');
 var $aboutTitle = $('.about-section-header');
+var $skillsTitle = $('.about-text__subtitle');
+var $skillsList = $('.skills-list ul');
 
 $about.waypoint(function (direction) {
-  if (direction == 'down') {
-    $about.addClass('fade-in');
-    $about.removeClass('fade-out');
-    $aboutTitle.addClass('slide-left');
-    $aboutTitle.removeClass('fade-out');
-  } else {
-    $about.removeClass('fade-in');
-    $about.addClass('fade-out');
-    $aboutTitle.addClass('fade-out');
-    $aboutTitle.removeClass('slide-left');
-  }
-}, { offset: '70%' });
-
-// SKILLS SECTION //
-
-var $skillstitle = $('.skills-left');
-
-$skillstitle.waypoint(function (direction) {
-  if (direction == 'up') {
-    $skillstitle.removeClass('intro');
-    $skillstitle.addClass('fadeOut');
-  } else {
-    $skillstitle.addClass('intro');
-    $skillstitle.removeClass('fadeOut');
-  }
-}, { offset: '70%' });
-
-var $listItemOne = $('#list-item-1');
-
-$skillstitle.waypoint(function (direction) {
-  if (direction == 'down') {
-    $listItemOne.addClass('sideintro', 'delayed-text-1');
-    $listItemOne.removeClass('animated fadeOut');
-  } else {
-    $listItemOne.removeClass('sideintro', 'delayed-text-1');
-    $listItemOne.addClass('animated fadeOut');
-  }
-}, { offset: '60%' });
-
-var $listItemTwo = $('#list-item-2');
-
-$skillstitle.waypoint(function (direction) {
-  if (direction == 'down') {
-    $listItemTwo.addClass('sideintro', 'delayed-text-2');
-    $listItemTwo.removeClass('animated fadeOut');
-  } else {
-    $listItemTwo.removeClass('sideintro', 'delayed-text-2');
-    $listItemTwo.addClass('animated fadeOut');
-  }
-}, { offset: '60%' });
-
-var $listItemThree = $('#list-item-3');
-
-$skillstitle.waypoint(function (direction) {
-  if (direction == 'down') {
-    $listItemThree.addClass('sideintro', 'delayed-text-3');
-    $listItemThree.removeClass('animated fadeOut');
-  } else {
-    $listItemThree.removeClass('sideintro', 'delayed-text-3');
-    $listItemThree.addClass('animated fadeOut');
-  }
-}, { offset: '60%' });
-
-var $listItemFour = $('#list-item-4');
-
-$skillstitle.waypoint(function (direction) {
-  if (direction == 'down') {
-    $listItemFour.addClass('sideintro', 'delayed-text-4');
-    $listItemFour.removeClass('animated fadeOut');
-  } else {
-    $listItemFour.removeClass('sideintro', 'delayed-text-4');
-    $listItemFour.addClass('animated fadeOut');
-  }
-}, { offset: '60%' });
-
-var $listItemFive = $('#list-item-5');
-
-$skillstitle.waypoint(function (direction) {
-  if (direction == 'down') {
-    $listItemFive.addClass('sideintro', 'delayed-text-5');
-    $listItemFive.removeClass('animated fadeOut');
-  } else {
-    $listItemFive.removeClass('sideintro', 'delayed-text-5');
-    $listItemFive.addClass('animated fadeOut');
-  }
-}, { offset: '60%' });
-
-var $listItemSix = $('#list-item-6');
-
-$skillstitle.waypoint(function (direction) {
-  if (direction == 'down') {
-    $listItemSix.addClass('sideintro', 'delayed-text-6');
-    $listItemSix.removeClass('animated fadeOut');
-  } else {
-    $listItemSix.removeClass('sideintro', 'delayed-text-6');
-    $listItemSix.addClass('animated fadeOut');
-  }
-}, { offset: '60%' });
-
-var $listItemSeven = $('#list-item-7');
-
-$skillstitle.waypoint(function (direction) {
-  if (direction == 'down') {
-    $listItemSeven.addClass('sideintro', 'delayed-text-7');
-    $listItemSeven.removeClass('animated fadeOut');
-  } else {
-    $listItemSeven.removeClass('sideintro', 'delayed-text-7');
-    $listItemSeven.addClass('animated fadeOut');
-  }
-}, { offset: '60%' });
-
-var $listItemEight = $('#list-item-8');
-
-$skillstitle.waypoint(function (direction) {
-  if (direction == 'down') {
-    $listItemEight.addClass('sideintro', 'delayed-text-8');
-    $listItemEight.removeClass('animated fadeOut');
-  } else {
-    $listItemEight.removeClass('sideintro', 'delayed-text-8');
-    $listItemEight.addClass('animated fadeOut');
-  }
-}, { offset: '60%' });
+    if (direction == 'down') {
+        $about.addClass('fade-in');
+        $about.removeClass('fade-out');
+        $aboutTitle.addClass('slide-left');
+        $aboutTitle.removeClass('fade-out');
+        $skillsTitle.addClass('slide-left');
+        $skillsTitle.removeClass('fade-out');
+        $skillsList.addClass('fade-in');
+        $skillsList.removeClass('fade-out');
+    } else {
+        $about.removeClass('fade-in');
+        $about.addClass('fade-out');
+        $aboutTitle.addClass('fade-out');
+        $aboutTitle.removeClass('slide-left');
+        $skillsTitle.addClass('fade-out');
+        $skillsTitle.removeClass('slide-left');
+        $skillsList.addClass('fade-out');
+        $skillsList.removeClass('fade-in');
+    }
+}, {
+    offset: '70%'
+});
 
 //PROJECTS SECTION //
 
+var $projectsTitle = $('.projects-section-header');
+var $projects = $('.projects-section p');
+var $gallery = $('.gallery');
 
-var $projectsGrid = $('#rig');
-
-$projectsGrid.waypoint(function (direction) {
-  if (direction == 'down') {
-    $projectsGrid.addClass('intro');
-    $projectsGrid.removeClass('animated fadeOut');
-    $projectsGrid.css('opacity', 1);
-  } else {
-    $projectsGrid.addClass('animated fadeOut');
-    $projectsGrid.css('opacity', 0);
-  }
-}, { offset: '60%' });
+$projects.waypoint(function (direction) {
+    if (direction == 'down') {
+        $projects.addClass('fade-in');
+        $projects.removeClass('fade-out');
+        $projectsTitle.addClass('slide-left');
+        $projectsTitle.removeClass('fade-out');
+        $gallery.addClass('fade-in');
+        $gallery.removeClass('fade-out');
+    } else {
+        $projects.removeClass('fade-in');
+        $projects.addClass('fade-out');
+        $projectsTitle.addClass('fade-out');
+        $projectsTitle.removeClass('slide-left');
+        $gallery.removeClass('fade-in');
+        $gallery.addClass('fade-out');
+    }
+}, {
+    offset: '70%'
+});
 
 // CONTACT SECTION //
 
-var $contactMe = $('.contact-left');
+var $contact = $('.contact-section p');
+var $contactTitle = $('.contact-section-header');
+var $emailBtn = $('.btn-contact');
+var $socialIcons = $('.social-icon');
 
-$contactMe.waypoint(function (direction) {
-  if (direction == 'down') {
-    $contactMe.addClass('intro');
-    $contactMe.removeClass('animated fadeOut');
-  } else {
-    $contactMe.removeClass('intro');
-    $contactMe.addClass('animated fadeOut');
-  }
-}, { offset: '80%' });
-
-var $emailBtn = $('#contactbutton');
-
-$emailBtn.waypoint(function (direction) {
-  if (direction == 'down') {
-    $emailBtn.addClass('intro');
-    $emailBtn.removeClass('animated fadeOut');
-  } else {
-    $emailBtn.removeClass('intro');
-    $emailBtn.addClass('animated fadeOut');
-  }
-}, { offset: '80%' });
-
-var $socialOne = $('.fa-twitter');
-
-$socialOne.waypoint(function (direction) {
-  if (direction == 'down') {
-    $socialOne.addClass('sideintro', 'delayed-text-1');
-    $socialOne.removeClass('animated fadeOut');
-  } else {
-    $socialOne.removeClass('sideintro', 'delayed-text-1');
-    $socialOne.addClass('animated fadeOut');
-  }
-}, { offset: '80%' });
-
-var $socialTwo = $('.fa-instagram');
-
-$socialTwo.waypoint(function (direction) {
-  if (direction == 'down') {
-    $socialTwo.addClass('sideintro', 'delayed-text-2');
-    $socialTwo.removeClass('animated fadeOut');
-  } else {
-    $socialTwo.removeClass('sideintro', 'delayed-text-2');
-    $socialTwo.addClass('animated fadeOut');
-  }
-}, { offset: '80%' });
-
-var $socialThree = $('.fa-flickr');
-
-$socialThree.waypoint(function (direction) {
-  if (direction == 'down') {
-    $socialThree.addClass('sideintro', 'delayed-text-3');
-    $socialThree.removeClass('animated fadeOut');
-  } else {
-    $socialThree.removeClass('sideintro', 'delayed-text-3');
-    $socialThree.addClass('animated fadeOut');
-  }
-}, { offset: '80%' });
-
-var $socialFour = $('.fa-linkedin-square');
-
-$socialFour.waypoint(function (direction) {
-  if (direction == 'down') {
-    $socialFour.addClass('sideintro', 'delayed-text-4');
-    $socialFour.removeClass('animated fadeOut');
-  } else {
-    $socialFour.removeClass('sideintro', 'delayed-text-4');
-    $socialFour.addClass('animated fadeOut');
-  }
-}, { offset: '80%' });
-
-var $socialFive = $('.fa-github');
-
-$socialFive.waypoint(function (direction) {
-  if (direction == 'down') {
-    $socialFive.addClass('sideintro', 'delayed-text-5');
-    $socialFive.removeClass('animated fadeOut');
-  } else {
-    $socialFive.removeClass('sideintro', 'delayed-text-5');
-    $socialFive.addClass('animated fadeOut');
-  }
-}, { offset: '80%' });
+$contact.waypoint(function (direction) {
+    if (direction == 'down') {
+        $contact.addClass('fade-in');
+        $contact.removeClass('fade-out');
+        $contactTitle.addClass('slide-left');
+        $contactTitle.removeClass('fade-out');
+        $emailBtn.addClass('fade-in');
+        $emailBtn.removeClass('fade-out');
+        $socialIcons.addClass('fade-in');
+        $socialIcons.removeClass('fade-out');
+    } else {
+        $contact.removeClass('fade-in');
+        $contact.addClass('fade-out');
+        $contactTitle.addClass('fade-out');
+        $contactTitle.removeClass('slide-left');
+        $emailBtn.removeClass('fade-in');
+        $emailBtn.addClass('fade-out');
+        $socialIcons.removeClass('fade-in');
+        $socialIcons.addClass('fade-out');
+    }
+}, {
+    offset: '80%'
+});

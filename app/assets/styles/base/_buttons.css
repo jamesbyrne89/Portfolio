@@ -13,6 +13,7 @@
     border: solid 4px #fff;
     transition: all ease 0.3s;
     cursor: pointer;
+    animation-delay: 0.25s !important;
 }
 .btn-contact:hover {
     text-decoration: none;
