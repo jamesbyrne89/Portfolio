@@ -1,6 +1,6 @@
 // ***** KEYFRAMES *****
 
-@-webkit-keyframes intro {
+@-webkit-keyframes slideUp {
   0% {
     opacity: 0;
     -webkit-transform: translateY(40px);
@@ -20,7 +20,7 @@
 
 }
 
-@keyframes intro {
+@keyframes slideUp {
   0% {
     opacity: 0;
     -webkit-transform: translateY(50px);
@@ -244,5 +244,11 @@
 .slide-left {
    -webkit-animation: slideLeft 1s ease-out;
   animation: slideLeft 1s ease-out;
+  animation-fill-mode: both; 
+}
+
+.slide-up {
+   -webkit-animation: slideUp 0.75s ease-out;
+  animation: slideUp 0.75s ease-out;
   animation-fill-mode: both; 
 }

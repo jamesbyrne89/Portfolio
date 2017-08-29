@@ -71,20 +71,6 @@ function animateIn(el, offset) {
     });
 }
 
-var $welcome = $('#welcome-container');
-
-$welcome.waypoint(function (direction) {
-    if (direction == 'up') {
-        $welcome.addClass('intro');
-        $welcome.removeClass('fadeOut');
-    } else {
-        $welcome.removeClass('intro');
-        $welcome.addClass('fadeOut');
-    }
-}, {
-    offset: '2%'
-});
-
 var $aboutSection = $('#about');
 var $mouse = $('.mouse');
 
@@ -108,6 +94,7 @@ var $about = $('.about-section p');
 var $aboutTitle = $('.about-section-header');
 var $skillsTitle = $('.about-text__subtitle');
 var $skillsList = $('.skills-list ul');
+var $skillIcon = $('.tech-icon-wrapper');
 
 $about.waypoint(function (direction) {
     if (direction == 'down') {
@@ -117,8 +104,7 @@ $about.waypoint(function (direction) {
         $aboutTitle.removeClass('fade-out');
         $skillsTitle.addClass('slide-left');
         $skillsTitle.removeClass('fade-out');
-        $skillsList.addClass('fade-in');
-        $skillsList.removeClass('fade-out');
+        $skillIcon.addClass('slide-up');
     } else {
         $about.removeClass('fade-in');
         $about.addClass('fade-out');
@@ -126,8 +112,7 @@ $about.waypoint(function (direction) {
         $aboutTitle.removeClass('slide-left');
         $skillsTitle.addClass('fade-out');
         $skillsTitle.removeClass('slide-left');
-        $skillsList.addClass('fade-out');
-        $skillsList.removeClass('fade-in');
+        $skillIcon.removeClass('slide-up');
     }
 }, {
     offset: '70%'

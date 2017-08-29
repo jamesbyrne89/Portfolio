@@ -73,19 +73,6 @@ function animateIn(el, offset) {
 }
 
 
-var $welcome = $('#welcome-container');
-
-$welcome.waypoint(function(direction) {
-    if (direction == 'up') {
-        $welcome.addClass('intro');
-        $welcome.removeClass('fadeOut');
-    } else {
-        $welcome.removeClass('intro');
-        $welcome.addClass('fadeOut');
-    }
-}, {
-    offset: '2%'
-});
 
 
 var $aboutSection = $('#about');
@@ -112,6 +99,7 @@ var $about = $('.about-section p');
 var $aboutTitle = $('.about-section-header');
 var $skillsTitle = $('.about-text__subtitle');
 var $skillsList = $('.skills-list ul');
+var $skillIcon = $('.tech-icon-wrapper');
 
 $about.waypoint(function(direction) {
     if (direction == 'down') {
@@ -121,8 +109,7 @@ $about.waypoint(function(direction) {
         $aboutTitle.removeClass('fade-out');
         $skillsTitle.addClass('slide-left');
         $skillsTitle.removeClass('fade-out');
-        $skillsList.addClass('fade-in');
-        $skillsList.removeClass('fade-out');
+        $skillIcon.addClass('slide-up');
     } else {
         $about.removeClass('fade-in');
         $about.addClass('fade-out');
@@ -130,8 +117,8 @@ $about.waypoint(function(direction) {
         $aboutTitle.removeClass('slide-left');
         $skillsTitle.addClass('fade-out');
         $skillsTitle.removeClass('slide-left');
-        $skillsList.addClass('fade-out');
-        $skillsList.removeClass('fade-in');
+        $skillIcon.removeClass('slide-up');
+
     }
 }, {
     offset: '70%'
@@ -147,18 +134,18 @@ var $gallery = $('.gallery');
 $projects.waypoint(function(direction) {
     if (direction == 'down') {
         $projects.addClass('fade-in');
-        $projects.removeClass('fade-out');        
+        $projects.removeClass('fade-out');
         $projectsTitle.addClass('slide-left');
         $projectsTitle.removeClass('fade-out');
         $gallery.addClass('fade-in');
-        $gallery.removeClass('fade-out');         
+        $gallery.removeClass('fade-out');
     } else {
         $projects.removeClass('fade-in');
-        $projects.addClass('fade-out');        
+        $projects.addClass('fade-out');
         $projectsTitle.addClass('fade-out');
         $projectsTitle.removeClass('slide-left');
-         $gallery.removeClass('fade-in');
-        $gallery.addClass('fade-out');             
+        $gallery.removeClass('fade-in');
+        $gallery.addClass('fade-out');
     }
 }, {
     offset: '70%'
@@ -175,25 +162,23 @@ var $socialIcons = $('.social-icon');
 $contact.waypoint(function(direction) {
     if (direction == 'down') {
         $contact.addClass('fade-in');
-        $contact.removeClass('fade-out');             
+        $contact.removeClass('fade-out');
         $contactTitle.addClass('slide-left');
         $contactTitle.removeClass('fade-out');
         $emailBtn.addClass('fade-in');
-        $emailBtn.removeClass('fade-out');              
+        $emailBtn.removeClass('fade-out');
         $socialIcons.addClass('fade-in');
-        $socialIcons.removeClass('fade-out');            
+        $socialIcons.removeClass('fade-out');
     } else {
         $contact.removeClass('fade-in');
-        $contact.addClass('fade-out');              
+        $contact.addClass('fade-out');
         $contactTitle.addClass('fade-out');
         $contactTitle.removeClass('slide-left');
         $emailBtn.removeClass('fade-in');
-        $emailBtn.addClass('fade-out');     
+        $emailBtn.addClass('fade-out');
         $socialIcons.removeClass('fade-in');
-        $socialIcons.addClass('fade-out');                    
+        $socialIcons.addClass('fade-out');
     }
 }, {
     offset: '80%'
 });
-
-
