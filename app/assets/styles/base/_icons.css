@@ -9,6 +9,8 @@
     filter: grayscale(1);
     transition: all 0.25s;
     position: relative;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
     svg {
         margin: 0 0.5em;
     }
@@ -57,29 +59,29 @@
 }
 
 .tech-icon-wrapper:nth-child(2) {
-    animation-delay: 0.6s;
+    animation-delay: 0.55s;
 }
 
 .tech-icon-wrapper:nth-child(3) {
-    animation-delay: 0.7s;
+    animation-delay: 0.6s;
 }
 
 .tech-icon-wrapper:nth-child(4) {
-    animation-delay: 0.8s;
+    animation-delay: 0.65s;
 }
 
 .tech-icon-wrapper:nth-child(5) {
-    animation-delay: 0.9s;
+    animation-delay: 0.7s;
 }
 
 .tech-icon-wrapper:nth-child(6) {
-    animation-delay: 1s;
+    animation-delay: 0.75s;
 }
 
 .tech-icon-wrapper:nth-child(7) {
-    animation-delay: 1.1s;
+    animation-delay: 0.8s;
 }
 
 .tech-icon-wrapper:nth-child(8) {
-    animation-delay: 1.2s;
+    animation-delay: 0.85s;
 }

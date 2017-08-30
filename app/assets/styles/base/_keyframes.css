@@ -244,11 +244,11 @@
 .slide-left {
    -webkit-animation: slideLeft 1s ease-out;
   animation: slideLeft 1s ease-out;
-  animation-fill-mode: both; 
+  animation-fill-mode: forwards; 
 }
 
 .slide-up {
-   -webkit-animation: slideUp 0.75s ease-out;
-  animation: slideUp 0.75s ease-out;
+   -webkit-animation-name: slideUp;
+  animation-name: slideUp;
   animation-fill-mode: both; 
 }

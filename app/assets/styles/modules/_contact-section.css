@@ -19,12 +19,6 @@
 
 }
 
-.project-info-text {
-    width: 50%;
-    p {
-        width: 75%;
-    }
-}
 
 .contact-wrapper {
     margin: 3em 0.5em;
@@ -49,7 +43,7 @@
         text-align: left;
         margin-top: 1.5rem;
         line-height: 1.5;
-
+        opacity: 0;
         @mixin atMedium {
             width: 80%;
             font-size: 2rem;
