@@ -2,25 +2,27 @@
 .about-section {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     color: $darkGrey;
     background-color: #efefef;
     font-family: $bodyText;
     font-size: 1.75rem;
-
+    padding: 4em 1em;
+        @mixin atLarge {
+       padding: 4em 0;
+            
+        }
     p {
         text-align: left;
         opacity: 0;
         margin-top: 1.5rem;
         line-height: 1.5;
-
-        @mixin atMedium {
-            width: 80%;
-            font-size: 2rem;
-        }
+        width: 100%;
+        font-size: 1.25rem;
 
         @mixin atLarge {
-            font-size: 1.25rem;
             width: 75%;
+
         }
 
     }
@@ -32,14 +34,20 @@
 }
 
 .skills-list {
-    width: 75%;
+
+    @mixin atLarge {
+        width: 75%;
+    }
+
 }
 
 .about-text__subtitle {
     font-size: 1.5rem;
     text-align: left;
     margin-top: 4rem;
-};
+}
+
+;
 
 .about-section a {
     color: $yellow;
@@ -59,7 +67,6 @@
     transition: all 0.25s ease-in-out;
 }
 
-
 .about-section a:hover::after {
     width: 100%;
 }
@@ -67,20 +74,23 @@
 .about-section ul {
     margin-top: 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
-
-
 
 p:nth-child(1) {
     margin-top: 0;
 }
 
-.section-header-wrapper {
-    width: 40%;
-}
-
 .about-text {
-    width: 50%;
+    width: 100%;
+
+    @mixin atMedium {
+        width: 60%;
+    }
+
+    @mixin atLarge {
+        width: 50%;
+    }
+
 }

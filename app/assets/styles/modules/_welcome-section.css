@@ -7,7 +7,7 @@
     align-items: center;
     margin-top: 0px;
     background-color: $newNavy;
-    height: calc(100vh - 76px);
+    height: calc(100vh - 22rem); 
     position: relative;
     @mixin atMedium {
     height: calc(100vh - 22rem);  
@@ -20,11 +20,12 @@
 .intro-text {
     color: $yellow;
     font-size: 3rem;
-    padding: 0 0.5em 2em 0;
+    padding: 0 0.5em;
     position: relative;
     width: 50rem;
     font-family: 'Avenir-Black', sans-serif;
     font-weight: bold;
+    margin-top: 0;
     text-align: center;
     line-height: 1.25;
     animation-fill-mode: forwards;

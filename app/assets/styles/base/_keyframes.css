@@ -230,8 +230,8 @@
 /* Animation classes */
 
 .fade-in {
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1.2s ease-in-out;
+  animation: fadeIn 1.2s ease-in-out;
   animation-fill-mode: both;
 }
 
