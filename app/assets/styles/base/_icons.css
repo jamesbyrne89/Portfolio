@@ -40,12 +40,16 @@
     content: attr(aria-label);
     top: calc(100% + 4px);
     padding: 0.5em 1em;
-    font-size: .875rem;
+    font-size: 0.75rem;
     color: white;
     min-width: 3em;
     font-weight: bold;
     background: $newNavy;
     border-radius: 2px;
+    text-align: center;
+    @mixin atMedium {
+      font-size: 0.875rem;  
+    }
 }
 
 .tech-icon-wrapper:hover::before,

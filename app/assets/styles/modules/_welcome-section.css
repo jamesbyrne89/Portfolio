@@ -19,8 +19,8 @@
 
 .intro-text {
     color: $yellow;
-    font-size: 3rem;
-    padding: 0 0.5em;
+    font-size: 2.5rem;
+    padding: 0 1.5rem;
     position: relative;
     width: 50rem;
     font-family: 'Avenir-Black', sans-serif;
@@ -32,6 +32,7 @@
     animation: slideUp 1s ease-out;
     @mixin atMedium {
           font-size: 4rem;  
+
     }
     @mixin atLarge {
           font-size: 4rem;  

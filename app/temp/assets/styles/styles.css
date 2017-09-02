@@ -101,7 +101,7 @@ html {
     }
 }
 .section-header {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     line-height: 1;
     font-family: 'Avenir-Black', 'century-gothic', sans-serif;
     text-align: left;
@@ -115,6 +115,7 @@ html {
 @media (min-width: 700px) {
     .section-header {
         padding-left: 0rem;
+        font-size: 3.5rem;
     }
 }
 @media (min-width: 1200px) {
@@ -186,12 +187,18 @@ html {
     content: attr(aria-label);
     top: calc(100% + 4px);
     padding: 0.5em 1em;
-    font-size: .875rem;
+    font-size: 0.75rem;
     color: white;
     min-width: 3em;
     font-weight: bold;
     background: #163750;
     border-radius: 2px;
+    text-align: center;
+}
+@media (min-width: 700px) {
+    .tech-icon-wrapper::after {
+        font-size: 0.875rem;
+    }
 }
 .tech-icon-wrapper:hover::before,
 .tech-icon-wrapper:hover::after {
@@ -894,8 +901,8 @@ position: relative;
 @media (min-width: 1200px) {}
 .intro-text {
     color: #FEB63F;
-    font-size: 3rem;
-    padding: 0 0.5em;
+    font-size: 2.5rem;
+    padding: 0 1.5rem;
     position: relative;
     width: 50rem;
     font-family: 'Avenir-Black', sans-serif;
@@ -985,7 +992,12 @@ position: relative;
     margin-top: 1.5rem;
     line-height: 1.5;
     width: 100%;
-    font-size: 1.25rem;
+    font-size: 1rem;
+}
+@media (min-width: 700px) {
+    .about-section p {
+        font-size: 1.25rem;
+    }
 }
 @media (min-width: 1200px) {
     .about-section p {
@@ -1003,9 +1015,14 @@ position: relative;
     }
 }
 .about-text__subtitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     text-align: left;
     margin-top: 4rem;
+}
+@media (min-width: 1200px) {
+    .about-text__subtitle {
+        font-size: 1.5rem;
+    }
 }
 .about-section a {
     color: #FEB63F;
@@ -1221,6 +1238,9 @@ p:nth-child(1) {
         width: 50%;
     }
 }
+.projects-gallery-intro p {
+    font-size: 1rem;
+}
 @media (min-width: 700px) {
     .projects-gallery-intro p {
         width: 80%;
@@ -1369,6 +1389,7 @@ p:nth-child(1) {
     -webkit-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
     position: relative;
+    font-size: 1.5rem;
 
 }
 .cell__title::after {

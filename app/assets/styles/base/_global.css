@@ -73,7 +73,7 @@ html {
 }
 
 .section-header {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     line-height: 1;
     font-family: 'Avenir-Black', 'century-gothic', sans-serif;
     text-align: left;
@@ -84,6 +84,7 @@ html {
     margin-bottom: 2.5rem;
     @mixin atMedium {
         padding-left: 0rem;
+        font-size: 3.5rem;
     }
 
     @mixin atLarge {
