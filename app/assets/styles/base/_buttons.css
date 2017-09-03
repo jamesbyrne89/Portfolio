@@ -1,5 +1,5 @@
 .btn-contact {
-    margin-top: 4rem;
+    margin-top: 2.5rem;
     text-decoration: none;
     text-transform: uppercase;
     background-color: #fff;
@@ -15,6 +15,9 @@
     cursor: pointer;
     animation-delay: 0.25s !important;
     opacity: 0;
+        @mixin atLarge {
+       margin-top: 4rem;   
+        }
 }
 .btn-contact:hover {
     text-decoration: none;

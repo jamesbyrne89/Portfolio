@@ -6,11 +6,10 @@
     color: $darkGrey;
     background-color: #efefef;
     font-family: $bodyText;
-    font-size: 1.75rem;
-    padding: 4em 1em;
+    font-size: 1.25rem;
+    padding: 4em 1.5em;
         @mixin atLarge {
-       padding: 4em 0;
-            
+       padding: 4em 0;            
         }
     p {
         text-align: left;
@@ -21,11 +20,9 @@
         font-size: 1rem;
         @mixin atMedium {
         font-size: 1.25rem;
-
         }
         @mixin atLarge {
             width: 75%;
-
         }
 
     }
