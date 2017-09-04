@@ -1,6 +1,5 @@
 /* ***** NAVIGATION ***** */
 
-
 .site-header {
     width: 100vw;
     padding: 1.5em 0;
@@ -12,17 +11,18 @@
     background-color: rgba(255, 255, 255, 1);
     z-index: 15;
     height: 55px;
-        @mixin atMedium {
-            padding: 2.5em 0;
-    height: 80px;
-     }
-     @mixin atLarge {
-    padding: 0;
-
-     }
+    @mixin atMedium {
+        padding: 2.5em 0;
+        height: 80px;
+    }
+    @mixin atLarge {
+        padding: 0;
+    }
 }
 
+
 /* Sticky Header Styles */
+
 .sticky {
     position: fixed;
     top: -80px;
@@ -31,7 +31,7 @@
     animation: slideDown 0.4s ease-out forwards;
 }
 
- .menu-btn {
+.menu-btn {
     cursor: pointer;
     display: inline-block;
     display: block;
@@ -40,87 +40,87 @@
     display: flex;
     flex-direction: column;
 }
+
 .menu-btn span {
     position: relative;
     width: 28px;
-    height: 4px;
+    height: 3px;
     background: #a9a9a9;
     z-index: 99;
-     display: block;
-     transition: top 0.2s ease-in-out 0.2s, transform 0.2s ease, opacity 0.5s ease 1s;
-          @mixin atMedium {
-    width: 40px;
-    height: 5px;
-
-     }
+    transition: top 0.2s ease-in-out 0.2s, transform 0.2s ease, opacity 0.2s ease 0.2s;
+    @mixin atMedium {
+        width: 40px;
+        height: 4px;
+    }
 }
 
 .menu-btn span:first-child {
-    top: 4px;
-             @mixin atMedium {
-    top: 7px;
-     }
+    top: 3px;
+    @mixin atMedium {
+        top: 6px;
+    }
 }
+
 .menu-btn span:nth-child(2) {
     top: 10px;
-             @mixin atMedium {
-    top: 14px;
-     }
+    @mixin atMedium {
+        top: 14px;
+    }
 }
+
 .menu-btn span:last-child {
     top: 16px;
-             @mixin atMedium {
-    top: 20px;
-     }
+    @mixin atMedium {
+        top: 20px;
+    }
 }
 
-    .menu-btn span:first-child.opened {
-        top: 12px;
-        width: 30px;
-     transition: top 0.2s ease-in-out, transform 0.1s ease 0.3s, width 0.1s ease 0.3s;
-     transform: rotate(45deg);
-              @mixin atMedium {
-        width: 42px;
-     }
-}
-
-
-.menu-btn span:last-child.opened {
-    top: 8px;
+.menu-btn span:first-child.opened {
+    top: 12px;
     width: 30px;
     transition: top 0.2s ease-in-out, transform 0.1s ease 0.3s, width 0.1s ease 0.3s;
-     transform: rotate(-45deg);
-         @mixin atMedium {
+    transform: rotate(45deg);
+    @mixin atMedium {
+        width: 42px;
+    }
+}
+
+.menu-btn span:last-child.opened {
+    top: 5.5px;
+    width: 30px;
+    transition: top 0.2s ease-in-out, transform 0.1s ease 0.3s, width 0.1s ease 0.3s;
+    transform: rotate(-45deg);
+    @mixin atMedium {
         width: 42px;
         top: 6px;
-     }
+    }
 }
 
 .site-nav {
     position: absolute;
-   left: -110vw;
-   letter-spacing: 0.375rem;
-   z-index: 5;
-   top: 65px;
-   height: calc(100vh - 60px);
-   width: 100vw;
-    transition: all 0.2s ease-in-out; 
-    background: #fff; 
+    left: -110vw;
+    letter-spacing: 0.375rem;
+    z-index: 5;
+    top: 65px;
+    height: calc(100vh - 60px);
+    width: 100vw;
+    transition: all 0.2s ease-in-out;
+    background: #fff;
     display: flex;
     align-items: center;
-
-       @mixin atLarge {
-    width: 60%;
-    margin: auto;
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 100%;
-    align-items: center;
-    justify-content: space-around;
-    z-index: 10;
-}
-   ul{ width: 100%;
+    @mixin atLarge {
+        width: 60%;
+        margin: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 10;
+    }
+    ul {
+        width: 100%;
         display: flex;
         list-style: none;
         margin: -20px auto 0 auto;
@@ -131,54 +131,48 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
-       @mixin atLarge {
-    display: flex;
-    margin-top: 0px;
-    margin: 0 auto;
-   }
-        a{
-               display: inline-block;
-                text-decoration: none;
-                color: #a9a9a9;
-                padding: 5px auto;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                transition: all 0.25s;
-          @mixin atLarge {
-            width: auto;
-
+        @mixin atLarge {
+            display: flex;
+            margin-top: 0px;
+            margin: 0 auto;
         }
-    }
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #a9a9a9;
+            padding: 5px auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            transition: all 0.25s;
+            @mixin atLarge {
+                width: auto;
+            }
+        }
         a:hover {
             margin: 0;
             text-decoration: none;
             color: $nearBlackBackground;
         }
-
-                   a:after {
-                    display: none;
-                    @mixin atLarge {
-                    content: '';
-                    display: block;
-                    margin: auto;
-                    height: 3px;
-                    width: 0px;
-                    background: transparent;
-                    text-decoration: none;
-                    transition: width 0.4s ease, background-color .5s ease;
-                    }
-                }
-
-                a:hover:after {
-                    width: 100%;
-                    background: $nearBlackBackground;
-                    }    
-                }
-            
-
+        a:after {
+            display: none;
+            @mixin atLarge {
+                content: '';
+                display: block;
+                margin: auto;
+                height: 3px;
+                width: 0px;
+                background: transparent;
+                text-decoration: none;
+                transition: width 0.4s ease, background-color .5s ease;
+            }
+        }
+        a:hover:after {
+            width: 100%;
+            background: $nearBlackBackground;
+        }
     }
-
+}
 
 .hidden {
     opacity: 0;
@@ -187,52 +181,48 @@
 
 .nav__logo {
     width: auto;
-    height: 30px;
+    height: 36px;
     position: relative;
     left: 2em;
     display: inline-block;
     z-index: 25;
-         @mixin atMedium {
-    height: 40px;
-
-     }
+    top: -4px;
+    @mixin atMedium {
+        height: 40px;
+    }
     @mixin atLarge {
         display: none;
     }
 }
- .menu-btn {
-position: relative;
+
+.menu-btn {
+    position: relative;
     right: 2em;
     @mixin atLarge {
         display: none;
     }
-    }
-
-    .menu-btn span {
-        opacity: 1;
-    }
+}
 
 .menu-btn div {
     display: block;
     transition: all 1s;
-      @mixin atLarge {
+    @mixin atLarge {
         display: none;
-    }      
-    
+    }
 }
 
 .site-nav__item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex: 0 0 100%;
-            line-height: 1.75;
-            color: #a9a9a9;
-            margin: 0.5em 0;
-            font-weight: bold;
-             @mixin atLarge {
-            flex: 0 0 160px;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 100%;
+    line-height: 1.75;
+    color: #a9a9a9;
+    margin: 0.5em 0;
+    font-weight: bold;
+    @mixin atLarge {
+        flex: 0 0 160px;
+    }
 }
 
 .logo {
@@ -260,7 +250,7 @@ position: relative;
     position: absolute;
     align-items: center;
     transition: all 0.4s;
-        @mixin atLarge {
+    @mixin atLarge {
         height: 110px;
         top: 0;
     }
@@ -270,17 +260,14 @@ position: relative;
     position: fixed;
     z-index: 1;
     display: none;
-
 }
 
-    .fa-lg {
-        font-size: 1.0em;
-        line-height: .75em;
-        vertical-align: -15%;
-    }
-    .mobile-toggle {
-        display: block;
-    }
-  
+.fa-lg {
+    font-size: 1.0em;
+    line-height: .75em;
+    vertical-align: -15%;
+}
 
-
+.mobile-toggle {
+    display: block;
+}

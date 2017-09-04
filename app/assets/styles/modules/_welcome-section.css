@@ -1,21 +1,18 @@
 /* ***** WELCOME SECTION ***** */
 
-
 .intro-section {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 0px;
     background-color: $newNavy;
-    height: calc(100vh - 22rem); 
+    height: calc(100vh - 22rem);
     position: relative;
     @mixin atMedium {
-    height: calc(100vh - 22rem);  
+        height: calc(100vh - 22rem);
     }
-    @mixin atLarge {
-    }
+    @mixin atLarge {}
 }
-
 
 .intro-text {
     color: $yellow;
@@ -31,13 +28,13 @@
     animation-fill-mode: forwards;
     animation: slideUp 1s ease-out;
     @mixin atMedium {
-          font-size: 4rem;  
-
+        font-size: 4rem;
     }
     @mixin atLarge {
-          font-size: 4rem;  
+        font-size: 4rem;
     }
 }
+
 .mouse {
     position: absolute;
     width: 1rem;
@@ -49,6 +46,7 @@
     border: 2px solid #fff;
     animation-delay: 1s;
 }
+
 .scroll {
     display: block;
     width: 4px;
@@ -59,6 +57,7 @@
     -webkit-animation: finger 1s infinite;
     animation: finger 1s infinite;
 }
+
 .stick-me .sticking {
     transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
@@ -70,9 +69,9 @@
     animation: sideintro 3s;
     animation-fill-mode: backwards;
 }
+
 .intro {
     -webkit-animation: intro 1s;
     animation: intro 1s;
     animation-fill-mode: forwards;
 }
-
