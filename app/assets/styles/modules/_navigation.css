@@ -1,18 +1,21 @@
 /* ***** NAVIGATION ***** */
 
 .site-header {
-    width: 100vw;
-    padding: 1.5em 0;
-    padding-bottom: 0;
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 1em;
     margin: auto;
     color: #a9a9a9;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.25rem;
     background-color: rgba(255, 255, 255, 1);
     z-index: 15;
     height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     @mixin atMedium {
-        padding: 2.5em 0;
+        padding: 0 1em;
         height: 80px;
     }
     @mixin atLarge {
@@ -35,7 +38,6 @@
     cursor: pointer;
     display: inline-block;
     display: block;
-    float: right;
     height: 32px;
     display: flex;
     flex-direction: column;
@@ -64,7 +66,7 @@
 .menu-btn span:nth-child(2) {
     top: 10px;
     @mixin atMedium {
-        top: 14px;
+        top: 13px;
     }
 }
 
@@ -81,7 +83,8 @@
     transition: top 0.2s ease-in-out, transform 0.1s ease 0.3s, width 0.1s ease 0.3s;
     transform: rotate(45deg);
     @mixin atMedium {
-        width: 42px;
+        width: 40px;
+        top: 14px;
     }
 }
 
@@ -91,7 +94,7 @@
     transition: top 0.2s ease-in-out, transform 0.1s ease 0.3s, width 0.1s ease 0.3s;
     transform: rotate(-45deg);
     @mixin atMedium {
-        width: 42px;
+        width: 40px;
         top: 6px;
     }
 }
@@ -197,7 +200,6 @@
 
 .menu-btn {
     position: relative;
-    right: 2em;
     @mixin atLarge {
         display: none;
     }
