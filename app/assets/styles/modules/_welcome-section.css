@@ -6,10 +6,10 @@
     align-items: center;
     margin-top: 0px;
     background-color: $newNavy;
-    height: calc(100vh - 22rem);
+    height: calc(100vh - 100px);
     position: relative;
     @mixin atMedium {
-        height: calc(100vh - 22rem);
+        height: calc(100vh - 100px);
     }
     @mixin atLarge {}
 }

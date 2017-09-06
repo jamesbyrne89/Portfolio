@@ -599,8 +599,8 @@ html {
 }
 @media (min-width: 700px) {
     .menu-btn span {
-        width: 40px;
-        height: 4px;
+        width: 36px;
+        height: 3px;
     }
 }
 .menu-btn span:first-child {
@@ -656,7 +656,7 @@ html {
 @media (min-width: 700px) {
     .menu-btn span:last-child.opened {
         width: 40px;
-        top: 6px;
+        top: 7px;
     }
 }
 .site-nav {
@@ -673,13 +673,16 @@ html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
 }
 @media (min-width: 1200px) {
     .site-nav {
-        width: 60%;
+        width: 100%;
         margin: auto;
         position: relative;
         top: 0;
@@ -706,8 +709,9 @@ html {
     top: 40px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -775,7 +779,6 @@ html {
     width: auto;
     height: 36px;
     position: relative;
-    left: 2em;
     display: inline-block;
     z-index: 25;
     top: -4px;
@@ -823,14 +826,14 @@ html {
             flex: 0 0 100%;
     line-height: 1.75;
     color: #a9a9a9;
-    margin: 0.5em 0;
+    margin: 0.5em 2.5em;
     font-weight: bold;
 }
 @media (min-width: 1200px) {
     .site-nav__item {
         -webkit-box-flex: 0;
-        -ms-flex: 0 0 160px;
-        flex: 0 0 160px;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     }
 }
 .logo {
@@ -897,12 +900,12 @@ html {
             align-items: center;
     margin-top: 0px;
     background-color: #163750;
-    height: calc(100vh - 22rem);
+    height: calc(100vh - 100px);
     position: relative;
 }
 @media (min-width: 700px) {
     .intro-section {
-        height: calc(100vh - 22rem);
+        height: calc(100vh - 100px);
     }
 }
 @media (min-width: 1200px) {}
