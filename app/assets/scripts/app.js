@@ -24,7 +24,7 @@
 // MOBILE NAVIGATION
 $(function($) {
     $('.menu-btn').on('click', function() {
-        $('.responsive-menu').toggleClass('expand')
+        $('.site-nav').toggleClass('menu--active')
         $('.menu-btn span:first-child').toggleClass('opened')
         $('.menu-btn span:nth-child(2)').toggleClass('hidden')
         $('.menu-btn span:last-child').toggleClass('opened')
