@@ -182,6 +182,30 @@
     }
 }
 
+@-webkit-keyframes menuSlideDown {
+    0% {
+        display: flex;
+        opacity: 0;
+        top: -80px;
+    }
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+@keyframes menuSlideDown {
+    0% {
+        display: flex;
+        opacity: 0;
+        top: -80px;
+    }
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
+}
+
 
 /* Sticky header slides down */
 

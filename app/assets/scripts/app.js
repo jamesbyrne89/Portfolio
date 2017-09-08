@@ -24,10 +24,13 @@
 // MOBILE NAVIGATION
 $(function($) {
     $('.menu-btn').on('click', function() {
-        $('.site-nav').toggleClass('menu--active')
-        $('.menu-btn span:first-child').toggleClass('opened')
-        $('.menu-btn span:nth-child(2)').toggleClass('hidden')
-        $('.menu-btn span:last-child').toggleClass('opened')
+        $('.site-nav').toggleClass('menu--active');
+        setTimeout(function() {
+            $('.site-nav__item').toggleClass('site-nav__item--active');
+        }, 1000);
+        $('.menu-btn span:first-child').toggleClass('opened');
+        $('.menu-btn span:nth-child(2)').toggleClass('hidden');
+        $('.menu-btn span:last-child').toggleClass('opened');
     });
 });
 

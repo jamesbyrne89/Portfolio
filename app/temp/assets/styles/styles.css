@@ -459,6 +459,31 @@ html {
         transform: translateY(-4px) rotate(-45deg);
     }
 }
+@-webkit-keyframes menuSlideDown {
+    0% {
+        display: -webkit-box;
+        display: flex;
+        opacity: 0;
+        top: -80px;
+    }
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
+}
+@keyframes menuSlideDown {
+    0% {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        opacity: 0;
+        top: -80px;
+    }
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
+}
 /* Sticky header slides down */
 @-webkit-keyframes slideDown {
     0% {
@@ -566,6 +591,7 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    z-index: 10;
 }
 .menu-btn span {
     position: relative;
@@ -640,11 +666,20 @@ html {
         top: 7px;
     }
 }
-.menu--active {
-    -webkit-animation: menu-slide 1s ease-in-out;
-            animation: menu-slide 1s ease-in-out;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+.site-header .menu--active {
+    height: calc(100vh - 55px);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+.site-nav .site-nav__item--active {
+    opacity: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
 }
 .site-nav {
     position: absolute;
@@ -654,8 +689,8 @@ html {
     z-index: 5;
     height: 0;
     width: 100vw;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -666,7 +701,7 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 1em;
+    padding: 0 1em;
 }
 @media (min-width: 1200px) {
     .site-nav {
@@ -801,9 +836,10 @@ html {
     }
 }
 .site-nav__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;

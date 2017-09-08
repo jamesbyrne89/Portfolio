@@ -41,6 +41,7 @@
     height: 32px;
     display: flex;
     flex-direction: column;
+    z-index: 10;
 }
 
 .menu-btn span {
@@ -99,9 +100,16 @@
     }
 }
 
-.menu--active {
-    animation: menu-slide 1s ease-in-out;
-    animation-fill-mode: both;
+.site-header .menu--active {
+    height: calc(100vh - 55px);
+    transition: all 1s;
+}
+
+.site-nav .site-nav__item--active {
+    opacity: 1;
+    display: flex;
+    transform: translateY(0px);
+    transition: all 1s ease-out;
 }
 
 .site-nav {
@@ -112,12 +120,12 @@
     z-index: 5;
     height: 0;
     width: 100vw;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1em;
+    padding: 0 1em;
     @mixin atLarge {
         width: 100%;
         margin: auto;
@@ -221,7 +229,9 @@
 }
 
 .site-nav__item {
-    display: flex;
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
     align-items: center;
     justify-content: center;
     text-align: center;
