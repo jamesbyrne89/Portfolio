@@ -238,10 +238,13 @@
     flex: 0 0 100%;
     line-height: 1.75;
     color: #a9a9a9;
-    margin: 0.5em 2.5em;
+    margin: 0em 2.5em;
     font-weight: bold;
     @mixin atLarge {
         flex: 0 0 auto;
+        display: flex;
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 
