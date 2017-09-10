@@ -102,30 +102,34 @@
 
 .site-header .menu--active {
     height: calc(100vh - 55px);
-    transition: all 1s;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .site-nav .site-nav__item--active {
-    opacity: 1;
     display: flex;
     transform: translateY(0px);
     transition: all 1s ease-out;
+    animation: slide-up 0.85s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .site-nav {
     position: absolute;
+    display: flex;
     top: 55px;
     left: 0;
     letter-spacing: 0.375rem;
     z-index: 5;
-    height: 0;
+    height: calc(100vh - 55px);
     width: 100vw;
-    transition: all 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     background: #fff;
-    display: flex;
+    pointer-events: none;
     justify-content: center;
     align-items: center;
     padding: 0 1em;
+    opacity: 0;
     @mixin atLarge {
         width: 100%;
         margin: auto;
@@ -163,6 +167,7 @@
             display: flex;
             text-align: center;
             align-items: center;
+            justify-content: center;
             transition: all 0.25s;
             @mixin atLarge {
                 width: auto;
@@ -229,23 +234,38 @@
 }
 
 .site-nav__item {
-    display: none;
-    opacity: 0;
-    transform: translateY(-20px);
     align-items: center;
     justify-content: center;
     text-align: center;
     flex: 0 0 100%;
     line-height: 1.75;
     color: #a9a9a9;
-    margin: 0em 2.5em;
+    margin: 1em 2.5em;
     font-weight: bold;
+    opacity: 0;
     @mixin atLarge {
+        margin: 0em 2.5em;
         flex: 0 0 auto;
         display: flex;
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+.site-nav__item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.site-nav__item:nth-child(3) {
+    display: none;
+}
+
+.site-nav__item:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.site-nav__item:nth-child(5) {
+    animation-delay: 0.3s;
 }
 
 .logo {
