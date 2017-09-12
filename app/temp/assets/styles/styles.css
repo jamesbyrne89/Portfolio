@@ -700,17 +700,10 @@ html {
     pointer-events: auto;
 }
 .site-nav .site-nav__item--active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    -webkit-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-    -webkit-animation: slide-up 0.85s ease-in-out;
-            animation: slide-up 0.85s ease-in-out;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    -webkit-animation: slide-up 0.85s ease-out;
+            animation: slide-up 0.85s ease-out;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
 }
 .site-nav {
     position: absolute;
@@ -879,14 +872,10 @@ html {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
     line-height: 1.75;
     color: #a9a9a9;
     margin: 1em 2.5em;
     font-weight: bold;
-    opacity: 0;
 }
 @media (min-width: 1200px) {
     .site-nav__item {
@@ -894,28 +883,26 @@ html {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        opacity: 1;
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
     }
 }
+.site-nav__item:first-child {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+}
 .site-nav__item:nth-child(2) {
-    -webkit-animation-delay: 0.1s;
-            animation-delay: 0.1s;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
 }
 .site-nav__item:nth-child(3) {
     display: none;
 }
 .site-nav__item:nth-child(4) {
-    -webkit-animation-delay: 0.2s;
-            animation-delay: 0.2s;
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
 }
 .site-nav__item:nth-child(5) {
-    -webkit-animation-delay: 0.3s;
-            animation-delay: 0.3s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
 }
 .logo {
     display: none;

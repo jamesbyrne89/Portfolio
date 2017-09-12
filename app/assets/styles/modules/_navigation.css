@@ -107,11 +107,8 @@
 }
 
 .site-nav .site-nav__item--active {
-    display: flex;
-    transform: translateY(0px);
-    transition: all 1s ease-out;
-    animation: slide-up 0.85s ease-in-out;
-    animation-fill-mode: forwards;
+    animation: slide-up 0.85s ease-out;
+    animation-fill-mode: both;
 }
 
 .site-nav {
@@ -237,23 +234,22 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    flex: 0 0 100%;
     line-height: 1.75;
     color: #a9a9a9;
     margin: 1em 2.5em;
     font-weight: bold;
-    opacity: 0;
     @mixin atLarge {
         margin: 0em 2.5em;
         flex: 0 0 auto;
-        display: flex;
-        opacity: 1;
-        transform: translateY(0px);
     }
 }
 
+.site-nav__item:first-child {
+    animation-delay: 0.2s;
+}
+
 .site-nav__item:nth-child(2) {
-    animation-delay: 0.1s;
+    animation-delay: 0.3s;
 }
 
 .site-nav__item:nth-child(3) {
@@ -261,11 +257,11 @@
 }
 
 .site-nav__item:nth-child(4) {
-    animation-delay: 0.2s;
+    animation-delay: 0.4s;
 }
 
 .site-nav__item:nth-child(5) {
-    animation-delay: 0.3s;
+    animation-delay: 0.5s;
 }
 
 .logo {
