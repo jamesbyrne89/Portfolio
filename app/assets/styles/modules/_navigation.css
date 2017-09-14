@@ -137,6 +137,7 @@
         align-items: center;
         justify-content: space-around;
         z-index: 10;
+        opacity: 1;
     }
     ul {
         width: 100%;
@@ -254,6 +255,9 @@
 
 .site-nav__item:nth-child(3) {
     display: none;
+    @mixin atLarge {
+        display: block;
+    }
 }
 
 .site-nav__item:nth-child(4) {

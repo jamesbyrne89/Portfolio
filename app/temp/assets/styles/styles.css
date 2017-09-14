@@ -743,6 +743,7 @@ html {
         -ms-flex-pack: distribute;
         justify-content: space-around;
         z-index: 10;
+        opacity: 1;
     }
 }
 .site-nav ul {
@@ -896,6 +897,11 @@ html {
 .site-nav__item:nth-child(3) {
     display: none;
 }
+@media (min-width: 1200px) {
+    .site-nav__item:nth-child(3) {
+        display: block;
+    }
+}
 .site-nav__item:nth-child(4) {
     -webkit-animation-delay: 0.4s;
             animation-delay: 0.4s;
@@ -986,6 +992,7 @@ html {
     font-family: 'Avenir-Black', sans-serif;
     font-weight: bold;
     margin-top: 0;
+    margin-bottom: 3rem;
     text-align: center;
     line-height: 1.25;
     -webkit-animation-fill-mode: forwards;
@@ -1000,6 +1007,7 @@ html {
 }
 @media (min-width: 1200px) {
     .intro-text {
+        margin-bottom: 0;
         font-size: 4rem;
     }
 }
@@ -1304,13 +1312,11 @@ p:nth-child(1) {
     padding: 0em 1.5em;
 }
 .projects-gallery-intro {
-        text-align: left;
-        opacity: 0;
-
-        line-height: 1.5;
-        opacity: 0;
-
-    }
+    text-align: left;
+    opacity: 0;
+    line-height: 1.5;
+    opacity: 0;
+}
 @media (min-width: 700px) {
     .projects-gallery-intro {
         margin-top: 1.5rem;
@@ -1333,14 +1339,15 @@ p:nth-child(1) {
 }
 .gallery {
     max-width: 100%;
-    margin-top: 4rem;    /*center aligned*/
+    margin-top: 4rem;
+    /*center aligned*/
     padding: 0;
-    font-size: 0;    /* Remember to change it back to normal font size if have captions */
+    font-size: 0;
+    /* Remember to change it back to normal font size if have captions */
     display: block;
     list-style: none;
     -webkit-animation-delay: 0.5s;
             animation-delay: 0.5s;
-
 }
 @media (min-width: 1200px) {
     .gallery {
@@ -1390,14 +1397,13 @@ p:nth-child(1) {
     position: relative;
     overflow: hidden;
     height: 100%;
-
 }
 @media (min-width: 700px) {}
 .project-cell img {
     max-height: 100%;
     height: auto;
     display: block;
-    width: 100%;
+    min-width: 100%;
     height: auto;
     margin: auto;
     min-height: 100%;
@@ -1438,7 +1444,8 @@ p:nth-child(1) {
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0) scale(1.0, 1.0);    /*For IE6 - IE8*/
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    /*For IE6 - IE8*/
     -webkit-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
 }
@@ -1468,7 +1475,6 @@ p:nth-child(1) {
     transition: all 0.25s ease-out;
     position: relative;
     font-size: 1.5rem;
-
 }
 .cell__title::after {
     content: '';
@@ -1767,15 +1773,13 @@ p:nth-child(1) {
     text-align: left;
     position: relative;
     padding: 4em 1.5em;
-
 }
 @media (min-width: 1200px) {
     .contact-section {
         padding: 4em 0;
     }
 }
-.contact-section .section-header
-    {
+.contact-section .section-header {
     color: #fff;
 }
 .contact-wrapper {
@@ -1788,7 +1792,6 @@ p:nth-child(1) {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-
 }
 @media (min-width: 700px) {
     .contact-wrapper {
@@ -1798,7 +1801,6 @@ p:nth-child(1) {
 }
 .contact-text {
     text-align: left;
-
 }
 @media (min-width: 700px) {
     .contact-text {
@@ -1809,9 +1811,9 @@ p:nth-child(1) {
 }
 .contact-text p {
     text-align: left;
-    margin-top: 1.5rem;
     line-height: 1.5;
     opacity: 0;
+    font-size: 1rem;
 }
 @media (min-width: 700px) {
     .contact-text p {

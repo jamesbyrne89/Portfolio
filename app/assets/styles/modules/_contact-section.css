@@ -11,58 +11,50 @@
     text-align: left;
     position: relative;
     padding: 4em 1.5em;
-        @mixin atLarge {
-       padding: 4em 0;          
-        }
-    .section-header
-    {
+    @mixin atLarge {
+        padding: 4em 0;
+    }
+    .section-header {
         color: #fff;
     }
-
 }
-
 
 .contact-wrapper {
     margin: 3em 0.5em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-        @mixin atMedium {
+    @mixin atMedium {
         width: 80%;
         margin: 6em auto;
     }
-
 }
-
 
 .contact-text {
     text-align: left;
-        @mixin atMedium {
+    @mixin atMedium {
         flex: 0 0 50%;
     }
     p {
         text-align: left;
-        margin-top: 1.5rem;
         line-height: 1.5;
         opacity: 0;
+        font-size: 1rem;
         @mixin atMedium {
-
             font-size: 2rem;
         }
-
         @mixin atLarge {
             font-size: 1.25rem;
             width: 75%;
         }
     }
-
 }
-
 
 .socialicons {
     height: 20px;
     display: inline-block;
 }
+
 .fa {
     color: #fff;
     font-family: 'Avenir-Book', serif;
@@ -74,7 +66,7 @@
 .social-icons-wrapper {
     margin-top: 2.5rem;
     @mixin atLarge {
-    margin-top: 4rem;    
+        margin-top: 4rem;
     }
 }
 
@@ -82,7 +74,6 @@
     display: flex;
     list-style: none;
 }
-
 
 .social-icon {
     width: 1.5rem;
@@ -98,4 +89,3 @@
 .social-icon:first-child {
     margin-left: 0;
 }
-

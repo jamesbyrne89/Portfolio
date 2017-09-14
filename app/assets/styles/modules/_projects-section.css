@@ -1,4 +1,5 @@
 /* ***** PROJECTS SECTION ***** */
+
 .projects-section {
     color: $darkGrey;
     background-color: #fff;
@@ -16,38 +17,34 @@
     padding: 0em 1.5em;
 }
 
-
-
 .projects-gallery-intro {
-        text-align: left;
-        opacity: 0;
-
-        line-height: 1.5;
-        opacity: 0;
-        @mixin atMedium {
+    text-align: left;
+    opacity: 0;
+    line-height: 1.5;
+    opacity: 0;
+    @mixin atMedium {
         margin-top: 1.5rem;
         width: 50%;
-        }        
-        p {
-            font-size: 1rem;
+    }
+    p {
+        font-size: 1rem;
         @mixin atMedium {
             width: 80%;
             font-size: 1.25rem;
         }
-
         @mixin atLarge {
             width: 75%;
         }
-    
     }
-
-    }
+}
 
 .gallery {
     max-width: 100%;
-    margin-top: 4rem;    /*center aligned*/
+    margin-top: 4rem;
+    /*center aligned*/
     padding: 0;
-    font-size: 0;    /* Remember to change it back to normal font size if have captions */
+    font-size: 0;
+    /* Remember to change it back to normal font size if have captions */
     display: block;
     list-style: none;
     animation-delay: 0.5s;
@@ -56,7 +53,6 @@
         justify-content: space-between;
         flex-wrap: wrap;
     }
-
     li {
         display: inline-block;
         width: 100%;
@@ -69,61 +65,56 @@
         padding: 0;
         overflow: hidden;
         background-color: #fff;
-
         @mixin atSmall {
             width: 50%;
         }
-
         @mixin atMedium {
             height: 350px;
         }
-
         @mixin atLarge {
             width: 32%;
             margin: 0.75rem 0.5rem;
             max-height: 340px;
         }
-
     }
-
 }
 
+
 /* The wrapper for each item */
+
 .project-cell {
     display: block;
     position: relative;
     overflow: hidden;
     height: 100%;
-
-    @mixin atMedium {
-    }
-
+    @mixin atMedium {}
     img {
         max-height: 100%;
         height: auto;
         display: block;
-        width: 100%;
+        min-width: 100%;
         height: auto;
         margin: auto;
         min-height: 100%;
         border: none;
         transform: scale(1);
         transition: all 1s;
-
         &:hover {
             transform: scale(1.5) brightness(0.3);
         }
-
     }
-
 }
 
+
 /* If have the image layer */
+
 .gallery li:hover.cell__thumbnail {
     transform: scale(1.1) brightness(1);
 }
 
+
 /* Overlay layer */
+
 .cell__overlay {
     position: absolute;
     display: flex;
@@ -139,7 +130,8 @@
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0) scale(1.0, 1.0);    /*For IE6 - IE8*/
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    /*For IE6 - IE8*/
     transition: all 0.4s ease-out;
 }
 
@@ -153,7 +145,9 @@
     -webkit-transform: translateZ(100) scale(1.0, 1.0);
 }
 
+
 /* Caption */
+
 .cell__title {
     display: block;
     padding: 0 2em;
@@ -178,15 +172,12 @@
         height: 4px;
         background: #fff;
     }
-
     @mixin atMedium {
         font-size: 2rem;
     }
-
     @mixin atLarge {
         font-size: 1.5rem;
     }
-
 }
 
 .gallery li:hover .cell__title {
@@ -209,4 +200,3 @@
 .about-section p:nth-child(5) {
     animation-delay: 0.4s;
 }
-
