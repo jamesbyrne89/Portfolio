@@ -138,6 +138,7 @@
         justify-content: space-around;
         z-index: 10;
         opacity: 1;
+        pointer-events: auto;
     }
     ul {
         width: 100%;
