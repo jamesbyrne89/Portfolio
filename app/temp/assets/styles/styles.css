@@ -604,8 +604,13 @@ html {
     position: fixed;
     top: -80px;
     height: 80px;
-    -webkit-animation: slideDown 0.4s ease-out forwards;
-    animation: slideDown 0.4s ease-out forwards;
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    transition: -webkit-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+    transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
+    border-bottom: solid 1px #efefef;
 }
 .menu-btn {
     cursor: pointer;
@@ -1744,7 +1749,14 @@ p:nth-child(1) {
     }
 }
 .tech-section-header {
-    color: #a9a9a9 !important;
+    font-size: 1.25rem;
+    text-align: left;
+    margin-top: 4rem;
+}
+@media (min-width: 1200px) {
+    .tech-section-header {
+        font-size: 1.5rem;
+    }
 }
 .hr {
     border: solid 2px #a9a9a9;

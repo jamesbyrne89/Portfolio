@@ -30,8 +30,9 @@
     position: fixed;
     top: -80px;
     height: 80px;
-    -webkit-animation: slideDown 0.4s ease-out forwards;
-    animation: slideDown 0.4s ease-out forwards;
+    transform: translateY(80px);
+    transition: transform 0.4s ease-out;
+    border-bottom: solid 1px #efefef;
 }
 
 .menu-btn {
