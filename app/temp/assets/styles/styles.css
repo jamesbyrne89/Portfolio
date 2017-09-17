@@ -1564,8 +1564,9 @@ p:nth-child(1) {
         top: 70%;
     }
 }
-#summary {
-    padding: 3em 1em;
+.summary-section {
+    padding: 4em 0;
+    font-size: 1.25rem;
     background: #c5c1c0;
     font-family: 'Avenir-Book', serif;
 }
@@ -1663,9 +1664,10 @@ p:nth-child(1) {
 .link-holder {
     display: inline-block;
 }
-#details {
+.details-section {
     background: #efefef;
-    padding: 3em 1em;
+    padding: 4em 0;
+    font-size: 1.25rem;
     text-align: center;
 }
 .device-screenshots {
@@ -1761,6 +1763,12 @@ p:nth-child(1) {
 .hr {
     border: solid 2px #a9a9a9;
     width: 40px;
+}
+.wordpress {
+    opacity: 0.7;
+}
+.wordpress:hover {
+    opacity: 1;
 }
 /* ***** CONTACT SECTION ***** */
 .contact-section {
