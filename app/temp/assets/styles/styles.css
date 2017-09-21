@@ -1621,6 +1621,7 @@ p:nth-child(1) {
 .project-summary__link {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: inline-block;
+    position: relative;
     color: #0A1612;
     font-size: 1.25rem;
     font-weight: bold;
@@ -1642,6 +1643,8 @@ p:nth-child(1) {
 }
 .project-summary__link:hover:after {
     width: 100%;
+    left: 0;
+    right: 0;
 }
 .project-summary__link:after {
     display: none;
@@ -1649,12 +1652,14 @@ p:nth-child(1) {
 @media (min-width: 1200px) {
     .project-summary__link:after {
         content: '';
-        position: relative;
+        position: absolute;
         display: block;
         margin: auto;
         height: 3px;
         width: 1.5em;
-        top: 2.5em;
+        left: calc(50% - 0.75em);
+        right: calc(50% - 0.75em);
+        top: 2em;
         background: #0A1612;
         text-decoration: none;
         -webkit-transition: width .5s ease, background-color .5s ease;
@@ -1665,7 +1670,7 @@ p:nth-child(1) {
     display: inline-block;
 }
 .details-section {
-    background: #efefef;
+    f background: #efefef;
     padding: 4em 0;
     font-size: 1.25rem;
     text-align: center;
