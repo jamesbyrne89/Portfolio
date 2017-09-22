@@ -1167,7 +1167,6 @@ p:nth-child(1) {
 /* ***** SKILLS SECTION ***** */
 .skills-section-header {
     color: #efefef !important;
-
 }
 #skills {
     color: #efefef;
@@ -1181,7 +1180,7 @@ p:nth-child(1) {
     box-sizing: border-box;
 }
 #skills hr {
-    border: solid 2px #efefef ;
+    border: solid 2px #efefef;
 }
 #skills ul {
     color: #efefef;
@@ -1213,7 +1212,8 @@ p:nth-child(1) {
         font-size: 2.6rem;
     }
 }
-#skills .skills-left, #skills .skills-right {
+#skills .skills-left,
+    #skills .skills-right {
     width: 50%;
     -webkit-box-flex: 1;
     -ms-flex: 1 1 200px;
@@ -1228,73 +1228,25 @@ p:nth-child(1) {
     opacity: 0;
 }
 #skills .fadeOut,
-#skills #skills ul {
+    #skills #skills ul {
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
     -webkit-transition: all 1s;
     transition: all 1s;
 }
 #skills .delayed-text-1,
-#skills .delayed-text-2,
-#skills .delayed-text-3,
-#skills .delayed-text-4,
-#skills .delayed-text-5,
-#skills .delayed-text-6,
-#skills .delayed-text-7,
-#skills .delayed-text-8 {
+    #skills .delayed-text-2,
+    #skills .delayed-text-3,
+    #skills .delayed-text-4,
+    #skills .delayed-text-5,
+    #skills .delayed-text-6,
+    #skills .delayed-text-7,
+    #skills .delayed-text-8 {
     opacity: 0;
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-}
-#skills .delayed-text-1 {
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
-}
-#skills .delayed-text-2 {
-    -webkit-animation-delay: 0.1s;
-    animation-delay: 0.1s;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-}
-#skills .delayed-text-3 {
-    -webkit-animation-delay: 0.2s;
-    animation-delay: 0.2s;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-}
-#skills .delayed-text-4 {
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-}
-#skills .delayed-text-5 {
-    -webkit-animation-delay: 0.4s;
-    animation-delay: 0.4s;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-}
-#skills .delayed-text-6 {
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-}
-#skills .delayed-text-7 {
-    -webkit-animation-delay: 0.6s;
-    animation-delay: 0.6s;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-}
-#skills .delayed-text-8 {
-    -webkit-animation-delay: 0.7s;
-    animation-delay: 0.7s;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
 }
 /* ***** PROJECTS SECTION ***** */
 .projects-section {
@@ -1652,14 +1604,12 @@ p:nth-child(1) {
 @media (min-width: 1200px) {
     .project-summary__link:after {
         content: '';
-        position: absolute;
+        position: relative;
         display: block;
         margin: auto;
         height: 3px;
         width: 1.5em;
-        left: calc(50% - 0.75em);
-        right: calc(50% - 0.75em);
-        top: 2em;
+        top: 0.75em;
         background: #0A1612;
         text-decoration: none;
         -webkit-transition: width .5s ease, background-color .5s ease;
@@ -1670,7 +1620,7 @@ p:nth-child(1) {
     display: inline-block;
 }
 .details-section {
-    f background: #efefef;
+    background: #efefef;
     padding: 4em 0;
     font-size: 1.25rem;
     text-align: center;
@@ -1769,8 +1719,9 @@ p:nth-child(1) {
     border: solid 2px #a9a9a9;
     width: 40px;
 }
-.wordpress {
+.details__tech-list .wordpress {
     opacity: 0.7;
+    font-size: 2.25rem;
 }
 .wordpress:hover {
     opacity: 1;
