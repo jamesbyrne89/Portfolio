@@ -185,6 +185,33 @@ $contact.waypoint(function(direction) {
 });
 
 
+// PROJECTS PAGE - SUMMARY SECTION //
+
+var $projectSummaryRight = $('.summary-right');
+var $projectSummaryLeft = $('.summary-left');
+var $fullSummary = $('.details__full-summary p');
+
+$projectSummaryRight.waypoint(function(direction) {
+    if (direction == 'down') {
+        $projectSummaryLeft.addClass('slide-left');
+        $projectSummaryRight.addClass('fade-in');
+    } else {
+
+    }
+}, {
+    offset: '80%'
+});
+
+$fullSummary.waypoint(function(direction) {
+    if (direction == 'down') {
+        $fullSummary.addClass('fade-in');
+    } else {
+
+    }
+}, {
+    offset: '80%'
+});
+
 // PROJECTS PAGE - TECH SECTION //
 
 var $techTitle = $('.tech-section-header');
@@ -194,7 +221,6 @@ var $techIcon = $('.tech-icon-wrapper');
 $details.waypoint(function(direction) {
     if (direction == 'down') {
         // $contact.addClass('fade-in');
-        // $contact.removeClass('fade-out');
         $techTitle.addClass('slide-left');
         $techTitle.removeClass('fade-out');
         $techIcon.addClass('slide-up');

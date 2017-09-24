@@ -59,6 +59,7 @@
 .summary-left,
 .summary-right {
     flex: 1 1 200px;
+    opacity: 0;
 }
 
 .summary-right {
@@ -81,7 +82,7 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: inline-block;
     position: relative;
-    color: #0A1612;
+    color: $darkGrey;
     font-size: 1.25rem;
     font-weight: bold;
     padding: 5px auto;
@@ -112,7 +113,7 @@
             height: 3px;
             width: 1.5em;
             top: 0.75em;
-            background: #0A1612;
+            background: $darkGrey;
             text-decoration: none;
             transition: width .5s ease, background-color .5s ease;
         }
@@ -200,11 +201,14 @@
 
 .details__full-summary {
     font-size: 1.25rem;
-    color: #a9a9a9;
+    color: $darkGrey;
     width: 80%;
     margin: 0 auto 100px auto;
     @mixin atLarge {
         width: 70%;
+    }
+    p {
+        opacity: 0;
     }
 }
 
@@ -212,6 +216,7 @@
     font-size: 1.25rem;
     text-align: left;
     margin-top: 4rem;
+    opacity: 0;
     @mixin atLarge {
         font-size: 1.5rem;
     }
