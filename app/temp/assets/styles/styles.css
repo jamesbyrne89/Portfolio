@@ -485,6 +485,35 @@ html {
         top: 0px;
     }
 }
+@-webkit-keyframes menuSlideUp {
+    0% {
+        display: -webkit-box;
+        display: flex;
+        opacity: 0;
+        -webkit-transform: translateY(80px);
+                transform: translateY(80px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+}
+@keyframes menuSlideUp {
+    0% {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        opacity: 0;
+        -webkit-transform: translateY(80px);
+                transform: translateY(80px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+}
 @-webkit-keyframes slide-up {
     0% {
         opacity: 0;
@@ -579,6 +608,7 @@ html {
     background-color: rgba(255, 255, 255, 1);
     z-index: 15;
     height: 55px;
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1481,7 +1511,6 @@ p:nth-child(1) {
 }
 /* ***** PROJECTS PAGE ***** */
 #project-header {
-    margin-top: 0px;
     background-color: #163750;
     height: calc(80vh - 60px);
     display: -webkit-box;

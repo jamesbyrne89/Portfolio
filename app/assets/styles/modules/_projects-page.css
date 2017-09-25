@@ -1,7 +1,6 @@
 /* ***** PROJECTS PAGE ***** */
 
 #project-header {
-    margin-top: 0px;
     background-color: $newNavy;
     height: calc(80vh - 60px);
     display: flex;
