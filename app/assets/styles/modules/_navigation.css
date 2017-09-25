@@ -14,6 +14,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transform: translateY(0px);
+    transition: 0.2s;
     @mixin atMedium {
         padding: 0 1em;
         height: 80px;
