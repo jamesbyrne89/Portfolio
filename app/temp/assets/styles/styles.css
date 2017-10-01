@@ -1582,7 +1582,12 @@ p:nth-child(1) {
 }
 .summary-right {
     width: 50%;
-    font-size: 1.25rem;
+    font-size: 1rem;
+}
+@media (min-width: 1200px) {
+    .summary-right {
+        font-size: 1.25rem;
+    }
 }
 .summary-left {
     width: 30%;
@@ -1602,12 +1607,13 @@ p:nth-child(1) {
     display: inline-block;
     position: relative;
     color: rgb(82, 82, 82);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
     padding: 5px auto;
     width: 100%;
     height: auto;
     line-height: 1;
+    margin-bottom: 2.5rem;
 }
 @media (min-width: 700px) {
     .project-summary__link {
@@ -1706,10 +1712,10 @@ p:nth-child(1) {
     display: -ms-flexbox;
     display: flex;
     padding-left: 1em;
-    padding-left: 2.75em;
 }
 @media (min-width: 1200px) {
     .details__tech-list ul {
+        padding-left: 2.75em;
         margin-top: 0px;
     }
 }
@@ -1726,16 +1732,18 @@ p:nth-child(1) {
     }
 }
 .details__full-summary {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: rgb(82, 82, 82);
-    width: 80%;
     margin: 0 auto 5rem auto;
     text-align: left;
-    padding: 0 3em;
+    padding: 0 1em;
 }
 @media (min-width: 1200px) {
     .details__full-summary {
+        font-size: 1.25rem;
         width: 1000px;
+        width: 80%;
+        padding: 0 3em;
     }
 }
 .details__full-summary p {
@@ -1751,10 +1759,11 @@ p:nth-child(1) {
     margin-top: 4rem;
     opacity: 0;
     width: 1000px;
-    padding-left: 2.75em;
+    padding-left: 1em;
 }
 @media (min-width: 1200px) {
     .tech-section-header {
+        padding-left: 2.75em;
         font-size: 1.5rem;
     }
 }

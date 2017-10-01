@@ -63,7 +63,10 @@
 
 .summary-right {
     width: 50%;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    @mixin atLarge {
+        font-size: 1.25rem;
+    }
 }
 
 .summary-left {
@@ -82,12 +85,13 @@
     display: inline-block;
     position: relative;
     color: $darkGrey;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
     padding: 5px auto;
     width: 100%;
     height: auto;
     line-height: 1;
+    margin-bottom: 2.5rem;
     @mixin atMedium {
         font-size: 2rem;
     }
@@ -185,8 +189,8 @@
     margin: auto;
     display: flex;
     padding-left: 1em;
-    padding-left: 2.75em;
     @mixin atLarge {
+        padding-left: 2.75em;
         margin-top: 0px;
     }
 }
@@ -203,14 +207,16 @@
 }
 
 .details__full-summary {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: $darkGrey;
-    width: 80%;
     margin: 0 auto 5rem auto;
     text-align: left;
-    padding: 0 3em;
+    padding: 0 1em;
     @mixin atLarge {
+        font-size: 1.25rem;
         width: 1000px;
+        width: 80%;
+        padding: 0 3em;
     }
     p {
         opacity: 0;
@@ -227,8 +233,9 @@
     margin-top: 4rem;
     opacity: 0;
     width: 1000px;
-    padding-left: 2.75em;
+    padding-left: 1em;
     @mixin atLarge {
+        padding-left: 2.75em;
         font-size: 1.5rem;
     }
 }
