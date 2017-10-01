@@ -259,17 +259,10 @@
 }
 
 .site-nav__item:nth-child(3) {
-    display: none;
-    @mixin atLarge {
-        display: block;
-    }
-}
-
-.site-nav__item:nth-child(4) {
     animation-delay: 0.4s;
 }
 
-.site-nav__item:nth-child(5) {
+.site-nav__item:nth-child(4) {
     animation-delay: 0.5s;
 }
 
