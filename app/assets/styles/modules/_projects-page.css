@@ -212,6 +212,7 @@
     margin: 0 auto 5rem auto;
     text-align: left;
     padding: 0 1em;
+    max-width: 1000px;
     @mixin atLarge {
         font-size: 1.25rem;
         width: 1000px;
@@ -224,6 +225,10 @@
     }
     p:last-child {
         margin-bottom: 0;
+    }
+    li {
+        margin-top: 1rem;
+        list-style-position: inside;
     }
 }
 

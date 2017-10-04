@@ -1737,6 +1737,7 @@ p:nth-child(1) {
     margin: 0 auto 5rem auto;
     text-align: left;
     padding: 0 1em;
+    max-width: 1000px;
 }
 @media (min-width: 1200px) {
     .details__full-summary {
@@ -1752,6 +1753,10 @@ p:nth-child(1) {
 }
 .details__full-summary p:last-child {
     margin-bottom: 0;
+}
+.details__full-summary li {
+    margin-top: 1rem;
+    list-style-position: inside;
 }
 .tech-section-header {
     font-size: 1.25rem;
