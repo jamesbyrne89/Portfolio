@@ -188,6 +188,7 @@
     width: 1000px;
     margin: auto;
     display: flex;
+    justify-content: center;
     padding-left: 1em;
     @mixin atLarge {
         padding-left: 2.75em;
@@ -234,13 +235,11 @@
 
 .tech-section-header {
     font-size: 1.25rem;
-    text-align: left;
+    text-align: center;
     margin-top: 4rem;
     opacity: 0;
     width: 1000px;
-    padding-left: 1em;
     @mixin atLarge {
-        padding-left: 2.75em;
         font-size: 1.5rem;
     }
 }
