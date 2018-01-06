@@ -1711,6 +1711,9 @@ p:nth-child(1) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-left: 1em;
 }
 @media (min-width: 1200px) {
@@ -1760,15 +1763,13 @@ p:nth-child(1) {
 }
 .tech-section-header {
     font-size: 1.25rem;
-    text-align: left;
+    text-align: center;
     margin-top: 4rem;
     opacity: 0;
     width: 1000px;
-    padding-left: 1em;
 }
 @media (min-width: 1200px) {
     .tech-section-header {
-        padding-left: 2.75em;
         font-size: 1.5rem;
     }
 }

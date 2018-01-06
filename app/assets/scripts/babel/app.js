@@ -225,3 +225,8 @@ $details.waypoint(function (direction) {
 }, {
     offset: '80%'
 });
+
+var date = new Date();
+var year = date.getFullYear();
+
+document.querySelectorAll('.site-footer').innerText = 'Site design by James Byrne. \xA9 ' + year;
