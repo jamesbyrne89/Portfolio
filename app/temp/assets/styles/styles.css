@@ -39,7 +39,6 @@ body {
 }
 /****** MEDIA QUERIES ******/
 // ***** GENERAL STYLES *****
-
 a,
 a:visited {
     text-decoration: none;
@@ -94,7 +93,6 @@ html {
     padding: 0px 1vw;
     box-sizing: border-box;
     padding: 0px;
-
 }
 @media (min-width: 700px) {
     #main-container {
@@ -111,7 +109,6 @@ html {
     display: block;
     opacity: 0;
     margin-bottom: 2.5rem;
-
 }
 @media (min-width: 700px) {
     .section-header {
@@ -122,6 +119,7 @@ html {
 @media (min-width: 1200px) {
     .section-header {
         padding-left: 12rem;
+        text-align: right;
     }
 }
 .section-header-wrapper {
