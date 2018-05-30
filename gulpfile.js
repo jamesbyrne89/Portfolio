@@ -134,7 +134,7 @@ gulp.task('copyGeneralFiles', [ 'deleteDistFolder' ], function() {
 });
 
 // Build final
-gulp.task('build', [ 'deleteDistFolder', 'copyGeneralFiles', 'usemin' ]);
+gulp.task('deploy', [ 'deleteDistFolder', 'copyGeneralFiles', 'usemin' ]);
 
 // Usemin
 gulp.task('usemin', [ 'deleteDistFolder', 'compilecss' ], function() {
@@ -161,6 +161,6 @@ gulp.task('usemin', [ 'deleteDistFolder', 'compilecss' ], function() {
 });
 
 // Preview final build in browserSync
-gulp.task('deploy', [ 'build' ], function() {
+gulp.task('runDeploy', [ 'deploy' ], function() {
   browserSync.init({ notify: false, server: { baseDir: 'docs' } });
 });
