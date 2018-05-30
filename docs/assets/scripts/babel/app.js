@@ -1,10 +1,12 @@
+'use strict';
+
 /**
  * Sticky header that slides into view only when the user scrolls up
  */
 
 (function stickyHeader() {
-    let previous = window.scrollY;
-    window.addEventListener('scroll', function() {
+    var previous = window.scrollY;
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 180 && window.scrollY > previous) {
             $('.site-header').removeClass('sticky');
             previous = window.scrollY;
@@ -20,10 +22,9 @@
     });
 })();
 
-
 // MOBILE NAVIGATION
-$(function($) {
-    $('.menu-btn').on('click', function() {
+$(function ($) {
+    $('.menu-btn').on('click', function () {
         $('.site-nav').toggleClass('menu--active');
         $('.site-nav__item').toggleClass('site-nav__item--active');
         $('.menu-btn span:first-child').toggleClass('opened');
@@ -32,26 +33,24 @@ $(function($) {
     });
 });
 
-$(function($) {
-    $('.menu-link').on('click', function() {
-        $('.responsive-menu').addClass('expand')
-        $('.menu-btn span:first-child').removeClass('opened')
-        $('.menu-btn span:nth-child(2)').removeClass('hidden')
-        $('.menu-btn span:last-child').removeClass('opened')
+$(function ($) {
+    $('.menu-link').on('click', function () {
+        $('.responsive-menu').addClass('expand');
+        $('.menu-btn span:first-child').removeClass('opened');
+        $('.menu-btn span:nth-child(2)').removeClass('hidden');
+        $('.menu-btn span:last-child').removeClass('opened');
     });
 });
 
-$(function($) {
-    $('.menu-link').click(function() {
-        $('.responsive-menu').toggleClass('expand')
+$(function ($) {
+    $('.menu-link').click(function () {
+        $('.responsive-menu').toggleClass('expand');
     });
 });
 
 $("img.lazy").lazyload({
     threshold: -900
 });
-
-
 
 // SLIDE IN ANIMATIONS
 
@@ -60,28 +59,25 @@ $("img.lazy").lazyload({
 function animateIn(el, offset) {
     var $element = $(el);
 
-    $element.waypoint(function(direction) {
+    $element.waypoint(function (direction) {
         if (direction == 'down') {
-            $element.addClass('sideintro', 'delayed-text-5')
-            $element.removeClass('animated fadeOut')
+            $element.addClass('sideintro', 'delayed-text-5');
+            $element.removeClass('animated fadeOut');
         } else {
-            $element.removeClass('sideintro', 'delayed-text-5')
-            $element.addClass('animated fadeOut')
+            $element.removeClass('sideintro', 'delayed-text-5');
+            $element.addClass('animated fadeOut');
         }
     }, {
         offset: offset
     });
 }
 
-
-
-
 var $aboutSection = $('#about');
 var $mouse = $('.mouse');
 
 $mouse.addClass('fade-in');
 
-$aboutSection.waypoint(function(direction) {
+$aboutSection.waypoint(function (direction) {
     if (direction == 'down') {
         $mouse.addClass('fade-out');
         $mouse.removeClass('fade-in');
@@ -93,7 +89,6 @@ $aboutSection.waypoint(function(direction) {
     offset: '60%'
 });
 
-
 // ABOUT ME SECTION //
 
 var $about = $('.about-section p');
@@ -102,7 +97,7 @@ var $skillsTitle = $('.about-text__subtitle');
 var $skillsList = $('.skills-list ul');
 var $skillIcon = $('.tech-icon-wrapper');
 
-$about.waypoint(function(direction) {
+$about.waypoint(function (direction) {
     if (direction == 'down') {
         $about.addClass('fade-in');
         $about.removeClass('fade-out');
@@ -125,14 +120,13 @@ $about.waypoint(function(direction) {
     offset: '70%'
 });
 
-
 // PROJECTS SECTION //
 
 var $projectsTitle = $('.projects-section-header');
 var $projects = $('.projects-gallery-intro');
 var $gallery = $('.gallery');
 
-$projects.waypoint(function(direction) {
+$projects.waypoint(function (direction) {
     if (direction == 'down') {
         $projects.addClass('fade-in');
         $projects.removeClass('fade-out');
@@ -152,7 +146,6 @@ $projects.waypoint(function(direction) {
     offset: '70%'
 });
 
-
 // CONTACT SECTION //
 
 var $contact = $('.contact-section p');
@@ -160,7 +153,7 @@ var $contactTitle = $('.contact-section-header');
 var $emailBtn = $('.btn-contact');
 var $socialIcons = $('.social-icon');
 
-$contact.waypoint(function(direction) {
+$contact.waypoint(function (direction) {
     if (direction == 'down') {
         $contact.addClass('fade-in');
         $contact.removeClass('fade-out');
@@ -184,30 +177,25 @@ $contact.waypoint(function(direction) {
     offset: '80%'
 });
 
-
 // PROJECTS PAGE - SUMMARY SECTION //
 
 var $projectSummaryRight = $('.summary-right');
 var $projectSummaryLeft = $('.summary-left');
 var $fullSummary = $('.details__full-summary p');
 
-$projectSummaryRight.waypoint(function(direction) {
+$projectSummaryRight.waypoint(function (direction) {
     if (direction == 'down') {
         $projectSummaryLeft.addClass('slide-left');
         $projectSummaryRight.addClass('fade-in');
-    } else {
-
-    }
+    } else {}
 }, {
     offset: '80%'
 });
 
-$fullSummary.waypoint(function(direction) {
+$fullSummary.waypoint(function (direction) {
     if (direction == 'down') {
         $fullSummary.addClass('fade-in');
-    } else {
-
-    }
+    } else {}
 }, {
     offset: '80%'
 });
@@ -218,7 +206,7 @@ var $techTitle = $('.tech-section-header');
 var $details = $('.details-wrapper');
 var $techIcon = $('.tech-icon-wrapper');
 
-$details.waypoint(function(direction) {
+$details.waypoint(function (direction) {
     if (direction == 'down') {
         // $contact.addClass('fade-in');
         $techTitle.addClass('slide-left');
@@ -238,7 +226,7 @@ $details.waypoint(function(direction) {
     offset: '80%'
 });
 
-let date = new Date();
-let year = date.getFullYear();
+var date = new Date();
+var year = date.getFullYear();
 
-document.querySelectorAll('.site-footer').innerText = `Site design by James Byrne. © ${year}`;
+document.querySelectorAll('.site-footer').innerText = 'Site design by James Byrne. \xA9 ' + year;
