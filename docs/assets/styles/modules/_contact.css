@@ -1,0 +1,106 @@
+/* ***** CONTACT SECTION ***** */
+
+.contact-section {
+    color: #fff;
+    background-color: $nearBlackBackground;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    text-align: left;
+    position: relative;
+    padding: 4em 1.5em;
+    @mixin atLarge {
+        padding: 4em 0;
+    }
+    .section-header {
+        color: #fff;
+    }
+}
+
+.contact-wrapper {
+    margin: 3em 0.5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    @mixin atMedium {
+        width: 80%;
+        margin: 6em auto;
+    }
+}
+
+.contact-text {
+    text-align: left;
+    @mixin atMedium {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+    }
+    p {
+        text-align: left;
+        line-height: 1.5;
+        opacity: 0;
+        font-size: 1rem;
+        @mixin atMedium {
+            font-size: 1.25rem;
+        }
+        @mixin atLarge {
+            width: 75%;
+        }
+    }
+}
+
+.socialicons {
+    height: 20px;
+    display: inline-block;
+}
+
+.fa {
+    color: #fff;
+    font-family: 'Avenir-Book', serif;
+    font-size: 26px;
+    text-align: center;
+    width: 100%;
+}
+
+.social-icons-wrapper {
+    margin-top: 2.5rem;
+    @mixin atLarge {
+        margin-top: 4rem;
+    }
+}
+
+.social-icons-wrapper ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+}
+
+.social-icon {
+    width: 1.5rem;
+    fill: #fff;
+    margin: 0 1.5rem;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    &:hover {
+        fill: $yellow;
+    }
+}
+
+.social-icon:first-child {
+    margin-left: 0;
+}
