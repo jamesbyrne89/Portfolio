@@ -15,24 +15,23 @@ a:hover {
 /* ***** FONTS ***** */
 @font-face {
     font-family: 'Avenir-Black';
+    font-display: swap;
     src: url('/assets/fonts/AvenirLTStd-Black.WOFF') format('woff'), url('../myfont.woff') format('woff');
 }
 @font-face {
     font-family: 'Avenir-Book';
+    font-display: swap;
     src: url('/assets/fonts/AvenirLTStd-Book.WOFF') format('woff'), url('../myfont.woff') format('woff');
 }
 @font-face {
     font-family: 'Avenir-Next';
-    src: url('assets/fonts/AvenirNextLT.WOFF') format('woff'),
-    url('assets/fonts/AvenirNextLT.WOFF') format('woff'),
-    url('assets/fonts/AvenirNextLT.ttf') format('ttf'),
-    url('assets/fonts/AvenirNextLT.eot') format('woff'),
-    url('assets/fonts/AvenirNextLT.svg') format('svg'),
+    font-display: swap;
+    src: url('assets/fonts/AvenirNextLT.WOFF') format('woff'), url('assets/fonts/AvenirNextLT.WOFF') format('woff'), url('assets/fonts/AvenirNextLT.ttf') format('ttf'), url('assets/fonts/AvenirNextLT.eot') format('woff'), url('assets/fonts/AvenirNextLT.svg') format('svg'),
 }
 body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-family: 'Avenir-Next', helvetica, arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Avenir-Next', helvetica, arial, sans-serif;
     font-weight: 400;
     line-height: 1.5;
     font-size: 1.25rem;
@@ -1010,28 +1009,28 @@ p:nth-child(1) {
 }
 /* ***** PROJECTS SECTION ***** */
 .projects-section {
-    color: rgb(82, 82, 82);
-    background-color: #fff;
-    font-size: 1.25rem;
-    text-align: left;
-    min-height: 100vh;
-    box-sizing: border-box;
-    padding: 4em 0em;
+  color: rgb(82, 82, 82);
+  background-color: #fff;
+  font-size: 1.25rem;
+  text-align: left;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 4em 0em;
 }
 .projects-section-wrapper {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding: 0em 1.5em;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0em 1.5em;
 }
 .projects-gallery-intro {
-    text-align: left;
-    opacity: 0;
-    line-height: 1.5;
-    opacity: 0;
+  text-align: left;
+  opacity: 0;
+  line-height: 1.5;
+  opacity: 0;
 }
 @media (min-width: 700px) {
     .projects-gallery-intro {
@@ -1054,17 +1053,18 @@ p:nth-child(1) {
     }
 }
 .gallery {
-    max-width: 100%;
-    margin-top: 4rem;
-    /*center aligned*/
-    padding: 0;
-    font-size: 0;
-    /* Remember to change it back to normal font size if have captions */
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 1rem;
-    list-style: none;
-    animation-delay: 0.5s;
+  max-width: 100%;
+  margin-top: 4rem;
+  /*center aligned*/
+  padding: 0;
+  font-size: 0;
+  opacity: 0;
+  /* Remember to change it back to normal font size if have captions */
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  list-style: none;
+  animation-delay: 0.5s;
 }
 @media (min-width: 700px) {
     .gallery {
@@ -1104,10 +1104,10 @@ p:nth-child(1) {
 }
 /* The wrapper for each item */
 .project-cell {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    height: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
 }
 @media (min-width: 700px) {}
 .project-cell img {
@@ -1124,55 +1124,55 @@ p:nth-child(1) {
 }
 /* If have the image layer */
 .gallery li:hover.cell__thumbnail {
-    transform: scale(1.1) brightness(1);
+  transform: scale(1.1) brightness(1);
 }
 /* Overlay layer */
 .cell__overlay {
-    position: absolute;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    background: #FEB63F;
-    background-size: 50px 50px;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0) scale(1, 1);
-    /*For IE6 - IE8*/
-    transition: all 0.4s ease-out;
+  position: absolute;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: #FEB63F;
+  background-size: 50px 50px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  /*For IE6 - IE8*/
+  transition: all 0.4s ease-out;
 }
 .gallery li:hover .cell__overlay {
-    opacity: 1;
+  opacity: 1;
 }
 .gallery li:hover .rig-cell__overlay {
-    opacity: 0;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(100) scale(1, 1);
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(100) scale(1, 1);
 }
 /* Caption */
 .cell__title {
-    display: block;
-    padding: 0 2em;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    font-weight: 700;
-    font-family: inherit;
-    margin-top: -1.25em;
-    color: white;
-    opacity: 0;
-    transform: translateY(1.5rem);
-    transition: all 0.3s ease-out;
-    position: relative;
-    font-size: 1.5rem;
+  display: block;
+  padding: 0 2em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-family: inherit;
+  margin-top: -1.25em;
+  color: white;
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: all 0.3s ease-out;
+  position: relative;
+  font-size: 1.5rem;
 }
 .cell__title::after {
     content: '';
@@ -1194,20 +1194,20 @@ p:nth-child(1) {
     }
 }
 .gallery li:hover .cell__title {
-    transform: translateY(0px);
-    opacity: 1;
+  transform: translateY(0px);
+  opacity: 1;
 }
 .about-section p:nth-child(2) {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 .about-section p:nth-child(3) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .about-section p:nth-child(4) {
-    animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 .about-section p:nth-child(5) {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 /* ***** PROJECTS PAGE ***** */
 #project-header {
