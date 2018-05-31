@@ -80,7 +80,7 @@
             height: 300px;
         }
         @mixin atLarge {
-            max-height: 340px;
+            height: 18vw;
         }
     }
 }
