@@ -1,79 +1,90 @@
 /* ***** WELCOME SECTION ***** */
 
 .intro-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0px;
-    background-color: $newNavy;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0px;
+  background-color: $newNavy;
+  height: calc(100vh - 100px);
+  position: relative;
+  @mixin atMedium {
     height: calc(100vh - 100px);
-    position: relative;
-    @mixin atMedium {
-        height: calc(100vh - 100px);
-    }
-    @mixin atLarge {}
+  }
 }
 
 .intro-text {
-    color: $yellow;
-    font-size: 2.5rem;
-    padding: 0 1.5rem;
-    position: relative;
-    width: 50rem;
-    font-family: 'Avenir-Black', sans-serif;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 3rem;
-    text-align: center;
-    line-height: 1.25;
-    animation-fill-mode: forwards;
-    animation: slideUp 1s ease-out;
-    @mixin atMedium {
-        font-size: 3.25rem;
-    }
-    @mixin atLarge {
-        margin-bottom: 0;
-        font-size: 4rem;
-    }
+  color: $yellow;
+  font-size: 2.5rem;
+  padding: 0 1.5rem;
+  position: relative;
+  width: 50rem;
+  font-family: $largeText;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  text-align: center;
+  line-height: 1.25;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation: slideUp 1s ease-out;
+  animation: slideUp 1s ease-out;
+  @mixin atMedium {
+    font-size: 3.25rem;
+  }
+  @mixin atLarge {
+    margin-bottom: 0;
+    font-size: 4rem;
+  }
 }
 
 .mouse {
-    position: absolute;
-    width: 1rem;
-    height: 2.5rem;
-    bottom: 40px;
-    left: 50%;
-    margin-left: -0.5rem;
-    border-radius: 15px;
-    border: 2px solid #fff;
-    animation-delay: 1s;
+  position: absolute;
+  width: 1rem;
+  height: 2.5rem;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -0.5rem;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  opacity: 0;
 }
 
 .scroll {
-    display: block;
-    width: 4px;
-    height: 4px;
-    margin: 6px auto;
-    border-radius: 4px;
-    background: #fff;
-    -webkit-animation: finger 1s infinite;
-    animation: finger 1s infinite;
+  display: block;
+  width: 4px;
+  height: 4px;
+  margin: 6px auto;
+  border-radius: 4px;
+  background: #fff;
+  -webkit-animation: finger 1s infinite;
+  animation: finger 1s infinite;
 }
 
 .stick-me .sticking {
-    transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
 }
 
 .sideintro {
-    -webkit-animation: sideintro 3s;
-    animation: sideintro 3s;
-    animation-fill-mode: backwards;
+  -webkit-animation: sideintro 3s;
+  animation: sideintro 3s;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
 }
 
 .intro {
-    -webkit-animation: intro 1s;
-    animation: intro 1s;
-    animation-fill-mode: forwards;
+  -webkit-animation: intro 1s;
+  animation: intro 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }

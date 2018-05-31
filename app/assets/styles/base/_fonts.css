@@ -15,7 +15,7 @@
 @font-face {
     font-family: 'Avenir-Next';
     font-display: swap;
-    src: url('assets/fonts/AvenirNextLT.WOFF') format('woff'), url('assets/fonts/AvenirNextLT.WOFF') format('woff'), url('assets/fonts/AvenirNextLT.ttf') format('ttf'), url('assets/fonts/AvenirNextLT.eot') format('woff'), url('assets/fonts/AvenirNextLT.svg') format('svg'),
+    src: url('/assets/fonts/AvenirNextLTRegular.woff') format('woff'), url('/assets/fonts/AvenirNextLTRegular.woffF2') format('woff2'), url('/assets/fonts/AvenirNextLTRegular.ttf') format('ttf'), url('/assets/fonts/AvenirNextLTRegular.svg') format('svg');
 }
 
 body {

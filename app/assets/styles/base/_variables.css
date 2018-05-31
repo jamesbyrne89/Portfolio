@@ -1,6 +1,15 @@
 $newNavy: #163750;
-$nearBlackBackground: #0A1612;
-$yellow: #FEB63F;
+$nearBlackBackground: #0a1612;
+$yellow: #feb63f;
 $midGrey: #c5c1c0;
 $darkGrey: rgb(82, 82, 82);
-$bodyText: 'Avenir-Next', helvetica, arial, sans-serif;
+$largeText: 'Avenir-Black',
+'system-ui',
+helvetica,
+arial,
+sans-serif;
+$bodyText: 'Avenir-Next',
+'system-ui',
+helvetica,
+arial,
+sans-serif;
