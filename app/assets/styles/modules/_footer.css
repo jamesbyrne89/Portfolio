@@ -1,10 +1,10 @@
 .site-footer {
-  color: #a9a9a9;
-  background-color: #fff;
-  text-align: center;
-  display: block;
-  margin: auto;
-  font-size: 0.75rem;
-  position: relative;
-  padding: 1.5rem;
+    color: $darkGrey;
+    background-color: #fff;
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-size: 0.75rem;
+    position: relative;
+    padding: 1.5rem;
 }

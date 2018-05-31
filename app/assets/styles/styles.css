@@ -1,3 +1,4 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
 @import 'base/_variables';
 @import 'base/_reset';
 @import 'base/_fonts';
