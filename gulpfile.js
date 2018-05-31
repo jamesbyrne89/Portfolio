@@ -41,11 +41,13 @@ watch('app/index.html', function() {
 
 // Compile CSS
 gulp.task('compilecss', function() {
-  return gulp
-    .src('app/assets/styles/styles.css')
-    .pipe(debug())
-    .pipe(postcss([ cssImport, autoprefixer, mixins, nested, cssvars ]))
-    .pipe(gulp.dest('app/temp/assets/styles'));
+  return gulp.src('app/assets/styles/styles.css').on('error', function() {
+    console.log('Caught an error');
+  }).pipe(
+    debug(),
+  ).pipe(postcss([ cssImport, autoprefixer, mixins, nested, cssvars ])).on('error', function(err) {
+    console.log('Caught an error', err);
+  }).pipe(gulp.dest('app/temp/assets/styles'));
 });
 
 // Lint CSS

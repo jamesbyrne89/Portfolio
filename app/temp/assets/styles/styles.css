@@ -104,8 +104,8 @@ html {
     margin: 0px auto 1.25rem auto;
     color: rgb(82, 82, 82);
     display: block;
-    opacity: 0;
     margin-bottom: 2.5rem;
+    opacity: 0;
 }
 @media (min-width: 700px) {
     .section-header {
@@ -378,6 +378,16 @@ html {
         top: 0px;
     }
 }
+@keyframes slide-left {
+    0% {
+        opacity: 0;
+        transform: translateX(5rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 /* Animation classes */
 .fade-in {
     animation: fadeIn 1.2s ease-in-out;
@@ -388,7 +398,7 @@ html {
     animation-fill-mode: both;
 }
 .slide-left {
-    animation: slideLeft 1s ease-out;
+    animation: slide-left 1s ease-out;
     animation-fill-mode: forwards;
 }
 .slide-up {
@@ -1587,6 +1597,3 @@ p:nth-child(1) {
     bottom: 10px;
     padding: 1.5rem;
 }
-
-
-
