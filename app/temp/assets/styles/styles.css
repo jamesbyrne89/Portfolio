@@ -861,7 +861,6 @@ arial,
 sans-serif;
     font-size: 1.25rem;
     padding: 4em 1.5em;
-
 }
 @media (min-width: 1200px) {
     .about-section {
@@ -906,7 +905,7 @@ sans-serif;
     }
 }
 .about-section a {
-    color: #feb63f;
+    color: #163750;
     display: inline-block;
     position: relative;
 }
@@ -914,7 +913,7 @@ sans-serif;
     content: '';
     width: 0;
     height: 2px;
-    background-color: #feb63f;
+    background-color: #163750;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -938,7 +937,6 @@ p:nth-child(1) {
 }
 .about-text {
     width: 100%;
-
 }
 @media (min-width: 700px) {
     .about-text {
@@ -1605,13 +1603,12 @@ sans-serif;
     margin-left: 0;
 }
 .site-footer {
-    color: #a9a9a9;
-    background-color: #fff;
-    text-align: center;
-    display: block;
-    margin: auto;
-    font-size: 0.75rem;
-    position: relative;
-    bottom: 10px;
-    padding: 1.5rem;
+  color: #a9a9a9;
+  background-color: #fff;
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-size: 0.75rem;
+  position: relative;
+  padding: 1.5rem;
 }

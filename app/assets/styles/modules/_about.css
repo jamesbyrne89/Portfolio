@@ -1,16 +1,22 @@
 /* ***** ABOUT SECTION ***** */
+
 .about-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     color: $darkGrey;
     background-color: #efefef;
     font-family: $bodyText;
     font-size: 1.25rem;
     padding: 4em 1.5em;
-        @mixin atLarge {
-       padding: 4em 0;            
-        }
+    @mixin atLarge {
+        padding: 4em 0;
+    }
     p {
         text-align: left;
         opacity: 0;
@@ -19,41 +25,38 @@
         width: 100%;
         font-size: 1rem;
         @mixin atMedium {
-        font-size: 1.25rem;
+            font-size: 1.25rem;
         }
         @mixin atLarge {
             width: 75%;
         }
-
     }
-
 }
 
 .skills-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .skills-list {
-
     @mixin atLarge {
         width: 75%;
     }
-
 }
 
 .about-text__subtitle {
     font-size: 1.25rem;
     text-align: left;
     margin-top: 4rem;
-        @mixin atLarge {
-       font-size: 1.5rem;
+    @mixin atLarge {
+        font-size: 1.5rem;
     }
 }
 
 ;
-
 .about-section a {
-    color: $yellow;
+    color: $newNavy;
     display: inline-block;
     position: relative;
 }
@@ -62,11 +65,12 @@
     content: '';
     width: 0;
     height: 2px;
-    background-color: $yellow;
+    background-color: $newNavy;
     position: absolute;
     bottom: 0;
     left: 0;
     display: inline-block;
+    -webkit-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
 }
 
@@ -76,9 +80,14 @@
 
 .about-section ul {
     margin-top: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 p:nth-child(1) {
@@ -87,13 +96,10 @@ p:nth-child(1) {
 
 .about-text {
     width: 100%;
-
     @mixin atMedium {
         width: 60%;
     }
-
     @mixin atLarge {
         width: 50%;
     }
-
 }
