@@ -1,28 +1,33 @@
 /* ***** FONTS ***** */
 
 @font-face {
-    font-family: 'Avenir-Black';
-    font-display: swap;
-    src: url('/assets/fonts/AvenirLTStd-Black.WOFF') format('woff'), url('../myfont.woff') format('woff');
+  font-family: 'Avenir-Black';
+  font-display: swap;
+  src: url('/assets/fonts/AvenirLTStd-Black.WOFF') format('woff'),
+    url('../myfont.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'Avenir-Book';
-    font-display: swap;
-    src: url('/assets/fonts/AvenirLTStd-Book.WOFF') format('woff'), url('../myfont.woff') format('woff');
+  font-family: 'Avenir-Book';
+  font-display: swap;
+  src: url('/assets/fonts/AvenirLTStd-Book.WOFF') format('woff'),
+    url('../myfont.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'Avenir-Next';
-    font-display: swap;
-    src: url('/assets/fonts/AvenirNextLTRegular.woff') format('woff'), url('/assets/fonts/AvenirNextLTRegular.woffF2') format('woff2'), url('/assets/fonts/AvenirNextLTRegular.ttf') format('ttf'), url('/assets/fonts/AvenirNextLTRegular.svg') format('svg');
+  font-family: 'Avenir-Next';
+  font-display: swap;
+  src: url('/assets/fonts/AvenirNextLTRegular.woff') format('woff'),
+    url('/assets/fonts/AvenirNextLTRegular.woff2') format('woff2'),
+    url('/assets/fonts/AvenirNextLTRegular.ttf') format('ttf'),
+    url('/assets/fonts/AvenirNextLTRegular.svg') format('svg');
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: $bodyText;
-    font-weight: 400;
-    line-height: 1.5;
-    font-size: 1.25rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $bodyText;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1.25rem;
 }

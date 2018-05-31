@@ -14,89 +14,92 @@ a:hover {
 }
 /* ***** FONTS ***** */
 @font-face {
-    font-family: 'Avenir-Black';
-    font-display: swap;
-    src: url('/assets/fonts/AvenirLTStd-Black.WOFF') format('woff'), url('../myfont.woff') format('woff');
+  font-family: 'Avenir-Black';
+  font-display: swap;
+  src: url('/assets/fonts/AvenirLTStd-Black.WOFF') format('woff'),
+    url('../myfont.woff') format('woff');
 }
 @font-face {
-    font-family: 'Avenir-Book';
-    font-display: swap;
-    src: url('/assets/fonts/AvenirLTStd-Book.WOFF') format('woff'), url('../myfont.woff') format('woff');
+  font-family: 'Avenir-Book';
+  font-display: swap;
+  src: url('/assets/fonts/AvenirLTStd-Book.WOFF') format('woff'),
+    url('../myfont.woff') format('woff');
 }
 @font-face {
-    font-family: 'Avenir-Next';
-    font-display: swap;
-    src: url('/assets/fonts/AvenirNextLTRegular.woff') format('woff'), url('/assets/fonts/AvenirNextLTRegular.woffF2') format('woff2'), url('/assets/fonts/AvenirNextLTRegular.ttf') format('ttf'), url('/assets/fonts/AvenirNextLTRegular.svg') format('svg');
+  font-family: 'Avenir-Next';
+  font-display: swap;
+  src: url('/assets/fonts/AvenirNextLTRegular.woff') format('woff'),
+    url('/assets/fonts/AvenirNextLTRegular.woff2') format('woff2'),
+    url('/assets/fonts/AvenirNextLTRegular.ttf') format('ttf'),
+    url('/assets/fonts/AvenirNextLTRegular.svg') format('svg');
 }
 body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: 'Avenir-Next',
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Avenir-Next',
 'system-ui',
 helvetica,
 arial,
 sans-serif;
-    font-weight: 400;
-    line-height: 1.5;
-    font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1.25rem;
 }
 /****** MEDIA QUERIES ******/
 // ***** GENERAL STYLES *****
 a,
 a:visited {
-    text-decoration: none;
-    color: #feb63f !important;
+  text-decoration: none;
+  color: #feb63f !important;
 }
 a:focus {
-    outline-color: #0a1612 !important;
+  outline-color: #0a1612 !important;
 }
 button:hover,
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 html {
-    font-size: 1rem;
-    font-family: 'Avenir-Next',
+  font-size: 1rem;
+  font-family: 'Avenir-Next',
 'system-ui',
 helvetica,
 arial,
 sans-serif;
-    text-rendering: geometricPrecision !important;
-    -webkit-font-smoothing: antialiased !important;
+  text-rendering: geometricPrecision !important;
+  -webkit-font-smoothing: antialiased !important;
 }
 ::-moz-selection {
-    color: #fff;
-    background: #feb63f;
+  color: #fff;
+  background: #feb63f;
 }
 ::selection {
-    color: #fff;
-    background: #feb63f;
+  color: #fff;
+  background: #feb63f;
 }
 .slow {
-    animation-duration: 3s;
+  animation-duration: 3s;
 }
 .medium {
-    animation-duration: 1s;
+  animation-duration: 1s;
 }
 .fast {
-    animation-duration: 0.5s;
+  animation-duration: 0.5s;
 }
 .section {
-    max-width: 100vw;
-    margin: auto;
-    padding: 8rem 0;
-    font-size: 3rem;
-    text-align: center;
-    color: #000;
+  max-width: 100vw;
+  margin: auto;
+  padding: 8rem 0;
+  font-size: 3rem;
+  text-align: center;
+  color: #000;
 }
 #main-container {
-    background-color: #fff;
-    height: 100vh;
-    width: 100%;
-    max-width: 100vw;
-    padding: 0px 1vw;
-    box-sizing: border-box;
-    padding: 0px;
+  background-color: #fff;
+  width: 100%;
+  padding: 0px 1vw;
+  box-sizing: border-box;
+  padding: 0px;
 }
 @media (min-width: 700px) {
     #main-container {
@@ -104,15 +107,15 @@ sans-serif;
     }
 }
 .section-header {
-    font-size: 2.5rem;
-    line-height: 1;
-    font-family: 'Avenir-Black', 'century-gothic', sans-serif;
-    text-align: left;
-    margin: 0px auto 1.25rem auto;
-    color: rgb(82, 82, 82);
-    display: block;
-    margin-bottom: 2.5rem;
-    opacity: 0;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-family: 'Avenir-Black', 'century-gothic', sans-serif;
+  text-align: left;
+  margin: 0px auto 1.25rem auto;
+  color: rgb(82, 82, 82);
+  display: block;
+  margin-bottom: 2.5rem;
+  opacity: 0;
 }
 @media (min-width: 700px) {
     .section-header {
@@ -127,7 +130,7 @@ sans-serif;
     }
 }
 .section-header-wrapper {
-    width: 100%;
+  width: 100%;
 }
 @media (min-width: 700px) {
     .section-header-wrapper {
@@ -135,12 +138,12 @@ sans-serif;
     }
 }
 .fadeOut {
-    animation-name: fadeOut;
-    animation-fill-mode: forwards;
+  animation-name: fadeOut;
+  animation-fill-mode: forwards;
 }
 .fa {
-    font-family: 'Avenir-Book', serif;
-    font-size: 2.6rem;
+  font-family: 'Avenir-Book', serif;
+  font-size: 2.6rem;
 }
 .tech-icon-wrapper {
   text-align: left;
@@ -429,11 +432,11 @@ sans-serif;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
-        align-items: center;
+    align-items: center;
     -ms-flex-pack: justify;
-        justify-content: space-between;
+    justify-content: space-between;
     transform: translateY(0px);
-    transition: 0.2s;
+    transition: all 0.2s ease-out;
 }
 @media (min-width: 700px) {
     .site-header {
@@ -463,7 +466,7 @@ sans-serif;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
-        flex-direction: column;
+    flex-direction: column;
     z-index: 10;
 }
 .menu-btn span {
@@ -551,9 +554,9 @@ sans-serif;
     background: #fff;
     pointer-events: none;
     -ms-flex-pack: center;
-        justify-content: center;
+    justify-content: center;
     -ms-flex-align: center;
-        align-items: center;
+    align-items: center;
     padding: 0 1em;
     opacity: 0;
 }
@@ -580,14 +583,14 @@ sans-serif;
     display: flex;
     list-style: none;
     margin: -20px auto 0 auto;
-    padding: 0;
+    padding: 0 10%;
     text-align: center;
     height: auto;
     top: 40px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
     -ms-flex-align: center;
     align-items: center;
 }
@@ -684,9 +687,9 @@ sans-serif;
 }
 .site-nav__item {
     -ms-flex-align: center;
-        align-items: center;
+    align-items: center;
     -ms-flex-pack: center;
-        justify-content: center;
+    justify-content: center;
     text-align: center;
     line-height: 1.75;
     color: #a9a9a9;
@@ -737,7 +740,7 @@ sans-serif;
     z-index: 994;
     position: absolute;
     -ms-flex-align: center;
-        align-items: center;
+    align-items: center;
     transition: all 0.4s;
 }
 @media (min-width: 1200px) {
@@ -1025,28 +1028,28 @@ p:nth-child(1) {
 }
 /* ***** PROJECTS SECTION ***** */
 .projects-section {
-  color: rgb(82, 82, 82);
-  background-color: #fff;
-  font-size: 1.25rem;
-  text-align: left;
-  min-height: 100vh;
-  box-sizing: border-box;
-  padding: 4em 0em;
+    color: rgb(82, 82, 82);
+    background-color: #fff;
+    font-size: 1.25rem;
+    text-align: left;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 4em 0em;
 }
 .projects-section-wrapper {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 0em 1.5em;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0em 1.5em;
 }
 .projects-gallery-intro {
-  text-align: left;
-  opacity: 0;
-  line-height: 1.5;
-  opacity: 0;
+    text-align: left;
+    opacity: 0;
+    line-height: 1.5;
+    opacity: 0;
 }
 @media (min-width: 700px) {
     .projects-gallery-intro {
@@ -1069,18 +1072,18 @@ p:nth-child(1) {
     }
 }
 .gallery {
-  max-width: 100%;
-  margin-top: 4rem;
-  /*center aligned*/
-  padding: 0;
-  font-size: 0;
-  opacity: 0;
-  /* Remember to change it back to normal font size if have captions */
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 1rem;
-  list-style: none;
-  animation-delay: 0.5s;
+    max-width: 100%;
+    margin-top: 4rem;
+    /*center aligned*/
+    padding: 0;
+    font-size: 0;
+    opacity: 0;
+    /* Remember to change it back to normal font size if have captions */
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 1rem;
+    list-style: none;
+    animation-delay: 0.5s;
 }
 @media (min-width: 700px) {
     .gallery {
@@ -1120,10 +1123,10 @@ p:nth-child(1) {
 }
 /* The wrapper for each item */
 .project-cell {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  height: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
 }
 @media (min-width: 700px) {}
 .project-cell img {
@@ -1140,55 +1143,59 @@ p:nth-child(1) {
 }
 /* If have the image layer */
 .gallery li:hover.cell__thumbnail {
-  transform: scale(1.1) brightness(1);
+    transform: scale(1.1) brightness(1);
 }
 /* Overlay layer */
 .cell__overlay {
-  position: absolute;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: center;
-  align-items: center;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  background: #feb63f;
-  background-size: 50px 50px;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0) scale(1, 1);
-  /*For IE6 - IE8*/
-  transition: all 0.4s ease-out;
+    position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #feb63f;
+    background-size: 50px 50px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1, 1);
+    /*For IE6 - IE8*/
+    transition: all 0.4s ease-out;
 }
 .gallery li:hover .cell__overlay {
-  opacity: 1;
+    opacity: 1;
 }
 .gallery li:hover .rig-cell__overlay {
-  opacity: 0;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(100) scale(1, 1);
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(100) scale(1, 1);
 }
 /* Caption */
 .cell__title {
-  display: block;
-  padding: 0 2em;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  font-weight: 700;
-  font-family: inherit;
-  margin-top: -1.25em;
-  color: white;
-  opacity: 0;
-  transform: translateY(1.5rem);
-  transition: all 0.3s ease-out;
-  position: relative;
-  font-size: 1.5rem;
+    display: block;
+    padding: 0 2em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Avenir-Black',
+'system-ui',
+helvetica,
+arial,
+sans-serif;
+    margin-top: -1.25em;
+    color: white;
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: all 0.3s ease-out;
+    position: relative;
+    font-size: 1.5rem;
 }
 .cell__title::after {
     content: '';
@@ -1210,20 +1217,20 @@ p:nth-child(1) {
     }
 }
 .gallery li:hover .cell__title {
-  transform: translateY(0px);
-  opacity: 1;
+    transform: translateY(0px);
+    opacity: 1;
 }
 .about-section p:nth-child(2) {
-  animation-delay: 0.1s;
+    animation-delay: 0.1s;
 }
 .about-section p:nth-child(3) {
-  animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 .about-section p:nth-child(4) {
-  animation-delay: 0.3s;
+    animation-delay: 0.3s;
 }
 .about-section p:nth-child(5) {
-  animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 /* ***** PROJECTS PAGE ***** */
 #project-header {

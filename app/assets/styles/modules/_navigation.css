@@ -12,11 +12,20 @@
     z-index: 15;
     height: 55px;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-transform: translateY(0px);
     transform: translateY(0px);
-    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
     @mixin atMedium {
         padding: 0 1em;
         height: 80px;
@@ -26,15 +35,18 @@
     }
 }
 
-
 /* Sticky Header Styles */
 
 .sticky {
     position: fixed;
     top: -80px;
     height: 80px;
+    -webkit-transform: translateY(80px);
     transform: translateY(80px);
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    transition: -webkit-transform 0.4s ease-out;
     transition: transform 0.4s ease-out;
+    transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
     border-bottom: solid 1px #efefef;
 }
 
@@ -43,7 +55,12 @@
     display: inline-block;
     display: block;
     height: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     z-index: 10;
 }
@@ -54,7 +71,10 @@
     height: 3px;
     background: #a9a9a9;
     z-index: 99;
+    -webkit-transition: top 0.2s ease-in-out 0.2s, opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease;
+    transition: top 0.2s ease-in-out 0.2s, opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease;
     transition: top 0.2s ease-in-out 0.2s, transform 0.2s ease, opacity 0.2s ease 0.2s;
+    transition: top 0.2s ease-in-out 0.2s, transform 0.2s ease, opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease;
     @mixin atMedium {
         width: 36px;
         height: 3px;
@@ -85,7 +105,11 @@
 .menu-btn span:first-child.opened {
     top: 12px;
     width: 30px;
+    -webkit-transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
     transition: top 0.2s ease-in-out, transform 0.1s ease 0.3s, width 0.1s ease 0.3s;
+    transition: top 0.2s ease-in-out, transform 0.1s ease 0.3s, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     @mixin atMedium {
         width: 40px;
@@ -96,7 +120,11 @@
 .menu-btn span:last-child.opened {
     top: 5.5px;
     width: 30px;
+    -webkit-transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
     transition: top 0.2s ease-in-out, transform 0.1s ease 0.3s, width 0.1s ease 0.3s;
+    transition: top 0.2s ease-in-out, transform 0.1s ease 0.3s, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     @mixin atMedium {
         width: 40px;
@@ -111,12 +139,16 @@
 }
 
 .site-nav .site-nav__item--active {
+    -webkit-animation: slide-up 0.85s ease-out;
     animation: slide-up 0.85s ease-out;
+    -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
 
 .site-nav {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     top: 55px;
     left: 0;
@@ -124,10 +156,15 @@
     z-index: 5;
     height: calc(100vh - 55px);
     width: 100vw;
+    -webkit-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
     background: #fff;
     pointer-events: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 0 1em;
     opacity: 0;
@@ -138,7 +175,10 @@
         top: 0;
         left: 0;
         height: 100%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -ms-flex-pack: distribute;
         justify-content: space-around;
         z-index: 10;
         opacity: 1;
@@ -146,17 +186,25 @@
     }
     ul {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         list-style: none;
         margin: -20px auto 0 auto;
-        padding: 0;
+        padding: 0 10%;
         text-align: center;
         height: auto;
         top: 40px;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        justify-content: center;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         @mixin atLarge {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             margin-top: 0px;
             margin: 0 auto;
@@ -167,10 +215,17 @@
             color: #a9a9a9;
             padding: 5px auto;
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             text-align: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -webkit-transition: all 0.25s;
             transition: all 0.25s;
             @mixin atLarge {
                 width: auto;
@@ -191,6 +246,7 @@
                 width: 0px;
                 background: transparent;
                 text-decoration: none;
+                -webkit-transition: width 0.4s ease, background-color .5s ease;
                 transition: width 0.4s ease, background-color .5s ease;
             }
         }
@@ -203,6 +259,7 @@
 
 .hidden {
     opacity: 0;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -230,6 +287,7 @@
 
 .menu-btn div {
     display: block;
+    -webkit-transition: all 1s;
     transition: all 1s;
     @mixin atLarge {
         display: none;
@@ -237,7 +295,11 @@
 }
 
 .site-nav__item {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
     line-height: 1.75;
@@ -246,29 +308,37 @@
     font-weight: bold;
     @mixin atLarge {
         margin: 0em 2.5em;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     }
 }
 
 .site-nav__item:first-child {
+    -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
 }
 
 .site-nav__item:nth-child(2) {
+    -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
 }
 
 .site-nav__item:nth-child(3) {
+    -webkit-animation-delay: 0.4s;
     animation-delay: 0.4s;
 }
 
 .site-nav__item:nth-child(4) {
+    -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s;
 }
 
 .logo {
     display: none;
     @mixin atLarge {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
         flex: 0 0 auto;
         display: inline-block;
         width: 2.5rem;
@@ -277,6 +347,7 @@
 
 .opened {
     background: $nearBlackBackground !important;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -289,7 +360,10 @@
     background: #fff;
     z-index: 994;
     position: absolute;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-transition: all 0.4s;
     transition: all 0.4s;
     @mixin atLarge {
         height: 110px;
