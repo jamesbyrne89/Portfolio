@@ -1,10 +1,12 @@
+'use strict';
 /**
  * Sticky header that slides into view only when the user scrolls up
  */
-document.addEventListener('DOMContentLoaded', function() {
+
+document.addEventListener('DOMContentLoaded', function () {
   (function stickyHeader() {
-    let previous = window.scrollY;
-    window.addEventListener('scroll', function() {
+    var previous = window.scrollY;
+    window.addEventListener('scroll', function () {
       if (window.scrollY > 180 && window.scrollY > previous) {
         $('.site-header').removeClass('sticky');
         previous = window.scrollY;
@@ -21,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
   })();
 
   // MOBILE NAVIGATION
-  $(function($) {
-    $('.menu-btn').on('click', function() {
+  $(function ($) {
+    $('.menu-btn').on('click', function () {
       $('.site-nav').toggleClass('menu--active');
       $('.site-nav__item').toggleClass('site-nav__item--active');
       $('.menu-btn span:first-child').toggleClass('opened');
@@ -31,8 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  $(function($) {
-    $('.menu-link').on('click', function() {
+  $(function ($) {
+    $('.menu-link').on('click', function () {
       $('.responsive-menu').addClass('expand');
       $('.menu-btn span:first-child').removeClass('opened');
       $('.menu-btn span:nth-child(2)').removeClass('hidden');
@@ -40,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  $(function($) {
-    $('.menu-link').click(function() {
+  $(function ($) {
+    $('.menu-link').click(function () {
       $('.responsive-menu').toggleClass('expand');
     });
   });
@@ -51,18 +53,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   $mouse.addClass('fade-in');
 
-  $aboutSection.waypoint(
-    function(direction) {
-      if (direction == 'down') {
-        $mouse.addClass('fade-out');
-        $mouse.removeClass('fade-in');
-      } else {
-        $mouse.removeClass('fade-in');
-        $mouse.removeClass('fade-out');
-      }
-    },
-    { offset: '60%' },
-  );
+  $aboutSection.waypoint(function (direction) {
+    if (direction == 'down') {
+      $mouse.addClass('fade-out');
+      $mouse.removeClass('fade-in');
+    } else {
+      $mouse.removeClass('fade-in');
+      $mouse.removeClass('fade-out');
+    }
+  }, { offset: '60%' });
 
   // ABOUT ME SECTION //
   var $about = $('.about-section p');
@@ -71,39 +70,33 @@ document.addEventListener('DOMContentLoaded', function() {
   var $skillsList = $('.skills-list ul');
   var $skillIcon = $('.tech-icon-wrapper');
 
-  $about.waypoint(
-    function(direction) {
-      if (direction == 'down') {
-        $about.addClass('fade-in');
-        $about.removeClass('fade-out');
-        $aboutTitle.addClass('slide-left');
-        $aboutTitle.removeClass('fade-out');
-        $skillsTitle.addClass('slide-left');
-        $skillsTitle.removeClass('fade-out');
-        $skillIcon.addClass('slide-up');
-      } else {}
-    },
-    { offset: '70%' },
-  );
+  $about.waypoint(function (direction) {
+    if (direction == 'down') {
+      $about.addClass('fade-in');
+      $about.removeClass('fade-out');
+      $aboutTitle.addClass('slide-left');
+      $aboutTitle.removeClass('fade-out');
+      $skillsTitle.addClass('slide-left');
+      $skillsTitle.removeClass('fade-out');
+      $skillIcon.addClass('slide-up');
+    } else {}
+  }, { offset: '70%' });
 
   // PROJECTS SECTION //
   var $projectsTitle = $('.projects-section-header');
   var $projects = $('.projects-gallery-intro');
   var $gallery = $('.gallery');
 
-  $projects.waypoint(
-    function(direction) {
-      if (direction == 'down') {
-        $projects.addClass('fade-in');
-        $projects.removeClass('fade-out');
-        $projectsTitle.addClass('slide-left');
-        $projectsTitle.removeClass('fade-out');
-        $gallery.addClass('fade-in');
-        $gallery.removeClass('fade-out');
-      } else {}
-    },
-    { offset: '70%' },
-  );
+  $projects.waypoint(function () {
+    if (direction == 'down') {
+      $projects.addClass('fade-in');
+      $projects.removeClass('fade-out');
+      $projectsTitle.addClass('slide-left');
+      $projectsTitle.removeClass('fade-out');
+      $gallery.addClass('fade-in');
+      $gallery.removeClass('fade-out');
+    } else {}
+  }, { offset: '70%' });
 
   // CONTACT SECTION //
   var $contact = $('.contact-section p');
@@ -111,67 +104,53 @@ document.addEventListener('DOMContentLoaded', function() {
   var $emailBtn = $('.btn-contact');
   var $socialIcons = $('.social-icon');
 
-  $contact.waypoint(
-    function(direction) {
-      if (direction == 'down') {
-        $contact.addClass('fade-in');
-        $contact.removeClass('fade-out');
-        $contactTitle.addClass('slide-left');
-        $contactTitle.removeClass('fade-out');
-        $emailBtn.addClass('fade-in');
-        $emailBtn.removeClass('fade-out');
-        $socialIcons.addClass('fade-in');
-        $socialIcons.removeClass('fade-out');
-      } else {}
-    },
-    { offset: '80%' },
-  );
+  $contact.waypoint(function (direction) {
+    if (direction == 'down') {
+      $contact.addClass('fade-in');
+      $contact.removeClass('fade-out');
+      $contactTitle.addClass('slide-left');
+      $contactTitle.removeClass('fade-out');
+      $emailBtn.addClass('fade-in');
+      $emailBtn.removeClass('fade-out');
+      $socialIcons.addClass('fade-in');
+      $socialIcons.removeClass('fade-out');
+    } else {}
+  }, { offset: '80%' });
 
   // PROJECTS PAGE - SUMMARY SECTION //
   var $projectSummaryRight = $('.summary-right');
   var $projectSummaryLeft = $('.summary-left');
   var $fullSummary = $('.details__full-summary p');
 
-  $projectSummaryRight.waypoint(
-    function(direction) {
-      if (direction == 'down') {
-        $projectSummaryLeft.addClass('slide-left');
-        $projectSummaryRight.addClass('fade-in');
-      } else {}
-    },
-    { offset: '80%' },
-  );
+  $projectSummaryRight.waypoint(function (direction) {
+    if (direction == 'down') {
+      $projectSummaryLeft.addClass('slide-left');
+      $projectSummaryRight.addClass('fade-in');
+    } else {}
+  }, { offset: '80%' });
 
-  $fullSummary.waypoint(
-    function(direction) {
-      if (direction == 'down') {
-        $fullSummary.addClass('fade-in');
-      } else {}
-    },
-    { offset: '80%' },
-  );
+  $fullSummary.waypoint(function (direction) {
+    if (direction == 'down') {
+      $fullSummary.addClass('fade-in');
+    } else {}
+  }, { offset: '80%' });
 
   // PROJECTS PAGE - TECH SECTION //
   var $techTitle = $('.tech-section-header');
   var $details = $('.details-wrapper');
   var $techIcon = $('.tech-icon-wrapper');
 
-  $details.waypoint(
-    function(direction) {
-      if (direction == 'down') {
-        $techTitle.addClass('slide-left');
-        $techTitle.removeClass('fade-out');
-        $techIcon.addClass('slide-up');
-      } else {}
-    },
-    { offset: '80%' },
-  );
+  $details.waypoint(function (direction) {
+    if (direction == 'down') {
+      $techTitle.addClass('slide-left');
+      $techTitle.removeClass('fade-out');
+      $techIcon.addClass('slide-up');
+    } else {}
+  }, { offset: '80%' });
 
   var scroll = new SmoothScroll('a.menu-link');
 
-  let year = new Date().getFullYear() || null;
+  var year = new Date().getFullYear() || null;
 
-  document.querySelector(
-    '.site-footer',
-  ).innerText = `Site design by James Byrne. © ${year}`;
+  document.querySelector('.site-footer').innerText = 'Site design by James Byrne. © ' + year;
 });

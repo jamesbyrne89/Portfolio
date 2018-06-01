@@ -1,12 +1,12 @@
 {
-  "name": "Palette - Save colours online",
-  "short_name": "Palette",
+  "name": "James Byrne &bull; Front End Web Developer in London",
+  "short_name": "James Byrne",
 
   "icons": [
     {
       "src": "favicon.png",
-      "sizes": "144x144",
-      "type": "image/png"
+      "sizes": "64x64",
+      "type": "assets/images/logo-64x64"
     }
   ],
   "start_url": "./index.html",

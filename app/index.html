@@ -463,12 +463,12 @@
     <!-- build:js assets/scripts/app.js -->
     <script src="assets/scripts/app.js"></script>
     <!-- endBuild -->
-    <!-- build:js assets/scripts/app.js -->
     <script>
-        if('serviceWorker' in navigator) {
+        if ('serviceWorker' in navigator) {
             navigator.serviceWorker
-           .register('/sw.js')
-           .then(function() { console.log("Service Worker Registered"); });
+                .register('/sw.js')
+                .then(function () { console.log("Service Worker Registered"); })
+                .catch(function (err) { console.log(err) });
         }
     </script>
 </body>

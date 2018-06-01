@@ -20,7 +20,8 @@ const gulp = require('gulp'),
   beautify = require('gulp-jsbeautify'),
   webpack = require('webpack'),
   stylelint = require('gulp-stylelint'),
-  prettier = require('gulp-prettier');
+  prettier = require('gulp-prettier'),
+  swPrecache = require('sw-precache');
 
 // Default task that runs on 'Gulp' command
 gulp.task('default', [ 'cssInject', 'compilecss', 'watch' ]);
@@ -32,6 +33,16 @@ gulp.task('watch', function() {
 // Watch CSS for changes and inject compiled and minified CSS
 watch('app/assets/styles/**/*.css', function() {
   gulp.start('cssInject');
+});
+
+gulp.task('create-service-worker', [ 'deploy' ], function() {
+  var dir = 'docs';
+  swPrecache.write(`${dir}/sw.js`, {
+    staticFileGlobs: [
+      dir + '/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff}',
+    ],
+    stripPrefix: dir,
+  });
 });
 
 // Live reload browserSync
@@ -56,41 +67,14 @@ gulp.task('cssInject', [ 'compilecss' ], function() {
   return gulp.src('app/assets/styles/styles.css').pipe(browserSync.stream());
 });
 
-// Webpack
-// gulp.task('bundle', function(callback){
-//  webpack(require('./webpack.config.js'), function(err, stats){
-//    if(err) {
-//      console.log(err.toString());
-//    }
-//    console.log(stats.toString());
-//    callback();
-//    });
-//  });
-watch('app/assets/scripts/*.js', function() {
+watch('app/**/*.js', function() {
   browserSync.reload();
 });
 
-gulp.task('prettier', () => {
-  gulp
-    .src('assets/scripts/*.js')
-    .pipe(prettier({ useFlowParser: true }))
-    .pipe(gulp.dest('assets/scripts/*.js'));
-});
-
 watch('app/assets/scripts/*.js', function() {
-  gulp.start('prettier');
   gulp.start('compressScripts');
 });
 
-// rebundle scripts when changes are made
-// watch('app/assets/scripts/**/*.js', function(){
-//   gulp.start('rebundle');
-// });
-// Reload browsersync
-// gulp.task('rebundle', ['bundle'], function(){
-//  browserSync.reload();
-//  });
-// Optimise images
 gulp.task('optimiseImages', function() {
   return gulp
     .src('app/assets/images/**/*')
@@ -107,13 +91,13 @@ gulp.task('babel', () => {
   return gulp
     .src('app/assets/scripts/*.js')
     .pipe(babel({ presets: [ 'es2015' ] }))
-    .pipe(gulp.dest('app/assets/scripts/babel'));
+    .pipe(gulp.dest('app/assets/scripts'));
 });
 
 // Minify Javascript
 gulp.task('compressScripts', [ 'babel', 'deleteDistFolder' ], function() {
   return gulp
-    .src('app/assets/scripts/babel/*.js')
+    .src('app/assets/scripts/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('app/temp/assets/scripts/min'));
 });
@@ -123,12 +107,12 @@ gulp.task('copyGeneralFiles', [ 'deleteDistFolder' ], function() {
   var pathsToCopy = [
     './app/**/*',
     './app/assets/scripts/vendor/**/*',
-    '!./app.assets/scripts/*.js',
+    '!./app/assets/scripts/babel/**/*',
+    '!./app/assets/scripts/min',
+    '!./app/assets/scripts/*.js',
     '!./app/index.html',
     '!./app/assets/images',
-    '!./app/assets/styles/styles.css',
-    '!./app/assets/styles/base',
-    '!./app/temp',
+    '!./app/assets/styles/**/*',
     '!./app/temp/**/*',
   ];
 
@@ -163,6 +147,6 @@ gulp.task('usemin', [ 'deleteDistFolder', 'compilecss' ], function() {
 });
 
 // Preview final build in browserSync
-gulp.task('runDeploy', [ 'deploy' ], function() {
+gulp.task('runDeploy', [ 'create-service-worker' ], function() {
   browserSync.init({ notify: false, server: { baseDir: 'docs' } });
 });
