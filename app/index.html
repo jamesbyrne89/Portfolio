@@ -9,8 +9,8 @@
     <meta name="description" content="A London-based front end web developer with a passion for crafting beautiful experiences on the web.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" href="assets/images/icons/logo-64x64.png" type="image/x-icon" />
+    <link rel="manifest" href="assets/manifest.json">
     <!-- build:css assets/styles/styles.css -->
     <link rel="stylesheet" href="/temp/assets/styles/styles.css">
     <!-- endBuild -->
@@ -250,7 +250,7 @@
                 <li>
                     <div class="project-cell">
                         <img class="cell__thumbnail lazyload" alt="Cocksure Brewing Co. thumbnail" data-src="assets/images/cocksure.jpg" data-original="assets/images/Cocksure-1.png">
-                        <a href="projects/cocksure-brewing-co">
+                        <a href="http://cocksurebrewing.com">
                             <span class="cell__overlay">
                                 <span class="cell__title">Cocksure Brewing Co.
                                 </span>
@@ -263,7 +263,7 @@
                 <li>
                     <div class="project-cell">
                         <img class="cell__thumbnail lazyload" alt="Tic-Tac-Toe thumbnail" data-src="assets/images/tic_tac_toe.jpg" data-original="assets/images/tic_tac_toe.jpg">
-                        <a href="projects/tic-tac-toe">
+                        <a href="https://jamesbyrne89.github.io/Tic-Tac-Toe">
                             <span class="cell__overlay">
                                 <span class="cell__title">Tic-Tac-Toe
                                 </span>
@@ -463,6 +463,14 @@
     <!-- build:js assets/scripts/app.js -->
     <script src="assets/scripts/app.js"></script>
     <!-- endBuild -->
+    <!-- build:js assets/scripts/app.js -->
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker
+           .register('/sw.js')
+           .then(function() { console.log("Service Worker Registered"); });
+        }
+    </script>
 </body>
 
 </html>

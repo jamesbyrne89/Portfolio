@@ -1,0 +1,17 @@
+{
+  "name": "Palette - Save colours online",
+  "short_name": "Palette",
+
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#163750",
+  "theme_color": "#163750"
+}
