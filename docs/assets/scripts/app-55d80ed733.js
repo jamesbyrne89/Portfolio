@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var $projects = $('.projects-gallery-intro');
   var $gallery = $('.gallery');
 
-  $projects.waypoint(function () {
+  $projects.waypoint(function (direction) {
     if (direction == 'down') {
       $projects.addClass('fade-in');
       $projects.removeClass('fade-out');
@@ -153,4 +153,4 @@ document.addEventListener('DOMContentLoaded', function () {
   var year = new Date().getFullYear() || null;
 
   document.querySelector('.site-footer').innerText = 'Site design by James Byrne. © ' + year;
-});
+});yield

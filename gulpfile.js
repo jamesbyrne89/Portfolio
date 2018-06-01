@@ -78,6 +78,7 @@ watch('app/assets/scripts/*.js', function() {
 gulp.task('optimiseImages', function() {
   return gulp
     .src('app/assets/images/**/*')
+    .pipe(debug())
     .pipe(imagemin({ progressive: true, interlaced: true, multipass: true }))
     .pipe(gulp.dest('docs/assets/images'));
 });
@@ -99,7 +100,7 @@ gulp.task('compressScripts', [ 'babel', 'deleteDistFolder' ], function() {
   return gulp
     .src('app/assets/scripts/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('app/temp/assets/scripts/min'));
+    .pipe(gulp.dest('app/temp/assets/scripts'));
 });
 
 // Grab any other files
@@ -113,14 +114,20 @@ gulp.task('copyGeneralFiles', [ 'deleteDistFolder' ], function() {
     '!./app/index.html',
     '!./app/assets/images',
     '!./app/assets/styles/**/*',
+    '!./app/temp',
     '!./app/temp/**/*',
   ];
 
-  return gulp.src(pathsToCopy).pipe(gulp.dest('./docs'));
+  return gulp.src(pathsToCopy).pipe(debug()).pipe(gulp.dest('./docs'));
 });
 
 // Build final
-gulp.task('deploy', [ 'deleteDistFolder', 'copyGeneralFiles', 'usemin' ]);
+gulp.task('deploy', [
+  'deleteDistFolder',
+  'optimiseImages',
+  'copyGeneralFiles',
+  'usemin',
+]);
 
 // Usemin
 gulp.task('usemin', [ 'deleteDistFolder', 'compilecss' ], function() {
