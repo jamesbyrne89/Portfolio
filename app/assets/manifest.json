@@ -9,7 +9,7 @@
       "type": "assets/images/logo-64x64"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#163750",

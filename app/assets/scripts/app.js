@@ -153,4 +153,4 @@ document.addEventListener('DOMContentLoaded', function () {
   var year = new Date().getFullYear() || null;
 
   document.querySelector('.site-footer').innerText = 'Site design by James Byrne. © ' + year;
-});yield
+});

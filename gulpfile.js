@@ -18,8 +18,6 @@ const gulp = require('gulp'),
   debug = require('gulp-debug'),
   rev = require('gulp-rev'),
   beautify = require('gulp-jsbeautify'),
-  webpack = require('webpack'),
-  stylelint = require('gulp-stylelint'),
   prettier = require('gulp-prettier'),
   swPrecache = require('sw-precache');
 
@@ -39,7 +37,8 @@ gulp.task('create-service-worker', [ 'deploy' ], function() {
   var dir = 'docs';
   swPrecache.write(`${dir}/sw.js`, {
     staticFileGlobs: [
-      dir + '/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff}',
+      dir +
+        '/**/*.{js,html,css,png,jpg,JPG,jpeg,gif,svg,eot,ttf,woff,woff2,WOFF}',
     ],
     stripPrefix: dir,
   });
@@ -61,7 +60,6 @@ gulp.task('compilecss', function() {
   }).pipe(gulp.dest('app/temp/assets/styles'));
 });
 
-// Lint CSS
 // Injects compiled CSS into page
 gulp.task('cssInject', [ 'compilecss' ], function() {
   return gulp.src('app/assets/styles/styles.css').pipe(browserSync.stream());
@@ -85,7 +83,7 @@ gulp.task('optimiseImages', function() {
 
 // Delete Dist folder before recreating
 gulp.task('deleteDistFolder', function() {
-  return del('./docs');
+  return del('docs');
 });
 
 gulp.task('babel', () => {
@@ -104,7 +102,7 @@ gulp.task('compressScripts', [ 'babel', 'deleteDistFolder' ], function() {
 });
 
 // Grab any other files
-gulp.task('copyGeneralFiles', [ 'deleteDistFolder' ], function() {
+gulp.task('copyGeneralFiles', function() {
   var pathsToCopy = [
     './app/**/*',
     './app/assets/scripts/vendor/**/*',
@@ -112,7 +110,7 @@ gulp.task('copyGeneralFiles', [ 'deleteDistFolder' ], function() {
     '!./app/assets/scripts/min',
     '!./app/assets/scripts/*.js',
     '!./app/index.html',
-    '!./app/assets/images',
+    '!./app/assets/images/**/*',
     '!./app/assets/styles/**/*',
     '!./app/temp',
     '!./app/temp/**/*',
@@ -122,12 +120,7 @@ gulp.task('copyGeneralFiles', [ 'deleteDistFolder' ], function() {
 });
 
 // Build final
-gulp.task('deploy', [
-  'deleteDistFolder',
-  'optimiseImages',
-  'copyGeneralFiles',
-  'usemin',
-]);
+gulp.task('deploy', [ 'usemin', 'copyGeneralFiles', 'optimiseImages' ]);
 
 // Usemin
 gulp.task('usemin', [ 'deleteDistFolder', 'compilecss' ], function() {
