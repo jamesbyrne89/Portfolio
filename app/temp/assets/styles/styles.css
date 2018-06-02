@@ -789,16 +789,16 @@ sans-serif;
 }
 /* ***** WELCOME SECTION ***** */
 .intro-section {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-top: 0px;
-    background-color: #163750;
-    height: calc(100vh - 100px);
-    position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0px;
+  background-color: #163750;
+  height: calc(100vh - 100px);
+  position: relative;
 }
 @media (min-width: 700px){
     .intro-section{
@@ -806,23 +806,23 @@ sans-serif;
     }
 }
 .intro-text {
-    color: #feb63f;
-    font-size: 2.5rem;
-    padding: 0 1rem;
-    margin: 0 auto;
-    position: absolute;
-    top: 20%;
-    font-family: 'Avenir-Black',
+  color: #feb63f;
+  font-size: 2.5rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 40%;
+  font-family: 'Avenir-Black',
 'system-ui',
 helvetica,
 arial,
 sans-serif;
-    text-rendering: optimizeSpeed;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.25;
-    animation-fill-mode: forwards;
-    animation: slideUp 0.8s ease-out;
+  text-rendering: optimizeSpeed;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.25;
+  animation-fill-mode: forwards;
+  animation: slideUp 0.8s ease-out;
 }
 @media (min-width: 700px){
     .intro-text{
@@ -838,38 +838,38 @@ sans-serif;
     }
 }
 .mouse {
-    position: absolute;
-    width: 1rem;
-    height: 2.5rem;
-    bottom: 40px;
-    left: 50%;
-    margin-left: -0.5rem;
-    border-radius: 15px;
-    border: 2px solid #fff;
-    animation-delay: 1s;
-    opacity: 0;
+  position: absolute;
+  width: 1rem;
+  height: 2.5rem;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -0.5rem;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  animation-delay: 1s;
+  opacity: 0;
 }
 .scroll {
-    display: block;
-    width: 4px;
-    height: 4px;
-    margin: 6px auto;
-    border-radius: 4px;
-    background: #fff;
-    animation: finger 1s infinite;
+  display: block;
+  width: 4px;
+  height: 4px;
+  margin: 6px auto;
+  border-radius: 4px;
+  background: #fff;
+  animation: finger 1s infinite;
 }
 .stick-me .sticking {
-    transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
 }
 .sideintro {
-    animation: sideintro 3s;
-    animation-fill-mode: backwards;
+  animation: sideintro 3s;
+  animation-fill-mode: backwards;
 }
 .intro {
-    animation: intro 1s;
-    animation-fill-mode: forwards;
+  animation: intro 1s;
+  animation-fill-mode: forwards;
 }
 /* ***** ABOUT SECTION ***** */
 .about-section {
