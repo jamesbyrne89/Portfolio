@@ -156,7 +156,7 @@
     0% {
         opacity: 1;
         -webkit-transform: translateY(0);
-                transform: translateY(0);
+        transform: translateY(0);
     }
     100% {
         opacity: 0;
@@ -344,11 +344,38 @@
     }
 }
 
+@-webkit-keyframes enter-up {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(100%));
+        transform: translateY(100%));
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        border: solid 2px hotpink;
+    }
+}
+
+@keyframes enter-up {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(100%));
+        transform: translateY(100%));
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
 /* Animation classes */
 
 .fade-in {
-    -webkit-animation: fadeIn 1.2s ease-in-out;
-    animation: fadeIn 1.2s ease-in-out;
+    -webkit-animation: fadeIn 1.2s cubic-bezier(0.6, 0, 0.2, 1);
+    animation: fadeIn 1.2s cubic-bezier(0.6, 0, 0.2, 1);
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
@@ -361,8 +388,15 @@
 }
 
 .slide-left {
-    -webkit-animation: slide-left 1s ease-out;
-    animation: slide-left 1s ease-out;
+    -webkit-animation: slide-left 1s cubic-bezier(0.6, 0, 0.2, 1);
+    animation: slide-left 1s cubic-bezier(0.6, 0, 0.2, 1);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.enter-up {
+    -webkit-animation: enter-up 0.8s cubic-bezier(0.6, 0, 0.2, 1);
+    animation: enter-up 0.8s cubic-bezier(0.6, 0, 0.2, 1);
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
@@ -372,6 +406,6 @@
     animation-name: slideUp;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    -webkit-transition: all 1s ease-out;
-    transition: all 1s ease-out;
+    -webkit-transition: all 1s cubic-bezier(0.6, 0, 0.2, 1);
+    transition: all 1s cubic-bezier(0.6, 0, 0.2, 1);
 }

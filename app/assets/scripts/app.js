@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (direction == 'down') {
       $about.addClass('fade-in');
       $about.removeClass('fade-out');
-      $aboutTitle.addClass('slide-left');
+      $aboutTitle.addClass('enter-up');
       $aboutTitle.removeClass('fade-out');
-      $skillsTitle.addClass('slide-left');
+      $skillsTitle.addClass('enter-up');
       $skillsTitle.removeClass('fade-out');
       $skillIcon.addClass('slide-up');
     } else {}
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (direction == 'down') {
       $projects.addClass('fade-in');
       $projects.removeClass('fade-out');
-      $projectsTitle.addClass('slide-left');
+      $projectsTitle.addClass('enter-up');
       $projectsTitle.removeClass('fade-out');
       $gallery.addClass('fade-in');
       $gallery.removeClass('fade-out');
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (direction == 'down') {
       $contact.addClass('fade-in');
       $contact.removeClass('fade-out');
-      $contactTitle.addClass('slide-left');
+      $contactTitle.addClass('enter-up');
       $contactTitle.removeClass('fade-out');
       $emailBtn.addClass('fade-in');
       $emailBtn.removeClass('fade-out');
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   $projectSummaryRight.waypoint(function (direction) {
     if (direction == 'down') {
-      $projectSummaryLeft.addClass('slide-left');
+      $projectSummaryLeft.addClass('enter-up');
       $projectSummaryRight.addClass('fade-in');
     } else {}
   }, { offset: '80%' });
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   $details.waypoint(function (direction) {
     if (direction == 'down') {
-      $techTitle.addClass('slide-left');
+      $techTitle.addClass('enter-up');
       $techTitle.removeClass('fade-out');
       $techIcon.addClass('slide-up');
     } else {}
