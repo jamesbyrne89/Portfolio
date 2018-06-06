@@ -17,7 +17,6 @@ const gulp = require('gulp'),
   del = require('del'),
   debug = require('gulp-debug'),
   rev = require('gulp-rev'),
-  beautify = require('gulp-jsbeautify'),
   prettier = require('gulp-prettier'),
   swPrecache = require('sw-precache');
 
