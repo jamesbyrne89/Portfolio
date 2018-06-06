@@ -3,17 +3,17 @@
   "short_name": "James Byrne",
   "icons": [
     {
-      "src": "assets/images/logo-512x512.jpg",
+      "src": "assets/images/icons/logo-512x512.jpg",
       "sizes": "512x512",
       "type": "image/jpg"
     },
     {
-      "src": "assets/images/logo-192x192.jpg",
+      "src": "assets/images/icons/logo-192x192.jpg",
       "sizes": "192x192",
       "type": "image/jpg"
     }
   ],
-  "start_url": "index.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#163750",
