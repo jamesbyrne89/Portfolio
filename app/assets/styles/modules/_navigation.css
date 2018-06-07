@@ -97,6 +97,12 @@
     transition: top 0.2s ease-in-out 0.2s, opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease;
     -webkit-transition: top 0.2s ease-in-out 0.2s, opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease;
     transition: top 0.2s ease-in-out 0.2s, opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease;
+    -webkit-transition: top 0.2s ease-in-out 0.2s, opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease;
+    transition: top 0.2s ease-in-out 0.2s, opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease;
+    -webkit-transition: top 0.2s ease-in-out 0.2s, opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease;
+    transition: top 0.2s ease-in-out 0.2s, opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease;
+    -webkit-transition: top 0.2s ease-in-out 0.2s, opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease;
+    transition: top 0.2s ease-in-out 0.2s, opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease;
     transition: top 0.2s ease-in-out 0.2s, transform 0.2s ease, opacity 0.2s ease 0.2s;
     transition: top 0.2s ease-in-out 0.2s, transform 0.2s ease, opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease;
     @mixin atMedium {
@@ -129,6 +135,12 @@
 .menu-btn span:first-child.opened {
     top: 12px;
     width: 30px;
+    -webkit-transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    -webkit-transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    -webkit-transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
     -webkit-transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
     transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
     -webkit-transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
@@ -198,6 +210,12 @@
     transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
     -webkit-transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
     transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    -webkit-transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    -webkit-transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    -webkit-transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
+    transition: top 0.2s ease-in-out, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
     transition: top 0.2s ease-in-out, transform 0.1s ease 0.3s, width 0.1s ease 0.3s;
     transition: top 0.2s ease-in-out, transform 0.1s ease 0.3s, width 0.1s ease 0.3s, -webkit-transform 0.1s ease 0.3s;
     -webkit-transform: rotate(-45deg);
@@ -218,8 +236,8 @@
 }
 
 .site-nav .site-nav__item--active {
-    -webkit-animation: slide-up 0.85s ease-out;
-    animation: slide-up 0.85s ease-out;
+    -webkit-animation: slide-up 0.85s cubic-bezier(0.6, 0, 0.2, 1);
+    animation: slide-up 0.85s cubic-bezier(0.6, 0, 0.2, 1);
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
@@ -304,8 +322,8 @@
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             justify-content: center;
-            -webkit-transition: all 0.25s;
-            transition: all 0.25s;
+            -webkit-transition: all 0.25s cubic-bezier(0.6, 0, 0.2, 1);
+            transition: all 0.25s cubic-bezier(0.6, 0, 0.2, 1);
             @mixin atLarge {
                 width: auto;
             }

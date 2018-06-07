@@ -5,10 +5,10 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     color: $darkGrey;
     background-color: #efefef;
     font-family: $bodyText;
@@ -49,6 +49,7 @@
     font-size: 1.25rem;
     text-align: left;
     margin-top: 4rem;
+    opacity: 0;
     @mixin atLarge {
         font-size: 1.5rem;
     }
@@ -84,10 +85,10 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 p:nth-child(1) {
