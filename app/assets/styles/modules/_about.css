@@ -1,14 +1,6 @@
 /* ***** ABOUT SECTION ***** */
 
 .about-section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     color: $darkGrey;
     background-color: #efefef;
     font-family: $bodyText;
@@ -27,9 +19,13 @@
         @mixin atMedium {
             font-size: 1.25rem;
         }
-        @mixin atLarge {
-            width: 75%;
-        }
+    }
+}
+
+.about-text {
+    @mixin atMedium {
+        margin-top: 1rem;
+        ;
     }
 }
 
@@ -55,7 +51,6 @@
     }
 }
 
-;
 .about-section a {
     color: $newNavy;
     display: inline-block;
@@ -93,14 +88,4 @@
 
 p:nth-child(1) {
     margin-top: 0;
-}
-
-.about-text {
-    width: 100%;
-    @mixin atMedium {
-        width: 60%;
-    }
-    @mixin atLarge {
-        width: 50%;
-    }
 }

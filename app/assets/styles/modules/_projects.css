@@ -8,19 +8,6 @@
   min-height: 100vh;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 4em 0em;
-}
-
-.projects-section-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 0em 1.5em;
 }
 
 .projects-gallery-intro {
@@ -28,15 +15,12 @@
   opacity: 0;
   line-height: 1.5;
   opacity: 0;
-  @mixin atMedium {
-    margin-top: 1.5rem;
-    width: 50%;
-  }
   p {
     font-size: 1rem;
     @mixin atMedium {
-      width: 80%;
+      width: 90%;
       font-size: 1.25rem;
+      margin-top: 1rem;
     }
     @mixin atLarge {
       width: 75%;
@@ -45,7 +29,7 @@
 }
 
 .gallery {
-  max-width: 100%;
+  grid-column: 1 / -1;
   margin-top: 4rem;
   /*center aligned*/
   padding: 0;

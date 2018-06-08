@@ -27,3 +27,8 @@
   background-color: transparent;
   border: solid 4px #fff;
 }
+
+button:active {
+  outline: 0;
+  border: 0;
+}
