@@ -2,20 +2,22 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   /*  Sticky header */
+  var siteHeader = document.querySelector('.site-header');
+
   (function stickyHeader() {
     var previous = window.scrollY;
     window.addEventListener('scroll', function () {
       if (window.scrollY > 50) {
-        $('.site-header').addClass('sticky');
+        siteHeader.classList.add('sticky');
         if (window.scrollY > previous) {
-          $('.site-header').removeClass('header--fixed');
+          siteHeader.classList.remove('header--fixed');
         }
         if (window.scrollY <= previous) {
-          $('.site-header').addClass('header--fixed');
+          siteHeader.classList.add('header--fixed');
         }
       } else {
-        $('.site-header').removeClass('sticky');
-        $('.site-header').removeClass('header--fixed');
+        siteHeader.classList.remove('sticky');
+        siteHeader.classList.remove('header--fixed');
       }
       previous = window.scrollY;
     });
@@ -82,9 +84,9 @@ document.addEventListener('DOMContentLoaded', function () {
     debounce(waypoint('.about-text__subtitle', 'enter-up', 0.8));
     debounce(waypoint('.about-section p', 'fade-in', 0.8));
 
-    debounce(waypoint('.tech-icon-wrapper', 'slide-up', 0.75));
-    debounce(waypoint('.projects-gallery-intro', 'fade-in', 0.75));
-    debounce(waypoint('.gallery', 'fade-in', 0.75));
+    debounce(waypoint('.tech-icon-wrapper', 'slide-up', 0.8));
+    debounce(waypoint('.projects-gallery-intro', 'fade-in', 0.8));
+    debounce(waypoint('.gallery', 'fade-in', 0.8));
 
     debounce(waypoint('.contact-text p', 'fade-in', 0.8));
     debounce(waypoint('.btn-contact', 'fade-in', 0.95));
