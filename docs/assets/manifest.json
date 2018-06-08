@@ -1,0 +1,22 @@
+{
+  "short_name": "James Byrne",
+  "name": "James Byrne &bull; Front End Web Developer in London",
+  
+  "icons": [
+    {
+      "src": "/assets/images/icons/logo-512x512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/assets/images/icons/logo-192x192.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#163750",
+  "theme_color": "#163750"
+}
