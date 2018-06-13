@@ -19,12 +19,9 @@
 .contact-wrapper {
     margin: 3em 0.5em;
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     @mixin atMedium {
         width: 80%;
@@ -36,7 +33,6 @@
     text-align: left;
     @mixin atMedium {
         -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
         flex: 0 0 50%;
     }
     p {
@@ -76,21 +72,35 @@
 
 .social-icons-wrapper ul {
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 200px;
     list-style: none;
 }
 
 .social-icon {
+    position: relative;
     width: 1.5rem;
     fill: #fff;
     margin: 0 1.5rem;
-    -webkit-transition: all 0.25s;
     transition: all 0.25s;
     -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s;
+    overflow: hidden;
+    svg {
+        height: 100%;
+        position: absolute;
+    }
     &:hover {
         fill: $yellow;
+    }
+    span {
+        position: absolute;
+        top: -100%;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
     }
 }
 
