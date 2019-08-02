@@ -9,8 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import HeroSection from "./HeroSection"
+import Header from "./Header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -27,7 +26,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <HeroSection text="Hello. I'm James Byrne, a frontend developer based in London." />
+      {children}
     </>
   )
 }
