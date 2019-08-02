@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { colours, fontSizes } from "../styles/theme"
+import { colours, fonts, fontSizes } from "../styles/theme"
 
 interface Props {
   text: string
@@ -21,6 +21,7 @@ const HeroSectionTextStyles = styled.article`
 const HeadlineStyles = styled.h1`
   color: ${colours.yellow};
   max-width: 700px;
+  font-family: ${fonts.headingFont};
   font-size: ${fontSizes.headingLg};
 `
 

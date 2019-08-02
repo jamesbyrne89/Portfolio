@@ -12,6 +12,10 @@ export const colours: Colours = {
   navy: "#163750",
 }
 
+export const fonts = {
+  headingFont: "Avenir-Black",
+}
+
 export const fontSizes: FontSizes = {
   headingLg: "3.75rem",
 }
