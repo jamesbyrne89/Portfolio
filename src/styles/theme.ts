@@ -14,10 +14,11 @@ export const colours: Colours = {
 };
 
 export const fonts = {
-  headingFont: "Avenir-Black",
+  headingFont: "AvenirBlack",
+  bodyFont: "AvenirBook",
 };
 
 export const fontSizes: FontSizes = {
   headingLg: "3.75rem",
-  body: "1.375rem",
+  body: "1.25rem",
 };

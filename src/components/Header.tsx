@@ -1,12 +1,7 @@
-import PropTypes from "prop-types";
 import React from "react";
 import styled from "@emotion/styled";
 import Nav from "./Nav";
-import { colours, fontSizes } from "../styles/theme";
-
-interface Props {
-  siteTitle: string;
-}
+import { colours, fonts, fontSizes } from "../styles/theme";
 
 const HeaderStyles = styled.header`
   padding: 0 10vw;
@@ -18,24 +13,17 @@ const HeaderStyles = styled.header`
 `;
 
 const LogoStyles = styled.span`
+  font-family: ${fonts.headingFont};
   font-weight: bold;
   color: ${colours.yellow};
   font-size: ${fontSizes.body};
 `;
 
-const Header = ({ siteTitle }: Props) => (
+const Header = () => (
   <HeaderStyles>
     <LogoStyles>JB.</LogoStyles>
     <Nav />
   </HeaderStyles>
 );
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
-};
 
 export default Header;

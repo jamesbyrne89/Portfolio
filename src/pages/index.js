@@ -1,13 +1,16 @@
-import React from "react"
-import Layout from "../components/layout"
-import HeroSection from "../components/HeroSection"
-import SEO from "../components/seo"
+import React from "react";
+import Layout from "../components/layout";
+import HeroSection from "../components/HeroSection";
+import SEO from "../components/seo";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <HeroSection text="Hello. I'm James, a frontend developer based in London." />
+    <SEO title="James Byrne" />
+    <HeroSection
+      headlineText="Hello. I'm James, a frontend developer based in London."
+      introText="Hiya. If you like what you see and think I could help you, feel free to drop me an email, or get in touch through social media."
+    />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
