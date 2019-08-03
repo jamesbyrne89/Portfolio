@@ -2,11 +2,6 @@ import React from "react";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
 
-interface Props {
-  //   headlineText: string;
-  //   introText: string;
-}
-
 const AboutSectionStyles = styled.section`
   background: ${colours.grey};
   padding: 8em 0;
@@ -28,6 +23,7 @@ const DetailsSectionStyles = styled.div`
   h2 {
     font-family: ${fonts.headingFont};
     font-size: ${fontSizes.headingSm};
+    padding-bottom: 2em;
   }
 
   ul {
@@ -36,7 +32,6 @@ const DetailsSectionStyles = styled.div`
     /* max-height: 250px; */
     max-width: 750px;
     font-size: ${fontSizes.body};
-    margin-top: 2em;
   }
 
   li {
@@ -60,7 +55,7 @@ const AboutSection = () => (
   <AboutSectionStyles>
     <Wrapper>
       <DetailsSectionStyles>
-        <h2>Technologies I've used</h2>
+        <h2>Technologies I've used:</h2>
         <ul>
           <li>React</li>
           <li>Redux</li>
@@ -75,7 +70,7 @@ const AboutSection = () => (
         </ul>
       </DetailsSectionStyles>
       <DetailsSectionStyles>
-        <h2>Currently Learning</h2>
+        <h2>Currently learning:</h2>
         <ul>
           <li>NodeJS</li>
           <li>VueJS</li>

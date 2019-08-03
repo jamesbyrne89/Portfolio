@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { Link } from "gatsby";
 import Nav from "./Nav";
 import { colours, fonts, fontSizes } from "../styles/theme";
 
@@ -17,11 +18,16 @@ const LogoStyles = styled.span`
   font-weight: bold;
   color: ${colours.yellow};
   font-size: ${fontSizes.body};
+  a {
+    text-decoration: none;
+  }
 `;
 
 const Header = () => (
   <HeaderStyles>
-    <LogoStyles>JB.</LogoStyles>
+    <LogoStyles>
+      <Link to="/">JB.</Link>
+    </LogoStyles>
     <Nav />
   </HeaderStyles>
 );

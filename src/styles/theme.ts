@@ -23,6 +23,6 @@ export const fonts = {
 
 export const fontSizes: FontSizes = {
   headingLg: "3.75rem",
-  headingSm: "1.75rem",
+  headingSm: "2.5rem",
   body: "1.25rem",
 };
