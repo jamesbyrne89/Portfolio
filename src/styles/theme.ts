@@ -7,6 +7,7 @@ interface Colours {
 
 interface FontSizes {
   headingLg: string;
+  headingMd: string;
   headingSm: string;
   body: string;
 }
@@ -25,6 +26,7 @@ export const fonts = {
 
 export const fontSizes: FontSizes = {
   headingLg: "3.75rem",
+  headingMd: "2.5rem",
   headingSm: "1.5rem",
   body: "1.25rem",
 };

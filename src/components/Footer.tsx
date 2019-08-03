@@ -45,6 +45,9 @@ const FooterStyles = styled.footer`
     width: auto;
     margin-right: 1em;
     font-size: ${fontSizes.body};
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
   svg {
     height: 1.25em;
@@ -52,7 +55,7 @@ const FooterStyles = styled.footer`
     fill: ${colours.black};
   }
 
-  .social-icon span {
+  span {
     visibility: hidden;
     position: absolute;
   }
@@ -72,15 +75,15 @@ const Footer = () => (
     </small>
     <ul>
       <li>
-        <a class="social-icon" href="https://twitter.com/james_byrne">
+        <a href="https://twitter.com/james_byrne">
           <svg
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg aria-labelledby="
             role="img"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            stroke-linejoin="round"
-            stroke-miterlimit="1.414"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            strokeLinejoin="round"
+            strokeMiterlimit="1.414"
           >
             <title>Twitter icon</title>
             <path
@@ -89,22 +92,22 @@ const Footer = () => (
             1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42
             1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04
             0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z"
-              fill-rule="nonzero"
+              fillRule="nonzero"
             />
           </svg>
           <span>Twitter Icon</span>
         </a>
       </li>
       <li>
-        <a class="social-icon" href="https://uk.linkedin.com/in/jamestbyrne89">
+        <a href="https://uk.linkedin.com/in/jamestbyrne89">
           <svg
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg aria-labelledby="
             role="img"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            stroke-linejoin="round"
-            stroke-miterlimit="1.414"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            strokeLinejoin="round"
+            strokeMiterlimit="1.414"
           >
             <title>LinkedIn icon</title>
             <path
@@ -113,22 +116,22 @@ const Footer = () => (
             0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188
             8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516
             1.185-1.153V1.153C16 .516 15.467 0 14.815 0z"
-              fill-rule="nonzero"
+              fillRule="nonzero"
             />
           </svg>
           <span>LinkedIn Icon</span>
         </a>
       </li>
       <li>
-        <a class="social-icon" href="https://github.com/jamesbyrne89">
+        <a href="https://github.com/jamesbyrne89">
           <svg
             aria-labelledby="title"
             role="img"
             viewBox="0 0 24 24"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            stroke-linejoin="round"
-            stroke-miterlimit="1.414"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            strokeLinejoin="round"
+            strokeMiterlimit="1.414"
           >
             <title>GitHub icon</title>
             <path
@@ -145,7 +148,7 @@ const Footer = () => (
         </a>
       </li>
       <li>
-        <a class="social-icon" href="https://medium.com/@james_byrne">
+        <a href="https://medium.com/@james_byrne">
           <svg
             viewBox="0 0 26 20"
             version="1.1"
@@ -153,7 +156,7 @@ const Footer = () => (
             role=" img "
           >
             <title>Medium icon</title>
-            <g id="Templates" stroke="none" stroke-width="1">
+            <g id="Templates" stroke="none" strokeWidth="1">
               <g
                 id="Home-Copy"
                 transform="translate(-455.000000, -4247.000000)"
