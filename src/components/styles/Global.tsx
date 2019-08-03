@@ -69,6 +69,7 @@ const GlobalStyles = () => (
         display: none;
       }
       a {
+        color: inherit;
         background-color: transparent;
         -webkit-text-decoration-skip: objects;
       }
