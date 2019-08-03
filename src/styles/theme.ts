@@ -2,6 +2,7 @@ interface Colours {
   yellow: string;
   navy: string;
   grey: string;
+  black: string;
 }
 
 interface FontSizes {
@@ -14,6 +15,7 @@ export const colours: Colours = {
   yellow: "#feb63f",
   navy: "#163750",
   grey: "#efefef",
+  black: "#3D4046",
 };
 
 export const fonts = {
@@ -23,6 +25,6 @@ export const fonts = {
 
 export const fontSizes: FontSizes = {
   headingLg: "3.75rem",
-  headingSm: "2.5rem",
+  headingSm: "1.5rem",
   body: "1.25rem",
 };

@@ -10,7 +10,7 @@ const FooterStyles = styled.footer`
   justify-content: space-between;
   align-items: center;
   background: #fff;
-  color: #000;
+  color: ${colours.black};
   a {
     position: relative;
     text-decoration: none;
@@ -34,15 +34,22 @@ const FooterStyles = styled.footer`
 
   ul {
     display: flex;
+    a {
+      &::after {
+        display: none;
+      }
+    }
   }
 
   li {
     width: auto;
     margin-right: 1em;
+    font-size: ${fontSizes.body};
   }
   svg {
     height: 1.25em;
     width: 1.25em;
+    fill: ${colours.black};
   }
 
   .social-icon span {
@@ -60,8 +67,8 @@ const CURRENT_YEAR = new Date().getFullYear();
 const Footer = () => (
   <FooterStyles>
     <small>
-      Built with <a href="https://www.gatsbyjs.org">Gatsby</a>. &#169; James
-      Byrne {CURRENT_YEAR}
+      Built with <a href="https://www.gatsbyjs.org">Gatsby</a>. James Byrne
+      &#169; {CURRENT_YEAR}
     </small>
     <ul>
       <li>

@@ -9,7 +9,7 @@ interface Props {
 
 const HeroSectionStyles = styled.section`
   background: ${colours.navy};
-  height: 100vh;
+  height: calc(100vh - 100px);
   display: flex;
   align-items: center;
 `;
@@ -21,7 +21,26 @@ const HeroSectionTextStyles = styled.article`
     font-family: ${fonts.bodyFont};
     font-size: ${fontSizes.body};
     color: #fff;
-    line-height: 1.25;
+    line-height: 1.5;
+  }
+  a {
+    text-decoration: none;
+    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: currentColor;
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      transform: translateY(0);
+      transition: all 0.2s ease-out;
+    }
+    &:hover::after {
+      opacity: 0;
+      transform: translateY(4px);
+    }
   }
 `;
 
@@ -36,10 +55,10 @@ const HeroSection = ({ headlineText, introText }: Props) => (
   <HeroSectionStyles>
     <HeroSectionTextStyles>
       <HeadlineStyles className="intro-text">{headlineText}</HeadlineStyles>
-      <div className="mouse">
-        <div className="scroll"></div>
-      </div>
       <p>{introText}</p>
+      <p>
+        <a href="mailto:mail@jamestbyrne.com">Get in touch.</a>
+      </p>
     </HeroSectionTextStyles>
   </HeroSectionStyles>
 );

@@ -13,7 +13,7 @@ const IndexPage = () => (
     />
     <HeroSection
       headlineText="Hello. I'm James, a frontend developer based in London."
-      introText="Hiya. If you like what you see and think I could help you, feel free to drop me an email, or get in touch through social media."
+      introText="I'm a front end web developer based in London, with a passion for crafting beautiful, functional experiences on the web. My toolbox includes a range of technologies across HTML, CSS and Javascript, but the user always comes first."
     />
     <AboutSection />
     <Footer />

@@ -23,7 +23,7 @@ const DetailsSectionStyles = styled.div`
   h2 {
     font-family: ${fonts.headingFont};
     font-size: ${fontSizes.headingSm};
-    padding-bottom: 2em;
+    padding-bottom: 1.75em;
   }
 
   ul {
@@ -36,7 +36,7 @@ const DetailsSectionStyles = styled.div`
 
   li {
     margin-right: 1.5em;
-    line-height: 1.75;
+    line-height: 1.5;
     /* &::after {
       content: "\u2022";
       position: relative;
@@ -55,22 +55,23 @@ const AboutSection = () => (
   <AboutSectionStyles>
     <Wrapper>
       <DetailsSectionStyles>
-        <h2>Technologies I've used:</h2>
+        <h2>Technologies I've used.</h2>
         <ul>
           <li>React</li>
           <li>Redux</li>
-          <li>VueJS</li>
+          <li>Vue.js</li>
           <li>Storybook</li>
           <li>Typescript</li>
           <li>Styled Components</li>
           <li>Express</li>
           <li>Jest</li>
+          <li>Puppeteer</li>
           <li>Knockout</li>
-          <li>NextJS</li>
+          <li>Next.js</li>
         </ul>
       </DetailsSectionStyles>
       <DetailsSectionStyles>
-        <h2>Currently learning:</h2>
+        <h2>What I'm currently learning.</h2>
         <ul>
           <li>NodeJS</li>
           <li>VueJS</li>

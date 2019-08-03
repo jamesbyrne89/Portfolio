@@ -98,9 +98,6 @@ const GlobalStyles = () => (
         background-color: #ff0;
         color: #000;
       }
-      small {
-        font-size: 80%;
-      }
       sub,
       sup {
         font-size: 75%;
@@ -215,7 +212,6 @@ const GlobalStyles = () => (
         font: inherit;
       }
       html {
-        font: 112.5%/1.45em georgia, serif;
         box-sizing: border-box;
         overflow-y: scroll;
       }
