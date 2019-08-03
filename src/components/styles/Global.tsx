@@ -27,13 +27,15 @@ const GlobalStyles = () => (
 
       html {
         font-family: sans-serif;
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
       }
       body {
         margin: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+      }
+      * {
+        margin: 0;
+        padding: 0;
       }
       article,
       aside,
@@ -258,16 +260,9 @@ const GlobalStyles = () => (
         margin-bottom: 1.45rem;
       }
       ul {
-        margin-left: 1.45rem;
-        margin-right: 0;
-        margin-top: 0;
-        padding-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 0;
-        margin-bottom: 1.45rem;
-        list-style-position: outside;
+        list-style-position: inside;
         list-style-image: none;
+        list-style-type: none;
       }
       ol {
         margin-left: 1.45rem;
@@ -433,25 +428,6 @@ const GlobalStyles = () => (
       th {
         font-weight: bold;
       }
-      li {
-        margin-bottom: calc(1.45rem / 2);
-      }
-      ol li {
-        padding-left: 0;
-      }
-      ul li {
-        padding-left: 0;
-      }
-      li > ol {
-        margin-left: 1.45rem;
-        margin-bottom: calc(1.45rem / 2);
-        margin-top: calc(1.45rem / 2);
-      }
-      li > ul {
-        margin-left: 1.45rem;
-        margin-bottom: calc(1.45rem / 2);
-        margin-top: calc(1.45rem / 2);
-      }
       blockquote *:last-child {
         margin-bottom: 0;
       }
@@ -460,9 +436,6 @@ const GlobalStyles = () => (
       }
       p *:last-child {
         margin-bottom: 0;
-      }
-      li > p {
-        margin-bottom: calc(1.45rem / 2);
       }
       code {
         font-size: 0.85rem;
