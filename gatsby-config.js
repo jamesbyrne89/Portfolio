@@ -4,6 +4,7 @@ module.exports = {
     description: `A London-based front end web developer with a passion for crafting beautiful experiences on the web.`,
     author: `@gatsbyjs`,
   },
+
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,

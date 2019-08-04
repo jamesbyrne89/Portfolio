@@ -1,6 +1,25 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
+
+const technologiesUsed = [
+  `React`,
+  `Redux`,
+  `Vue.js`,
+  `Storybook`,
+  `Typescript`,
+  `Styled Components`,
+  `Express`,
+  `MongoDB`,
+  `Jest`,
+  `Puppeteer`,
+  `Knockout`,
+  `Next.js`,
+  `and more!`,
+];
+
+const currentlyLearning = [`NodeJS`, `VueJS`, `Emotion`];
 
 const AboutSectionStyles = styled.section`
   background: ${colours.grey};
@@ -25,61 +44,54 @@ const DetailsSectionStyles = styled.div`
     font-size: ${fontSizes.headingSm};
     padding-bottom: 1.75em;
   }
+`;
 
-  ul {
-    /* display: flex;
-    flex-wrap: wrap; */
-    /* max-height: 250px; */
-    max-width: 750px;
-    font-size: ${fontSizes.body};
-  }
+const List = styled.ul`
+  max-width: 750px;
+  font-size: ${fontSizes.body};
 
   li {
     margin-right: 1.5em;
     line-height: 1.5;
-    /* &::after {
-      content: "\u2022";
-      position: relative;
-      font-size: 1rem;
-      top: 0;
-      right: -1em;
-    }
-    &:nth-child(5)::after,
-    &:last-of-type::after {
-      display: none;
-    } */
   }
 `;
 
-const AboutSection = () => (
-  <AboutSectionStyles>
-    <Wrapper>
-      <DetailsSectionStyles>
-        <h2>Technologies I've used.</h2>
-        <ul>
-          <li>React</li>
-          <li>Redux</li>
-          <li>Vue.js</li>
-          <li>Storybook</li>
-          <li>Typescript</li>
-          <li>Styled Components</li>
-          <li>Express</li>
-          <li>Jest</li>
-          <li>Puppeteer</li>
-          <li>Knockout</li>
-          <li>Next.js</li>
-        </ul>
-      </DetailsSectionStyles>
-      <DetailsSectionStyles>
-        <h2>What I'm currently learning.</h2>
-        <ul>
-          <li>NodeJS</li>
-          <li>VueJS</li>
-          <li>Emotion</li>
-        </ul>
-      </DetailsSectionStyles>
-    </Wrapper>
-  </AboutSectionStyles>
-);
+const AboutSection = () => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+          }
+        }
+      }
+    `
+  );
+  return (
+    <AboutSectionStyles>
+      <Wrapper>
+        <DetailsSectionStyles>
+          <h2>Technologies I've used.</h2>
+          <List>
+            {technologiesUsed.map(tech => (
+              <li>{tech}</li>
+            ))}
+          </List>
+        </DetailsSectionStyles>
+        <DetailsSectionStyles>
+          <h2>What I'm currently learning.</h2>
+          <List>
+            {currentlyLearning.map(tech => (
+              <li>{tech}</li>
+            ))}
+          </List>
+        </DetailsSectionStyles>
+      </Wrapper>
+    </AboutSectionStyles>
+  );
+};
 
 export default AboutSection;
