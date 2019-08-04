@@ -57,7 +57,7 @@ const HeroSection = ({ headlineText, introText }: Props) => (
       <HeadlineStyles className="intro-text">{headlineText}</HeadlineStyles>
       <p>{introText}</p>
       <p>
-        <a href="mailto:mail@jamestbyrne.com">Get in touch.</a>
+        <a href="mailto:mail@jamestbyrne.com">Get in touch</a>
       </p>
     </HeroSectionTextStyles>
   </HeroSectionStyles>

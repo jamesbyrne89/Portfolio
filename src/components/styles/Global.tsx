@@ -71,6 +71,7 @@ const GlobalStyles = () => (
       a {
         color: inherit;
         background-color: transparent;
+        text-decoration: none;
         -webkit-text-decoration-skip: objects;
       }
       a:active,
