@@ -5,7 +5,7 @@ import { colours, fonts, fontSizes } from "../styles/theme";
 const FooterStyles = styled.footer`
   font-family: ${fonts.bodyFont};
   padding: 1em 10vw;
-  height: 150px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,6 +34,7 @@ const FooterStyles = styled.footer`
 
   ul {
     display: flex;
+    margin-top: 0.375em;
     a {
       &::after {
         display: none;

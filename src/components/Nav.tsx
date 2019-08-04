@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { Link } from "gatsby";
 import { colours, fonts, fontSizes } from "../styles/theme";
 
 const NavStyles = styled.nav`
@@ -45,7 +46,9 @@ const NavStyles = styled.nav`
 const Nav = () => (
   <NavStyles>
     <ul>
-      <li>about</li>
+      <li>
+        <Link to="/about">about</Link>
+      </li>
       <li>
         <a href="mailto:mail@jamestbyrne.com">contact</a>
       </li>

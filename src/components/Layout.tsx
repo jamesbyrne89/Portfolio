@@ -8,6 +8,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Header from "./Header";
+import Footer from "./Footer";
 import GlobalStyles from "./styles/Global";
 
 interface Props {
@@ -30,6 +31,7 @@ const Layout = ({ children }: Props) => {
       <GlobalStyles />
       <Header />
       {children}
+      <Footer />
     </>
   );
 };
