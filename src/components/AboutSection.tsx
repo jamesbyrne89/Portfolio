@@ -16,10 +16,11 @@ const technologiesUsed = [
   `Puppeteer`,
   `Knockout`,
   `Next.js`,
+  `Webpack`,
   `and more!`,
 ];
 
-const currentlyLearning = [`NodeJS`, `VueJS`, `Emotion`];
+const currentlyLearning = [`NodeJS`, `VueJS`, `GraphQL`];
 
 const AboutSectionStyles = styled.section`
   background: ${colours.grey};

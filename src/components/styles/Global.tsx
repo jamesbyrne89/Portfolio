@@ -214,19 +214,15 @@ const GlobalStyles = () => (
       }
       html {
         box-sizing: border-box;
-        overflow-y: scroll;
       }
       * {
         box-sizing: inherit;
-      }
-      *:before {
-        box-sizing: inherit;
-      }
-      *:after {
-        box-sizing: inherit;
+        &:before,
+        &:after {
+          box-sizing: inherit;
+        }
       }
       body {
-        color: hsla(0, 0%, 0%, 0.8);
         font-family: georgia, serif;
         font-weight: normal;
         word-wrap: break-word;
@@ -238,23 +234,9 @@ const GlobalStyles = () => (
       }
       img {
         max-width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-        padding-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 0;
         margin-bottom: 1.45rem;
       }
       hgroup {
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-        padding-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 0;
         margin-bottom: 1.45rem;
       }
       ul {
@@ -264,54 +246,20 @@ const GlobalStyles = () => (
       }
       ol {
         margin-left: 1.45rem;
-        margin-right: 0;
-        margin-top: 0;
-        padding-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 0;
         margin-bottom: 1.45rem;
         list-style-position: outside;
         list-style-image: none;
       }
       dl {
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-        padding-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 0;
         margin-bottom: 1.45rem;
       }
       dd {
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-        padding-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 0;
         margin-bottom: 1.45rem;
       }
       p {
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-        padding-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 0;
         margin-bottom: 1.45rem;
       }
       figure {
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-        padding-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 0;
         margin-bottom: 1.45rem;
       }
       pre {

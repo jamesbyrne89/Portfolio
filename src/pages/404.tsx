@@ -5,11 +5,10 @@ import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import { colours, fonts, fontSizes } from "../styles/theme";
 
-const ErrorPageStyles = styled.main`
-  background: ${colours.navy};
+const ErrorPageStyles = styled.section`
   display: flex;
   align-items: center;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 200px);
 `;
 
 const ErrorPageTextStyles = styled.div`

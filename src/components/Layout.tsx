@@ -6,14 +6,21 @@
  */
 
 import React from "react";
+import styled from "@emotion/styled";
 import { useStaticQuery, graphql } from "gatsby";
 import Header from "./Header";
 import Footer from "./Footer";
 import GlobalStyles from "./styles/Global";
+import { colours } from "../styles/theme";
 
 interface Props {
   children: React.ReactNode;
 }
+
+const MainStyles = styled.main`
+  min-height: calc(100vh - 200px);
+  background: ${colours.navy};
+`;
 
 const Layout = ({ children }: Props) => {
   const data = useStaticQuery(graphql`
@@ -30,7 +37,7 @@ const Layout = ({ children }: Props) => {
     <>
       <GlobalStyles />
       <Header />
-      {children}
+      <MainStyles>{children}</MainStyles>
       <Footer />
     </>
   );
