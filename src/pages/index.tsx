@@ -3,7 +3,6 @@ import Layout from "../components/Layout";
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
 import ContactSection from "../components/ContactSection";
-import Footer from "../components/Footer";
 import SEO from "../components/Seo";
 
 const IndexPage = () => (
@@ -18,7 +17,6 @@ const IndexPage = () => (
     />
     <AboutSection />
     <ContactSection />
-    <Footer />
   </Layout>
 );
 
