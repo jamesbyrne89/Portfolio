@@ -18,8 +18,8 @@ const AboutPage = () => (
       description="A London-based front end web developer with a passion for crafting beautiful experiences on the web."
     />
     <Wrapper>
-      <LikesSection />
-      <ExperienceSection />
+      <LikesSection title="Likes." />
+      <ExperienceSection title="Experience." />
     </Wrapper>
   </Layout>
 );

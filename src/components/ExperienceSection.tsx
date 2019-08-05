@@ -32,11 +32,15 @@ const Wrapper = styled.div`
   margin: auto;
 `;
 
-const ExperienceSection = () => {
+interface Props {
+  title: string;
+}
+
+const ExperienceSection = ({ title }: Props) => {
   return (
     <ExperienceSectionStyles>
       <Wrapper>
-        <h2>Experience</h2>
+        <h2>{title}</h2>
         <ul>
           <li>
             <div>Huddle</div>
