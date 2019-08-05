@@ -7,10 +7,6 @@ import cameraImg from "../images/camera.png";
 
 const LikesSectionStyles = styled.section`
   background: ${colours.navy};
-  padding: 8em 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: ${fonts.bodyFont};
   font-size: ${fontSizes.body};
   color: #fff;
@@ -24,15 +20,6 @@ const LikesSectionStyles = styled.section`
 
   p {
   }
-
-  img {
-    height: 48px;
-  }
-`;
-
-const Wrapper = styled.div`
-  width: 80vw;
-  margin: auto;
 `;
 
 const List = styled.ul`
@@ -40,37 +27,36 @@ const List = styled.ul`
   font-size: ${fontSizes.body};
 
   li {
+    display: flex;
     margin-right: 1.5em;
-    line-height: 1.5;
+    line-height: 2;
+  }
+
+  img {
+    height: 32px;
+    margin: 0 1em;
   }
 `;
 
 const LikesSection = () => {
   return (
     <LikesSectionStyles>
-      <Wrapper>
-        <p>
-          Background about me, how I'm self-taught, used to work in PR, etc.
-        </p>
-        <h2>Likes</h2>
-        <List>
-          <li>
-            <img src={cyclistImg} />
-          </li>
-          <li>
-            <img src={runnerImg} />
-          </li>
-          <li>
-            <img src={cameraImg} />
-          </li>
-        </List>
-        <h2>Experience</h2>
-        <List>
-          <li>Huddle</li>
-          <li>Warehouse</li>
-          <li>Sky</li>
-        </List>
-      </Wrapper>
+      <p>Background about me, how I'm self-taught, used to work in PR, etc.</p>
+      <h2>Likes</h2>
+      <List>
+        <li>
+          Cycling
+          <img src={cyclistImg} />
+        </li>
+        <li>
+          Running
+          <img src={runnerImg} />
+        </li>
+        <li>
+          Photography
+          <img src={cameraImg} />
+        </li>
+      </List>
     </LikesSectionStyles>
   );
 };
