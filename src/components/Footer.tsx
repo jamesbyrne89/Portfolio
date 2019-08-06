@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
+import { LinkStyles } from "./styles/sharedStyles";
 
 const FooterStyles = styled.footer`
   font-family: ${fonts.bodyFont};
@@ -11,26 +12,6 @@ const FooterStyles = styled.footer`
   align-items: center;
   background: #fff;
   color: ${colours.black};
-  a {
-    position: relative;
-    text-decoration: none;
-    &::after {
-      content: "";
-      width: 100%;
-      height: 2px;
-      background: currentColor;
-      position: absolute;
-      left: 0;
-      bottom: -8px;
-      transform: translateY(0);
-      transition: all 0.2s ease-out;
-      opacity: 0;
-    }
-    &:hover::after {
-      transform: translateY(-4px);
-      opacity: 1;
-    }
-  }
 
   ul {
     display: flex;
@@ -71,8 +52,8 @@ const CURRENT_YEAR = new Date().getFullYear();
 const Footer = () => (
   <FooterStyles>
     <small>
-      Built with <a href="https://www.gatsbyjs.org">Gatsby</a>. James Byrne
-      &#169; {CURRENT_YEAR}
+      Built with <LinkStyles href="https://www.gatsbyjs.org">Gatsby</LinkStyles>
+      . James Byrne &#169; {CURRENT_YEAR}
     </small>
     <ul>
       <li>

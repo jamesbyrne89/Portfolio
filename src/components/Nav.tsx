@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { Link } from "gatsby";
 import { colours, fonts, fontSizes } from "../styles/theme";
+import { LinkStyles, GatsbyLinkStyles } from "./styles/sharedStyles";
 
 const NavStyles = styled.nav`
   display: flex;
@@ -17,40 +17,16 @@ const NavStyles = styled.nav`
     list-style: none;
     margin-left: 2em;
   }
-  a {
-    display: block;
-    color: inherit;
-    text-decoration: none;
-    padding-bottom: 0.5em;
-    position: relative;
-    transition: all 0.3s ease-out;
-    &::after {
-      content: "";
-      width: 100%;
-      height: 2px;
-      background: currentColor;
-      position: absolute;
-      left: 0;
-      bottom: 2px;
-      transform: translateY(0);
-      transition: all 0.2s ease-out;
-      opacity: 0;
-    }
-    &:hover::after {
-      transform: translateY(-4px);
-      opacity: 1;
-    }
-  }
 `;
 
 const Nav = () => (
   <NavStyles>
     <ul>
       <li>
-        <Link to="/about">about</Link>
+        <GatsbyLinkStyles to="/about">about</GatsbyLinkStyles>
       </li>
       <li>
-        <a href="mailto:mail@jamestbyrne.com">contact</a>
+        <LinkStyles href="mailto:mail@jamestbyrne.com">contact</LinkStyles>
       </li>
     </ul>
   </NavStyles>

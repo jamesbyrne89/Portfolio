@@ -96,7 +96,7 @@ const LikesSection = ({ title }: Props) => {
         <li>
           <span>
             Hacking on side projects
-            <a href="">See them on Github</a>
+            <a href="https://github.com/jamesbyrne89">See them on Github</a>
           </span>
           <img src={coderImg} />
         </li>

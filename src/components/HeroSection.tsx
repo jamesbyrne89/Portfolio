@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
+import {
+  LinkStyles,
+  getBodyFontStyles,
+} from "../components/styles/sharedStyles";
 
 interface Props {
   headlineText: string;
@@ -18,29 +22,9 @@ const HeroSectionTextStyles = styled.article`
   margin-left: 10vw;
   max-width: 700px;
   p {
-    font-family: ${fonts.bodyFont};
-    font-size: ${fontSizes.body};
+    ${getBodyFontStyles}
     color: #fff;
     line-height: 1.5;
-  }
-  a {
-    text-decoration: none;
-    position: relative;
-    &::after {
-      content: "";
-      width: 100%;
-      height: 2px;
-      background: currentColor;
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      transform: translateY(0);
-      transition: all 0.2s ease-out;
-    }
-    &:hover::after {
-      opacity: 0;
-      transform: translateY(4px);
-    }
   }
 `;
 
@@ -57,7 +41,9 @@ const HeroSection = ({ headlineText, introText }: Props) => (
       <HeadlineStyles className="intro-text">{headlineText}</HeadlineStyles>
       <p>{introText}</p>
       <p>
-        <a href="mailto:mail@jamestbyrne.com">Get in touch</a>
+        <LinkStyles href="mailto:mail@jamestbyrne.com" withUnderline>
+          Get in touch
+        </LinkStyles>
       </p>
     </HeroSectionTextStyles>
   </HeroSectionStyles>

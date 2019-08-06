@@ -18,9 +18,6 @@ const LogoStyles = styled.span`
   font-weight: bold;
   color: ${colours.yellow};
   font-size: ${fontSizes.body};
-  a {
-    text-decoration: none;
-  }
 `;
 
 const Header = () => (
