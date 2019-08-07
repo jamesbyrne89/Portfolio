@@ -23,17 +23,17 @@ const AnimationWrapper = ({ children }: Props) => {
   };
 
   useEffect(() => {
-    console.log(scrollPos);
-    if (scrollPos === 0) {
-      window.addEventListener("scroll", getScrollPosition);
-    }
+    window.addEventListener("scroll", getScrollPosition);
+
+    return () => {
+      window.removeEventListener("scroll", getScrollPosition);
+    };
+  }, []);
+
+  useEffect(() => {
     if (scrollPos > 200) {
       setAnimated(true);
     }
-
-    // return () => {
-    //   window.removeEventListener("scroll", getScrollPosition);
-    // };
   }, [scrollPos]);
   return <Wrapper animated={animated}>{children}</Wrapper>;
 };

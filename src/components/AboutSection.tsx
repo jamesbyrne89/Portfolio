@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
@@ -72,12 +72,19 @@ const AboutSection = () => {
       }
     `
   );
+
+  const techTitle = useRef(null);
+
+  useEffect(() => {
+    console.log(techTitle);
+  }, []);
+
   return (
     <AboutSectionStyles>
       <Wrapper>
         <DetailsSectionStyles>
           <AnimationWrapper>
-            <h2>Technologies I've used.</h2>
+            <h2 ref={techTitle}>Technologies I've used.</h2>
           </AnimationWrapper>
           <List>
             {technologiesUsed.map((tech, i) => (
