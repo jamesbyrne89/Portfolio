@@ -5,6 +5,7 @@ import {
   LinkStyles,
   getBodyFontStyles,
 } from "../components/styles/sharedStyles";
+import AnimationWrapper from "../components/AnimationWrapper";
 
 interface Props {
   headlineText: string;
@@ -25,6 +26,26 @@ const HeroSectionTextStyles = styled.article`
     ${getBodyFontStyles}
     color: #fff;
     line-height: 1.5;
+    margin-top: 2rem;
+  }
+  a {
+    text-decoration: none;
+    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: currentColor;
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      transform: translateY(0);
+      transition: all 0.2s ease-out;
+    }
+    &:hover::after {
+      opacity: 0;
+      transform: translateY(4px);
+    }
   }
 `;
 
@@ -33,12 +54,15 @@ const HeadlineStyles = styled.h1`
   font-family: ${fonts.headingFont};
   font-size: ${fontSizes.headingLg};
   line-height: 1.1;
+  margin: 0;
 `;
 
 const HeroSection = ({ headlineText, introText }: Props) => (
   <HeroSectionStyles>
     <HeroSectionTextStyles>
-      <HeadlineStyles className="intro-text">{headlineText}</HeadlineStyles>
+      <AnimationWrapper>
+        <HeadlineStyles>{headlineText}</HeadlineStyles>
+      </AnimationWrapper>
       <p>{introText}</p>
       <p>
         <LinkStyles href="mailto:mail@jamestbyrne.com" withUnderline>

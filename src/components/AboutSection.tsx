@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
+import AnimationWrapper from "./AnimationWrapper";
 
 const technologiesUsed = [
   `React`,
@@ -43,13 +44,13 @@ const DetailsSectionStyles = styled.div`
   h2 {
     font-family: ${fonts.headingFont};
     font-size: ${fontSizes.headingSm};
-    padding-bottom: 1.75em;
   }
 `;
 
 const List = styled.ul`
   max-width: 750px;
   font-size: ${fontSizes.body};
+  margin-top: 1.75em;
 
   li {
     margin-right: 1.5em;
@@ -75,18 +76,22 @@ const AboutSection = () => {
     <AboutSectionStyles>
       <Wrapper>
         <DetailsSectionStyles>
-          <h2>Technologies I've used.</h2>
+          <AnimationWrapper>
+            <h2>Technologies I've used.</h2>
+          </AnimationWrapper>
           <List>
-            {technologiesUsed.map(tech => (
-              <li>{tech}</li>
+            {technologiesUsed.map((tech, i) => (
+              <li key={tech + i}>{tech}</li>
             ))}
           </List>
         </DetailsSectionStyles>
         <DetailsSectionStyles>
-          <h2>What I'm currently learning.</h2>
+          <AnimationWrapper>
+            <h2>What I'm currently learning.</h2>
+          </AnimationWrapper>
           <List>
-            {currentlyLearning.map(tech => (
-              <li>{tech}</li>
+            {currentlyLearning.map((tech, i) => (
+              <li key={tech + i}>{tech}</li>
             ))}
           </List>
         </DetailsSectionStyles>
