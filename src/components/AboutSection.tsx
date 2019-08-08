@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
@@ -73,18 +73,21 @@ const AboutSection = () => {
     `
   );
 
-  const techTitle = useRef(null);
+  const [offsets, setOffsets] = useState(null);
 
-  useEffect(() => {
-    console.log(techTitle);
+  const offsetRef = useCallback(node => {
+    setOffsets(node);
   }, []);
+
+  const titleOne = useRef(null);
+  const titleTwo = useRef(null);
 
   return (
     <AboutSectionStyles>
       <Wrapper>
         <DetailsSectionStyles>
-          <AnimationWrapper>
-            <h2 ref={techTitle}>Technologies I've used.</h2>
+          <AnimationWrapper ref={titleOne}>
+            <h2 ref={titleOne}>Technologies I've used.</h2>
           </AnimationWrapper>
           <List>
             {technologiesUsed.map((tech, i) => (
@@ -93,8 +96,8 @@ const AboutSection = () => {
           </List>
         </DetailsSectionStyles>
         <DetailsSectionStyles>
-          <AnimationWrapper>
-            <h2>What I'm currently learning.</h2>
+          <AnimationWrapper ref={titleTwo}>
+            <h2 ref={titleTwo}>What I'm currently learning.</h2>
           </AnimationWrapper>
           <List>
             {currentlyLearning.map((tech, i) => (
