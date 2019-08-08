@@ -73,11 +73,8 @@ const AboutSection = () => {
     `
   );
 
-  const [offsets, setOffsets] = useState(null);
-
-  const offsetRef = useCallback(node => {
-    setOffsets(node);
-  }, []);
+  const techListRefs = technologiesUsed.map(item => useRef(null));
+  const learningListRefs = currentlyLearning.map(item => useRef(null));
 
   const titleOne = useRef(null);
   const titleTwo = useRef(null);
@@ -91,17 +88,33 @@ const AboutSection = () => {
           </AnimationWrapper>
           <List>
             {technologiesUsed.map((tech, i) => (
-              <li key={tech + i}>{tech}</li>
+              <AnimationWrapper
+                key={tech + i}
+                ref={techListRefs[0]}
+                delay={0.3 + i / 10}
+              >
+                <li key={tech + i} ref={techListRefs[i]}>
+                  {tech}
+                </li>
+              </AnimationWrapper>
             ))}
           </List>
         </DetailsSectionStyles>
         <DetailsSectionStyles>
-          <AnimationWrapper ref={titleTwo}>
+          <AnimationWrapper ref={titleTwo} delay={2}>
             <h2 ref={titleTwo}>What I'm currently learning.</h2>
           </AnimationWrapper>
           <List>
             {currentlyLearning.map((tech, i) => (
-              <li key={tech + i}>{tech}</li>
+              <AnimationWrapper
+                key={tech + i}
+                ref={learningListRefs[0]}
+                delay={2.5 + i / 10}
+              >
+                <li key={tech + i} ref={learningListRefs[i]}>
+                  {tech}
+                </li>
+              </AnimationWrapper>
             ))}
           </List>
         </DetailsSectionStyles>

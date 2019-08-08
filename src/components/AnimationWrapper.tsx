@@ -1,5 +1,6 @@
 import React, { useState, useEffect, forwardRef } from "react";
 import styled from "@emotion/styled";
+import { debounce } from "../lib/utils";
 
 interface Props {
   children: React.ReactChild;
@@ -7,27 +8,26 @@ interface Props {
   delay: number;
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<Props & { animated: boolean }>`
   overflow: hidden;
   height: auto;
   > * {
     transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1);
-    ${props => (props.delay ? `transition-delay: ${props.delay}s;` : null)}
-    transform: ${props => `translateY(${props.animated ? "0%" : "100%"})`};
+    ${({ delay }) => (delay ? `transition-delay: ${delay}s;` : null)}
+    transform: ${({ animated }) => `translateY(${animated ? "0%" : "100%"})`};
   }
 `;
 
 const AnimationWrapper = (
   { children, offset = 0.5, delay = 0 }: Props,
-  ref
+  ref: React.RefObject<HTMLElement>
 ) => {
-  console.log(ref);
   const [animated, setAnimated] = useState(false);
   const [scrollPos, setScrollPos] = useState(window.scrollY);
 
-  const getScrollPosition = () => {
+  const getScrollPosition = debounce(() => {
     setScrollPos(window.scrollY);
-  };
+  }, 250);
 
   useEffect(() => {
     window.addEventListener("scroll", getScrollPosition);
@@ -41,6 +41,7 @@ const AnimationWrapper = (
     if (!ref || !ref.current) {
       return;
     }
+
     const triggerPoint = Math.round(
       ref.current.offsetTop - window.innerHeight * offset
     );
