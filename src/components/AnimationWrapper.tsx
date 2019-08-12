@@ -12,6 +12,7 @@ const Wrapper = styled.div<Props & { animated: boolean }>`
   overflow: hidden;
   height: auto;
   > * {
+    will-change: transform;
     transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1);
     ${({ delay }) => (delay ? `transition-delay: ${delay}s;` : null)}
     transform: ${({ animated }) => `translateY(${animated ? "0%" : "100%"})`};
@@ -19,7 +20,7 @@ const Wrapper = styled.div<Props & { animated: boolean }>`
 `;
 
 const AnimationWrapper = (
-  { children, offset = 0.5, delay = 0 }: Props,
+  { children, offset = 0.8, delay = 0 }: Props,
   ref: React.RefObject<HTMLElement>
 ) => {
   const [animated, setAnimated] = useState(false);
@@ -39,6 +40,7 @@ const AnimationWrapper = (
 
   useEffect(() => {
     if (!ref || !ref.current) {
+      setAnimated(true);
       return;
     }
 

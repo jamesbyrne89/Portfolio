@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { jsx } from "@emotion/core";
 import { colours, fonts, fontSizes } from "../styles/theme";
 import {
   LinkStyles,
@@ -26,7 +27,7 @@ const HeroSectionTextStyles = styled.article`
     ${getBodyFontStyles}
     color: #fff;
     line-height: 1.5;
-    margin-top: 2rem;
+    margin-bottom: 0;
   }
   a {
     text-decoration: none;
@@ -57,13 +58,71 @@ const HeadlineStyles = styled.h1`
   margin: 0;
 `;
 
+const IntroTextWrapper = styled.div`
+  margin: 2.5em 0 1em;
+`;
+
 const HeroSection = ({ headlineText, introText }: Props) => (
   <HeroSectionStyles>
     <HeroSectionTextStyles>
       <AnimationWrapper>
-        <HeadlineStyles>{headlineText}</HeadlineStyles>
+        <HeadlineStyles>
+          {headlineText
+            .split(" ")
+            .slice(0, 4)
+            .join(" ")}
+        </HeadlineStyles>
       </AnimationWrapper>
-      <p>{introText}</p>
+      <AnimationWrapper>
+        <HeadlineStyles>
+          {headlineText
+            .split(" ")
+            .slice(4, 6)
+            .join(" ")}
+        </HeadlineStyles>
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <HeadlineStyles>
+          {headlineText
+            .split(" ")
+            .slice(6)
+            .join(" ")}
+        </HeadlineStyles>
+      </AnimationWrapper>
+      <IntroTextWrapper>
+        <AnimationWrapper>
+          <p>
+            {introText
+              .split(" ")
+              .slice(0, 9)
+              .join(" ")}
+          </p>
+        </AnimationWrapper>
+        <AnimationWrapper>
+          <p>
+            {introText
+              .split(" ")
+              .slice(9, 18)
+              .join(" ")}
+          </p>
+        </AnimationWrapper>
+        <AnimationWrapper>
+          <p>
+            {introText
+              .split(" ")
+              .slice(18, 29)
+              .join(" ")}
+          </p>
+        </AnimationWrapper>
+        <AnimationWrapper>
+          <p>
+            {introText
+              .split(" ")
+              .slice(29)
+              .join(" ")}
+          </p>
+        </AnimationWrapper>
+      </IntroTextWrapper>
       <p>
         <LinkStyles href="mailto:mail@jamestbyrne.com" withUnderline>
           Get in touch

@@ -83,7 +83,7 @@ const AboutSection = () => {
     <AboutSectionStyles>
       <Wrapper>
         <DetailsSectionStyles>
-          <AnimationWrapper ref={titleOne}>
+          <AnimationWrapper ref={titleOne} offset={0.8}>
             <h2 ref={titleOne}>Technologies I've used.</h2>
           </AnimationWrapper>
           <List>
@@ -101,7 +101,7 @@ const AboutSection = () => {
           </List>
         </DetailsSectionStyles>
         <DetailsSectionStyles>
-          <AnimationWrapper ref={titleTwo} delay={2}>
+          <AnimationWrapper ref={titleTwo} offset={0.8} delay={2}>
             <h2 ref={titleTwo}>What I'm currently learning.</h2>
           </AnimationWrapper>
           <List>
