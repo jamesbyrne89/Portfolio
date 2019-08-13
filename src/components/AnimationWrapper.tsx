@@ -11,9 +11,10 @@ interface Props {
 const Wrapper = styled.div<Props & { animated: boolean }>`
   overflow: hidden;
   height: auto;
+  padding-bottom: 0.5em;
   > * {
     will-change: transform;
-    transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1);
+    transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1), opacity 1s cubic-bezier(0.6, 0, 0.2, 1);
     ${({ delay }) => (delay ? `transition-delay: ${delay}s;` : null)}
     transform: ${({ animated }) => `translateY(${animated ? "0%" : "100%"})`};
   }

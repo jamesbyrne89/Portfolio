@@ -32,17 +32,7 @@ const HeroSectionTextStyles = styled.article`
   a {
     text-decoration: none;
     position: relative;
-    &::after {
-      content: "";
-      width: 100%;
-      height: 2px;
-      background: currentColor;
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      transform: translateY(0);
-      transition: all 0.2s ease-out;
-    }
+    display: inline-block;
     &:hover::after {
       opacity: 0;
       transform: translateY(4px);
@@ -124,9 +114,11 @@ const HeroSection = ({ headlineText, introText }: Props) => (
         </AnimationWrapper>
       </IntroTextWrapper>
       <p>
-        <LinkStyles href="mailto:mail@jamestbyrne.com" withUnderline>
-          Get in touch
-        </LinkStyles>
+        <AnimationWrapper delay={1.5}>
+          <LinkStyles href="mailto:mail@jamestbyrne.com" withUnderline>
+            Get in touch
+          </LinkStyles>
+        </AnimationWrapper>
       </p>
     </HeroSectionTextStyles>
   </HeroSectionStyles>
