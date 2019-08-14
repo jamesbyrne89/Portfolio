@@ -33,7 +33,7 @@ const ContactSection = () => {
       <AnimationWrapper ref={titleRef} offset={0.8} delay={0.15}>
         <h3>Email address</h3>
       </AnimationWrapper>
-      <AnimationWrapper ref={emailRef} offset={0.8} delay={0.3}>
+      <AnimationWrapper ref={titleRef} offset={0.8} delay={0.3}>
         <LinkStyles
           ref={emailRef}
           href="mailto: mail@jamestbyrne.com"

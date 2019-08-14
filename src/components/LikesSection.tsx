@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
+import { LinkStyles } from "./styles/sharedStyles";
 import cyclistImg from "../images/cyclist.png";
 import runnerImg from "../images/runner.png";
 import cameraImg from "../images/camera.png";
@@ -42,7 +43,12 @@ const List = styled.ul`
 
   a {
     position: relative;
-    margin: 0 auto 0 0;
+    margin: 0 auto 0 0.5em;
+    &::before {
+      content: "*";
+      position: absolute;
+      left: -0.55em;
+    }
     &::after {
       content: "";
       width: 100%;
@@ -95,8 +101,10 @@ const LikesSection = ({ title }: Props) => {
         </li>
         <li>
           <span>
-            Hacking on side projects
-            <a href="https://github.com/jamesbyrne89">See them on Github</a>
+            Hacking on side projects*
+            <LinkStyles href="https://github.com/jamesbyrne89" withUnderline>
+              See them on Github
+            </LinkStyles>
           </span>
           <img src={coderImg} />
         </li>
