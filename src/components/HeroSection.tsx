@@ -114,7 +114,7 @@ const HeroSection = ({ headlineText, introText }: Props) => (
         </AnimationWrapper>
       </IntroTextWrapper>
       <p>
-        <AnimationWrapper delay={1.5}>
+        <AnimationWrapper>
           <LinkStyles href="mailto:mail@jamestbyrne.com" withUnderline>
             Get in touch
           </LinkStyles>

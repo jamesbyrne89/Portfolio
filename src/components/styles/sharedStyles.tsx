@@ -12,14 +12,14 @@ export const LinkStyles = styled.a`
     background: currentColor;
     position: absolute;
     left: 0;
-    bottom: ${({ withUnderline }) => (withUnderline ? `-4px` : `-8px`)};
+    bottom: ${({ withUnderline }) => (withUnderline ? `-0.1em` : `-0.2em`)};
     transform: translateY(0);
     transition: all 0.2s ease-out;
     opacity: ${({ withUnderline }) => (withUnderline ? 1 : 0)};
   }
   &:hover::after {
     transform: translateY(
-      ${({ withUnderline }) => (withUnderline ? `4px` : `-4px`)}
+      ${({ withUnderline }) => (withUnderline ? `0.1em` : `-0.1em`)}
     );
     opacity: ${({ withUnderline }) => (withUnderline ? 0 : 1)};
   }

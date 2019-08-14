@@ -11,7 +11,7 @@ interface Props {
 const Wrapper = styled.div<Props & { animated: boolean }>`
   overflow: hidden;
   height: auto;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.25em;
   > * {
     will-change: transform;
     transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1), opacity 1s cubic-bezier(0.6, 0, 0.2, 1);
@@ -27,9 +27,9 @@ const AnimationWrapper = (
   const [animated, setAnimated] = useState(false);
   const [scrollPos, setScrollPos] = useState(window.scrollY);
 
-  const getScrollPosition = debounce(() => {
-    setScrollPos(window.scrollY);
-  }, 250);
+  const getScrollPosition = () => {
+    requestAnimationFrame(() => setScrollPos(window.scrollY));
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", getScrollPosition);
