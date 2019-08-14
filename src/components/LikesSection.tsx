@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
 import { LinkStyles } from "./styles/sharedStyles";
+import AnimationWrapper from "./AnimationWrapper";
 import cyclistImg from "../images/cyclist.png";
 import runnerImg from "../images/runner.png";
 import cameraImg from "../images/camera.png";
@@ -23,6 +24,7 @@ const LikesSectionStyles = styled.section`
   p {
     max-width: 750px;
     line-height: 1.5;
+    margin-bottom: 0;
   }
 `;
 
@@ -79,13 +81,31 @@ interface Props {
 const LikesSection = ({ title }: Props) => {
   return (
     <LikesSectionStyles>
-      <p>
-        I'm a self-taught frontend developer with two years experience. I
-        originally wanted to be a journalist and studied English and Journalism
-        at university. After graduating I worked in public relations for four
-        years before taking the plunge and retraining as a software developer.
-      </p>
-      <h2>{title}</h2>
+      <AnimationWrapper>
+        <p>
+          I'm a self-taught frontend developer with two years experience. I
+          originally wanted
+        </p>
+      </AnimationWrapper>
+      <AnimationWrapper delay={0.1}>
+        <p>
+          to be a journalist and studied English and Journalism at university.
+          After graduating
+        </p>
+      </AnimationWrapper>
+      <AnimationWrapper delay={0.2}>
+        <p>
+          I worked in public relations for four years before taking the plunge
+          and retraining
+        </p>
+      </AnimationWrapper>
+      <AnimationWrapper delay={0.3}>
+        <p>as a software developer.</p>
+      </AnimationWrapper>
+
+      <AnimationWrapper delay={0.3}>
+        <h2>{title}</h2>
+      </AnimationWrapper>
       <List>
         <li>
           Cycling

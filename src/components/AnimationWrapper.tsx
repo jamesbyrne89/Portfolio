@@ -8,7 +8,7 @@ interface Props {
   delay: number;
 }
 
-const Wrapper = styled.div<Props & { animated: boolean }>`
+const Wrapper = styled.div<Props & { animated: boolean; exited: boolean }>`
   overflow: hidden;
   height: auto;
   padding-bottom: 0.25em;
@@ -17,7 +17,9 @@ const Wrapper = styled.div<Props & { animated: boolean }>`
     transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1), opacity 1s cubic-bezier(0.6, 0, 0.2, 1);
     ${({ delay }) => (delay ? `transition-delay: ${delay}s;` : null)}
     transform: ${({ animated }) => `translateY(${animated ? "0%" : "100%"})`};
+    opacity: ${({ exited }) => (exited ? "0" : "1")};
   }
+
 `;
 
 const AnimationWrapper = (
@@ -26,6 +28,7 @@ const AnimationWrapper = (
 ) => {
   const [animated, setAnimated] = useState(false);
   const [scrollPos, setScrollPos] = useState(window.scrollY);
+  const [exited, setExited] = useState(false);
 
   const getScrollPosition = () => {
     requestAnimationFrame(() => setScrollPos(window.scrollY));
@@ -51,6 +54,10 @@ const AnimationWrapper = (
     if (scrollPos > triggerPoint) {
       setAnimated(true);
     }
+
+    return () => {
+      setExited(true);
+    };
   }, [scrollPos]);
 
   return (
