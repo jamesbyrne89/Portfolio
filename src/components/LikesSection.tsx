@@ -13,25 +13,18 @@ const LikesSectionStyles = styled.section`
   font-family: ${fonts.bodyFont};
   font-size: ${fontSizes.body};
   color: #fff;
+  margin-top: 4em;
   h2 {
     font-family: ${fonts.headingFont};
     font-size: ${fontSizes.headingSm};
     color: ${colours.yellow};
-    padding-bottom: 1.75em;
-    margin-top: 4em;
-  }
-
-  p {
-    max-width: 750px;
-    line-height: 1.5;
-    margin-bottom: 0;
   }
 `;
 
 const List = styled.ul`
   max-width: 750px;
   font-size: ${fontSizes.body};
-
+  margin-top: 2em;
   li {
     display: flex;
     margin-right: 1.5em;
@@ -81,28 +74,6 @@ interface Props {
 const LikesSection = ({ title }: Props) => {
   return (
     <LikesSectionStyles>
-      <AnimationWrapper>
-        <p>
-          I'm a self-taught frontend developer with two years experience. I
-          originally wanted
-        </p>
-      </AnimationWrapper>
-      <AnimationWrapper delay={0.1}>
-        <p>
-          to be a journalist and studied English and Journalism at university.
-          After graduating
-        </p>
-      </AnimationWrapper>
-      <AnimationWrapper delay={0.2}>
-        <p>
-          I worked in public relations for four years before taking the plunge
-          and retraining
-        </p>
-      </AnimationWrapper>
-      <AnimationWrapper delay={0.3}>
-        <p>as a software developer.</p>
-      </AnimationWrapper>
-
       <AnimationWrapper delay={0.3}>
         <h2>{title}</h2>
       </AnimationWrapper>

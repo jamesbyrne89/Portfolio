@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import HeroSection from "../components/HeroSection";
-import AboutSection from "../components/AboutSection";
+import SkillsSection from "../components/SkillsSection";
 import ContactSection from "../components/ContactSection";
 import SEO from "../components/Seo";
 
@@ -15,7 +15,7 @@ const IndexPage = () => (
       headlineText="Hello. I'm James, a frontend developer based in London."
       introText="I love crafting beautiful, functional experiences on the web, with accessibility and security baked in from the start. My toolbox includes a range of technologies across HTML, CSS and Javascript, but the tech stack is always secondary to the needs of the user."
     />
-    <AboutSection />
+    <SkillsSection />
     <ContactSection />
   </Layout>
 );

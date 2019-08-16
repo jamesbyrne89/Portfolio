@@ -16,7 +16,7 @@ const Wrapper = styled.div<Props & { animated: boolean; exited: boolean }>`
     will-change: transform;
     transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1), opacity 1s cubic-bezier(0.6, 0, 0.2, 1);
     ${({ delay }) => (delay ? `transition-delay: ${delay}s;` : null)}
-    transform: ${({ animated }) => `translateY(${animated ? "0%" : "100%"})`};
+    transform: ${({ animated }) => `translateY(${animated ? "0%" : "105%"})`};
     opacity: ${({ exited }) => (exited ? "0" : "1")};
   }
 

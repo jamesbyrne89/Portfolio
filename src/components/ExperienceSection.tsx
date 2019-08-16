@@ -1,15 +1,17 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
+import AnimationWrapper from "./AnimationWrapper";
 
 const ExperienceSectionStyles = styled.section`
   color: #fff;
+  margin-top: 4em;
+
   h2 {
     font-family: ${fonts.headingFont};
     font-size: ${fontSizes.headingSm};
     color: ${colours.yellow};
     padding-bottom: 1.75em;
-    margin-top: 4em;
   }
 
   ul {
@@ -40,7 +42,9 @@ const ExperienceSection = ({ title }: Props) => {
   return (
     <ExperienceSectionStyles>
       <Wrapper>
-        <h2>{title}</h2>
+        <AnimationWrapper>
+          <h2>{title}</h2>
+        </AnimationWrapper>
         <ul>
           <li>
             <div>Huddle</div>

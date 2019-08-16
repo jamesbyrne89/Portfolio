@@ -23,7 +23,7 @@ const technologiesUsed = [
 
 const currentlyLearning = [`NodeJS`, `VueJS`, `GraphQL`];
 
-const AboutSectionStyles = styled.section`
+const SkillsSectionStyles = styled.section`
   background: ${colours.grey};
   padding: 8em 0;
   display: flex;
@@ -58,7 +58,7 @@ const List = styled.ul`
   }
 `;
 
-const AboutSection = () => {
+const SkillsSection = () => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -80,7 +80,7 @@ const AboutSection = () => {
   const titleTwo = useRef(null);
 
   return (
-    <AboutSectionStyles>
+    <SkillsSectionStyles>
       <Wrapper>
         <DetailsSectionStyles>
           <AnimationWrapper ref={titleOne} offset={0.8}>
@@ -119,8 +119,8 @@ const AboutSection = () => {
           </List>
         </DetailsSectionStyles>
       </Wrapper>
-    </AboutSectionStyles>
+    </SkillsSectionStyles>
   );
 };
 
-export default AboutSection;
+export default SkillsSection;

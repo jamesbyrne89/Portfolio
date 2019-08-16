@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Layout from "../components/Layout";
+import ProfileSection from "../components/ProfileSection";
 import LikesSection from "../components/LikesSection";
 import ExperienceSection from "../components/ExperienceSection";
 import SEO from "../components/Seo";
@@ -18,6 +19,7 @@ const AboutPage = () => (
       description="A London-based front end web developer with a passion for crafting beautiful experiences on the web."
     />
     <Wrapper>
+      <ProfileSection />
       <LikesSection title="Likes." />
       <ExperienceSection title="Experience." />
     </Wrapper>
