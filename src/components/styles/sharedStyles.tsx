@@ -5,6 +5,7 @@ import { colours, fonts, fontSizes } from "../../styles/theme";
 export const LinkStyles = styled.a`
   position: relative;
   text-decoration: none;
+  display: inline-block;
   &::after {
     content: "";
     width: 100%;

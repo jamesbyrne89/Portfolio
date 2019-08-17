@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
 import { LinkStyles } from "./styles/sharedStyles";
@@ -44,7 +44,7 @@ const List = styled.ul`
       position: absolute;
       left: -0.55em;
     }
-    &::after {
+    /* &::after {
       content: "";
       width: 100%;
       height: 2px;
@@ -58,7 +58,7 @@ const List = styled.ul`
     &:hover::after {
       opacity: 0;
       transform: translateY(4px);
-    }
+    } */
   }
 
   img {
@@ -72,33 +72,49 @@ interface Props {
 }
 
 const LikesSection = ({ title }: Props) => {
+  const titleRef = useRef(null);
+
   return (
     <LikesSectionStyles>
-      <AnimationWrapper delay={0.3}>
+      <AnimationWrapper ref={titleRef} delay={0.45}>
         <h2>{title}</h2>
       </AnimationWrapper>
       <List>
-        <li>
-          Cycling
-          <img src={cyclistImg} />
-        </li>
-        <li>
-          Running
-          <img src={runnerImg} />
-        </li>
-        <li>
-          Photography
-          <img src={cameraImg} />
-        </li>
-        <li>
-          <span>
-            Hacking on side projects*
-            <LinkStyles href="https://github.com/jamesbyrne89" withUnderline>
-              See them on Github
-            </LinkStyles>
-          </span>
-          <img src={coderImg} />
-        </li>
+        <AnimationWrapper ref={titleRef} delay={0.6}>
+          <li>
+            Cycling
+            <img src={cyclistImg} />
+          </li>
+        </AnimationWrapper>
+        <AnimationWrapper ref={titleRef} delay={0.75}>
+          <li>
+            Running
+            <img src={runnerImg} />
+          </li>
+        </AnimationWrapper>
+        <AnimationWrapper ref={titleRef} delay={0.9}>
+          <li>
+            Photography
+            <img src={cameraImg} />
+          </li>
+        </AnimationWrapper>
+        <AnimationWrapper ref={titleRef} delay={1.05}>
+          <li>
+            <span>
+              Hacking on side projects*
+              <AnimationWrapper ref={titleRef} delay={1.2}>
+                <LinkStyles
+                  href="https://github.com/jamesbyrne89"
+                  withUnderline
+                >
+                  See them on Github
+                </LinkStyles>
+              </AnimationWrapper>
+            </span>
+
+            <img src={coderImg} />
+          </li>
+        </AnimationWrapper>
       </List>
     </LikesSectionStyles>
   );
