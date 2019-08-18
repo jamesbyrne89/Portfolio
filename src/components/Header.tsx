@@ -11,6 +11,11 @@ const HeaderStyles = styled.header`
   justify-content: space-between;
   align-items: flex-end;
   background: ${colours.navy};
+
+  @media (max-width: 475px) {
+    height: 70px;
+    padding: 0 1.25rem;
+  }
 `;
 
 const LogoStyles = styled.span`

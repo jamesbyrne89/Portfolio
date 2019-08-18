@@ -18,11 +18,17 @@ const HeroSectionStyles = styled.section`
   height: calc(100vh - 100px);
   display: flex;
   align-items: center;
+  @media (max-width: 475px) {
+    padding: 0 1.25rem;
+  }
 `;
 
 const HeroSectionTextStyles = styled.article`
   margin-left: 10vw;
   max-width: 700px;
+  @media (max-width: 475px) {
+    margin-left: 0;
+  }
   p {
     ${getBodyFontStyles}
     color: #fff;
@@ -46,6 +52,9 @@ const HeadlineStyles = styled.h1`
   font-size: ${fontSizes.headingLg};
   line-height: 1.1;
   margin: 0;
+  @media (max-width: 475px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const IntroTextWrapper = styled.div`

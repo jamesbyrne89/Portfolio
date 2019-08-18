@@ -30,6 +30,9 @@ export function getBodyFontStyles(): string {
   return `
     font-family: ${fonts.bodyFont};
     font-size: ${fontSizes.body};
+    @media (max-width: 475px) {
+      font-size: 1.125rem;
+    }
     `;
 }
 

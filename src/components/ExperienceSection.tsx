@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
 import AnimationWrapper from "./AnimationWrapper";
@@ -11,13 +11,13 @@ const ExperienceSectionStyles = styled.section`
     font-family: ${fonts.headingFont};
     font-size: ${fontSizes.headingSm};
     color: ${colours.yellow};
-    padding-bottom: 1.75em;
   }
 
   ul {
     font-family: ${fonts.bodyFont};
     font-size: ${fontSizes.body};
     list-style-type: none;
+    margin-top: 2em;
   }
 
   li {
@@ -39,24 +39,37 @@ interface Props {
 }
 
 const ExperienceSection = ({ title }: Props) => {
+  const titleRef = useRef(null);
   return (
     <ExperienceSectionStyles>
       <Wrapper>
-        <AnimationWrapper>
-          <h2>{title}</h2>
+        <AnimationWrapper ref={titleRef}>
+          <h2 ref={titleRef}>{title}</h2>
         </AnimationWrapper>
         <ul>
           <li>
-            <div>Huddle</div>
-            <div>2018 — Present</div>
+            <AnimationWrapper ref={titleRef} delay={0.15}>
+              <div>Huddle</div>
+            </AnimationWrapper>
+            <AnimationWrapper ref={titleRef} delay={0.3}>
+              <div>2018 — Present</div>
+            </AnimationWrapper>
           </li>
           <li>
-            <div>Warehouse</div>
-            <div>2017 — 2018</div>
+            <AnimationWrapper ref={titleRef} delay={0.45}>
+              <div>Warehouse</div>
+            </AnimationWrapper>
+            <AnimationWrapper ref={titleRef} delay={0.6}>
+              <div>2017 — 2018</div>
+            </AnimationWrapper>
           </li>
           <li>
-            <div>Sky</div>
-            <div>2017</div>
+            <AnimationWrapper ref={titleRef} delay={0.75}>
+              <div>Sky</div>
+            </AnimationWrapper>
+            <AnimationWrapper ref={titleRef} delay={0.9}>
+              <div>2017</div>
+            </AnimationWrapper>
           </li>
         </ul>
       </Wrapper>

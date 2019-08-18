@@ -5,13 +5,19 @@ import { LinkStyles } from "./styles/sharedStyles";
 
 const FooterStyles = styled.footer`
   font-family: ${fonts.bodyFont};
-  padding: 1em 10vw;
+  padding: 0 10vw;
   height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   background: #fff;
   color: ${colours.black};
+
+  small {
+    display: block;
+    padding: 1em 0;
+  }
 
   ul {
     display: flex;
