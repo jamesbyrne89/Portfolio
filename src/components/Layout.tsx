@@ -23,22 +23,31 @@ const MainStyles = styled.main`
 `;
 
 const Layout = ({ children }: Props) => {
-  const data = useStaticQuery(graphql`
+  const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
+          author
+          social {
+            twitter
+            linkedin
+            github
+            medium
+          }
         }
       }
     }
   `);
-
   return (
     <>
       <GlobalStyles />
       <Header />
       <MainStyles>{children}</MainStyles>
-      <Footer />
+      <Footer
+        author={site.siteMetadata.author}
+        links={site.siteMetadata.social}
+      />
     </>
   );
 };

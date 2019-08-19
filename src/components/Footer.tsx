@@ -55,15 +55,26 @@ const SvgStyles = styled.svg`
 
 const CURRENT_YEAR = new Date().getFullYear();
 
-const Footer = () => (
+interface SocialLinks {
+  twitter: string;
+  linkedin: string;
+  github: string;
+  medium: string;
+}
+interface Props {
+  author: string;
+  links: SocialLinks;
+}
+
+const Footer = ({ author, links }: Props) => (
   <FooterStyles>
     <small>
       Built with <LinkStyles href="https://www.gatsbyjs.org">Gatsby</LinkStyles>
-      . James Byrne &#169; {CURRENT_YEAR}
+      . {author} &#169; {CURRENT_YEAR}
     </small>
     <ul>
       <li>
-        <a href="https://twitter.com/james_byrne">
+        <a href={links.twitter}>
           <svg
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg aria-labelledby="
@@ -87,7 +98,7 @@ const Footer = () => (
         </a>
       </li>
       <li>
-        <a href="https://uk.linkedin.com/in/jamestbyrne89">
+        <a href={links.linkedin}>
           <svg
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg aria-labelledby="
@@ -111,7 +122,7 @@ const Footer = () => (
         </a>
       </li>
       <li>
-        <a href="https://github.com/jamesbyrne89">
+        <a href={links.github}>
           <svg
             aria-labelledby="title"
             role="img"
@@ -136,7 +147,7 @@ const Footer = () => (
         </a>
       </li>
       <li>
-        <a href="https://medium.com/@james_byrne">
+        <a href={links.medium}>
           <svg
             viewBox="0 0 26 20"
             version="1.1"

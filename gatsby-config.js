@@ -2,7 +2,17 @@ module.exports = {
   siteMetadata: {
     title: `Front End Developer in London`,
     description: `A London-based front end web developer with a passion for crafting beautiful experiences on the web.`,
-    author: `@gatsbyjs`,
+    author: `James Byrne`,
+    introSection: {
+      headline: `Hello. I'm James, a frontend developer based in London.`,
+      blurb: `I love crafting beautiful, functional experiences on the web, with accessibility and security baked in from the start. My toolbox includes a range of technologies across HTML, CSS and Javascript, but the tech stack is always secondary to the needs of the user.`,
+    },
+    social: {
+      twitter: `https://twitter.com/james_byrne`,
+      linkedin: `https://uk.linkedin.com/in/jamestbyrne89`,
+      github: `https://github.com/jamesbyrne89`,
+      medium: `https://medium.com/@james_byrne`,
+    },
   },
 
   plugins: [

@@ -8,10 +8,11 @@ interface Props {
   delay: number;
 }
 
-const Wrapper = styled.div<Props & { animated: boolean; exited: boolean }>`
+const Wrapper = styled.span<Props & { animated: boolean; exited: boolean }>`
   overflow: hidden;
   height: auto;
   padding-bottom: 0.25em;
+  display: block;
   > * {
     will-change: transform;
     transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1), opacity 1s cubic-bezier(0.6, 0, 0.2, 1);
