@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Front End Developer in London`,
+    title: `James Byrne — Front End Developer in London`,
     description: `A London-based front end web developer with a passion for crafting beautiful experiences on the web.`,
     author: `James Byrne`,
     introSection: {

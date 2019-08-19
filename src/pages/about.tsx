@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 const AboutPage = () => (
   <Layout>
     <SEO
-      title="About | James Byrne"
+      title="About"
       description="A London-based front end web developer with a passion for crafting beautiful experiences on the web."
     />
     <Wrapper>

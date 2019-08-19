@@ -11,6 +11,7 @@ const IndexPage = () => {
     query HomepageDataQuery {
       site {
         siteMetadata {
+          description
           introSection {
             headline
             blurb
@@ -21,10 +22,7 @@ const IndexPage = () => {
   `);
   return (
     <Layout>
-      <SEO
-        title="James Byrne"
-        description="A London-based front end web developer with a passion for crafting beautiful experiences on the web."
-      />
+      <SEO title="James Byrne" />
       <HeroSection
         headlineText={site.siteMetadata.introSection.headline}
         introText={site.siteMetadata.introSection.blurb}
