@@ -11,10 +11,15 @@ const IndexPage = () => {
     query HomepageDataQuery {
       site {
         siteMetadata {
-          description
           introSection {
             headline
             blurb
+          }
+          skills {
+            technologies {
+              used
+              learning
+            }
           }
         }
       }
@@ -27,7 +32,7 @@ const IndexPage = () => {
         headlineText={site.siteMetadata.introSection.headline}
         introText={site.siteMetadata.introSection.blurb}
       />
-      <SkillsSection />
+      <SkillsSection technologies={site.siteMetadata.skills.technologies} />
       <ContactSection />
     </Layout>
   );

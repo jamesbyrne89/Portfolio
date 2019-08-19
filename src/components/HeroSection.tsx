@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { jsx } from "@emotion/core";
 import { colours, fonts, fontSizes } from "../styles/theme";
 import {
   LinkStyles,
@@ -19,6 +18,7 @@ const HeroSectionStyles = styled.section`
   display: flex;
   align-items: center;
   @media (max-width: 475px) {
+    height: calc(100vh - 70px);
     padding: 0 1.25rem;
   }
 `;

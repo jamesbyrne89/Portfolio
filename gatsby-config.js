@@ -7,6 +7,27 @@ module.exports = {
       headline: `Hello. I'm James, a frontend developer based in London.`,
       blurb: `I love crafting beautiful, functional experiences on the web, with accessibility and security baked in from the start. My toolbox includes a range of technologies across HTML, CSS and Javascript, but the tech stack is always secondary to the needs of the user.`,
     },
+    skills: {
+      technologies: {
+        used: [
+          `React`,
+          `Redux`,
+          `Vue.js`,
+          `Storybook`,
+          `Typescript`,
+          `Styled Components`,
+          `Express`,
+          `MongoDB`,
+          `Jest`,
+          `Puppeteer`,
+          `Knockout`,
+          `Next.js`,
+          `Webpack`,
+          `and more!`,
+        ],
+        learning: [`NodeJS`, `VueJS`, `GraphQL`],
+      },
+    },
     social: {
       twitter: `https://twitter.com/james_byrne`,
       linkedin: `https://uk.linkedin.com/in/jamestbyrne89`,

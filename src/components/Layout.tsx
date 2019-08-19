@@ -20,6 +20,9 @@ interface Props {
 const MainStyles = styled.main`
   min-height: calc(100vh - 200px);
   background: ${colours.navy};
+  @media (max-width: 475px) {
+    min-height: calc(100vh - 170px);
+  }
 `;
 
 const Layout = ({ children }: Props) => {

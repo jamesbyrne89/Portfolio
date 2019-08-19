@@ -4,24 +4,12 @@ import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
 import AnimationWrapper from "./AnimationWrapper";
 
-const technologiesUsed = [
-  `React`,
-  `Redux`,
-  `Vue.js`,
-  `Storybook`,
-  `Typescript`,
-  `Styled Components`,
-  `Express`,
-  `MongoDB`,
-  `Jest`,
-  `Puppeteer`,
-  `Knockout`,
-  `Next.js`,
-  `Webpack`,
-  `and more!`,
-];
-
-const currentlyLearning = [`NodeJS`, `VueJS`, `GraphQL`];
+interface Props {
+  technologies: {
+    used: string[];
+    learning: string[];
+  };
+}
 
 const SkillsSectionStyles = styled.section`
   background: ${colours.grey};
@@ -37,6 +25,11 @@ const Wrapper = styled.div`
   display: grid;
   grid-gap: 4em;
   grid-template-columns: 1fr 1fr;
+  @media (max-width: 475px) {
+    font-size: 2.5rem;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+  }
 `;
 
 const DetailsSectionStyles = styled.div`
@@ -58,23 +51,11 @@ const List = styled.ul`
   }
 `;
 
-const SkillsSection = () => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  );
+const SkillsSection = ({ technologies }: Props) => {
+  const { used, learning } = technologies;
 
-  const techListRefs = technologiesUsed.map(item => useRef(null));
-  const learningListRefs = currentlyLearning.map(item => useRef(null));
+  const techListRefs = technologies.used.map(item => useRef(null));
+  const learningListRefs = technologies.learning.map(item => useRef(null));
 
   const titleOne = useRef(null);
   const titleTwo = useRef(null);
@@ -87,7 +68,7 @@ const SkillsSection = () => {
             <h2 ref={titleOne}>Technologies I've used.</h2>
           </AnimationWrapper>
           <List>
-            {technologiesUsed.map((tech, i) => (
+            {technologies.used.map((tech, i) => (
               <AnimationWrapper
                 key={tech + i}
                 ref={techListRefs[0]}
@@ -105,7 +86,7 @@ const SkillsSection = () => {
             <h2 ref={titleTwo}>What I'm currently learning.</h2>
           </AnimationWrapper>
           <List>
-            {currentlyLearning.map((tech, i) => (
+            {technologies.learning.map((tech, i) => (
               <AnimationWrapper
                 key={tech + i}
                 ref={learningListRefs[0]}
