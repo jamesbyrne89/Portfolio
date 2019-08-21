@@ -1,7 +1,7 @@
-import React, { useCallback, useRef, useState } from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import React, { useRef } from "react";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
+import { getBodyFontStyles } from "./styles/sharedStyles";
 import AnimationWrapper from "./AnimationWrapper";
 
 interface Props {
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-gap: 4em;
   grid-template-columns: 1fr 1fr;
-  @media (max-width: 475px) {
+  @media (max-width: 500px) {
     font-size: 2.5rem;
     grid-template-columns: 1fr;
     grid-gap: 2em;
@@ -42,7 +42,7 @@ const DetailsSectionStyles = styled.div`
 
 const List = styled.ul`
   max-width: 750px;
-  font-size: ${fontSizes.body};
+  ${getBodyFontStyles}
   margin-top: 1.75em;
 
   li {
@@ -54,8 +54,8 @@ const List = styled.ul`
 const SkillsSection = ({ technologies }: Props) => {
   const { used, learning } = technologies;
 
-  const techListRefs = technologies.used.map(item => useRef(null));
-  const learningListRefs = technologies.learning.map(item => useRef(null));
+  const techListRefs = used.map(item => useRef(null));
+  const learningListRefs = learning.map(item => useRef(null));
 
   const titleOne = useRef(null);
   const titleTwo = useRef(null);
@@ -68,7 +68,7 @@ const SkillsSection = ({ technologies }: Props) => {
             <h2 ref={titleOne}>Technologies I've used.</h2>
           </AnimationWrapper>
           <List>
-            {technologies.used.map((tech, i) => (
+            {used.map((tech, i) => (
               <AnimationWrapper
                 key={tech + i}
                 ref={techListRefs[0]}
@@ -86,7 +86,7 @@ const SkillsSection = ({ technologies }: Props) => {
             <h2 ref={titleTwo}>What I'm currently learning.</h2>
           </AnimationWrapper>
           <List>
-            {technologies.learning.map((tech, i) => (
+            {learning.map((tech, i) => (
               <AnimationWrapper
                 key={tech + i}
                 ref={learningListRefs[0]}

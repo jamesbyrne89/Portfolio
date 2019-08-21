@@ -52,8 +52,14 @@ const HeadlineStyles = styled.h1`
   font-size: ${fontSizes.headingLg};
   line-height: 1.1;
   margin: 0;
-  @media (max-width: 475px) {
-    font-size: 2.5rem;
+  @media (max-width: 768px) {
+    font-size: 2.75rem;
+  }
+  @media (max-width: 550px) {
+    font-size: 2.25rem;
+  }
+  @media (max-width: 400px) {
+    font-size: 2rem;
   }
 `;
 
