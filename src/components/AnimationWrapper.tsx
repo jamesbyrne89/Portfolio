@@ -13,6 +13,7 @@ const Wrapper = styled.span<Props & { animated: boolean; exited: boolean }>`
   height: auto;
   padding-bottom: 0.25em;
   display: block;
+  white-space: nowrap;
   > * {
     will-change: transform;
     transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1), opacity 1s cubic-bezier(0.6, 0, 0.2, 1);

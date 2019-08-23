@@ -44,6 +44,14 @@ const HeroSectionTextStyles = styled.article`
       transform: translateY(4px);
     }
   }
+
+  .line-one,
+  .line-two,
+  .line-three,
+  .line-four {
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;
 
 const HeadlineStyles = styled.h1`
@@ -95,38 +103,82 @@ const HeroSection = ({ headlineText, introText }: Props) => (
         </HeadlineStyles>
       </AnimationWrapper>
       <IntroTextWrapper>
-        <AnimationWrapper>
-          <p>
-            {introText
-              .split(" ")
-              .slice(0, 9)
-              .join(" ")}
-          </p>
-        </AnimationWrapper>
-        <AnimationWrapper>
-          <p>
-            {introText
-              .split(" ")
-              .slice(9, 18)
-              .join(" ")}
-          </p>
-        </AnimationWrapper>
-        <AnimationWrapper>
-          <p>
-            {introText
-              .split(" ")
-              .slice(18, 29)
-              .join(" ")}
-          </p>
-        </AnimationWrapper>
-        <AnimationWrapper>
-          <p>
-            {introText
-              .split(" ")
-              .slice(29)
-              .join(" ")}
-          </p>
-        </AnimationWrapper>
+        <div className="line-one">
+          <AnimationWrapper>
+            <p>
+              {introText
+                .split(" ")
+                .slice(0, 4)
+                .join(" ")
+                .concat(String.fromCharCode(160))}
+            </p>
+          </AnimationWrapper>
+          <AnimationWrapper>
+            <p>
+              {introText
+                .split(" ")
+                .slice(4, 9)
+                .join(" ")}
+            </p>
+          </AnimationWrapper>
+        </div>
+        <div className="line-two">
+          <AnimationWrapper>
+            <p>
+              {introText
+                .split(" ")
+                .slice(9, 14)
+                .join(" ")
+                .concat(String.fromCharCode(160))}
+            </p>
+          </AnimationWrapper>
+          <AnimationWrapper>
+            <p>
+              {introText
+                .split(" ")
+                .slice(14, 18)
+                .join(" ")}
+            </p>
+          </AnimationWrapper>
+        </div>
+        <div className="line-three">
+          <AnimationWrapper>
+            <p>
+              {introText
+                .split(" ")
+                .slice(18, 24)
+                .join(" ")
+                .concat(String.fromCharCode(160))}
+            </p>
+          </AnimationWrapper>
+          <AnimationWrapper>
+            <p>
+              {introText
+                .split(" ")
+                .slice(24, 29)
+                .join(" ")}
+            </p>
+          </AnimationWrapper>
+        </div>
+        <div className="line-three">
+          <AnimationWrapper>
+            <p>
+              {introText
+                .split(" ")
+                .slice(29, 35)
+                .join(" ")
+                .concat(String.fromCharCode(160))}
+            </p>
+          </AnimationWrapper>
+          <AnimationWrapper>
+            <p>
+              {introText
+                .split(" ")
+                .slice(35)
+                .join(" ")}
+            </p>
+          </AnimationWrapper>
+        </div>
       </IntroTextWrapper>
       <p>
         <AnimationWrapper>

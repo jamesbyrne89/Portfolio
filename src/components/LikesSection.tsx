@@ -44,21 +44,6 @@ const List = styled.ul`
       position: absolute;
       left: -0.55em;
     }
-    /* &::after {
-      content: "";
-      width: 100%;
-      height: 2px;
-      background: currentColor;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      transform: translateY(0);
-      transition: all 0.2s ease-out;
-    }
-    &:hover::after {
-      opacity: 0;
-      transform: translateY(4px);
-    } */
   }
 
   img {
