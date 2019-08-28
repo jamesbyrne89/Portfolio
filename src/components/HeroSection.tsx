@@ -5,6 +5,7 @@ import {
   LinkStyles,
   getBodyFontStyles,
   Line,
+  sectionPadding,
 } from "../components/styles/sharedStyles";
 import AnimationWrapper from "../components/AnimationWrapper";
 
@@ -18,9 +19,9 @@ const HeroSectionStyles = styled.section`
   height: calc(100vh - 100px);
   display: flex;
   align-items: center;
+  ${sectionPadding}
   @media (max-width: 475px) {
     height: calc(100vh - 70px);
-    padding: 0 1.25rem;
   }
 `;
 

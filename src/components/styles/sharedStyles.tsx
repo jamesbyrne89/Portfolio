@@ -44,4 +44,18 @@ export const Line = styled.div`
   flex-wrap: wrap;
 `;
 
+export const Wrapper = styled.div`
+  width: 80vw;
+  margin: auto;
+`;
+
+export const sectionPadding = () => {
+  return `
+    padding: 0 10vw;
+    @media (max-width: 475px) {
+      padding: 0 1.25rem;
+    }
+  `;
+};
+
 export const GatsbyLinkStyles = LinkStyles.withComponent(Link);

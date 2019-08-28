@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
 import AnimationWrapper from "./AnimationWrapper";
-import { getBodyFontStyles } from "./styles/sharedStyles";
+import { getBodyFontStyles, Wrapper } from "./styles/sharedStyles";
 
 const ExperienceSectionStyles = styled.section`
   color: #fff;
@@ -27,11 +27,6 @@ const ExperienceSectionStyles = styled.section`
       margin-top: 0;
     }
   }
-`;
-
-const Wrapper = styled.div`
-  width: 80vw;
-  margin: auto;
 `;
 
 interface Props {

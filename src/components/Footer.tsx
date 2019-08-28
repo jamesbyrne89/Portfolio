@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
-import { LinkStyles } from "./styles/sharedStyles";
+import { LinkStyles, sectionPadding } from "./styles/sharedStyles";
 
 const FooterStyles = styled.footer`
   font-family: ${fonts.bodyFont};
-  padding: 0 10vw;
+  ${sectionPadding}
   height: 100px;
   display: flex;
   justify-content: space-between;
@@ -37,11 +37,6 @@ const FooterStyles = styled.footer`
       margin-right: 0;
     }
   }
-  svg {
-    height: 1.25em;
-    width: 1.25em;
-    fill: ${colours.black};
-  }
 
   span {
     visibility: hidden;
@@ -49,8 +44,10 @@ const FooterStyles = styled.footer`
   }
 `;
 
-const SvgStyles = styled.svg`
-  height: 16px;
+const SocialIconStyles = styled.svg`
+  height: 1.25em;
+  width: 1.25em;
+  fill: ${colours.black};
 `;
 
 const CURRENT_YEAR = new Date().getFullYear();
@@ -75,10 +72,8 @@ const Footer = ({ author, links }: Props) => (
     <ul>
       <li>
         <a href={links.twitter}>
-          <svg
+          <SocialIconStyles
             viewBox="0 0 16 16"
-            xmlns="http://www.w3.org/2000/svg aria-labelledby="
-            role="img"
             fillRule="evenodd"
             clipRule="evenodd"
             strokeLinejoin="round"
@@ -93,16 +88,14 @@ const Footer = ({ author, links }: Props) => (
             0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z"
               fillRule="nonzero"
             />
-          </svg>
+          </SocialIconStyles>
           <span>Twitter Icon</span>
         </a>
       </li>
       <li>
         <a href={links.linkedin}>
-          <svg
+          <SocialIconStyles
             viewBox="0 0 16 16"
-            xmlns="http://www.w3.org/2000/svg aria-labelledby="
-            role="img"
             fillRule="evenodd"
             clipRule="evenodd"
             strokeLinejoin="round"
@@ -117,15 +110,14 @@ const Footer = ({ author, links }: Props) => (
             1.185-1.153V1.153C16 .516 15.467 0 14.815 0z"
               fillRule="nonzero"
             />
-          </svg>
+          </SocialIconStyles>
           <span>LinkedIn Icon</span>
         </a>
       </li>
       <li>
         <a href={links.github}>
-          <svg
+          <SocialIconStyles
             aria-labelledby="title"
-            role="img"
             viewBox="0 0 24 24"
             fillRule="evenodd"
             clipRule="evenodd"
@@ -142,18 +134,13 @@ const Footer = ({ author, links }: Props) => (
             5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592
             24 12.297c0-6.627-5.373-12-12-12"
             />
-          </svg>
+          </SocialIconStyles>
           <span>Github Icon</span>
         </a>
       </li>
       <li>
         <a href={links.medium}>
-          <svg
-            viewBox="0 0 26 20"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg aria-labelledby="
-            role=" img "
-          >
+          <SocialIconStyles viewBox="0 0 24 24" version="1.1">
             <title>Medium icon</title>
             <g id="Templates" stroke="none" strokeWidth="1">
               <g
@@ -178,7 +165,7 @@ const Footer = ({ author, links }: Props) => (
                 </g>
               </g>
             </g>
-          </svg>
+          </SocialIconStyles>
           <span>Medium Icon</span>
         </a>
       </li>
