@@ -4,6 +4,7 @@ import { colours, fonts, fontSizes } from "../styles/theme";
 import {
   LinkStyles,
   getBodyFontStyles,
+  Line,
 } from "../components/styles/sharedStyles";
 import AnimationWrapper from "../components/AnimationWrapper";
 
@@ -43,14 +44,6 @@ const HeroSectionTextStyles = styled.article`
       opacity: 0;
       transform: translateY(4px);
     }
-  }
-
-  .line-one,
-  .line-two,
-  .line-three,
-  .line-four {
-    display: flex;
-    flex-wrap: wrap;
   }
 `;
 
@@ -103,7 +96,7 @@ const HeroSection = ({ headlineText, introText }: Props) => (
         </HeadlineStyles>
       </AnimationWrapper>
       <IntroTextWrapper>
-        <div className="line-one">
+        <Line>
           <AnimationWrapper>
             <p>
               {introText
@@ -121,8 +114,8 @@ const HeroSection = ({ headlineText, introText }: Props) => (
                 .join(" ")}
             </p>
           </AnimationWrapper>
-        </div>
-        <div className="line-two">
+        </Line>
+        <Line>
           <AnimationWrapper>
             <p>
               {introText
@@ -140,8 +133,8 @@ const HeroSection = ({ headlineText, introText }: Props) => (
                 .join(" ")}
             </p>
           </AnimationWrapper>
-        </div>
-        <div className="line-three">
+        </Line>
+        <Line>
           <AnimationWrapper>
             <p>
               {introText
@@ -159,8 +152,8 @@ const HeroSection = ({ headlineText, introText }: Props) => (
                 .join(" ")}
             </p>
           </AnimationWrapper>
-        </div>
-        <div className="line-three">
+        </Line>
+        <Line>
           <AnimationWrapper>
             <p>
               {introText
@@ -178,7 +171,7 @@ const HeroSection = ({ headlineText, introText }: Props) => (
                 .join(" ")}
             </p>
           </AnimationWrapper>
-        </div>
+        </Line>
       </IntroTextWrapper>
       <p>
         <AnimationWrapper>

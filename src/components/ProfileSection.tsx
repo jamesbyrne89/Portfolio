@@ -2,11 +2,11 @@ import React from "react";
 import styled from "@emotion/styled";
 import AnimationWrapper from "./AnimationWrapper";
 import { colours, fonts, fontSizes } from "../styles/theme";
+import { getBodyFontStyles } from "./styles/sharedStyles";
 
 const ProfileSectionStyles = styled.section`
   background: ${colours.navy};
-  font-family: ${fonts.bodyFont};
-  font-size: ${fontSizes.body};
+  ${getBodyFontStyles()}
   color: #fff;
   p {
     max-width: 750px;

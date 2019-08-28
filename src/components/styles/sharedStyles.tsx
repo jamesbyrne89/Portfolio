@@ -39,4 +39,9 @@ export function getBodyFontStyles(): string {
     `;
 }
 
+export const Line = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
 export const GatsbyLinkStyles = LinkStyles.withComponent(Link);

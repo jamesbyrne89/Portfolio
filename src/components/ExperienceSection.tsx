@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
 import AnimationWrapper from "./AnimationWrapper";
+import { getBodyFontStyles } from "./styles/sharedStyles";
 
 const ExperienceSectionStyles = styled.section`
   color: #fff;
@@ -14,8 +15,7 @@ const ExperienceSectionStyles = styled.section`
   }
 
   ul {
-    font-family: ${fonts.bodyFont};
-    font-size: ${fontSizes.body};
+    ${getBodyFontStyles}
     list-style-type: none;
     margin-top: 2em;
   }

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
-import { LinkStyles } from "./styles/sharedStyles";
+import { LinkStyles, getBodyFontStyles } from "./styles/sharedStyles";
 import AnimationWrapper from "./AnimationWrapper";
 import cyclistImg from "../images/cyclist.png";
 import runnerImg from "../images/runner.png";
@@ -23,7 +23,7 @@ const LikesSectionStyles = styled.section`
 
 const List = styled.ul`
   max-width: 750px;
-  font-size: ${fontSizes.body};
+  ${getBodyFontStyles}
   margin-top: 2em;
   li {
     display: flex;
