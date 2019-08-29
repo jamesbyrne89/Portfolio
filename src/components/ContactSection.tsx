@@ -1,12 +1,18 @@
 import React, { useRef } from "react";
 import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
-import { LinkStyles, getBodyFontStyles } from "./styles/sharedStyles";
+import {
+  LinkStyles,
+  getBodyFontStyles,
+  sectionPadding,
+} from "./styles/sharedStyles";
 import AnimationWrapper from "./AnimationWrapper";
 
 const ContactSectionStyles = styled.div`
   background: ${colours.grey};
-  padding: 2em 10vw 12em;
+  ${sectionPadding}
+  padding-top: 2em;
+  padding-bottom: 12em;
   font-family: ${fonts.headingFont};
   h2 {
     font-size: ${fontSizes.headingMd};

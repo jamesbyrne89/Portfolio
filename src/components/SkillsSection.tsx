@@ -30,6 +30,10 @@ const Wrapper = styled.div`
     grid-template-columns: 1fr;
     grid-gap: 2em;
   }
+  @media (max-width: 475px) {
+    width: 100%;
+    padding: 0 1.25rem;
+  }
 `;
 
 const DetailsSectionStyles = styled.div`
