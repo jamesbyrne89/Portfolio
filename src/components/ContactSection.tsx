@@ -4,18 +4,19 @@ import { colours, fonts, fontSizes } from "../styles/theme";
 import {
   LinkStyles,
   getBodyFontStyles,
+  getHeadingFontStyles,
   sectionPadding,
 } from "./styles/sharedStyles";
 import AnimationWrapper from "./AnimationWrapper";
 
 const ContactSectionStyles = styled.div`
   background: ${colours.grey};
-  ${sectionPadding}
+  ${sectionPadding};
   padding-top: 2em;
-  padding-bottom: 12em;
+  padding-bottom: 12em !important;
   font-family: ${fonts.headingFont};
   h2 {
-    font-size: ${fontSizes.headingMd};
+    ${getHeadingFontStyles}
   }
   h3 {
     padding-bottom: 0.75em;

@@ -39,6 +39,19 @@ export function getBodyFontStyles(): string {
     `;
 }
 
+export function getHeadingFontStyles(): string {
+  return `
+    font-family: ${fonts.headingFont};
+    font-size: ${fontSizes.headingMd};
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+    @media (max-width: 400px) {
+      font-size: 1rem;
+    }
+    `;
+}
+
 export const Line = styled.div`
   display: flex;
   flex-wrap: wrap;
