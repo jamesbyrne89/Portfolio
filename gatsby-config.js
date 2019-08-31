@@ -34,8 +34,13 @@ module.exports = {
       github: `https://github.com/jamesbyrne89`,
       medium: `https://medium.com/@james_byrne`,
     },
+    likes: [
+      { name: "Cycling", img: "" },
+      { name: "Running", img: "" },
+      { name: "Photography", img: "" },
+      { name: "Hacking on side projects", img: "" },
+    ],
   },
-
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,

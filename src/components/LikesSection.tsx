@@ -52,11 +52,17 @@ const List = styled.ul`
   }
 `;
 
-interface Props {
-  title: string;
+interface Like {
+  name: string;
+  img: string;
 }
 
-const LikesSection = ({ title }: Props) => {
+interface Props {
+  title: string;
+  likes: Like[];
+}
+
+const LikesSection = ({ title, likes }: Props) => {
   const titleRef = useRef(null);
 
   return (
@@ -65,24 +71,14 @@ const LikesSection = ({ title }: Props) => {
         <h2>{title}</h2>
       </AnimationWrapper>
       <List>
-        <AnimationWrapper ref={titleRef} delay={0.6}>
-          <li>
-            Cycling
-            <img src={cyclistImg} />
-          </li>
-        </AnimationWrapper>
-        <AnimationWrapper ref={titleRef} delay={0.75}>
-          <li>
-            Running
-            <img src={runnerImg} />
-          </li>
-        </AnimationWrapper>
-        <AnimationWrapper ref={titleRef} delay={0.9}>
-          <li>
-            Photography
-            <img src={cameraImg} />
-          </li>
-        </AnimationWrapper>
+        {likes.map(like => (
+          <AnimationWrapper ref={titleRef} delay={0.6}>
+            <li>
+              {like.name}
+              <img src={cyclistImg} />
+            </li>
+          </AnimationWrapper>
+        ))}
         <AnimationWrapper ref={titleRef} delay={1.05}>
           <li>
             <span>
