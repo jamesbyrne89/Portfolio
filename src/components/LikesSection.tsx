@@ -72,10 +72,10 @@ const LikesSection = ({ title, likes }: Props) => {
       </AnimationWrapper>
       <List>
         {likes.map(like => (
-          <AnimationWrapper ref={titleRef} delay={0.6}>
+          <AnimationWrapper key={like.name} ref={titleRef} delay={0.6}>
             <li>
               {like.name}
-              <img src={cyclistImg} />
+              <img src={like.img} />
             </li>
           </AnimationWrapper>
         ))}

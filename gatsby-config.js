@@ -35,9 +35,9 @@ module.exports = {
       medium: `https://medium.com/@james_byrne`,
     },
     likes: [
-      { name: "Cycling", img: "" },
-      { name: "Running", img: "" },
-      { name: "Photography", img: "" },
+      { name: "Cycling", img: `src/images/cyclist.png` },
+      { name: "Running", img: `src/images/runner.png` },
+      { name: "Photography", img: `src/images/camera.png` },
       { name: "Hacking on side projects", img: "" },
     ],
   },
