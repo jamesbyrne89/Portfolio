@@ -19,7 +19,7 @@ interface Props {
 function SEO({ description, lang = `en`, meta = [], title }: Props) {
   const { site } = useStaticQuery(
     graphql`
-      query {
+      {
         site {
           siteMetadata {
             title
@@ -73,7 +73,8 @@ function SEO({ description, lang = `en`, meta = [], title }: Props) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+        ...meta,
+      ]}
     />
   );
 }

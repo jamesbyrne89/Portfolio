@@ -1,9 +1,8 @@
 import React, { useState, useEffect, forwardRef } from "react";
 import styled from "@emotion/styled";
-import { debounce } from "../lib/utils";
 
 interface Props {
-  children: React.ReactChild;
+  children: React.ReactNode;
   offset?: number;
   delay?: number;
   animated?: boolean;
