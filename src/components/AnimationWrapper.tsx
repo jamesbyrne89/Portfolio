@@ -4,11 +4,13 @@ import { debounce } from "../lib/utils";
 
 interface Props {
   children: React.ReactChild;
-  offset: number;
-  delay: number;
+  offset?: number;
+  delay?: number;
+  animated?: boolean;
+  exited?: boolean;
 }
 
-const Wrapper = styled.span<Props & { animated: boolean; exited: boolean }>`
+const Wrapper = styled.span<Props>`
   overflow: hidden;
   height: auto;
   padding-bottom: 0.25em;
@@ -57,10 +59,8 @@ const AnimationWrapper = (
       setAnimated(true);
     }
 
-    return () => {
-      setExited(true);
-    };
-  }, [scrollPos]);
+    return () => setExited(true);
+  }, [scrollPos, ref]);
 
   return (
     <Wrapper animated={animated} delay={delay}>
