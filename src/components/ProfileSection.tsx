@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 import AnimationWrapper from "./AnimationWrapper";
 import { colours, fonts, fontSizes } from "../styles/theme";
 import { getBodyFontStyles } from "./styles/sharedStyles";
@@ -19,10 +20,15 @@ const ProfileSection = () => {
   return (
     <ProfileSectionStyles>
       <AnimationWrapper>
-        <p>
+        <motion.p
+          animate={{
+            transform: "0%",
+          }}
+          transition={{ ease: "cubic-bezier(0.6, 0, 0.2, 1)", duration: 0.1 }}
+        >
           I'm a self-taught frontend developer with two years experience. I
           originally wanted
-        </p>
+        </motion.p>
       </AnimationWrapper>
       <AnimationWrapper delay={0.1}>
         <p>

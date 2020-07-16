@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Link } from "gatsby";
 import { colours, fonts, fontSizes } from "../../styles/theme";
 
-export const LinkStyles = styled.a`
+export const LinkStyles = styled.a<{ withUnderline: boolean }>`
   position: relative;
   text-decoration: none;
   display: inline-block;

@@ -223,7 +223,6 @@ const GlobalStyles = () => (
         }
       }
       body {
-        font-family: georgia, serif;
         font-weight: normal;
         word-wrap: break-word;
         font-kerning: normal;
