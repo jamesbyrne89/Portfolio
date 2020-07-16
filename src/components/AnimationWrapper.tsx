@@ -60,7 +60,7 @@ const AnimationWrapper = (
     }
 
     return () => setExited(true);
-  }, [scrollPos, ref]);
+  }, [scrollPos, ref, scrollPos, offset]);
 
   return (
     <Wrapper animated={animated} delay={delay}>
