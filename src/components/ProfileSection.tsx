@@ -26,7 +26,7 @@ const ProfileSection = () => {
           }}
           transition={{ ease: [0.6, 0, 0.2, 1], duration: 0.1 }}
         >
-          I'm a self-taught frontend developer with two years experience. I
+          I'm a self-taught frontend developer with four years of experience. I
           originally wanted
         </motion.p>
       </AnimationWrapper>
