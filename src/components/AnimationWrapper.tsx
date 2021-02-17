@@ -30,14 +30,17 @@ const AnimationWrapper = (
   ref: React.RefObject<HTMLElement>
 ) => {
   const [animated, setAnimated] = useState(false);
-  const [scrollPos, setScrollPos] = useState(window.scrollY);
+  const [scrollPos, setScrollPos] = useState(0);
   const [exited, setExited] = useState(false);
 
-  const getScrollPosition = () => {
-    requestAnimationFrame(() => setScrollPos(window.scrollY));
-  };
+  const getScrollPosition = () => requestAnimationFrame(() => setScrollPos(window.scrollY));
+
 
   useEffect(() => {
+    if (!window) {
+      return;
+    }
+    setScrollPos(window.scrollY)
     window.addEventListener("scroll", getScrollPosition);
 
     return () => {

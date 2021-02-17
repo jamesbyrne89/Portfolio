@@ -5,21 +5,17 @@ import HeroSection from "../components/HeroSection";
 import SkillsSection from "../components/SkillsSection";
 import ContactSection from "../components/ContactSection";
 import SEO from "../components/Seo";
+import { skills } from "../data/content";
 
 const IndexPage = () => {
   const { site } = useStaticQuery(graphql`
     query HomepageDataQuery {
       site {
         siteMetadata {
+          description
           introSection {
             headline
             blurb
-          }
-          skills {
-            technologies {
-              used
-              learning
-            }
           }
         }
       }
@@ -27,12 +23,12 @@ const IndexPage = () => {
   `);
   return (
     <Layout>
-      <SEO title="James Byrne" />
+      <SEO title="James Byrne" description={site.siteMetadata.description}/>
       <HeroSection
         headlineText={site.siteMetadata.introSection.headline}
         introText={site.siteMetadata.introSection.blurb}
       />
-      <SkillsSection technologies={site.siteMetadata.skills.technologies} />
+      <SkillsSection technologies={skills.technologies} />
       <ContactSection />
     </Layout>
   );

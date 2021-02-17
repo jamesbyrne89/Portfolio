@@ -7,40 +7,6 @@ module.exports = {
       headline: `Hello. I'm James, a frontend developer based in London.`,
       blurb: `I love crafting beautiful, functional experiences on the web, with accessibility and security baked in from the start. My toolbox includes a range of technologies across HTML, CSS and Javascript, but the tech stack is always secondary to the needs of the user.`,
     },
-    skills: {
-      technologies: {
-        used: [
-          `React`,
-          `Redux`,
-          `Vue.js`,
-          `Storybook`,
-          `Typescript`,
-          `Styled Components`,
-          `Express`,
-          `MongoDB`,
-          `Jest`,
-          `Puppeteer`,
-          `Knockout`,
-          `Next.js`,
-          `Webpack`,
-          `and more!`,
-        ],
-        learning: [`NodeJS`, `VueJS`, `GraphQL`],
-      },
-    },
-    social: {
-      twitter: `https://twitter.com/james_byrne`,
-      linkedin: `https://uk.linkedin.com/in/jamestbyrne89`,
-      github: `https://github.com/jamesbyrne89`,
-      medium: `https://medium.com/@james_byrne`,
-    },
-    likes: [
-      { name: "Cycling", img: `src/images/cyclist.png` },
-      { name: "Running", img: `src/images/runner.png` },
-      { name: "Photography", img: `src/images/camera.png` },
-      { name: "Hacking on side projects", img: "" },
-    ],
-  },
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
@@ -48,7 +14,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/static/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -70,4 +36,5 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+}
 };

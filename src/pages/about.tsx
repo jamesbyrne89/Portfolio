@@ -6,6 +6,7 @@ import ProfileSection from "../components/ProfileSection";
 import LikesSection from "../components/LikesSection";
 import ExperienceSection from "../components/ExperienceSection";
 import SEO from "../components/Seo";
+import { likes } from "../data/content";
 
 const Wrapper = styled.div`
   width: 80vw;
@@ -18,20 +19,17 @@ const AboutPage = () => {
     query AboutPageDataQuery {
       site {
         siteMetadata {
-          likes {
-            name
-            img
-          }
+          description
         }
       }
     }
   `);
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO title="About" description={site.siteMetadata.description} />
       <Wrapper>
         <ProfileSection />
-        <LikesSection title="Likes." likes={site.siteMetadata.likes} />
+        <LikesSection title="Likes." likes={likes} />
         <ExperienceSection title="Experience." />
       </Wrapper>
     </Layout>

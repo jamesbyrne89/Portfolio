@@ -3,10 +3,7 @@ import styled from "@emotion/styled";
 import { colours, fonts, fontSizes } from "../styles/theme";
 import { LinkStyles, getBodyFontStyles } from "./styles/sharedStyles";
 import AnimationWrapper from "./AnimationWrapper";
-import cyclistImg from "../images/cyclist.png";
-import runnerImg from "../images/runner.png";
-import cameraImg from "../images/camera.png";
-import coderImg from "../images/coder.png";
+
 
 const LikesSectionStyles = styled.section`
   background: ${colours.navy};
@@ -27,6 +24,7 @@ const List = styled.ul`
   margin-top: 2em;
   li {
     display: flex;
+    align-items: center;
     margin-right: 1.5em;
     line-height: 2;
   }
@@ -47,7 +45,7 @@ const List = styled.ul`
   }
 
   img {
-    height: 32px;
+    height: 26px;
     margin: 0 1em;
   }
 `;
@@ -75,11 +73,11 @@ const LikesSection = ({ title, likes }: Props) => {
           <AnimationWrapper key={like.name} ref={titleRef} delay={0.6}>
             <li>
               {like.name}
-              <img src={like.img} />
+              <img src={like.img} alt=""></img>
             </li>
           </AnimationWrapper>
         ))}
-        <AnimationWrapper ref={titleRef} delay={1.05}>
+        {/* <AnimationWrapper ref={titleRef} delay={1.05}>
           <li>
             <span>
               Hacking on side projects*
@@ -95,7 +93,7 @@ const LikesSection = ({ title, likes }: Props) => {
 
             <img src={coderImg} />
           </li>
-        </AnimationWrapper>
+        </AnimationWrapper> */}
       </List>
     </LikesSectionStyles>
   );

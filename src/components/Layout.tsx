@@ -12,6 +12,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import GlobalStyles from "./styles/Global";
 import { colours } from "../styles/theme";
+import { social } from '../data/content'
 
 interface Props {
   children: React.ReactNode;
@@ -32,12 +33,6 @@ const Layout = ({ children }: Props) => {
         siteMetadata {
           title
           author
-          social {
-            twitter
-            linkedin
-            github
-            medium
-          }
         }
       }
     }
@@ -49,7 +44,7 @@ const Layout = ({ children }: Props) => {
       <MainStyles>{children}</MainStyles>
       <Footer
         author={site.siteMetadata.author}
-        links={site.siteMetadata.social}
+        links={social}
       />
     </>
   );

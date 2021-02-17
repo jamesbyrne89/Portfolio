@@ -24,7 +24,7 @@ const ProfileSection = () => {
           animate={{
             transform: "0%",
           }}
-          transition={{ ease: "cubic-bezier(0.6, 0, 0.2, 1)", duration: 0.1 }}
+          transition={{ ease: [0.6, 0, 0.2, 1], duration: 0.1 }}
         >
           I'm a self-taught frontend developer with two years experience. I
           originally wanted
